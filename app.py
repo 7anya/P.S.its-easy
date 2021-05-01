@@ -14,6 +14,9 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 
 db = SQLAlchemy(app)
 
+from flask import send_file
+
+
 
 class Request(db.Model):
     __tablename__ = "request"
@@ -91,6 +94,14 @@ def logout():
     for key in list(session.keys()):
         session.pop(key)
     return redirect('/')
+
+
+@app.route('/csv')  # this is a job for GET, not POST
+def plot_csv():
+    return send_file('Example.csv',
+                     mimetype='text/csv',
+                     attachment_filename='Example.csv',
+                     as_attachment=True)
 
 
 if __name__ == "__main__":
