@@ -12,12 +12,8 @@ import NotificationsIcon from '@material-ui/icons/Motorcycle';
 import LoginIcon from '@material-ui/icons/ExitToApp';
 import RegisterIcon from '@material-ui/icons/ListAlt';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
-import logo from '../../resources/ps-file.png';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
-import CalIcon from '@material-ui/icons/Event';
+// import logo from '../../resources/ps-file.png';
 // import { CustomThemeContext } from '../../context/CustomThemeProvider';
 
 const useStyles = makeStyles((theme) => ({
@@ -80,9 +76,9 @@ function Navbar(props) {
 		setMobileMoreAnchorEl(event.currentTarget);
 	};
 
-	React.useEffect(() => {
-		console.log(props);
-	}, []);
+	// React.useEffect(() => {
+	// 	console.log(props);
+	// }, []);
 
 	const menuId = 'primary-search-account-menu';
 	const renderMenu = (

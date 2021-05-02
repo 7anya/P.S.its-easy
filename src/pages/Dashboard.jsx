@@ -10,18 +10,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import {
-	FormControl,
-	FormControlLabel,
-	InputLabel,
-	MenuItem,
-	Select,
-	Slider,
-	TextField,
-	Typography,
-} from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import FadeIn from 'react-fade-in';
-import SearchBar from 'material-ui-search-bar';
 import SearchComponent from '../components/SearchComponent/SearchComponent';
 import useDimensions from 'react-use-dimensions';
 
@@ -122,8 +112,11 @@ const Dashboard = () => {
 						max = 0,
 						avg = 0;
 					min = Math.min(...y);
+					min = Math.round(min * 100) / 100;
 					max = Math.max(...y);
+					max = Math.round(max * 100) / 100;
 					avg = y.reduce((a, b) => a + b, 0) / y.length;
+					avg = Math.round(avg * 100) / 100;
 					newInfo = {
 						...newInfo,
 						[key]: { min, max, avg },
@@ -1153,7 +1146,7 @@ const Dashboard = () => {
 												variant="body1"
 												style={{ color: '#ffd39c' }}
 											>
-												Median:{' '}
+												Mean:{' '}
 											</Typography>
 											{stationDetails.median}
 										</Typography>
