@@ -8,6 +8,7 @@ import {
 	MenuItem,
 	Select,
 	Slider,
+	Typography,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function SearchComponent({ setMainSearch, setMainChoice }) {
+function SearchComponent({ setMainSearch, setMainChoice, setMainSlider }) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([5, 10]);
@@ -30,6 +31,7 @@ function SearchComponent({ setMainSearch, setMainChoice }) {
 	const handleSubmit = () => {
 		setMainChoice(choice);
 		setMainSearch(search);
+		setMainSlider(slider);
 	};
 
 	return (
@@ -58,17 +60,22 @@ function SearchComponent({ setMainSearch, setMainChoice }) {
 					<MenuItem value={'2017'}>2017</MenuItem>
 				</Select>
 			</FormControl>
+			<Typography id="range-slider" gutterBottom>
+				CGPA range
+			</Typography>
 			<Slider
 				value={slider}
 				onChange={(event, newValue) => setSlider(newValue)}
 				valueLabelDisplay="auto"
 				aria-labelledby="range-slider"
-				getAriaValueText={(value) => `${value}`}
+				getAriaValueText={(value) => `${value} CGPA`}
 				min={5}
 				max={10}
 				step={0.1}
 			/>
-			<Button onClick={handleSubmit}>Apply!</Button>
+			<Button onClick={handleSubmit} variant="outlined" color="primary">
+				Apply!
+			</Button>
 		</div>
 	);
 }

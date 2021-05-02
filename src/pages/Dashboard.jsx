@@ -28,30 +28,42 @@ import useDimensions from 'react-use-dimensions';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
-		height: '100vh',
+		height: '90vh',
 	},
 	paper1: {
-		padding: theme.spacing(5),
+		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
-		height: '200px',
+		height: '180px',
 		margin: '50px',
-		marginTop: '70px',
+		marginTop: '10px',
+		backgroundColor: 'rgba(39, 39, 39, 0.7)',
+		borderColor: theme.palette.primary.main,
+		borderWidth: '2px',
+		borderStyle: 'solid',
 	},
 	paper2: {
-		padding: theme.spacing(5),
+		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
 		margin: '50px',
-		marginTop: '50px',
+		marginTop: '0px',
+		backgroundColor: 'rgba(39, 39, 39, 0.7)',
+		borderColor: theme.palette.primary.main,
+		borderWidth: '2px',
+		borderStyle: 'solid',
 	},
 	formControl: {
 		margin: theme.spacing(5),
 		minWidth: 220,
 	},
 	chartContainer: {
-		height: '70vh',
-		backgroundColor: theme.palette.grey[200],
+		height: '72vh',
+		marginTop: '10px',
+		backgroundColor: 'rgba(39, 39, 39, 0.7)',
+		borderColor: theme.palette.secondary.main,
+		borderWidth: '2px',
+		borderStyle: 'solid',
 	},
 	svg: {
 		backgroundColor: 'darkgreen',
@@ -72,12 +84,10 @@ const Dashboard = () => {
 	const [allStationInfo, setAllStationInfo] = useState({});
 	const [choice, setMainChoice] = useState('Overall');
 	const [search, setMainSearch] = useState('');
-	const [slider, setSlider] = useState([5, 10]);
+	const [slider, setMainSlider] = useState([5, 10]);
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
-		console.log('loading start');
-
 		//console.log(data);
 		let points = [];
 		let x = [];
@@ -108,8 +118,6 @@ const Dashboard = () => {
 					y.push(...data[key]['2017']['CG']);
 
 				if (y.length > 0) {
-					points.push({ x: key, y: y });
-					x.push(key);
 					let min = 0,
 						max = 0,
 						avg = 0;
@@ -120,15 +128,28 @@ const Dashboard = () => {
 						...newInfo,
 						[key]: { min, max, avg },
 					};
+					//console.log(slider[0], slider[1]);
+					if (max >= slider[0] && min <= slider[1]) {
+						points.push({ x: key, y: y });
+						x.push(key);
+					}
 				}
 			}
 		}
-		if (points.length >= 15) {
+		if (points.length > 15) {
+			let i = points.length;
+			while (i % 15 !== 0) {
+				points.push({ x: '-', y: [0] });
+				i++;
+			}
 			setIndex({ start: 0, end: 15 });
 			setIsNextDisabled(false);
 			setIsPrevDisabled(true);
 		} else {
-			setIndex({ start: 0, end: points.length });
+			for (let i = points.length; i < 15; i++) {
+				points.push({ x: '-', y: [0] });
+			}
+			setIndex({ start: 0, end: 15 });
 			setIsPrevDisabled(true);
 			setIsNextDisabled(true);
 		}
@@ -136,8 +157,7 @@ const Dashboard = () => {
 		setDataPoints(points);
 		setXvalues(x);
 		setAllStationInfo(newInfo);
-		console.log('loading end');
-	}, [choice, search]);
+	}, [choice, search, slider]);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
@@ -166,7 +186,7 @@ const Dashboard = () => {
 
 	return (
 		<div className={classes.root}>
-			<Grid container direction="row" spacing={2}>
+			<Grid container direction="row" spacing={0}>
 				<Grid
 					item
 					xs={8}
@@ -176,7 +196,7 @@ const Dashboard = () => {
 					<VictoryChart
 						padding={{
 							bottom: 100,
-							left: 50,
+							left: 60,
 							right: 50,
 						}}
 						domainPadding={20}
@@ -190,6 +210,7 @@ const Dashboard = () => {
 						}
 					>
 						<VictoryAxis
+							label="Station Names"
 							style={{
 								tickLabels: {
 									fontSize: 12,
@@ -199,23 +220,39 @@ const Dashboard = () => {
 									textAnchor: 'start',
 									width: 0,
 									height: 0,
+									fill: 'rgba(255, 211, 156, 1)',
+								},
+								axis: { stroke: 'rgba(255, 99, 99, 0.6)' },
+								grid: { stroke: 'rgba(255, 99, 99, 0.3)' },
+								ticks: { stroke: 'rgba(255, 211, 156, 0.8)' },
+								axisLabel: {
+									fill: 'rgba(255, 99, 99, 1)',
+									padding: 150,
+									fontSize: 15,
+									fontStyle: 'italic',
 								},
 							}}
 							tickValues={xvalues.slice(index.start, index.end)}
 							theme={VictoryTheme.material}
-							animate={{
-								onExit: {
-									duration: 500,
-								},
-								onEnter: {
-									duration: 500,
-								},
-							}}
 						/>
 						<VictoryAxis
 							dependentAxis
+							label="CGPA"
 							style={{
-								tickLabels: { fontSize: 12, padding: 5 },
+								tickLabels: {
+									fontSize: 12,
+									padding: 5,
+									fill: 'rgba(255, 211, 156, 1)',
+								},
+								axis: { stroke: 'rgba(255, 99, 99, 0.6)' },
+								grid: { stroke: 'rgba(255, 99, 99, 0.3)' },
+								ticks: { stroke: 'rgba(255, 211, 156, 0.8)' },
+								axisLabel: {
+									fill: 'rgba(255, 99, 99, 1)',
+									padding: 38,
+									fontSize: 15,
+									fontStyle: 'italic',
+								},
 							}}
 							theme={VictoryTheme.material}
 						/>
@@ -228,8 +265,13 @@ const Dashboard = () => {
 							whiskerWidth={6}
 							data={dataPoints.slice(index.start, index.end)}
 							style={{
-								min: { strokeWidth: 2.5 },
-								max: { strokeWidth: 2.5 },
+								min: { stroke: '#ff6363', strokeWidth: 2.5 },
+								max: { stroke: '#ff6363', strokeWidth: 2.5 },
+								q1: { fill: '#ff6363' },
+								q3: { fill: '#ff6363' },
+								median: { stroke: '#ff6363' },
+								minLabels: { fill: 'tomato' },
+								maxLabels: { fill: 'orange' },
 							}}
 							events={[
 								{
@@ -261,7 +303,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -275,7 +317,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -288,7 +330,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -300,7 +342,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -312,7 +354,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -329,7 +371,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -343,7 +385,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -356,7 +398,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -368,7 +410,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -380,7 +422,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -418,7 +460,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -432,7 +474,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -445,7 +487,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -457,7 +499,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -469,7 +511,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -486,7 +528,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -500,7 +542,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -513,7 +555,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -525,7 +567,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -537,7 +579,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -575,7 +617,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -589,7 +631,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -602,7 +644,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -614,7 +656,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -626,7 +668,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -643,7 +685,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -657,7 +699,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -670,7 +712,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -682,7 +724,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -694,7 +736,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -732,7 +774,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -746,7 +788,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -759,7 +801,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -771,7 +813,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -783,7 +825,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -800,7 +842,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -814,7 +856,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -827,7 +869,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -839,7 +881,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -851,7 +893,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -889,7 +931,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -903,7 +945,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'tomato',
+																		'#bbe1fa',
 																}
 															),
 														};
@@ -916,7 +958,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -928,7 +970,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -940,7 +982,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'tomato',
+																	'#bbe1fa',
 															},
 														};
 													},
@@ -957,7 +999,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -971,7 +1013,7 @@ const Dashboard = () => {
 																props.style,
 																{
 																	fill:
-																		'#455A64',
+																		'#ff6363',
 																}
 															),
 														};
@@ -984,7 +1026,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -996,7 +1038,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -1008,7 +1050,7 @@ const Dashboard = () => {
 															style: {
 																...props.style,
 																stroke:
-																	'#455A64',
+																	'#ff6363',
 															},
 														};
 													},
@@ -1031,6 +1073,8 @@ const Dashboard = () => {
 								<Button
 									disabled={isPrevDisabled}
 									onClick={handlePrevious}
+									variant="outlined"
+									color="secondary"
 								>
 									Previous
 								</Button>
@@ -1046,6 +1090,8 @@ const Dashboard = () => {
 								<Button
 									disabled={isNextDisabled}
 									onClick={handleNext}
+									variant="outlined"
+									color="secondary"
 								>
 									Next
 								</Button>
@@ -1054,7 +1100,7 @@ const Dashboard = () => {
 					</Grid>
 				</Grid>
 				<Grid item xs={4}>
-					<Paper className={classes.paper1}>
+					<Paper elevation={3} className={classes.paper1}>
 						<FadeIn>
 							{stationDetails.name ? (
 								<div key={stationDetails.name}>
@@ -1063,25 +1109,53 @@ const Dashboard = () => {
 											variant="body1"
 											component="p"
 										>
-											Name: {stationDetails.name}
+											<Typography
+												component="span"
+												variant="body1"
+												style={{ color: '#ffd39c' }}
+											>
+												Name:{' '}
+											</Typography>
+											{stationDetails.name}
 										</Typography>
 										<Typography
 											variant="body1"
 											component="p"
 										>
-											Min: {stationDetails.min}
+											<Typography
+												component="span"
+												variant="body1"
+												style={{ color: '#ffd39c' }}
+											>
+												Min:{' '}
+											</Typography>
+											{stationDetails.min}
 										</Typography>
 										<Typography
 											variant="body1"
 											component="p"
 										>
-											Max: {stationDetails.max}
+											<Typography
+												component="span"
+												variant="body1"
+												style={{ color: '#ffd39c' }}
+											>
+												Max:{' '}
+											</Typography>
+											{stationDetails.max}
 										</Typography>
 										<Typography
 											variant="body1"
 											component="p"
 										>
-											Median: {stationDetails.median}
+											<Typography
+												component="span"
+												variant="body1"
+												style={{ color: '#ffd39c' }}
+											>
+												Median:{' '}
+											</Typography>
+											{stationDetails.median}
 										</Typography>
 									</FadeIn>
 								</div>
@@ -1096,10 +1170,11 @@ const Dashboard = () => {
 							)}
 						</FadeIn>
 					</Paper>
-					<Paper className={classes.paper2}>
+					<Paper elevation={10} className={classes.paper2}>
 						<SearchComponent
 							setMainChoice={setMainChoice}
 							setMainSearch={setMainSearch}
+							setMainSlider={setMainSlider}
 						/>
 					</Paper>
 				</Grid>
