@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function SearchComponent({ setMainSearch, setMainChoice, setMainSlider }) {
+function FilterComponent({ setMainSearch, setMainChoice, setMainSlider }) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([5, 10]);
@@ -80,4 +80,4 @@ function SearchComponent({ setMainSearch, setMainChoice, setMainSlider }) {
 	);
 }
 
-export default SearchComponent;
+export default FilterComponent;
