@@ -7,7 +7,8 @@ from auth_decorator import login_required
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_statistics import Statistics
-
+import threading
+from scaperOperations import *
 # App config
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
@@ -105,4 +106,8 @@ def plot_csv():
 
 
 if __name__ == "__main__":
+    th = threading.Thread(target=runScriptAfterInterval)
+    th.start()
     app.run()
+    th.join()
+

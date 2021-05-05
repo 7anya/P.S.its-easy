@@ -14,7 +14,8 @@ import (
 )
 
 var csvDataMap sync.Map
-var waitGroup sync.WaitGroup
+
+//var waitGroup sync.WaitGroup
 
 func checkErrors(err error) {
 	if err != nil {
@@ -67,6 +68,7 @@ func makeDetailsSheet(problemBank []map[string]interface{}) {
 	csvFile, err := os.Create("StationDetails.csv")
 	checkErrors(err)
 	csvWriter := csv.NewWriter(csvFile)
+
 	csvData := make([]string, 10)
 	//Head
 	csvData[0] = "Station ID"
@@ -84,15 +86,15 @@ func makeDetailsSheet(problemBank []map[string]interface{}) {
 	var length = (int64)(len(problemBank))
 	notifyWriteKeyToMap := make(chan int64)
 	go writeToCSV(notifyWriteKeyToMap, csvFile, csvWriter, length)
-	waitGroup.Add(1)
+	//waitGroup.Add(1)
 	for i, station := range problemBank {
-		go getProjectDetails(station, notifyWriteKeyToMap, i)
-		waitGroup.Add(1)
+		getProjectDetails(station, notifyWriteKeyToMap, i)
+		//waitGroup.Add(1)
 	}
 }
 
 func writeToCSV(notifyWriteKeyToMap chan int64, csvFile *os.File, csvWriter *csv.Writer, length int64) {
-	defer waitGroup.Done()
+	//defer waitGroup.Done()
 	for i := int64(0); i < length; i++ {
 		csvData, ok := csvDataMap.Load(<-notifyWriteKeyToMap)
 		if !ok {
@@ -109,7 +111,7 @@ func writeToCSV(notifyWriteKeyToMap chan int64, csvFile *os.File, csvWriter *csv
 }
 
 func getProjectDetails(station map[string]interface{}, notifyWriteKeyToMap chan int64, count int) {
-	defer waitGroup.Done()
+	//defer waitGroup.Done()
 	csvData := make([]string, 10)
 	projectAndFacilitiesCounterpart := getStationDetails(fmt.Sprintf("%v", station["StationId"]), fmt.Sprintf("%v", station["CompanyId"]))
 	if station != nil {
@@ -227,5 +229,5 @@ func main() {
 	//Create CSV
 	problemBank := postRequest("http://psd.bits-pilani.ac.in/Student/ViewActiveStationProblemBankData.aspx/getPBdetail", "{batchid: \"undefined\" }", os.Args[1], "http://psd.bits-pilani.ac.in/Student/ViewActiveStationProblemBankData.aspx")
 	makeDetailsSheet(problemBank)
-	waitGroup.Wait()
+	//waitGroup.Wait()
 }
