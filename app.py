@@ -1,6 +1,7 @@
 from flask import Flask, redirect, url_for, session
 from authlib.integrations.flask_client import OAuth
 import os
+from Globals import *
 from datetime import timedelta
 # decorator for routes that should be accessible only by logged in users
 from auth_decorator import login_required
@@ -9,6 +10,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_statistics import Statistics
 import threading
 from scaperOperations import *
+import time
+
 # App config
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
@@ -16,7 +19,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 db = SQLAlchemy(app)
 
 from flask import send_file
-
 
 
 class Request(db.Model):
@@ -97,17 +99,25 @@ def logout():
     return redirect('/')
 
 
-@app.route('/csv')  # this is a job for GET, not POST
-def plot_csv():
-    return send_file('Example.csv',
-                     mimetype='text/csv',
-                     attachment_filename='Example.csv',
-                     as_attachment=True)
+@app.route('/csv', methods=["GET"])  # this is a job for GET, not POST
+def send_csv():
+    print(csvInUse, "yeeeeeeee")
+    if csvInUse:
+        print("sleeping :)")
+        time.sleep(120)
+        return "sleeping"
+    else:
+        print(csvInUse, "yeeeeeeee")
+
+        return send_file('Example.csv', mimetype='text/csv', attachment_filename='Example.csv',
+                         as_attachment=True)
+
 
 
 if __name__ == "__main__":
+    csvInUse = False
     th = threading.Thread(target=runScriptAfterInterval)
     th.start()
+    app.debug = True
     app.run()
     th.join()
-
