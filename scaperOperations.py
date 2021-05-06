@@ -15,6 +15,7 @@ def fun():  # user defined function which adds +10 to given number
 
 def runScript():
     cookie = "_ga=GA1.3.1997755782.1597948974; ASP.NET_SessionId=c1f21y3ahegfwhndjl0ceztm"
+
     csvInUse=True
     stream = os.popen(f"""./PS_scraper '{cookie}'""")
     csvInUse=False
