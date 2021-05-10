@@ -1,11 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {
-	VictoryChart,
-	VictoryBoxPlot,
-	VictoryTheme,
-	VictoryAxis,
-	VictoryZoomContainer,
-} from 'victory';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -63,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
 let data = require('../dataset/data.json');
 
-const Dashboard = () => {
+const ResponsesPage = () => {
 	const classes = useStyles();
 
 	const [dataPoints, setDataPoints] = useState([]);
@@ -317,4 +310,4 @@ const Dashboard = () => {
 	);
 };
 
-export default Dashboard;
+export default ResponsesPage;
