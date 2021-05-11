@@ -1,4 +1,4 @@
-import { Grid, Link, makeStyles, Paper } from '@material-ui/core';
+import { Button, Grid, Link, makeStyles, Paper } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: 'center',
 		color: theme.palette.text.primary,
 		margin: '50px',
-		marginTop: '0px',
+		marginTop: '10px',
+		marginBottom: '20px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
 		borderWidth: '2px',
@@ -60,7 +61,13 @@ function ChroniclesPage() {
 	const classes = useStyles();
 	const [stations, setStations] = useState([]);
 	const [bio, setBio] = useState([]);
+	const [index, setIndex] = useState({ start: 0, end: 0 });
+
+	const [isNextDisabled, setIsNextDisabled] = useState(true);
+	const [isPrevDisabled, setIsPrevDisabled] = useState(true);
 	const [student, setStudent] = useState({ name: '', id: '', writeUp: '' });
+	const [expandedTop, setExpandedTop] = React.useState(false);
+	const [expandedBottom, setExpandedBottom] = React.useState(false);
 
 	useEffect(() => {
 		if (student.name !== '') {
@@ -72,63 +79,61 @@ function ChroniclesPage() {
 	useEffect(() => {
 		//console.log(data);
 		const newArray = [];
-		// for (const property in data) {
-		// 	newArray.push({
-		// 		name: property,
-		// 		...data[property],
-		// 	});
-		// }
-		newArray.push({
-			name: 'Amazon Development Center, Bangalore',
-			...data['Amazon Development Center, Bangalore'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Chennai',
-			...data['Amazon Development Center, Chennai'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Delhi',
-			...data['Amazon Development Center, Delhi'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center,Hyderabad',
-			...data['Amazon Development Center, Hyderabad'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Bangalore',
-			...data['Amazon Development Center, Bangalore'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Chennai',
-			...data['Amazon Development Center, Chennai'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Delhi',
-			...data['Amazon Development Center, Delhi'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center,Hyderabad',
-			...data['Amazon Development Center, Hyderabad'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Bangalore',
-			...data['Amazon Development Center, Bangalore'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Chennai',
-			...data['Amazon Development Center, Chennai'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center, Delhi',
-			...data['Amazon Development Center, Delhi'],
-		});
-		newArray.push({
-			name: 'Amazon Development Center,Hyderabad',
-			...data['Amazon Development Center, Hyderabad'],
-		});
-		// console.log(newArray);
+		for (const property in data) {
+			newArray.push({
+				name: property,
+				...data[property],
+			});
+		}
+
+		if (newArray.length > 15) {
+			setIndex({ start: 0, end: 15 });
+			setIsNextDisabled(false);
+			setIsPrevDisabled(true);
+		} else {
+			setIndex({ start: 0, end: 15 });
+			setIsPrevDisabled(true);
+			setIsNextDisabled(true);
+		}
 		setStations(newArray);
 	}, []);
+
+	const handleNext = () => {
+		// console.log(allStationInfo);
+
+		if (index.end + 15 < stations.length) {
+			setIndex({ start: index.start + 15, end: index.end + 15 });
+			setIsPrevDisabled(false);
+		} else if (index.start + 15 <= stations.length) {
+			setIndex({ start: index.start + 15, end: stations.length });
+			setIsPrevDisabled(false);
+			setIsNextDisabled(true);
+		}
+		setExpandedTop(false);
+		setExpandedBottom(false);
+	};
+
+	const handlePrevious = () => {
+		if (index.start - 15 > 0) {
+			setIndex({ start: index.start - 15, end: index.end - 15 });
+			setIsNextDisabled(false);
+		} else if (index.end - 15 >= 0) {
+			setIndex({ start: 0, end: index.end - 15 });
+			setIsPrevDisabled(true);
+			setIsNextDisabled(false);
+		}
+		setExpandedTop(false);
+		setExpandedBottom(false);
+	};
+
+	const handleChangeTop = (panel) => (event, isExpanded) => {
+		setExpandedTop(isExpanded ? panel : false);
+		setExpandedBottom(false);
+	};
+
+	const handleChangeBottom = (panel) => (event, isExpanded) => {
+		setExpandedBottom(isExpanded ? panel : false);
+	};
 
 	return (
 		<div className={classes.root}>
@@ -156,18 +161,19 @@ function ChroniclesPage() {
 									.includes('short summary of work done')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Short Summary Of Work Done :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -183,18 +189,19 @@ function ChroniclesPage() {
 									.includes('tool used')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Tools Used :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -206,18 +213,19 @@ function ChroniclesPage() {
 									.includes('objectives of the project')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Objectives of The Project :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -229,18 +237,19 @@ function ChroniclesPage() {
 									.includes('outcomes of the project')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Outcomes Of The Project :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -252,18 +261,19 @@ function ChroniclesPage() {
 									.includes('major learning')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Major Learning Outcomes :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -277,19 +287,20 @@ function ChroniclesPage() {
 									)
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Brief Description of Working
 											Environment :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -305,18 +316,19 @@ function ChroniclesPage() {
 									.includes('details of papers / patents')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Details of Papers/Patents :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -328,18 +340,19 @@ function ChroniclesPage() {
 									.includes('academic courses relevant')
 							) {
 								return (
-									<Typography component="p" type="body1">
+									<Typography
+										component="p"
+										type="body1"
+										style={{ marginTop: '20px' }}
+									>
 										<Typography
-											component="span"
+											component="p"
 											type="body1"
-											color="primary"
+											color="secondary"
 										>
 											Academic Courses Relevant :
 										</Typography>
-										<Typography
-											component="span"
-											type="body1"
-										>
+										<Typography component="p" type="body1">
 											{line.split(':')[1]}
 										</Typography>
 									</Typography>
@@ -355,10 +368,10 @@ function ChroniclesPage() {
 					</Scrollbars>
 				</Grid>
 				<Grid item xs={4}>
-					<Paper elevation={3} className={classes.paper1}></Paper>
+					{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
 					<Paper elevation={3} className={classes.paper2}>
 						<Scrollbars
-							style={{ height: '55vh' }}
+							style={{ height: '65vh' }}
 							renderThumbVertical={({ style, ...props }) => (
 								<div
 									{...props}
@@ -371,209 +384,289 @@ function ChroniclesPage() {
 								/>
 							)}
 						>
-							{stations.map((station) => {
-								return (
-									<Accordion>
-										<AccordionSummary
-											expandIcon={<ExpandMoreIcon />}
-											aria-controls="panel1a-content"
-											id="panel1a-header"
+							{stations
+								.slice(index.start, index.end)
+								.map((station) => {
+									return (
+										<Accordion
+											expanded={
+												expandedTop === station.name
+											}
+											onChange={handleChangeTop(
+												station.name
+											)}
 										>
-											<Typography
-												className={classes.heading}
+											<AccordionSummary
+												expandIcon={<ExpandMoreIcon />}
+												aria-controls="panel1a-content"
+												id="panel1a-header"
 											>
-												{station.name}
-											</Typography>
-										</AccordionSummary>
-										<AccordionDetails
-											style={{ display: 'block' }}
-										>
-											{station['2017'].length > 0 && (
-												<Accordion>
-													<AccordionSummary
-														expandIcon={
-															<ExpandMoreIcon />
+												<Typography
+													className={classes.heading}
+												>
+													{station.name}
+												</Typography>
+											</AccordionSummary>
+											<AccordionDetails
+												style={{ display: 'block' }}
+											>
+												{station['2017'].length > 0 && (
+													<Accordion
+														expanded={
+															expandedBottom ===
+															'2017'
 														}
-														aria-controls="panel1a-content"
-														id="panel1a-header"
+														onChange={handleChangeBottom(
+															'2017'
+														)}
 													>
-														<Typography
-															className={
-																classes.heading
+														<AccordionSummary
+															expandIcon={
+																<ExpandMoreIcon />
 															}
+															aria-controls="panel1a-content"
+															id="panel1a-header"
 														>
-															2017
-														</Typography>
-													</AccordionSummary>
-													{station['2017'].map(
-														(student) => (
-															<Link
-																component="button"
-																onClick={() => {
-																	setStudent(
-																		student
-																	);
-																}}
-																color="inherit"
-																underline="none"
-																style={{
-																	display:
-																		'block',
-																}}
+															<Typography
+																className={
+																	classes.heading
+																}
 															>
-																<AccordionDetails>
-																	<Typography>
-																		{
-																			student.name
-																		}
-																	</Typography>
-																</AccordionDetails>
-															</Link>
-														)
-													)}
-												</Accordion>
-											)}
-											{station['2018'].length > 0 && (
-												<Accordion>
-													<AccordionSummary
-														expandIcon={
-															<ExpandMoreIcon />
+																2017
+															</Typography>
+														</AccordionSummary>
+														{station['2017'].map(
+															(student) => (
+																<Link
+																	component="button"
+																	onClick={() => {
+																		setStudent(
+																			student
+																		);
+																	}}
+																	color="inherit"
+																	underline="none"
+																	style={{
+																		display:
+																			'block',
+																	}}
+																>
+																	<AccordionDetails>
+																		<Typography>
+																			{
+																				student.name
+																			}
+																		</Typography>
+																	</AccordionDetails>
+																</Link>
+															)
+														)}
+													</Accordion>
+												)}
+												{station['2018'].length > 0 && (
+													<Accordion
+														expanded={
+															expandedBottom ===
+															'2018'
 														}
-														aria-controls="panel1a-content"
-														id="panel1a-header"
+														onChange={handleChangeBottom(
+															'2018'
+														)}
 													>
-														<Typography
-															className={
-																classes.heading
+														<AccordionSummary
+															expandIcon={
+																<ExpandMoreIcon />
 															}
+															aria-controls="panel1a-content"
+															id="panel1a-header"
 														>
-															2018
-														</Typography>
-													</AccordionSummary>
-													{station['2018'].map(
-														(student) => (
-															<Link
-																component="button"
-																onClick={() => {
-																	setStudent(
-																		student
-																	);
-																}}
-																color="inherit"
-																underline="none"
-																style={{
-																	display:
-																		'block',
-																}}
+															<Typography
+																className={
+																	classes.heading
+																}
 															>
-																<AccordionDetails>
-																	<Typography>
-																		{
-																			student.name
-																		}
-																	</Typography>
-																</AccordionDetails>
-															</Link>
-														)
-													)}
-												</Accordion>
-											)}
-											{station['2019'].length > 0 && (
-												<Accordion>
-													<AccordionSummary
-														expandIcon={
-															<ExpandMoreIcon />
+																2018
+															</Typography>
+														</AccordionSummary>
+														{station['2018'].map(
+															(student) => (
+																<Link
+																	component="button"
+																	onClick={() => {
+																		setStudent(
+																			student
+																		);
+																	}}
+																	color="inherit"
+																	underline="none"
+																	style={{
+																		display:
+																			'block',
+																	}}
+																>
+																	<AccordionDetails>
+																		<Typography>
+																			{
+																				student.name
+																			}
+																		</Typography>
+																	</AccordionDetails>
+																</Link>
+															)
+														)}
+													</Accordion>
+												)}
+												{station['2019'].length > 0 && (
+													<Accordion
+														expanded={
+															expandedBottom ===
+															'2019'
 														}
-														aria-controls="panel1a-content"
-														id="panel1a-header"
+														onChange={handleChangeBottom(
+															'2019'
+														)}
 													>
-														<Typography
-															className={
-																classes.heading
+														<AccordionSummary
+															expandIcon={
+																<ExpandMoreIcon />
 															}
+															aria-controls="panel1a-content"
+															id="panel1a-header"
 														>
-															2019
-														</Typography>
-													</AccordionSummary>
-													{station['2019'].map(
-														(student) => (
-															<Link
-																component="button"
-																onClick={() => {
-																	setStudent(
-																		student
-																	);
-																}}
-																color="inherit"
-																underline="none"
-																style={{
-																	display:
-																		'block',
-																}}
+															<Typography
+																className={
+																	classes.heading
+																}
 															>
-																<AccordionDetails>
-																	<Typography>
-																		{
-																			student.name
-																		}
-																	</Typography>
-																</AccordionDetails>
-															</Link>
-														)
-													)}
-												</Accordion>
-											)}
-											{station['2020'].length > 0 && (
-												<Accordion>
-													<AccordionSummary
-														expandIcon={
-															<ExpandMoreIcon />
+																2019
+															</Typography>
+														</AccordionSummary>
+														{station['2019'].map(
+															(student) => (
+																<Link
+																	component="button"
+																	onClick={() => {
+																		setStudent(
+																			student
+																		);
+																	}}
+																	color="inherit"
+																	underline="none"
+																	style={{
+																		display:
+																			'block',
+																	}}
+																>
+																	<AccordionDetails>
+																		<Typography>
+																			{
+																				student.name
+																			}
+																		</Typography>
+																	</AccordionDetails>
+																</Link>
+															)
+														)}
+													</Accordion>
+												)}
+												{station['2020'].length > 0 && (
+													<Accordion
+														expanded={
+															expandedBottom ===
+															'2020'
 														}
-														aria-controls="panel1a-content"
-														id="panel1a-header"
+														onChange={handleChangeBottom(
+															'2020'
+														)}
 													>
-														<Typography
-															className={
-																classes.heading
+														<AccordionSummary
+															expandIcon={
+																<ExpandMoreIcon />
 															}
+															aria-controls="panel1a-content"
+															id="panel1a-header"
 														>
-															2020
-														</Typography>
-													</AccordionSummary>
-													{station['2020'].map(
-														(student) => (
-															<Link
-																component="button"
-																onClick={() => {
-																	setStudent(
-																		student
-																	);
-																}}
-																color="inherit"
-																underline="none"
-																style={{
-																	display:
-																		'block',
-																}}
+															<Typography
+																className={
+																	classes.heading
+																}
 															>
-																<AccordionDetails>
-																	<Typography>
-																		{
-																			student.name
-																		}
-																	</Typography>
-																</AccordionDetails>
-															</Link>
-														)
-													)}
-												</Accordion>
-											)}
-										</AccordionDetails>
-									</Accordion>
-								);
-							})}
+																2020
+															</Typography>
+														</AccordionSummary>
+														{station['2020'].map(
+															(student) => (
+																<Link
+																	component="button"
+																	onClick={() => {
+																		setStudent(
+																			student
+																		);
+																	}}
+																	color="inherit"
+																	underline="none"
+																	style={{
+																		display:
+																			'block',
+																	}}
+																>
+																	<AccordionDetails>
+																		<Typography>
+																			{
+																				student.name
+																			}
+																		</Typography>
+																	</AccordionDetails>
+																</Link>
+															)
+														)}
+													</Accordion>
+												)}
+											</AccordionDetails>
+										</Accordion>
+									);
+								})}
 						</Scrollbars>
 					</Paper>
+					<Grid
+						container
+						style={{ paddingLeft: '50px', paddingRight: '50px' }}
+					>
+						<Grid item xs={6}>
+							<Grid
+								container
+								alignItems="center"
+								direction="row"
+								justify="center"
+							>
+								<Button
+									disabled={isPrevDisabled}
+									onClick={handlePrevious}
+									variant="outlined"
+									color="primary"
+								>
+									Previous
+								</Button>
+							</Grid>
+						</Grid>
+						<Grid item xs={6}>
+							<Grid
+								container
+								alignItems="center"
+								direction="row"
+								justify="center"
+							>
+								<Button
+									disabled={isNextDisabled}
+									onClick={handleNext}
+									variant="outlined"
+									color="primary"
+								>
+									Next
+								</Button>
+							</Grid>
+						</Grid>
+					</Grid>
 				</Grid>
 			</Grid>
 		</div>

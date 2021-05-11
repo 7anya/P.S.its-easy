@@ -18,6 +18,11 @@ export const light = {
 };
 
 export const dark = {
+	typography: {
+		fontFamily: ['"Product Sans"', 'Roboto', 'Arial', 'sans-serif'].join(
+			','
+		),
+	},
 	palette: {
 		type: 'dark',
 		primary: {
