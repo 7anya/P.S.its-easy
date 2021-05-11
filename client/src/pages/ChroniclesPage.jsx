@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import data from '../dataset/chronicles_combined_new.json';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Fade from '@material-ui/core/Fade';
+import SearchBar from 'material-ui-search-bar';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -60,20 +62,27 @@ const useStyles = makeStyles((theme) => ({
 function ChroniclesPage() {
 	const classes = useStyles();
 	const [stations, setStations] = useState([]);
+	const [full, setFull] = useState([]);
 	const [bio, setBio] = useState([]);
 	const [index, setIndex] = useState({ start: 0, end: 0 });
-
+	const [search, setSearch] = useState('');
 	const [isNextDisabled, setIsNextDisabled] = useState(true);
 	const [isPrevDisabled, setIsPrevDisabled] = useState(true);
 	const [student, setStudent] = useState({ name: '', id: '', writeUp: '' });
 	const [expandedTop, setExpandedTop] = React.useState(false);
 	const [expandedBottom, setExpandedBottom] = React.useState(false);
+	const [fade, setFade] = useState(true);
 
 	useEffect(() => {
-		if (student.name !== '') {
-			const lines = student.writeUp.split('\n');
-			setBio(lines);
-		}
+		setFade(false);
+
+		setTimeout(() => {
+			if (student.name !== '') {
+				const lines = student.writeUp.split('\n');
+				setBio(lines);
+			}
+			setFade(true);
+		}, 200);
 	}, [student]);
 
 	useEffect(() => {
@@ -95,8 +104,25 @@ function ChroniclesPage() {
 			setIsPrevDisabled(true);
 			setIsNextDisabled(true);
 		}
-		setStations(newArray);
+		setFull(newArray);
 	}, []);
+
+	useEffect(() => {
+		const newStations = full.filter((each) => {
+			return each.name.toLowerCase().includes(search);
+		});
+		setStations(newStations);
+
+		if (newStations.length > 15) {
+			setIndex({ start: 0, end: 15 });
+			setIsNextDisabled(false);
+			setIsPrevDisabled(true);
+		} else {
+			setIndex({ start: 0, end: newStations.length });
+			setIsPrevDisabled(true);
+			setIsNextDisabled(true);
+		}
+	}, [search, full]);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
@@ -118,7 +144,7 @@ function ChroniclesPage() {
 			setIndex({ start: index.start - 15, end: index.end - 15 });
 			setIsNextDisabled(false);
 		} else if (index.end - 15 >= 0) {
-			setIndex({ start: 0, end: index.end - 15 });
+			setIndex({ start: 0, end: 15 });
 			setIsPrevDisabled(true);
 			setIsNextDisabled(false);
 		}
@@ -133,6 +159,10 @@ function ChroniclesPage() {
 
 	const handleChangeBottom = (panel) => (event, isExpanded) => {
 		setExpandedBottom(isExpanded ? panel : false);
+	};
+
+	const handleSearch = (newValue = search) => {
+		setSearch(newValue);
 	};
 
 	return (
@@ -161,22 +191,28 @@ function ChroniclesPage() {
 									.includes('short summary of work done')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Short Summary Of Work Done :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Short Summary Of Work Done :
+											</Typography>
+
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -189,22 +225,27 @@ function ChroniclesPage() {
 									.includes('tool used')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Tools Used :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Tools Used :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -213,22 +254,27 @@ function ChroniclesPage() {
 									.includes('objectives of the project')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Objectives of The Project :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Objectives of The Project :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -237,22 +283,27 @@ function ChroniclesPage() {
 									.includes('outcomes of the project')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Outcomes Of The Project :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Outcomes Of The Project :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -261,22 +312,27 @@ function ChroniclesPage() {
 									.includes('major learning')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Major Learning Outcomes :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Major Learning Outcomes :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -287,23 +343,28 @@ function ChroniclesPage() {
 									)
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Brief Description of Working
-											Environment :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Brief Description of Working
+												Environment :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -316,22 +377,27 @@ function ChroniclesPage() {
 									.includes('details of papers / patents')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Details of Papers/Patents :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Details of Papers/Patents :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else if (
 								line
@@ -340,28 +406,35 @@ function ChroniclesPage() {
 									.includes('academic courses relevant')
 							) {
 								return (
-									<Typography
-										component="p"
-										type="body1"
-										style={{ marginTop: '20px' }}
-									>
+									<Fade in={fade}>
 										<Typography
 											component="p"
 											type="body1"
-											color="secondary"
+											style={{ marginTop: '20px' }}
 										>
-											Academic Courses Relevant :
+											<Typography
+												component="p"
+												type="body1"
+												color="secondary"
+											>
+												Academic Courses Relevant :
+											</Typography>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line.split(':')[1]}
+											</Typography>
 										</Typography>
-										<Typography component="p" type="body1">
-											{line.split(':')[1]}
-										</Typography>
-									</Typography>
+									</Fade>
 								);
 							} else {
 								return (
-									<Typography component="p" type="body1">
-										{line}
-									</Typography>
+									<Fade in={fade}>
+										<Typography component="p" type="body1">
+											{line}
+										</Typography>
+									</Fade>
 								);
 							}
 						})}
@@ -370,8 +443,15 @@ function ChroniclesPage() {
 				<Grid item xs={4}>
 					{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
 					<Paper elevation={3} className={classes.paper2}>
+						<SearchBar
+							value={search}
+							onChange={(newValue) => handleSearch(newValue)}
+							onRequestSearch={handleSearch}
+							onCancelSearch={() => handleSearch('')}
+							style={{ marginBottom: '20px' }}
+						/>
 						<Scrollbars
-							style={{ height: '65vh' }}
+							style={{ height: '60vh' }}
 							renderThumbVertical={({ style, ...props }) => (
 								<div
 									{...props}
