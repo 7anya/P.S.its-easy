@@ -72,28 +72,60 @@ function ChroniclesPage() {
 	useEffect(() => {
 		//console.log(data);
 		const newArray = [];
-		for (const property in data) {
-			newArray.push({
-				name: property,
-				...data[property],
-			});
-		}
-		// newArray.push({
-		// 	name: 'Amazon Development Center, Bangalore',
-		// 	...data['Amazon Development Center, Bangalore'],
-		// });
-		// newArray.push({
-		// 	name: 'Amazon Development Center, Chennai',
-		// 	...data['Amazon Development Center, Chennai'],
-		// });
-		// newArray.push({
-		// 	name: 'Amazon Development Center, Delhi',
-		// 	...data['Amazon Development Center, Delhi'],
-		// });
-		// newArray.push({
-		// 	name: 'Amazon Development Center,Hyderabad',
-		// 	...data['Amazon Development Center, Hyderabad'],
-		// });
+		// for (const property in data) {
+		// 	newArray.push({
+		// 		name: property,
+		// 		...data[property],
+		// 	});
+		// }
+		newArray.push({
+			name: 'Amazon Development Center, Bangalore',
+			...data['Amazon Development Center, Bangalore'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Chennai',
+			...data['Amazon Development Center, Chennai'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Delhi',
+			...data['Amazon Development Center, Delhi'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center,Hyderabad',
+			...data['Amazon Development Center, Hyderabad'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Bangalore',
+			...data['Amazon Development Center, Bangalore'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Chennai',
+			...data['Amazon Development Center, Chennai'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Delhi',
+			...data['Amazon Development Center, Delhi'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center,Hyderabad',
+			...data['Amazon Development Center, Hyderabad'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Bangalore',
+			...data['Amazon Development Center, Bangalore'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Chennai',
+			...data['Amazon Development Center, Chennai'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center, Delhi',
+			...data['Amazon Development Center, Delhi'],
+		});
+		newArray.push({
+			name: 'Amazon Development Center,Hyderabad',
+			...data['Amazon Development Center, Hyderabad'],
+		});
 		// console.log(newArray);
 		setStations(newArray);
 	}, []);
@@ -109,9 +141,9 @@ function ChroniclesPage() {
 								{...props}
 								style={{
 									...style,
-									backgroundColor: '#fff',
+									backgroundColor: '#ff6363',
 									width: '4px',
-									opacity: '0.5',
+									opacity: '0.7',
 								}}
 							/>
 						)}
@@ -332,9 +364,9 @@ function ChroniclesPage() {
 									{...props}
 									style={{
 										...style,
-										backgroundColor: '#fff',
+										backgroundColor: '#bb86fc',
 										width: '4px',
-										opacity: '0.5',
+										opacity: '0.7',
 									}}
 								/>
 							)}
