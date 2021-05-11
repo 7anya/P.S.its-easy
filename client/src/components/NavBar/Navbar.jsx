@@ -13,6 +13,7 @@ import LoginIcon from '@material-ui/icons/ExitToApp';
 import RegisterIcon from '@material-ui/icons/ListAlt';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Link from '@material-ui/core/Link';
+import { Button } from '@material-ui/core';
 // import logo from '../../resources/ps-file.png';
 // import { CustomThemeContext } from '../../context/CustomThemeProvider';
 
@@ -256,6 +257,17 @@ function Navbar(props) {
 								</Button>
 							</>
 						)} */}
+						<Button color="inherit">
+							<Link href="/ps2/responses" underline="none">
+								PS-2 Responses
+							</Link>
+						</Button>
+
+						<Button color="inherit">
+							<Link href="/ps2/chronicles" underline="none">
+								PS-2 Chronicles
+							</Link>
+						</Button>
 					</div>
 					<div className={classes.sectionMobile}>
 						<IconButton

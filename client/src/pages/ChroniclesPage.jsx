@@ -428,6 +428,20 @@ function ChroniclesPage() {
 										</Typography>
 									</Fade>
 								);
+							} else if (
+								line
+									.toLowerCase()
+									.replace(/\s+/g, ' ')
+									.includes('student write-up')
+							) {
+								return (
+									<Fade in={fade}>
+										<Typography
+											component="p"
+											type="body1"
+										></Typography>
+									</Fade>
+								);
 							} else {
 								return (
 									<Fade in={fade}>
