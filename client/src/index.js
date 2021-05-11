@@ -5,12 +5,35 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CustomThemeProvider from './context/CustomThemeProvider';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+	typography: {
+		fontFamily: ['"Product Sans"', 'Roboto', 'Arial', 'sans-serif'].join(
+			','
+		),
+	},
+	palette: {
+		type: 'dark',
+		primary: {
+			main: '#bb86fc',
+		},
+		secondary: {
+			main: '#ff6363',
+		},
+		background: {
+			default: '#121212',
+			paper: '#272727',
+		},
+	},
+});
 
 ReactDOM.render(
-	<CustomThemeProvider>
+	<ThemeProvider theme={theme}>
 		<CssBaseline />
 		<App />
-	</CustomThemeProvider>,
+	</ThemeProvider>,
 	document.getElementById('root')
 );
 

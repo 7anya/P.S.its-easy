@@ -49,7 +49,7 @@ const CustomThemeProvider = (props) => {
 	const [themeName, _setThemeName] = useState(currentTheme);
 
 	// Retrieve the theme object by theme name
-	const theme = createMuiTheme(themeName === 'light' ? light : dark);
+	const newTheme = createMuiTheme(themeName === 'light' ? light : dark);
 
 	// Wrap _setThemeName to store new theme names in localStorage
 	const setThemeName = (name) => {
@@ -64,7 +64,7 @@ const CustomThemeProvider = (props) => {
 
 	return (
 		<CustomThemeContext.Provider value={contextValue}>
-			<ThemeProvider theme={theme}>{children}</ThemeProvider>
+			<ThemeProvider theme={newTheme}>{children}</ThemeProvider>
 		</CustomThemeContext.Provider>
 	);
 };
