@@ -29,6 +29,30 @@ const theme = createMuiTheme({
 	},
 });
 
+// const theme = createMuiTheme({
+// 	typography: {
+// 		fontFamily: ['"Product Sans"', 'Roboto', 'Arial', 'sans-serif'].join(
+// 			','
+// 		),
+// 		allVariants: {
+// 			color: '#f9cec4',
+// 		},
+// 	},
+// 	palette: {
+// 		type: 'dark',
+// 		primary: {
+// 			main: '#f9cec4',
+// 		},
+// 		secondary: {
+// 			main: '#228990',
+// 		},
+// 		background: {
+// 			default: '#474b5f',
+// 			paper: '#232530',
+// 		},
+// 	},
+// });
+
 ReactDOM.render(
 	<ThemeProvider theme={theme}>
 		<CssBaseline />

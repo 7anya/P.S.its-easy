@@ -168,7 +168,7 @@ function ChroniclesPage() {
 	return (
 		<div className={classes.root}>
 			<Grid container direction="row" spacing={0}>
-				<Grid item xs={8} className={classes.chartContainer}>
+				<Grid item md={8} xs={12} className={classes.chartContainer}>
 					<Scrollbars
 						style={{ height: '75vh' }}
 						renderThumbVertical={({ style, ...props }) => (
@@ -454,7 +454,7 @@ function ChroniclesPage() {
 						})}
 					</Scrollbars>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item md={4} xs={12}>
 					{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
 					<Paper elevation={3} className={classes.paper2}>
 						<SearchBar

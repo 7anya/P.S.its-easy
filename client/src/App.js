@@ -19,6 +19,7 @@ const App = () => {
 					<Route path="/ps2/chronicles">
 						<ChroniclesPage />
 					</Route>
+
 					<Route path="/pref">
 						<Column />
 					</Route>
