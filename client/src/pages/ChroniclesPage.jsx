@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	chartContainer: {
 		marginTop: '10px',
+		margin: '50px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.secondary.main,
 		borderWidth: '2px',
@@ -69,6 +70,7 @@ function ChroniclesPage() {
 	const [expandedTop, setExpandedTop] = React.useState(false);
 	const [expandedBottom, setExpandedBottom] = React.useState(false);
 	const [fade, setFade] = useState(true);
+	const [details, setDetails] = useState({ name: '', id: '' });
 
 	useEffect(() => {
 		setFade(false);
@@ -77,6 +79,7 @@ function ChroniclesPage() {
 			if (student.name !== '') {
 				const lines = student.writeUp.split('\n');
 				setBio(lines);
+				setDetails({ name: student.name, id: student.id });
 			}
 			setFade(true);
 		}, 200);
@@ -165,291 +168,336 @@ function ChroniclesPage() {
 	return (
 		<div className={classes.root}>
 			<Grid container direction="row" spacing={0}>
-				<Grid item md={8} xs={12} className={classes.chartContainer}>
-					<Scrollbars
-						style={{ height: '75vh' }}
-						renderThumbVertical={({ style, ...props }) => (
-							<div
-								{...props}
-								style={{
-									...style,
-									backgroundColor: '#ff6363',
-									width: '4px',
-									opacity: '0.7',
-								}}
-							/>
-						)}
-					>
-						{bio.map((line) => {
-							if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('short summary of work done')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Short Summary Of Work Done :
-											</Typography>
+				<Grid item md={8} xs={12}>
+					<Paper className={classes.chartContainer}>
+						{/* <Typography
+							component="h1"
+							align="center"
+							variant="h4"
+							color="secondary"
+						>
+							PS-2 Chronicles
+						</Typography> */}
+						<Scrollbars
+							style={{ height: '70vh' }}
+							renderThumbVertical={({ style, ...props }) => (
+								<div
+									{...props}
+									style={{
+										...style,
+										backgroundColor: '#ff6363',
+										width: '4px',
+										opacity: '0.7',
+									}}
+								/>
+							)}
+						>
+							<Fade in={fade}>
+								<Typography component="p" type="body1">
+									<Typography
+										component="span"
+										type="body1"
+										color="secondary"
+									>
+										Name :
+									</Typography>
 
+									<Typography component="span" type="body1">
+										{' ' + details.name}
+									</Typography>
+								</Typography>
+							</Fade>
+							<Fade in={fade}>
+								<Typography component="p" type="body1">
+									<Typography
+										component="span"
+										type="body1"
+										color="secondary"
+									>
+										ID :
+									</Typography>
+
+									<Typography component="span" type="body1">
+										{' ' + details.id}
+									</Typography>
+								</Typography>
+							</Fade>
+							{bio.map((line) => {
+								if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('short summary of work done')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Short Summary Of Work Done :
+												</Typography>
+
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('tools used') ||
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('tool used')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Tools Used :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('objectives of the project')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Objectives of The Project :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('outcomes of the project')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Outcomes Of The Project :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('major learning')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Major Learning Outcomes :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes(
+											'brief description of working environment'
+										)
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Brief Description of Working
+													Environment :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes(
+											'details of papers/patents'
+										) ||
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('details of papers / patents')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Details of Papers/Patents :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('academic courses relevant')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+												style={{ marginTop: '20px' }}
+											>
+												<Typography
+													component="p"
+													type="body1"
+													color="secondary"
+												>
+													Academic Courses Relevant :
+												</Typography>
+												<Typography
+													component="p"
+													type="body1"
+												>
+													{line.split(':')[1]}
+												</Typography>
+											</Typography>
+										</Fade>
+									);
+								} else if (
+									line
+										.toLowerCase()
+										.replace(/\s+/g, ' ')
+										.includes('student write-up')
+								) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+											></Typography>
+										</Fade>
+									);
+								} else {
+									return (
+										<Fade in={fade}>
 											<Typography
 												component="p"
 												type="body1"
 											>
-												{line.split(':')[1]}
+												{line}
 											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('tools used') ||
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('tool used')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Tools Used :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('objectives of the project')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Objectives of The Project :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('outcomes of the project')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Outcomes Of The Project :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('major learning')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Major Learning Outcomes :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes(
-										'brief description of working environment'
-									)
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Brief Description of Working
-												Environment :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('details of papers/patents') ||
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('details of papers / patents')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Details of Papers/Patents :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('academic courses relevant')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-											style={{ marginTop: '20px' }}
-										>
-											<Typography
-												component="p"
-												type="body1"
-												color="secondary"
-											>
-												Academic Courses Relevant :
-											</Typography>
-											<Typography
-												component="p"
-												type="body1"
-											>
-												{line.split(':')[1]}
-											</Typography>
-										</Typography>
-									</Fade>
-								);
-							} else if (
-								line
-									.toLowerCase()
-									.replace(/\s+/g, ' ')
-									.includes('student write-up')
-							) {
-								return (
-									<Fade in={fade}>
-										<Typography
-											component="p"
-											type="body1"
-										></Typography>
-									</Fade>
-								);
-							} else {
-								return (
-									<Fade in={fade}>
-										<Typography component="p" type="body1">
-											{line}
-										</Typography>
-									</Fade>
-								);
-							}
-						})}
-					</Scrollbars>
+										</Fade>
+									);
+								}
+							})}
+						</Scrollbars>
+					</Paper>
 				</Grid>
 				<Grid item md={4} xs={12}>
 					{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
@@ -489,6 +537,7 @@ function ChroniclesPage() {
 											style={{
 												borderBottom:
 													'2px solid #bb86fc',
+												margin: '15px',
 											}}
 										>
 											<AccordionSummary
