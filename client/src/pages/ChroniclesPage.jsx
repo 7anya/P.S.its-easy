@@ -50,9 +50,6 @@ const useStyles = makeStyles((theme) => ({
 		borderStyle: 'solid',
 		padding: theme.spacing(4),
 	},
-	svg: {
-		backgroundColor: 'darkgreen',
-	},
 	heading: {
 		fontSize: theme.typography.pxToRem(15),
 		fontWeight: theme.typography.fontWeightRegular,
@@ -489,6 +486,10 @@ function ChroniclesPage() {
 											onChange={handleChangeTop(
 												station.name
 											)}
+											style={{
+												borderBottom:
+													'2px solid #bb86fc',
+											}}
 										>
 											<AccordionSummary
 												expandIcon={<ExpandMoreIcon />}
@@ -513,6 +514,12 @@ function ChroniclesPage() {
 														onChange={handleChangeBottom(
 															'2017'
 														)}
+														style={{
+															borderBottom:
+																'1px solid #bb86fc',
+															backgroundColor:
+																'#2d2d2d',
+														}}
 													>
 														<AccordionSummary
 															expandIcon={
@@ -543,7 +550,22 @@ function ChroniclesPage() {
 																	style={{
 																		display:
 																			'block',
+																		width: '100%',
+																		borderBottom:
+																			'1px solid #bb86fc',
 																	}}
+																	onMouseOver={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'#bb86fc')
+																	}
+																	onMouseOut={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'white')
+																	}
 																>
 																	<AccordionDetails>
 																		<Typography>
@@ -566,6 +588,12 @@ function ChroniclesPage() {
 														onChange={handleChangeBottom(
 															'2018'
 														)}
+														style={{
+															borderBottom:
+																'1px solid #bb86fc',
+															backgroundColor:
+																'#2d2d2d',
+														}}
 													>
 														<AccordionSummary
 															expandIcon={
@@ -596,7 +624,22 @@ function ChroniclesPage() {
 																	style={{
 																		display:
 																			'block',
+																		width: '100%',
+																		borderBottom:
+																			'1px solid #bb86fc',
 																	}}
+																	onMouseOver={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'#bb86fc')
+																	}
+																	onMouseOut={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'white')
+																	}
 																>
 																	<AccordionDetails>
 																		<Typography>
@@ -619,6 +662,12 @@ function ChroniclesPage() {
 														onChange={handleChangeBottom(
 															'2019'
 														)}
+														style={{
+															borderBottom:
+																'1px solid #bb86fc',
+															backgroundColor:
+																'#2d2d2d',
+														}}
 													>
 														<AccordionSummary
 															expandIcon={
@@ -649,7 +698,22 @@ function ChroniclesPage() {
 																	style={{
 																		display:
 																			'block',
+																		width: '100%',
+																		borderBottom:
+																			'1px solid #bb86fc',
 																	}}
+																	onMouseOver={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'#bb86fc')
+																	}
+																	onMouseOut={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'white')
+																	}
 																>
 																	<AccordionDetails>
 																		<Typography>
@@ -672,6 +736,12 @@ function ChroniclesPage() {
 														onChange={handleChangeBottom(
 															'2020'
 														)}
+														style={{
+															borderBottom:
+																'1px solid #bb86fc',
+															backgroundColor:
+																'#2d2d2d',
+														}}
 													>
 														<AccordionSummary
 															expandIcon={
@@ -702,7 +772,22 @@ function ChroniclesPage() {
 																	style={{
 																		display:
 																			'block',
+																		width: '100%',
+																		borderBottom:
+																			'1px solid #bb86fc',
 																	}}
+																	onMouseOver={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'#bb86fc')
+																	}
+																	onMouseOut={(
+																		e
+																	) =>
+																		(e.target.style.color =
+																			'white')
+																	}
 																>
 																	<AccordionDetails>
 																		<Typography>
