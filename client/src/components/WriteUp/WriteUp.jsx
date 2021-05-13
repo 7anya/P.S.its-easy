@@ -5,10 +5,6 @@ import Scroll from './Scroll';
 import TitlePara from './TitlePara';
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		flexGrow: 1,
-		height: '90vh',
-	},
 	chartContainer: {
 		marginTop: '10px',
 		margin: '50px',
@@ -17,10 +13,6 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 		padding: theme.spacing(4),
-	},
-	heading: {
-		fontSize: theme.typography.pxToRem(15),
-		fontWeight: theme.typography.fontWeightRegular,
 	},
 }));
 

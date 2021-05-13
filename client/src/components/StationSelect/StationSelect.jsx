@@ -1,0 +1,402 @@
+import {
+	Accordion,
+	AccordionDetails,
+	AccordionSummary,
+	Button,
+	Grid,
+	Link,
+	makeStyles,
+	Paper,
+} from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import SearchBar from 'material-ui-search-bar';
+import React from 'react';
+import Scrollbars from 'react-custom-scrollbars';
+
+const useStyles = makeStyles((theme) => ({
+	paper2: {
+		padding: theme.spacing(4),
+		textAlign: 'center',
+		color: theme.palette.text.primary,
+		margin: '50px',
+		marginTop: '10px',
+		marginBottom: '20px',
+		backgroundColor: 'rgba(39, 39, 39, 0.7)',
+		borderColor: theme.palette.primary.main,
+		borderWidth: '2px',
+		borderStyle: 'solid',
+	},
+}));
+
+const StationSelect = ({
+	stations,
+	index,
+	setIndex,
+	search,
+	setSearch,
+	setIsNextDisabled,
+	setIsPrevDisabled,
+	setStudent,
+	isPrevDisabled,
+	isNextDisabled,
+}) => {
+	const classes = useStyles();
+
+	const [expandedTop, setExpandedTop] = React.useState(false);
+	const [expandedBottom, setExpandedBottom] = React.useState(false);
+
+	const handleNext = () => {
+		// console.log(allStationInfo);
+
+		if (index.end + 15 < stations.length) {
+			setIndex({ start: index.start + 15, end: index.end + 15 });
+			setIsPrevDisabled(false);
+		} else if (index.start + 15 <= stations.length) {
+			setIndex({ start: index.start + 15, end: stations.length });
+			setIsPrevDisabled(false);
+			setIsNextDisabled(true);
+		}
+		setExpandedTop(false);
+		setExpandedBottom(false);
+	};
+
+	const handlePrevious = () => {
+		if (index.start - 15 > 0) {
+			setIndex({ start: index.start - 15, end: index.end - 15 });
+			setIsNextDisabled(false);
+		} else if (index.end - 15 >= 0) {
+			setIndex({ start: 0, end: 15 });
+			setIsPrevDisabled(true);
+			setIsNextDisabled(false);
+		}
+		setExpandedTop(false);
+		setExpandedBottom(false);
+	};
+
+	const handleChangeTop = (panel) => (event, isExpanded) => {
+		setExpandedTop(isExpanded ? panel : false);
+		setExpandedBottom(false);
+	};
+
+	const handleChangeBottom = (panel) => (event, isExpanded) => {
+		setExpandedBottom(isExpanded ? panel : false);
+	};
+
+	const handleSearch = (newValue = search) => {
+		setSearch(newValue);
+	};
+	return (
+		<>
+			<Paper elevation={3} className={classes.paper2}>
+				<SearchBar
+					value={search}
+					onChange={(newValue) => handleSearch(newValue)}
+					onRequestSearch={handleSearch}
+					onCancelSearch={() => handleSearch('')}
+					style={{ marginBottom: '20px' }}
+				/>
+				<Scrollbars
+					style={{ height: '60vh' }}
+					renderThumbVertical={({ style, ...props }) => (
+						<div
+							{...props}
+							style={{
+								...style,
+								backgroundColor: '#bb86fc',
+								width: '4px',
+								opacity: '0.7',
+							}}
+						/>
+					)}
+				>
+					{stations.slice(index.start, index.end).map((station) => {
+						return (
+							<Accordion
+								expanded={expandedTop === station.name}
+								onChange={handleChangeTop(station.name)}
+								style={{
+									borderBottom: '2px solid #bb86fc',
+									margin: '15px',
+								}}
+							>
+								<AccordionSummary
+									expandIcon={<ExpandMoreIcon />}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+								>
+									<Typography className={classes.heading}>
+										{station.name}
+									</Typography>
+								</AccordionSummary>
+								<AccordionDetails style={{ display: 'block' }}>
+									{station['2017'].length > 0 && (
+										<Accordion
+											expanded={expandedBottom === '2017'}
+											onChange={handleChangeBottom(
+												'2017'
+											)}
+											style={{
+												borderBottom:
+													'1px solid #bb86fc',
+												backgroundColor: '#2d2d2d',
+											}}
+										>
+											<AccordionSummary
+												expandIcon={<ExpandMoreIcon />}
+												aria-controls="panel1a-content"
+												id="panel1a-header"
+											>
+												<Typography
+													className={classes.heading}
+												>
+													2017
+												</Typography>
+											</AccordionSummary>
+											{station['2017'].map((student) => (
+												<Link
+													component="button"
+													onClick={() => {
+														setStudent(student);
+													}}
+													color="inherit"
+													underline="none"
+													style={{
+														display: 'block',
+														width: '100%',
+														borderBottom:
+															'1px solid #bb86fc',
+													}}
+													onMouseOver={(e) =>
+														(e.target.style.color =
+															'#bb86fc')
+													}
+													onMouseOut={(e) =>
+														(e.target.style.color =
+															'white')
+													}
+												>
+													<AccordionDetails>
+														<Typography>
+															{student.name}
+														</Typography>
+													</AccordionDetails>
+												</Link>
+											))}
+										</Accordion>
+									)}
+									{station['2018'].length > 0 && (
+										<Accordion
+											expanded={expandedBottom === '2018'}
+											onChange={handleChangeBottom(
+												'2018'
+											)}
+											style={{
+												borderBottom:
+													'1px solid #bb86fc',
+												backgroundColor: '#2d2d2d',
+											}}
+										>
+											<AccordionSummary
+												expandIcon={<ExpandMoreIcon />}
+												aria-controls="panel1a-content"
+												id="panel1a-header"
+											>
+												<Typography
+													className={classes.heading}
+												>
+													2018
+												</Typography>
+											</AccordionSummary>
+											{station['2018'].map((student) => (
+												<Link
+													component="button"
+													onClick={() => {
+														setStudent(student);
+													}}
+													color="inherit"
+													underline="none"
+													style={{
+														display: 'block',
+														width: '100%',
+														borderBottom:
+															'1px solid #bb86fc',
+													}}
+													onMouseOver={(e) =>
+														(e.target.style.color =
+															'#bb86fc')
+													}
+													onMouseOut={(e) =>
+														(e.target.style.color =
+															'white')
+													}
+												>
+													<AccordionDetails>
+														<Typography>
+															{student.name}
+														</Typography>
+													</AccordionDetails>
+												</Link>
+											))}
+										</Accordion>
+									)}
+									{station['2019'].length > 0 && (
+										<Accordion
+											expanded={expandedBottom === '2019'}
+											onChange={handleChangeBottom(
+												'2019'
+											)}
+											style={{
+												borderBottom:
+													'1px solid #bb86fc',
+												backgroundColor: '#2d2d2d',
+											}}
+										>
+											<AccordionSummary
+												expandIcon={<ExpandMoreIcon />}
+												aria-controls="panel1a-content"
+												id="panel1a-header"
+											>
+												<Typography
+													className={classes.heading}
+												>
+													2019
+												</Typography>
+											</AccordionSummary>
+											{station['2019'].map((student) => (
+												<Link
+													component="button"
+													onClick={() => {
+														setStudent(student);
+													}}
+													color="inherit"
+													underline="none"
+													style={{
+														display: 'block',
+														width: '100%',
+														borderBottom:
+															'1px solid #bb86fc',
+													}}
+													onMouseOver={(e) =>
+														(e.target.style.color =
+															'#bb86fc')
+													}
+													onMouseOut={(e) =>
+														(e.target.style.color =
+															'white')
+													}
+												>
+													<AccordionDetails>
+														<Typography>
+															{student.name}
+														</Typography>
+													</AccordionDetails>
+												</Link>
+											))}
+										</Accordion>
+									)}
+									{station['2020'].length > 0 && (
+										<Accordion
+											expanded={expandedBottom === '2020'}
+											onChange={handleChangeBottom(
+												'2020'
+											)}
+											style={{
+												borderBottom:
+													'1px solid #bb86fc',
+												backgroundColor: '#2d2d2d',
+											}}
+										>
+											<AccordionSummary
+												expandIcon={<ExpandMoreIcon />}
+												aria-controls="panel1a-content"
+												id="panel1a-header"
+											>
+												<Typography
+													className={classes.heading}
+												>
+													2020
+												</Typography>
+											</AccordionSummary>
+											{station['2020'].map((student) => (
+												<Link
+													component="button"
+													onClick={() => {
+														setStudent(student);
+													}}
+													color="inherit"
+													underline="none"
+													style={{
+														display: 'block',
+														width: '100%',
+														borderBottom:
+															'1px solid #bb86fc',
+													}}
+													onMouseOver={(e) =>
+														(e.target.style.color =
+															'#bb86fc')
+													}
+													onMouseOut={(e) =>
+														(e.target.style.color =
+															'white')
+													}
+												>
+													<AccordionDetails>
+														<Typography>
+															{student.name}
+														</Typography>
+													</AccordionDetails>
+												</Link>
+											))}
+										</Accordion>
+									)}
+								</AccordionDetails>
+							</Accordion>
+						);
+					})}
+				</Scrollbars>
+			</Paper>
+			<Grid
+				container
+				style={{ paddingLeft: '50px', paddingRight: '50px' }}
+			>
+				<Grid item xs={6}>
+					<Grid
+						container
+						alignItems="center"
+						direction="row"
+						justify="center"
+					>
+						<Button
+							disabled={isPrevDisabled}
+							onClick={handlePrevious}
+							variant="outlined"
+							color="primary"
+						>
+							Previous
+						</Button>
+					</Grid>
+				</Grid>
+				<Grid item xs={6}>
+					<Grid
+						container
+						alignItems="center"
+						direction="row"
+						justify="center"
+					>
+						<Button
+							disabled={isNextDisabled}
+							onClick={handleNext}
+							variant="outlined"
+							color="primary"
+						>
+							Next
+						</Button>
+					</Grid>
+				</Grid>
+			</Grid>
+		</>
+	);
+};
+
+export default StationSelect;
