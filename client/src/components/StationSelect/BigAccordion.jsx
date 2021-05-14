@@ -2,6 +2,7 @@ import {
 	Accordion,
 	AccordionDetails,
 	AccordionSummary,
+	Fade,
 	Link,
 	Typography,
 } from '@material-ui/core';
@@ -15,6 +16,7 @@ const BigAccordion = ({
 	expandedBottom,
 	station,
 	classes,
+	fade,
 	setStudent,
 }) => {
 	const handleChangeTop = (panel) => (event, isExpanded) => {
@@ -28,77 +30,81 @@ const BigAccordion = ({
 
 	const years = ['2017', '2018', '2019', '2020'];
 	return (
-		<Accordion
-			expanded={expandedTop === station.name}
-			onChange={handleChangeTop(station.name)}
-			style={{
-				borderBottom: '2px solid #bb86fc',
-				margin: '15px',
-			}}
-		>
-			<AccordionSummary
-				expandIcon={<ExpandMoreIcon />}
-				aria-controls="panel1a-content"
-				id="panel1a-header"
+		<Fade in={fade}>
+			<Accordion
+				expanded={expandedTop === station.name}
+				onChange={handleChangeTop(station.name)}
+				style={{
+					borderBottom: '2px solid #bb86fc',
+					margin: '15px',
+				}}
 			>
-				<Typography className={classes.heading}>
-					{station.name}
-				</Typography>
-			</AccordionSummary>
-			<AccordionDetails style={{ display: 'block' }}>
-				{years.map((year) => {
-					return (
-						station[year].length > 0 && (
-							<Accordion
-								expanded={expandedBottom === year}
-								onChange={handleChangeBottom(year)}
-								style={{
-									borderBottom: '1px solid #bb86fc',
-									backgroundColor: '#2d2d2d',
-								}}
-							>
-								<AccordionSummary
-									expandIcon={<ExpandMoreIcon />}
-									aria-controls="panel1a-content"
-									id="panel1a-header"
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls="panel1a-content"
+					id="panel1a-header"
+				>
+					<Typography className={classes.heading}>
+						{station.name}
+					</Typography>
+				</AccordionSummary>
+				<AccordionDetails style={{ display: 'block' }}>
+					{years.map((year) => {
+						return (
+							station[year].length > 0 && (
+								<Accordion
+									expanded={expandedBottom === year}
+									onChange={handleChangeBottom(year)}
+									style={{
+										borderBottom: '1px solid #bb86fc',
+										backgroundColor: '#2d2d2d',
+									}}
 								>
-									<Typography className={classes.heading}>
-										{year}
-									</Typography>
-								</AccordionSummary>
-								{station[year].map((student) => (
-									<Link
-										component="button"
-										onClick={() => {
-											setStudent(student);
-										}}
-										color="inherit"
-										underline="none"
-										style={{
-											display: 'block',
-											width: '100%',
-											borderBottom: '1px solid #bb86fc',
-										}}
-										onMouseOver={(e) =>
-											(e.target.style.color = '#bb86fc')
-										}
-										onMouseOut={(e) =>
-											(e.target.style.color = 'white')
-										}
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header"
 									>
-										<AccordionDetails>
-											<Typography>
-												{student.name}
-											</Typography>
-										</AccordionDetails>
-									</Link>
-								))}
-							</Accordion>
-						)
-					);
-				})}
-			</AccordionDetails>
-		</Accordion>
+										<Typography className={classes.heading}>
+											{year}
+										</Typography>
+									</AccordionSummary>
+									{station[year].map((student) => (
+										<Link
+											component="button"
+											onClick={() => {
+												setStudent(student);
+											}}
+											color="inherit"
+											underline="none"
+											style={{
+												display: 'block',
+												width: '100%',
+												borderBottom:
+													'1px solid #bb86fc',
+											}}
+											onMouseOver={(e) =>
+												(e.target.style.color =
+													'#bb86fc')
+											}
+											onMouseOut={(e) =>
+												(e.target.style.color = 'white')
+											}
+										>
+											<AccordionDetails>
+												<Typography>
+													{student.name}
+												</Typography>
+											</AccordionDetails>
+										</Link>
+									))}
+								</Accordion>
+							)
+						);
+					})}
+				</AccordionDetails>
+			</Accordion>
+		</Fade>
 	);
 };
 

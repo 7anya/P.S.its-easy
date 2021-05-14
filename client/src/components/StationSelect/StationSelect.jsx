@@ -35,39 +35,53 @@ const StationSelect = ({
 }) => {
 	const classes = useStyles();
 
+	const [fadeAccordion, setFadeAccordion] = React.useState(true);
 	const [expandedTop, setExpandedTop] = React.useState(false);
 	const [expandedBottom, setExpandedBottom] = React.useState(false);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
+		setFadeAccordion(false);
 
-		if (index.end + 15 < stations.length) {
-			setIndex({ start: index.start + 15, end: index.end + 15 });
-			setIsPrevDisabled(false);
-		} else if (index.start + 15 <= stations.length) {
-			setIndex({ start: index.start + 15, end: stations.length });
-			setIsPrevDisabled(false);
-			setIsNextDisabled(true);
-		}
-		setExpandedTop(false);
-		setExpandedBottom(false);
+		setTimeout(() => {
+			if (index.end + 15 < stations.length) {
+				setIndex({ start: index.start + 15, end: index.end + 15 });
+				setIsPrevDisabled(false);
+			} else if (index.start + 15 <= stations.length) {
+				setIndex({ start: index.start + 15, end: stations.length });
+				setIsPrevDisabled(false);
+				setIsNextDisabled(true);
+			}
+			setExpandedTop(false);
+			setExpandedBottom(false);
+			setFadeAccordion(true);
+		}, 200);
 	};
 
 	const handlePrevious = () => {
-		if (index.start - 15 > 0) {
-			setIndex({ start: index.start - 15, end: index.end - 15 });
-			setIsNextDisabled(false);
-		} else if (index.end - 15 >= 0) {
-			setIndex({ start: 0, end: 15 });
-			setIsPrevDisabled(true);
-			setIsNextDisabled(false);
-		}
-		setExpandedTop(false);
-		setExpandedBottom(false);
+		setFadeAccordion(false);
+
+		setTimeout(() => {
+			if (index.start - 15 > 0) {
+				setIndex({ start: index.start - 15, end: index.end - 15 });
+				setIsNextDisabled(false);
+			} else if (index.end - 15 >= 0) {
+				setIndex({ start: 0, end: 15 });
+				setIsPrevDisabled(true);
+				setIsNextDisabled(false);
+			}
+			setExpandedTop(false);
+			setExpandedBottom(false);
+			setFadeAccordion(true);
+		}, 200);
 	};
 
 	const handleSearch = (newValue = search) => {
-		setSearch(newValue);
+		setFadeAccordion(false);
+		setTimeout(() => {
+			setSearch(newValue);
+			setFadeAccordion(true);
+		}, 100);
 	};
 	return (
 		<>
@@ -96,6 +110,7 @@ const StationSelect = ({
 					{stations.slice(index.start, index.end).map((station) => {
 						return (
 							<BigAccordion
+								fade={fadeAccordion}
 								expandedTop={expandedTop}
 								setExpandedTop={setExpandedTop}
 								setExpandedBottom={setExpandedBottom}
