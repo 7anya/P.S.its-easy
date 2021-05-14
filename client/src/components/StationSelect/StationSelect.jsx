@@ -10,9 +10,10 @@ const useStyles = makeStyles((theme) => ({
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
-		margin: '50px',
-		marginTop: '10px',
+		marginTop: theme.spacing(2),
 		marginBottom: '20px',
+		marginLeft: theme.spacing(4),
+		marginRight: theme.spacing(4),
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
 		borderWidth: '2px',
@@ -79,7 +80,7 @@ const StationSelect = ({
 					style={{ marginBottom: '20px' }}
 				/>
 				<Scrollbars
-					style={{ height: '60vh' }}
+					style={{ height: '59vh' }}
 					renderThumbVertical={({ style, ...props }) => (
 						<div
 							{...props}

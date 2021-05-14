@@ -117,28 +117,60 @@ function ChroniclesPage() {
 		}
 	}, [search, full]);
 
+	useEffect(() => {
+		console.log(window.innerWidth);
+	}, []);
+
 	return (
 		<div className={classes.root}>
-			<Grid container direction="row" spacing={0}>
-				<Grid item md={8} xs={12}>
-					<WriteUp fade={fade} details={details} bio={bio} />
+			{window.innerWidth <= '800' ? (
+				<Grid
+					container
+					direction="row"
+					spacing={4}
+					style={{ padding: '20px' }}
+				>
+					<Grid item xs={12}>
+						{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
+						<StationSelect
+							stations={stations}
+							index={index}
+							setIndex={setIndex}
+							search={search}
+							setSearch={setSearch}
+							setIsNextDisabled={setIsNextDisabled}
+							setIsPrevDisabled={setIsPrevDisabled}
+							setStudent={setStudent}
+							isPrevDisabled={isPrevDisabled}
+							isNextDisabled={isNextDisabled}
+						/>
+					</Grid>
+					<Grid item xs={12}>
+						<WriteUp fade={fade} details={details} bio={bio} />
+					</Grid>
 				</Grid>
-				<Grid item md={4} xs={12}>
-					{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
-					<StationSelect
-						stations={stations}
-						index={index}
-						setIndex={setIndex}
-						search={search}
-						setSearch={setSearch}
-						setIsNextDisabled={setIsNextDisabled}
-						setIsPrevDisabled={setIsPrevDisabled}
-						setStudent={setStudent}
-						isPrevDisabled={isPrevDisabled}
-						isNextDisabled={isNextDisabled}
-					/>
+			) : (
+				<Grid container direction="row" spacing={0}>
+					<Grid item sm={8} xs={12}>
+						<WriteUp fade={fade} details={details} bio={bio} />
+					</Grid>
+					<Grid item sm={4} xs={12}>
+						{/* <Paper elevation={3} className={classes.paper1}></Paper> */}
+						<StationSelect
+							stations={stations}
+							index={index}
+							setIndex={setIndex}
+							search={search}
+							setSearch={setSearch}
+							setIsNextDisabled={setIsNextDisabled}
+							setIsPrevDisabled={setIsPrevDisabled}
+							setStudent={setStudent}
+							isPrevDisabled={isPrevDisabled}
+							isNextDisabled={isNextDisabled}
+						/>
+					</Grid>
 				</Grid>
-			</Grid>
+			)}
 		</div>
 	);
 }

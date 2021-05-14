@@ -6,8 +6,9 @@ import TitlePara from './TitlePara';
 
 const useStyles = makeStyles((theme) => ({
 	chartContainer: {
-		marginTop: '10px',
-		margin: '50px',
+		marginTop: theme.spacing(2),
+		marginLeft: theme.spacing(4),
+		marginRight: theme.spacing(4),
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.secondary.main,
 		borderWidth: '2px',

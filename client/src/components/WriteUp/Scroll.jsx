@@ -4,7 +4,7 @@ import Scrollbars from 'react-custom-scrollbars';
 const Scroll = ({ children }) => {
 	return (
 		<Scrollbars
-			style={{ height: '70vh' }}
+			style={{ height: '69vh' }}
 			renderThumbVertical={({ style, ...props }) => (
 				<div
 					{...props}
