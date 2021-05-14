@@ -1,14 +1,6 @@
-import { Button, Grid, Link, makeStyles, Paper } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import data from '../dataset/chronicles_combined_new.json';
-import { Scrollbars } from 'react-custom-scrollbars';
-import Fade from '@material-ui/core/Fade';
-import SearchBar from 'material-ui-search-bar';
 import WriteUp from '../components/WriteUp/WriteUp';
 import StationSelect from '../components/StationSelect/StationSelect';
 

@@ -1,19 +1,9 @@
-import {
-	Accordion,
-	AccordionDetails,
-	AccordionSummary,
-	Button,
-	Grid,
-	Link,
-	makeStyles,
-	Paper,
-} from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { makeStyles, Paper } from '@material-ui/core';
 import SearchBar from 'material-ui-search-bar';
 import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
 import BigAccordion from './BigAccordion';
+import ButtonSelect from './ButtonSelect';
 
 const useStyles = makeStyles((theme) => ({
 	paper2: {
@@ -117,45 +107,12 @@ const StationSelect = ({
 					})}
 				</Scrollbars>
 			</Paper>
-			<Grid
-				container
-				style={{ paddingLeft: '50px', paddingRight: '50px' }}
-			>
-				<Grid item xs={6}>
-					<Grid
-						container
-						alignItems="center"
-						direction="row"
-						justify="center"
-					>
-						<Button
-							disabled={isPrevDisabled}
-							onClick={handlePrevious}
-							variant="outlined"
-							color="primary"
-						>
-							Previous
-						</Button>
-					</Grid>
-				</Grid>
-				<Grid item xs={6}>
-					<Grid
-						container
-						alignItems="center"
-						direction="row"
-						justify="center"
-					>
-						<Button
-							disabled={isNextDisabled}
-							onClick={handleNext}
-							variant="outlined"
-							color="primary"
-						>
-							Next
-						</Button>
-					</Grid>
-				</Grid>
-			</Grid>
+			<ButtonSelect
+				isPrevDisabled={isPrevDisabled}
+				handlePrevious={handlePrevious}
+				isNextDisabled={isNextDisabled}
+				handleNext={handleNext}
+			/>
 		</>
 	);
 };
