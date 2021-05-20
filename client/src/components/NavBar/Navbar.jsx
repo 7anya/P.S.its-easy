@@ -108,7 +108,7 @@ function Navbar(props) {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem>
+			{/* <MenuItem>
 				<IconButton
 					aria-label="show 11 new notifications"
 					color="inherit"
@@ -118,8 +118,8 @@ function Navbar(props) {
 					</Badge>
 				</IconButton>
 				<p>Notifications</p>
-			</MenuItem>
-			<MenuItem>
+			</MenuItem> */}
+			{/* <MenuItem>
 				<IconButton
 					aria-label="account of current user"
 					aria-controls="primary-search-account-menu"
@@ -129,28 +129,20 @@ function Navbar(props) {
 					<LoginIcon />
 				</IconButton>
 				<p>Login</p>
+			</MenuItem> */}
+			<MenuItem>
+				<Button color="inherit">
+					<Link href="/ps2/responses" underline="none">
+						PS-2 Responses
+					</Link>
+				</Button>
 			</MenuItem>
 			<MenuItem>
-				<IconButton
-					aria-label="account of current user"
-					aria-controls="primary-search-account-menu"
-					aria-haspopup="true"
-					color="inherit"
-				>
-					<RegisterIcon />
-				</IconButton>
-				<p>Register</p>
-			</MenuItem>
-			<MenuItem>
-				<IconButton
-					aria-label="account of current user"
-					aria-controls="primary-search-account-menu"
-					aria-haspopup="true"
-					color="inherit"
-				>
-					<AccountCircle />
-				</IconButton>
-				<p>Profile</p>
+				<Button color="inherit">
+					<Link href="/ps2/chronicles" underline="none">
+						PS-2 Chronicles
+					</Link>
+				</Button>
 			</MenuItem>
 		</Menu>
 	);
