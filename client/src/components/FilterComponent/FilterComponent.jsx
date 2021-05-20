@@ -14,11 +14,18 @@ import {
 const useStyles = makeStyles((theme) => ({
 	formControl: {
 		margin: theme.spacing(5),
+		marginLeft: '0px',
+		marginRight: '0px',
 		minWidth: 220,
 	},
 }));
 
-function FilterComponent({ setMainSearch, setMainChoice, setMainSlider, mainSearch }) {
+function FilterComponent({
+	setMainSearch,
+	setMainChoice,
+	setMainSlider,
+	mainSearch,
+}) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([5, 10]);
@@ -26,7 +33,7 @@ function FilterComponent({ setMainSearch, setMainChoice, setMainSlider, mainSear
 
 	useEffect(() => {
 		setSearch(mainSearch);
-	}, [mainSearch])
+	}, [mainSearch]);
 
 	const handleSearch = (newValue = search) => {
 		setSearch(newValue);

@@ -9,6 +9,12 @@ import { useLocation } from 'react-router';
 import fuzz from 'fuzzball';
 import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesButtonGroup';
 import ResponseDisplayPaper from '../components/ResponseDisplayPaper/ResponseDisplayPaper';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Button, Link, Typography } from '@material-ui/core';
+import Scrollbars from 'react-custom-scrollbars';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -82,39 +88,6 @@ const ResponsesPage = () => {
 		}
 	}, []);
 
-	const changeDisplay = (key, newInfo, points, x) => {
-		let y = [];
-		if ((choice === 'Overall' || choice === '2020') && data[key]['2020'])
-			y.push(...data[key]['2020']['CG']);
-		if ((choice === 'Overall' || choice === '2019') && data[key]['2019'])
-			y.push(...data[key]['2019']['CG']);
-		if ((choice === 'Overall' || choice === '2018') && data[key]['2018'])
-			y.push(...data[key]['2018']['CG']);
-		if ((choice === 'Overall' || choice === '2017') && data[key]['2017'])
-			y.push(...data[key]['2017']['CG']);
-
-		if (y.length > 0) {
-			let min = 0,
-				max = 0,
-				avg = 0;
-			min = Math.min(...y);
-			min = Math.round(min * 100) / 100;
-			max = Math.max(...y);
-			max = Math.round(max * 100) / 100;
-			avg = y.reduce((a, b) => a + b, 0) / y.length;
-			avg = Math.round(avg * 100) / 100;
-			newInfo = {
-				...newInfo,
-				[key]: { min, max, avg },
-			};
-			//console.log(slider[0], slider[1]);
-			if (max >= slider[0] && min <= slider[1]) {
-				points.push({ x: key, y: y });
-				x.push(key);
-			}
-		}
-	};
-
 	useEffect(() => {
 		let points = [];
 		let x = [];
@@ -123,7 +96,48 @@ const ResponsesPage = () => {
 			for (const key in data) {
 				if (key.toLowerCase().includes(search.toLowerCase())) {
 					//console.log(key);
-					changeDisplay(key, newInfo, points, x);
+					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2020') &&
+						data[key]['2020']
+					)
+						y.push(...data[key]['2020']['CG']);
+					if (
+						(choice === 'Overall' || choice === '2019') &&
+						data[key]['2019']
+					)
+						y.push(...data[key]['2019']['CG']);
+					if (
+						(choice === 'Overall' || choice === '2018') &&
+						data[key]['2018']
+					)
+						y.push(...data[key]['2018']['CG']);
+					if (
+						(choice === 'Overall' || choice === '2017') &&
+						data[key]['2017']
+					)
+						y.push(...data[key]['2017']['CG']);
+
+					if (y.length > 0) {
+						let min = 0,
+							max = 0,
+							avg = 0;
+						min = Math.min(...y);
+						min = Math.round(min * 100) / 100;
+						max = Math.max(...y);
+						max = Math.round(max * 100) / 100;
+						avg = y.reduce((a, b) => a + b, 0) / y.length;
+						avg = Math.round(avg * 100) / 100;
+						newInfo = {
+							...newInfo,
+							[key]: { min, max, avg },
+						};
+						//console.log(slider[0], slider[1]);
+						if (max >= slider[0] && min <= slider[1]) {
+							points.push({ x: key, y: y });
+							x.push(key);
+						}
+					}
 				}
 			}
 		} else {
@@ -135,7 +149,48 @@ const ResponsesPage = () => {
 					) > 90
 				) {
 					//console.log(key);
-					changeDisplay(key, newInfo, points, x);
+					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2020') &&
+						data[key]['2020']
+					)
+						y.push(...data[key]['2020']['CG']);
+					if (
+						(choice === 'Overall' || choice === '2019') &&
+						data[key]['2019']
+					)
+						y.push(...data[key]['2019']['CG']);
+					if (
+						(choice === 'Overall' || choice === '2018') &&
+						data[key]['2018']
+					)
+						y.push(...data[key]['2018']['CG']);
+					if (
+						(choice === 'Overall' || choice === '2017') &&
+						data[key]['2017']
+					)
+						y.push(...data[key]['2017']['CG']);
+
+					if (y.length > 0) {
+						let min = 0,
+							max = 0,
+							avg = 0;
+						min = Math.min(...y);
+						min = Math.round(min * 100) / 100;
+						max = Math.max(...y);
+						max = Math.round(max * 100) / 100;
+						avg = y.reduce((a, b) => a + b, 0) / y.length;
+						avg = Math.round(avg * 100) / 100;
+						newInfo = {
+							...newInfo,
+							[key]: { min, max, avg },
+						};
+						//console.log(slider[0], slider[1]);
+						if (max >= slider[0] && min <= slider[1]) {
+							points.push({ x: key, y: y });
+							x.push(key);
+						}
+					}
 				}
 			}
 		}
@@ -190,43 +245,170 @@ const ResponsesPage = () => {
 
 	return (
 		<div className={classes.root}>
-			<Grid container direction="row" spacing={0}>
-				<Grid
-					item
-					xs={8}
-					ref={measureRef}
-					className={classes.chartContainer}
-				>
-					<ChartComponent
-						xvalues={xvalues}
-						index={index}
-						dataPoints={dataPoints}
-						width={width}
-						setStationDetails={setStationDetails}
-						allStationInfo={allStationInfo}
-						getKeyValue={getKeyValue}
-					/>
-					<ResponsesButtonGroup
-						isPrevDisabled={isPrevDisabled}
-						handlePrevious={handlePrevious}
-						index={index}
-						dataPoints={dataPoints}
-						isNextDisabled={isNextDisabled}
-						handleNext={handleNext}
-					/>
-				</Grid>
-				<Grid item xs={4}>
-					<ResponseDisplayPaper stationDetails={stationDetails} />
-					<Paper elevation={10} className={classes.paper2}>
-						<SearchComponent
-							mainSearch={search}
-							setMainChoice={setMainChoice}
-							setMainSearch={setMainSearch}
-							setMainSlider={setMainSlider}
+			{window.innerWidth <= '800' ? (
+				<Grid container direction="row" spacing={0}>
+					<Grid
+						item
+						xs={12}
+						ref={measureRef}
+						className={classes.chartContainer}
+						style={{
+							marginLeft: '30px',
+							marginRight: '30px',
+							marginTop: '20px',
+						}}
+					>
+						<Scrollbars
+							style={{
+								height: '71vh',
+							}}
+							renderThumbVertical={({ style, ...props }) => (
+								<div
+									{...props}
+									style={{
+										...style,
+										backgroundColor: '#ff6363',
+										width: '4px',
+										opacity: '0.7',
+									}}
+								/>
+							)}
+						>
+							{xvalues
+								.slice(index.start, index.end)
+								.map((val) => (
+									<Accordion>
+										<AccordionSummary
+											expandIcon={<ExpandMoreIcon />}
+											aria-controls="panel1bh-content"
+											id="panel1bh-header"
+										>
+											{val}
+										</AccordionSummary>
+										<AccordionDetails
+											style={{ display: 'block' }}
+										>
+											<Typography
+												variant="body1"
+												component="p"
+											>
+												<Typography
+													component="span"
+													variant="body1"
+													style={{ color: '#ffd39c' }}
+												>
+													Min:{' '}
+												</Typography>
+												{allStationInfo[val].min}
+											</Typography>
+											<Typography
+												variant="body1"
+												component="p"
+											>
+												<Typography
+													component="span"
+													variant="body1"
+													style={{ color: '#ffd39c' }}
+												>
+													Max:{' '}
+												</Typography>
+												{allStationInfo[val].max}
+											</Typography>
+											<Typography
+												variant="body1"
+												component="p"
+											>
+												<Typography
+													component="span"
+													variant="body1"
+													style={{ color: '#ffd39c' }}
+												>
+													Mean:{' '}
+												</Typography>
+												{allStationInfo[val].avg}
+											</Typography>
+											<Link
+												underline="none"
+												href={
+													'/ps2/chronicles?search=' +
+													val
+												}
+											>
+												<Button
+													variant="outlined"
+													color="secondary"
+													style={{
+														marginTop: '10px',
+													}}
+												>
+													Checkout It's Chronicles
+												</Button>
+											</Link>
+										</AccordionDetails>
+									</Accordion>
+								))}
+						</Scrollbars>
+					</Grid>
+					<Grid item xs={12}>
+						<ResponsesButtonGroup
+							isPrevDisabled={isPrevDisabled}
+							handlePrevious={handlePrevious}
+							index={index}
+							dataPoints={dataPoints}
+							isNextDisabled={isNextDisabled}
+							handleNext={handleNext}
 						/>
-					</Paper>
+					</Grid>
+					<Grid item xs={12}>
+						<Paper elevation={10} className={classes.paper2}>
+							<SearchComponent
+								mainSearch={search}
+								setMainChoice={setMainChoice}
+								setMainSearch={setMainSearch}
+								setMainSlider={setMainSlider}
+							/>
+						</Paper>
+					</Grid>
 				</Grid>
-			</Grid>
+			) : (
+				<Grid container direction="row" spacing={0}>
+					<Grid
+						item
+						xs={8}
+						ref={measureRef}
+						className={classes.chartContainer}
+					>
+						<ChartComponent
+							xvalues={xvalues}
+							index={index}
+							dataPoints={dataPoints}
+							width={width}
+							setStationDetails={setStationDetails}
+							allStationInfo={allStationInfo}
+							getKeyValue={getKeyValue}
+						/>
+						<ResponsesButtonGroup
+							isPrevDisabled={isPrevDisabled}
+							handlePrevious={handlePrevious}
+							index={index}
+							dataPoints={dataPoints}
+							isNextDisabled={isNextDisabled}
+							handleNext={handleNext}
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<ResponseDisplayPaper stationDetails={stationDetails} />
+						<Paper elevation={10} className={classes.paper2}>
+							<SearchComponent
+								mainSearch={search}
+								setMainChoice={setMainChoice}
+								setMainSearch={setMainSearch}
+								setMainSlider={setMainSlider}
+							/>
+						</Paper>
+					</Grid>
+				</Grid>
+			)}
 		</div>
 	);
 };

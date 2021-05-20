@@ -10,8 +10,19 @@ const ResponsesButtonGroup = ({
 	isNextDisabled,
 	handleNext,
 }) => {
+	let marginTop,
+		marginBottom = '0px';
+	if (window.innerWidth < 800) {
+		marginTop = '30px';
+		marginBottom = '30px';
+	} else {
+		marginTop = '50px';
+	}
 	return (
-		<Grid container style={{ marginTop: '50px' }}>
+		<Grid
+			container
+			style={{ marginTop: marginTop, marginBottom: marginBottom }}
+		>
 			<Grid item xs={4}>
 				<Grid
 					container
