@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/Navbar';
 import Column from './components/PrefferenceComponent/Column';
 import ChroniclesPage from './pages/ChroniclesPage';
 import { Scrollbars } from 'react-custom-scrollbars';
+import HomePage from './pages/HomePage';
 
 const App = () => {
 	return (
@@ -13,6 +14,9 @@ const App = () => {
 			<Router>
 				<NavBar />
 				<Switch>
+					<Route path="/">
+						<HomePage />
+					</Route>
 					<Route path="/ps2/responses">
 						<ResponsesPage />
 					</Route>
