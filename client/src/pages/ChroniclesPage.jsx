@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import data from '../dataset/chronicles_combined_new.json';
 import WriteUp from '../components/WriteUp/WriteUp';
 import StationSelect from '../components/StationSelect/StationSelect';
+import fuzz from "fuzzball";
+import { useLocation } from 'react-router';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -51,8 +53,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 function ChroniclesPage() {
 	const classes = useStyles();
+	const query = useQuery();
+
 	const [stations, setStations] = useState([]);
 	const [full, setFull] = useState([]);
 	const [bio, setBio] = useState([]);
@@ -64,6 +72,14 @@ function ChroniclesPage() {
 
 	const [fade, setFade] = useState(true);
 	const [details, setDetails] = useState({ name: '', id: '' });
+
+	useEffect(() => {
+		const searchParam = query.get("search");
+		if (searchParam) {
+			setSearch(searchParam);
+			query.delete("search");
+		}
+	}, []);
 
 	useEffect(() => {
 		setFade(false);
@@ -101,11 +117,21 @@ function ChroniclesPage() {
 	}, []);
 
 	useEffect(() => {
-		const newStations = full.filter((each) => {
+		let newStations;
+		if (search !== '') {
+			newStations = full.filter((each) => {
+			return fuzz.partial_ratio(each.name.toLowerCase(), search.toLowerCase()) > 90;
+			//return each.name.toLowerCase().includes(search);
+		});
+		
+		} else {
+			newStations = full.filter((each) => {
+			//return fuzz.partial_ratio(each.name.toLowerCase(), search.toLowerCase()) > 95;
 			return each.name.toLowerCase().includes(search);
 		});
-		setStations(newStations);
-
+		}
+		
+setStations(newStations);
 		if (newStations.length > 15) {
 			setIndex({ start: 0, end: 15 });
 			setIsNextDisabled(false);

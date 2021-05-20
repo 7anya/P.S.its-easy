@@ -3,12 +3,13 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import { ButtonBase, Typography } from '@material-ui/core';
+import { ButtonBase, Link, Typography } from '@material-ui/core';
 import FadeIn from 'react-fade-in';
 import SearchComponent from '../components/FilterComponent/FilterComponent';
 import useDimensions from 'react-use-dimensions';
 import { ChartComponent } from '../components/ChartComponents/ChartComponent';
 import { useLocation } from 'react-router';
+import fuzz from "fuzzball";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -57,9 +58,13 @@ const useStyles = makeStyles((theme) => ({
 
 let data = require('../dataset/data.json');
 
-const ResponsesPage = (props) => {
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+const ResponsesPage = () => {
 	const classes = useStyles();
-	const query = new URLSearchParams(useLocation().search);
+	const query = useQuery();
 
 	const [dataPoints, setDataPoints] = useState([]);
 	const [xvalues, setXvalues] = useState([]);
@@ -77,15 +82,17 @@ const ResponsesPage = (props) => {
 		const searchParam = query.get("search");
 		if (searchParam) {
 			setMainSearch(searchParam);
+			query.delete("search");
 		}
-	}, [query]);
+	}, []);
 
 	useEffect(() => {
 
 		let points = [];
 		let x = [];
 		let newInfo = {};
-		for (const key in data) {
+		if (search === "") {
+			for (const key in data) {
 			if (key.toLowerCase().includes(search.toLowerCase())) {
 				//console.log(key);
 				let y = [];
@@ -132,6 +139,56 @@ const ResponsesPage = (props) => {
 				}
 			}
 		}
+		} else {
+			for (const key in data) {
+			if (fuzz.partial_ratio(key.toLowerCase(),search.toLowerCase())>90) {
+				//console.log(key);
+				let y = [];
+				if (
+					(choice === 'Overall' || choice === '2020') &&
+					data[key]['2020']
+				)
+					y.push(...data[key]['2020']['CG']);
+				if (
+					(choice === 'Overall' || choice === '2019') &&
+					data[key]['2019']
+				)
+					y.push(...data[key]['2019']['CG']);
+				if (
+					(choice === 'Overall' || choice === '2018') &&
+					data[key]['2018']
+				)
+					y.push(...data[key]['2018']['CG']);
+				if (
+					(choice === 'Overall' || choice === '2017') &&
+					data[key]['2017']
+				)
+					y.push(...data[key]['2017']['CG']);
+
+				if (y.length > 0) {
+					let min = 0,
+						max = 0,
+						avg = 0;
+					min = Math.min(...y);
+					min = Math.round(min * 100) / 100;
+					max = Math.max(...y);
+					max = Math.round(max * 100) / 100;
+					avg = y.reduce((a, b) => a + b, 0) / y.length;
+					avg = Math.round(avg * 100) / 100;
+					newInfo = {
+						...newInfo,
+						[key]: { min, max, avg },
+					};
+					//console.log(slider[0], slider[1]);
+					if (max >= slider[0] && min <= slider[1]) {
+						points.push({ x: key, y: y });
+						x.push(key);
+					}
+				}
+			}
+		}
+		}
+		
 		if (points.length > 15) {
 			let i = points.length;
 			while (i % 15 !== 0) {
@@ -311,10 +368,12 @@ const ResponsesPage = (props) => {
 											</Typography>
 											{stationDetails.median}
 										</Typography>
+										<Link underline="none" href={"/ps2/chronicles?search="+stationDetails.name}>
 										<Button variant="outlined"
 									color="primary" style={{marginTop:'10px'}}>
 											Checkout It's Chronicles
-										</Button>
+										</Button></Link>
+										
 									</FadeIn>
 								</div>
 							) : (

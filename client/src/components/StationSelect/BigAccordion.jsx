@@ -50,7 +50,7 @@ const BigAccordion = ({
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails style={{ display: 'block' }}>
-					<Button variant="outlined" color="primary" style={{marginBottom:"10px"}} >Checkout It's Responses</Button>
+					<Link underline="none" href={"/ps2/responses?search="+station.name} ><Button variant="outlined" color="primary" style={{marginBottom:"10px"}} >Checkout It's Responses</Button></Link>
 					{years.map((year) => {
 						return (
 							station[year].length > 0 && (
