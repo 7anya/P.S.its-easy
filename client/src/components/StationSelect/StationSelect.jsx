@@ -128,6 +128,8 @@ const StationSelect = ({
 				handlePrevious={handlePrevious}
 				isNextDisabled={isNextDisabled}
 				handleNext={handleNext}
+				stations={stations}
+				index={index}
 			/>
 		</>
 	);

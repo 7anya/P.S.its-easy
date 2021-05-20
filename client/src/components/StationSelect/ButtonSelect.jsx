@@ -1,4 +1,4 @@
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 
 const ButtonSelect = ({
@@ -6,10 +6,12 @@ const ButtonSelect = ({
 	handlePrevious,
 	isNextDisabled,
 	handleNext,
+	stations,
+	index
 }) => {
 	return (
 		<Grid container style={{ paddingLeft: '50px', paddingRight: '50px' }}>
-			<Grid item xs={6}>
+			<Grid item xs={4}>
 				<Grid
 					container
 					alignItems="center"
@@ -26,7 +28,17 @@ const ButtonSelect = ({
 					</Button>
 				</Grid>
 			</Grid>
-			<Grid item xs={6}>
+			<Grid item xs={4}>
+				<Grid
+					container
+					alignItems="center"
+					direction="row"
+					justify="center"
+				>
+					<Typography align="center" color="primary" style={{ marginTop: "5px" }}>{index.start + 1} - {index.end} of {stations.length}</Typography>
+				</Grid>
+			</Grid>
+			<Grid item xs={4}>
 				<Grid
 					container
 					alignItems="center"
