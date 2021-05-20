@@ -5,15 +5,22 @@ import Scrollbars from 'react-custom-scrollbars';
 import BigAccordion from './BigAccordion';
 import ButtonSelect from './ButtonSelect';
 
+let pad = 4,
+	mar = 4;
+if (window.innerWidth <= 800) {
+	pad = 2;
+	mar = 2;
+}
+
 const useStyles = makeStyles((theme) => ({
 	paper2: {
-		padding: theme.spacing(4),
+		padding: theme.spacing(pad),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
 		marginTop: theme.spacing(2),
 		marginBottom: '20px',
-		marginLeft: theme.spacing(4),
-		marginRight: theme.spacing(4),
+		marginLeft: theme.spacing(mar),
+		marginRight: theme.spacing(mar),
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
 		borderWidth: '2px',

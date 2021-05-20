@@ -4,16 +4,23 @@ import DetailPara from './DetailPara';
 import Scroll from './Scroll';
 import TitlePara from './TitlePara';
 
+let pad = 4,
+	mar = 4;
+if (window.innerWidth <= 800) {
+	pad = 2;
+	mar = 2;
+}
+
 const useStyles = makeStyles((theme) => ({
 	chartContainer: {
 		marginTop: theme.spacing(2),
-		marginLeft: theme.spacing(4),
-		marginRight: theme.spacing(4),
+		marginLeft: theme.spacing(mar),
+		marginRight: theme.spacing(mar),
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.secondary.main,
 		borderWidth: '2px',
 		borderStyle: 'solid',
-		padding: theme.spacing(4),
+		padding: theme.spacing(pad),
 	},
 }));
 
