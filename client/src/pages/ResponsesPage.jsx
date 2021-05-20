@@ -190,7 +190,7 @@ const ResponsesPage = () => {
 						getKeyValue={getKeyValue}
 					/>
 					<Grid container style={{ marginTop: '50px' }}>
-						<Grid item xs={6}>
+						<Grid item xs={4}>
 							<Grid
 								container
 								alignItems="center"
@@ -207,7 +207,25 @@ const ResponsesPage = () => {
 								</Button>
 							</Grid>
 						</Grid>
-						<Grid item xs={6}>
+						<Grid item xs={4}>
+							<Grid
+								container
+								alignItems="center"
+								direction="row"
+								justify="center"
+							>
+								<Typography component='p'>
+									<Typography component='span' color='secondary'>Showing </Typography>
+									<Typography component='span' style={{ color: '#ffd39c' }}>{index.start+1} </Typography>
+									<Typography component='span' color='secondary'>to </Typography>
+									<Typography component='span' style={{ color: '#ffd39c' }}>{index.end} </Typography>
+									<Typography component='span' color='secondary'>of </Typography>
+									<Typography component='span' style={{ color: '#ffd39c' }}>{dataPoints.length} </Typography>
+									<Typography component='span' color='secondary'>Results </Typography>
+								</Typography>
+							</Grid>
+						</Grid>
+						<Grid item xs={4}>
 							<Grid
 								container
 								alignItems="center"

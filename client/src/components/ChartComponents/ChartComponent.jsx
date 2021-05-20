@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	VictoryAxis,
 	VictoryBoxPlot,
@@ -16,6 +16,7 @@ export const ChartComponent = ({
 	allStationInfo,
 	getKeyValue,
 }) => {
+
 	return (
 		<>
 			<VictoryChart
