@@ -81,7 +81,7 @@ const StationSelect = ({
 		setTimeout(() => {
 			setSearch(newValue);
 			setFadeAccordion(true);
-		}, 100);
+		}, 1);
 	};
 	return (
 		<>
