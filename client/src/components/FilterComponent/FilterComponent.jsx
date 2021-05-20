@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from 'material-ui-search-bar';
 import {
 	Button,
@@ -18,11 +18,15 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function FilterComponent({ setMainSearch, setMainChoice, setMainSlider }) {
+function FilterComponent({ setMainSearch, setMainChoice, setMainSlider, mainSearch }) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([5, 10]);
 	const [choice, setChoice] = useState('Overall');
+
+	useEffect(() => {
+		setSearch(mainSearch);
+	}, [mainSearch])
 
 	const handleSearch = (newValue = search) => {
 		setSearch(newValue);

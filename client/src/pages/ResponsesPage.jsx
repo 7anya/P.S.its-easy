@@ -3,11 +3,12 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import { Typography } from '@material-ui/core';
+import { ButtonBase, Typography } from '@material-ui/core';
 import FadeIn from 'react-fade-in';
 import SearchComponent from '../components/FilterComponent/FilterComponent';
 import useDimensions from 'react-use-dimensions';
 import { ChartComponent } from '../components/ChartComponents/ChartComponent';
+import { useLocation } from 'react-router';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -15,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
 		height: '90vh',
 	},
 	paper1: {
-		padding: theme.spacing(4),
+		padding: theme.spacing(3),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
-		height: '180px',
-		margin: '50px',
+		height: '200px',
+		margin: '40px',
 		marginTop: '10px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
-		margin: '50px',
+		margin: '40px',
 		marginTop: '0px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
@@ -56,8 +57,9 @@ const useStyles = makeStyles((theme) => ({
 
 let data = require('../dataset/data.json');
 
-const ResponsesPage = () => {
+const ResponsesPage = (props) => {
 	const classes = useStyles();
+	const query = new URLSearchParams(useLocation().search);
 
 	const [dataPoints, setDataPoints] = useState([]);
 	const [xvalues, setXvalues] = useState([]);
@@ -72,7 +74,14 @@ const ResponsesPage = () => {
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
-		//console.log(data);
+		const searchParam = query.get("search");
+		if (searchParam) {
+			setMainSearch(searchParam);
+		}
+	}, [query]);
+
+	useEffect(() => {
+
 		let points = [];
 		let x = [];
 		let newInfo = {};
@@ -302,6 +311,10 @@ const ResponsesPage = () => {
 											</Typography>
 											{stationDetails.median}
 										</Typography>
+										<Button variant="outlined"
+									color="primary" style={{marginTop:'10px'}}>
+											Checkout It's Chronicles
+										</Button>
 									</FadeIn>
 								</div>
 							) : (
@@ -317,6 +330,7 @@ const ResponsesPage = () => {
 					</Paper>
 					<Paper elevation={10} className={classes.paper2}>
 						<SearchComponent
+							mainSearch={search}
 							setMainChoice={setMainChoice}
 							setMainSearch={setMainSearch}
 							setMainSlider={setMainSlider}
