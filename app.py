@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, session
+from flask import Flask, redirect, url_for, session, request, render_template
 from authlib.integrations.flask_client import OAuth
 import os
 from Globals import *
@@ -14,8 +14,10 @@ import time
 import models
 
 # App config
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+
+MODE = "PROD" # Set to PROD or DEV
 
 db = SQLAlchemy(app)
 
@@ -64,15 +66,20 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
+# app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 
-@app.route('/api/isUser')
+
+
+
+
+@app.route('/api/isUser', methods=["GET"])
 @login_required
 def hello_world():
-    email = dict(session)['profile']['email']
+    # print(request.host)
     return dict(session)['profile']
 
 
-@app.route('/api/login')
+@app.route('/api/login', methods=["GET"])
 def login():
     google = oauth.create_client('google')  # create the google oauth client
     redirect_uri = url_for('authorize', _external=True)
@@ -90,14 +97,18 @@ def authorize():
     # and set ur own data in the session not the profile from google
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    return redirect('http://localhost:3000/')
+    if MODE=="DEV":
+        return redirect('http://localhost:3000/')
+    return redirect('/')
 
 
 @app.route('/api/logout')
 def logout():
     for key in list(session.keys()):
         session.pop(key)
-    return redirect('http://localhost:3000/')
+    if MODE=="DEV":
+        return redirect('http://localhost:3000/')
+    return redirect('/')
 
 
 @app.route('/api/csv', methods=["GET"])  # this is a job for GET, not POST
@@ -118,6 +129,15 @@ def send_csv():
 def send_chronicles():
     return models.chronicles
 
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')
+
+
 
 if __name__ == "__main__":
     s = os.popen("python3 models.py")
@@ -125,5 +145,5 @@ if __name__ == "__main__":
     # th = threading.Thread(target=runScriptAfterInterval)
     # th.start()
     app.debug = True
-    app.run()
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 5000))
     # th.join()

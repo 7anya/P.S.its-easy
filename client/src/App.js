@@ -31,13 +31,13 @@ const App = () => {
 			<Router>
 				<NavBar />
 				<Switch>
-					<Route path="/">
+					<Route exact path="/">
 						<HomePage user={user} />
 					</Route>
-					<Route path="/ps2/responses">
+					<Route exact path="/ps2/responses">
 						<ResponsesPage />
 					</Route>
-					<Route path="/ps2/chronicles">
+					<Route exact path="/ps2/chronicles">
 						<ChroniclesPage />
 					</Route>
 
