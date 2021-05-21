@@ -1,0 +1,182 @@
+{%- extends "flask_statistics_layout.html" -%}
+
+{%- block content -%}
+
+<div class="form-row justify-content-md-center">
+  <div class="form-group col-md-3">
+    <label for="startDate">Start Date</label>
+    <input type="date" class="form-control" id="startDate" value="{{start_date}}">
+  </div>
+  <div class="form-group col-md-3">
+    <label for="endDate">End Date</label>
+    <input type="date" class="form-control" id="endDate" value="{{end_date}}">
+  </div>
+  <div class="form-group d-flex align-items-end">
+    <button class="btn btn-success" onclick="onUpdateClick()">Update</button>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <canvas id="userChart"></canvas>
+  </div>
+  <div class="col-md-2">
+    <div class="box red shadow">
+      <div class="content">
+        <span class="label">Hits</span>
+        <span class="number">{{hits}}</span>
+      </div>
+    </div>
+    <div class="box blue shadow">
+      <div class="content">
+        <span class="label">Unique Users</span>
+        <span class="number">{{unique_users}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-10">  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Hits</th>
+          <th>Unique Hits</th>
+          <th>Last requested</th>
+          <th>Avg. Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for route in routes -%}
+        <tr>
+          <td><a href="{{url_for('statistics.index', path=route.path)}}">{{route.path}}</a></td>
+          <td>{{route.hits}}</td>
+          <td>{{route.unique_hits}}</td>
+          <td>{{route.last_requested.strftime("%Y-%m-%d %H:%M:%S")}}</td>
+          <td>{{route.average_response_time|round(5)}} s</td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .box {
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+
+  .box.blue {
+    background-color: #2196F3;
+  }
+
+  .box.red {
+    background-color: #E91E63;
+  }
+
+  .box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  .box .content {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .box .content .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  .box .content .number {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+
+
+</style>
+
+<script>
+  function onUpdateClick() {
+    // Reloads page with new query which includes new dates
+    let startDate = document.getElementById("startDate").value;
+    let endDate = document.getElementById("endDate").value;
+
+    let currentParams = new URLSearchParams(location.search);
+  
+    currentParams.delete("start");
+    currentParams.delete("end");
+  
+    currentParams.append("start", startDate);
+    currentParams.append("end", endDate);
+
+    // A change in location.search reloads page automatically
+    location.search = currentParams.toString();
+  }
+
+  var userChartData = {{user_chart_data|tojson|safe}};
+
+  var ctx = document.getElementById("userChart");
+  var userChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      datasets: [
+        {
+          label: "Hits",
+          data: userChartData[0],
+          fill: false,
+          borderColor: "#e91e63"
+        },
+        {
+          label: "Unique Hits",
+          data: userChartData[1],
+          fill: false,
+          borderColor: "#2196f3"
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        position: "top",
+        text: "Hits for all routes"
+      },
+      animation: false,
+      scales: {
+        xAxes: [{
+          type: 'time',
+          time: {
+            unit: 'day',
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            precision: 0,
+          }
+        }]
+      }
+    }
+  });
+</script>
+{%- endblock -%}

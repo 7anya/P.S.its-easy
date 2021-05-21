@@ -1,0 +1,127 @@
+{%- extends "flask_statistics_layout.html" -%}
+
+{%- block content -%}
+<div class="form-row justify-content-md-center">
+  <div class="form-group col-md-3">
+    <label for="startDate">Start Date</label>
+    <input type="date" class="form-control" id="startDate" value="{{start_date}}">
+  </div>
+  <div class="form-group col-md-3">
+    <label for="endDate">End Date</label>
+    <input type="date" class="form-control" id="endDate" value="{{end_date}}">
+  </div>
+  <div class="form-group d-flex align-items-end">
+    <button class="btn btn-success" onclick="onUpdateClick()">Update</button>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <canvas id="userChart"></canvas>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Method</th>
+          <th>Mimetype</th>
+          <th>Status</th>
+          <th>Size</th>
+          <th>Duration</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for request in requests -%}
+        <tr>
+          <td>{{request.path}}</td>
+          <td>{{request.method}}</td>
+          <td>{{request.mimetype}}</td>
+          <td>
+            {%- set status = request.status_code -%}
+            {%- if 200 <= status < 300 -%}
+              <span class="text-success">{{status}}</span>
+            {%- elif 400 <= status < 600 -%}
+              <span class="text-danger">{{status}}</span>
+            {%- else -%}
+              {{status}}
+            {%- endif -%}
+          </td>
+          <td>{{request.size|filesizeformat}}</td>
+          <td>{{request.response_time|round(5)}} s</td>
+          <td>{{request.date.strftime("%Y-%m-%d %H:%M:%S")}}</td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function onUpdateClick() {
+    // Reloads page with new query which includes new dates
+    let startDate = document.getElementById("startDate").value;
+    let endDate = document.getElementById("endDate").value;
+
+    let currentParams = new URLSearchParams(location.search);
+  
+    currentParams.delete("start");
+    currentParams.delete("end");
+  
+    currentParams.append("start", startDate);
+    currentParams.append("end", endDate);
+
+    // A change in location.search reloads page automatically
+    location.search = currentParams.toString();
+  }
+
+  var userChartData = {{user_chart_data|tojson|safe}};
+
+  var ctx = document.getElementById("userChart");
+  var userChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      datasets: [
+        {
+          label: "Hits",
+          data: userChartData[0],
+          fill: false,
+          borderColor: "#e91e63"
+        },
+        {
+          label: "Unique Hits",
+          data: userChartData[1],
+          fill: false,
+          borderColor: "#2196f3"
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        position: "top",
+        text: "Hits for {{path}}"
+      },
+      animation: false,
+      scales: {
+        xAxes: [{
+          type: 'time',
+          time: {
+            unit: 'day',
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            precision: 0,
+          }
+        }]
+      }
+    }
+  });
+</script>
+{%- endblock -%}
