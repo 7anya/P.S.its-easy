@@ -11,6 +11,7 @@ from flask_statistics import Statistics
 import threading
 from scaperOperations import *
 import time
+import models
 
 # App config
 app = Flask(__name__)
@@ -40,7 +41,7 @@ class Request(db.Model):
     mimetype = db.Column(db.String)
 
 
-statistics = Statistics(app, db, Request)
+# statistics = Statistics(app, db, Request)  uncomment to get stats.
 
 # Session config
 app.secret_key = "eeeeeeeeeeeeeeeeeeeeeeee"
@@ -113,11 +114,16 @@ def send_csv():
                          as_attachment=True)
 
 
+@app.route('/chronicles', methods=["GET"])
+def send_chronicles():
+    return models.chronicles
+
 
 if __name__ == "__main__":
+    s = os.popen("python3 models.py")
     csvInUse = False
-    th = threading.Thread(target=runScriptAfterInterval)
-    th.start()
+    # th = threading.Thread(target=runScriptAfterInterval)
+    # th.start()
     app.debug = True
     app.run()
-    th.join()
+    # th.join()
