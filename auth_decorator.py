@@ -10,5 +10,5 @@ def login_required(f):
         # the other data for that user/check if they exist
         if user:
             return f(*args, **kwargs)
-        return 'You aint logged in, no page for u!'
+        return 'No user found'
     return decorated_function

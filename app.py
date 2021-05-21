@@ -65,21 +65,21 @@ google = oauth.register(
 )
 
 
-@app.route('/')
+@app.route('/api/isUser')
 @login_required
 def hello_world():
     email = dict(session)['profile']['email']
-    return f'Hello, you are logged in as {email}!'
+    return dict(session)['profile']
 
 
-@app.route('/login')
+@app.route('/api/login')
 def login():
     google = oauth.create_client('google')  # create the google oauth client
     redirect_uri = url_for('authorize', _external=True)
     return google.authorize_redirect(redirect_uri)
 
 
-@app.route('/authorize')
+@app.route('/api/authorize')
 def authorize():
     google = oauth.create_client('google')  # create the google oauth client
     token = google.authorize_access_token()  # Access token from google (needed to get user info)
@@ -93,14 +93,14 @@ def authorize():
     return redirect('/')
 
 
-@app.route('/logout')
+@app.route('/api/logout')
 def logout():
     for key in list(session.keys()):
         session.pop(key)
     return redirect('/')
 
 
-@app.route('/csv', methods=["GET"])  # this is a job for GET, not POST
+@app.route('/api/csv', methods=["GET"])  # this is a job for GET, not POST
 def send_csv():
     print(csvInUse, "yeeeeeeee")
     if csvInUse:
@@ -114,7 +114,7 @@ def send_csv():
                          as_attachment=True)
 
 
-@app.route('/chronicles', methods=["GET"])
+@app.route('/api/chronicles', methods=["GET"])
 def send_chronicles():
     return models.chronicles
 
