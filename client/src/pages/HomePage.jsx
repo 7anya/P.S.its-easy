@@ -1,8 +1,17 @@
-import { Button, Grid, Typography } from '@material-ui/core';
-import React from 'react';
+import { Button, Grid, Link, Typography } from '@material-ui/core';
+import React, { useEffect, useState } from 'react';
 import { ReactComponent as Banner } from '../resources/undraw_Charts_re_5qe9.svg';
 
-const HomePage = () => {
+const HomePage = ({ user }) => {
+	const [serverURL, setServerURL] = useState('');
+
+	useEffect(() => {
+		if (window.location.host === 'localhost:3000') {
+			setServerURL('http://localhost:5000/');
+		} else {
+			setServerURL('/');
+		}
+	}, []);
 	return (
 		<>
 			<Grid container>
@@ -20,9 +29,35 @@ const HomePage = () => {
 				>
 					<Typography component="h1" variant="h1" align="center">
 						ps its easyyyyyyy
-						<Button variant="outlined" color="primary">
-							Log In with Google
-						</Button>
+						{user ? (
+							<>
+								<Typography
+									component="h4"
+									variant="h4"
+									color="textSecondary"
+									style={{ marginTop: '50px' }}
+								>
+									Welcome {user.name} !
+								</Typography>
+								<Link
+									underline="none"
+									href={serverURL + 'api/logout'}
+								>
+									<Button variant="outlined" color="primary">
+										Log Out
+									</Button>
+								</Link>
+							</>
+						) : (
+							<Link
+								underline="none"
+								href={serverURL + 'api/login'}
+							>
+								<Button variant="outlined" color="primary">
+									Log In with Google
+								</Button>
+							</Link>
+						)}
 					</Typography>
 				</Grid>
 			</Grid>

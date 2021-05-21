@@ -90,14 +90,14 @@ def authorize():
     # and set ur own data in the session not the profile from google
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    return redirect('/')
+    return redirect('http://localhost:3000/')
 
 
 @app.route('/api/logout')
 def logout():
     for key in list(session.keys()):
         session.pop(key)
-    return redirect('/')
+    return redirect('http://localhost:3000/')
 
 
 @app.route('/api/csv', methods=["GET"])  # this is a job for GET, not POST

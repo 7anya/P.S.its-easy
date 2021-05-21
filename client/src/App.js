@@ -32,7 +32,7 @@ const App = () => {
 				<NavBar />
 				<Switch>
 					<Route path="/">
-						<HomePage />
+						<HomePage user={user} />
 					</Route>
 					<Route path="/ps2/responses">
 						<ResponsesPage />
