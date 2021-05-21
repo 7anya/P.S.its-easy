@@ -306,6 +306,7 @@ const ResponsesPage = () => {
 							handleNext={handleNext}
 						/>
 					</Grid>
+
 					<Grid item xs={4}>
 						<ResponseDisplayPaper stationDetails={stationDetails} />
 						<Paper elevation={10} className={classes.paper2}>

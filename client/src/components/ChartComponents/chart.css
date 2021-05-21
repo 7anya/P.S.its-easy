@@ -1,0 +1,11 @@
+.VictoryContainer {
+	cursor: all-scroll;
+}
+
+rect {
+	cursor: pointer;
+}
+
+line {
+	cursor: pointer;
+}
