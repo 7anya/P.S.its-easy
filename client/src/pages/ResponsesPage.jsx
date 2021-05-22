@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-let data = require('../dataset/data.json');
+let data = require('../dataset/ps2_sem1_responses.json');
 
 function useQuery() {
 	return new URLSearchParams(useLocation().search);
