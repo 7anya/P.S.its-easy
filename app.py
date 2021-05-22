@@ -17,7 +17,7 @@ import models
 app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 
-MODE = "PROD" # Set to PROD or DEV
+MODE = "PROD"  # Set to PROD or DEV
 
 db = SQLAlchemy(app)
 
@@ -43,7 +43,7 @@ class Request(db.Model):
     mimetype = db.Column(db.String)
 
 
-# statistics = Statistics(app, db, Request)  uncomment to get stats.
+# statistics = Statistics(app, db, Request)
 
 # Session config
 app.secret_key = "eeeeeeeeeeeeeeeeeeeeeeee"
@@ -66,10 +66,8 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
+
 # app = Flask(__name__, static_folder='./client/build', static_url_path='/')
-
-
-
 
 
 @app.route('/api/isUser', methods=["GET"])
@@ -95,10 +93,14 @@ def authorize():
     user = oauth.google.userinfo()  # uses openid endpoint to fetch user info
     # Here you use the profile/user data that you got and query your database find/register the user
     # and set ur own data in the session not the profile from google
+    # print("heyyyyyyyyyy")
+    print(user_info)
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    if MODE=="DEV":
+    if MODE == "DEV":
         return redirect('http://localhost:3000/')
+
+    models.insertIfDoesntExist(user_info)
     return redirect('/')
 
 
@@ -106,7 +108,7 @@ def authorize():
 def logout():
     for key in list(session.keys()):
         session.pop(key)
-    if MODE=="DEV":
+    if MODE == "DEV":
         return redirect('http://localhost:3000/')
     return redirect('/')
 
@@ -129,14 +131,15 @@ def send_csv():
 def send_chronicles():
     return models.chronicles
 
+
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
 
+
 @app.errorhandler(404)
 def not_found(e):
     return app.send_static_file('index.html')
-
 
 
 if __name__ == "__main__":
@@ -145,5 +148,5 @@ if __name__ == "__main__":
     # th = threading.Thread(target=runScriptAfterInterval)
     # th.start()
     app.debug = True
-    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 5000))
+    app.run()
     # th.join()
