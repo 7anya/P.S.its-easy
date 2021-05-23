@@ -1,0 +1,7030 @@
+{
+	"Station Name": {
+		"2017": {
+			"CG": [],
+			"minCG": 0,
+			"maxCG": 0,
+			"count": 0,
+			"averageCG": 0
+		},
+		"2018": {
+			"CG": [],
+			"minCG": 0,
+			"maxCG": 0,
+			"count": 0,
+			"averageCG": 0
+		},
+		"2019": {
+			"CG": [],
+			"minCG": 0,
+			"maxCG": 0,
+			"count": 0,
+			"averageCG": 0
+		},
+		"2020": {
+			"CG": [],
+			"minCG": 0,
+			"maxCG": 0,
+			"count": 0,
+			"averageCG": 0
+		}
+	},
+	"Adity birla chemicals (thailand)": {
+		"2017": {
+			"CG": [6.25, 6.3],
+			"minCG": 6.25,
+			"maxCG": 6.3,
+			"count": 2,
+			"averageCG": 6.275
+		}
+	},
+	"Aditya Birla Insulators, Rishra": {
+		"2017": {
+			"CG": [6.38],
+			"minCG": 6.38,
+			"maxCG": 6.38,
+			"count": 1,
+			"averageCG": 6.38
+		}
+	},
+	"Altair Engineering India Private Ltd.,": {
+		"2017": {
+			"CG": [7.41, 7.6, 7.67],
+			"minCG": 7.41,
+			"maxCG": 7.67,
+			"count": 3,
+			"averageCG": 7.56
+		}
+	},
+	"Amazon Business Intelligence(Hyderabad)": {
+		"2017": {
+			"CG": [7.83, 8.07, 8.33, 8.33],
+			"minCG": 7.83,
+			"maxCG": 8.33,
+			"count": 4,
+			"averageCG": 8.14
+		},
+		"2018": {
+			"CG": [7.22, 6.48],
+			"minCG": 6.48,
+			"maxCG": 7.22,
+			"count": 2,
+			"averageCG": 6.85
+		}
+	},
+	"Amazon Development Center(Bangalore)": {
+		"2017": {
+			"CG": [7.75, 7.79, 7.87, 7.92, 7.98, 8.03, 8.12, 8.2, 8.28, 8.29],
+			"minCG": 7.75,
+			"maxCG": 8.29,
+			"count": 10,
+			"averageCG": 8.023
+		},
+		"2018": {
+			"CG": [8.49, 7.95],
+			"minCG": 7.95,
+			"maxCG": 8.49,
+			"count": 2,
+			"averageCG": 8.22
+		},
+		"2019": {
+			"CG": [
+				7.94, 8.31, 7.89, 7.14, 7.231, 7.22, 7.4, 7.19, 8.4, 8.13, 7.34,
+				7.79, 7.3, 7.76, 8.73
+			],
+			"minCG": 7.14,
+			"maxCG": 8.73,
+			"count": 15,
+			"averageCG": 7.718066666666668
+		},
+		"2020": {
+			"CG": [9.34, 9.208, 9.16, 9.33, 9.05, 9.23],
+			"minCG": 9.05,
+			"maxCG": 9.34,
+			"count": 6,
+			"averageCG": 9.219666666666669
+		}
+	},
+	"Amazon Development Center(Chennai)": {
+		"2017": {
+			"CG": [
+				6.89, 6.89, 7.13, 7.143, 7.247999999999999, 7.26, 7.4, 7.4, 7.44
+			],
+			"minCG": 6.89,
+			"maxCG": 7.44,
+			"count": 9,
+			"averageCG": 7.200111111111111
+		},
+		"2019": {
+			"CG": [7.25],
+			"minCG": 7.25,
+			"maxCG": 7.25,
+			"count": 1,
+			"averageCG": 7.25
+		},
+		"2020": {
+			"CG": [8.13, 7.99, 8.075, 8.0, 8.626, 8.38, 8.05],
+			"minCG": 7.99,
+			"maxCG": 8.626,
+			"count": 7,
+			"averageCG": 8.178714285714287
+		}
+	},
+	"Amazon Development Center(Delhi)": {
+		"2017": {
+			"CG": [7.51, 7.53],
+			"minCG": 7.51,
+			"maxCG": 7.53,
+			"count": 2,
+			"averageCG": 7.52
+		}
+	},
+	"Amazon Development Center(Hyderabad)": {
+		"2017": {
+			"CG": [
+				7.53, 7.56, 7.56, 7.56, 7.6, 7.63, 7.75, 8.0, 8.46, 8.5, 8.55
+			],
+			"minCG": 7.53,
+			"maxCG": 8.55,
+			"count": 11,
+			"averageCG": 7.881818181818182
+		},
+		"2018": {
+			"CG": [7.227],
+			"minCG": 7.227,
+			"maxCG": 7.227,
+			"count": 1,
+			"averageCG": 7.227
+		},
+		"2019": {
+			"CG": [7.73, 7.57],
+			"minCG": 7.57,
+			"maxCG": 7.73,
+			"count": 2,
+			"averageCG": 7.65
+		},
+		"2020": {
+			"CG": [8.731, 8.947000000000001],
+			"minCG": 8.731,
+			"maxCG": 8.947000000000001,
+			"count": 2,
+			"averageCG": 8.839
+		}
+	},
+	"Amazon Development Center(Pune)": {
+		"2017": {
+			"CG": [8.66],
+			"minCG": 8.66,
+			"maxCG": 8.66,
+			"count": 1,
+			"averageCG": 8.66
+		}
+	},
+	"American Express Bangalore ": {
+		"2017": {
+			"CG": [6.86, 6.92, 7.05],
+			"minCG": 6.86,
+			"maxCG": 7.05,
+			"count": 3,
+			"averageCG": 6.943333333333334
+		}
+	},
+	"American Express,Gurgaon": {
+		"2017": {
+			"CG": [6.46, 6.77, 6.82],
+			"minCG": 6.46,
+			"maxCG": 6.82,
+			"count": 3,
+			"averageCG": 6.683333333333334
+		}
+	},
+	"Analog Devices": {
+		"2017": {
+			"CG": [7.62, 7.81, 7.71, 7.731, 8.16, 7.36, 7.34],
+			"minCG": 7.62,
+			"maxCG": 7.81,
+			"count": 2,
+			"averageCG": 7.715
+		},
+		"2018": {
+			"CG": [8.01],
+			"minCG": 8.01,
+			"maxCG": 8.01,
+			"count": 1,
+			"averageCG": 8.01
+		}
+	},
+	"Apollo Tyres Ltd. - IoT , Bangalore": {
+		"2017": {
+			"CG": [5.87],
+			"minCG": 5.87,
+			"maxCG": 5.87,
+			"count": 1,
+			"averageCG": 5.87
+		}
+	},
+	"Apollo tyres-iot, bangalore": {
+		"2017": {
+			"CG": [6.84],
+			"minCG": 6.84,
+			"maxCG": 6.84,
+			"count": 1,
+			"averageCG": 6.84
+		}
+	},
+	"Apple - Bangalore": {
+		"2017": {
+			"CG": [6.61, 8.58, 9.45],
+			"minCG": 6.61,
+			"maxCG": 9.45,
+			"count": 3,
+			"averageCG": 8.213333333333333
+		}
+	},
+	"Aranca Bangalore": {
+		"2017": {
+			"CG": [6.43, 6.6129999999999995, 7.29],
+			"minCG": 6.43,
+			"maxCG": 6.43,
+			"count": 1,
+			"averageCG": 6.43
+		}
+	},
+	"ARM Embedded Technologies -Hyderabad": {
+		"2017": {
+			"CG": [8.13],
+			"minCG": 8.13,
+			"maxCG": 8.13,
+			"count": 1,
+			"averageCG": 8.13
+		}
+	},
+	"ARM Embedded Technologies Private Limited(Bangalore)": {
+		"2017": {
+			"CG": [7.56, 7.58, 7.86, 7.91, 8.07, 8.2, 8.219],
+			"minCG": 7.56,
+			"maxCG": 8.219,
+			"count": 7,
+			"averageCG": 7.914142857142858
+		},
+		"2018": {
+			"CG": [7.85, 7.67, 7.91, 7.5, 7.52, 7.7, 7.48],
+			"minCG": 7.48,
+			"maxCG": 7.91,
+			"count": 7,
+			"averageCG": 7.661428571428573
+		},
+		"2019": {
+			"CG": [7.76, 7.38, 7.57],
+			"minCG": 7.38,
+			"maxCG": 7.76,
+			"count": 3,
+			"averageCG": 7.57
+		}
+	},
+	"Aruba Networks": {
+		"2017": {
+			"CG": [6.9],
+			"minCG": 6.9,
+			"maxCG": 6.9,
+			"count": 1,
+			"averageCG": 6.9
+		}
+	},
+	"Aurigo Software Technologies , Bangalore": {
+		"2017": {
+			"CG": [6.3],
+			"minCG": 6.3,
+			"maxCG": 6.3,
+			"count": 1,
+			"averageCG": 6.3
+		},
+		"2019": {
+			"CG": [6.23],
+			"minCG": 6.23,
+			"maxCG": 6.23,
+			"count": 1,
+			"averageCG": 6.23
+		},
+		"2020": {
+			"CG": [8.189, 7.638],
+			"minCG": 7.638,
+			"maxCG": 8.189,
+			"count": 2,
+			"averageCG": 7.9135
+		}
+	},
+	"Autodesk India Pvt. Ltd.(Hyderabad)": {
+		"2017": {
+			"CG": [6.2, 6.28, 6.5],
+			"minCG": 6.2,
+			"maxCG": 6.5,
+			"count": 3,
+			"averageCG": 6.326666666666667
+		}
+	},
+	"Autodesk India Pvt. Ltd.(Pune)": {
+		"2017": {
+			"CG": [6.01, 6.2],
+			"minCG": 6.01,
+			"maxCG": 6.2,
+			"count": 2,
+			"averageCG": 6.105
+		},
+		"2018": {
+			"CG": [5.7, 6.7],
+			"minCG": 5.7,
+			"maxCG": 6.7,
+			"count": 2,
+			"averageCG": 6.2
+		}
+	},
+	"AutoRabit": {
+		"2017": {
+			"CG": [6.21],
+			"minCG": 6.21,
+			"maxCG": 6.21,
+			"count": 1,
+			"averageCG": 6.21
+		}
+	},
+	"Avaya India Private Limited": {
+		"2017": {
+			"CG": [6.03, 6.08, 6.18, 6.29],
+			"minCG": 6.03,
+			"maxCG": 6.29,
+			"count": 4,
+			"averageCG": 6.145
+		}
+	},
+	"Beckman Coulter (formerly ReaMetrix India P Ltd)(Bangalore)": {
+		"2017": {
+			"CG": [9.039],
+			"minCG": 9.039,
+			"maxCG": 9.039,
+			"count": 1,
+			"averageCG": 9.039
+		},
+		"2018": {
+			"CG": [6.22],
+			"minCG": 6.22,
+			"maxCG": 6.22,
+			"count": 1,
+			"averageCG": 6.22
+		}
+	},
+	"belong.co(Bangalore)": {
+		"2017": {
+			"CG": [6.91, 6.95, 8.0],
+			"minCG": 6.91,
+			"maxCG": 8.0,
+			"count": 3,
+			"averageCG": 7.286666666666666
+		},
+		"2018": {
+			"CG": [6.0],
+			"minCG": 6.0,
+			"maxCG": 6.0,
+			"count": 1,
+			"averageCG": 6.0
+		},
+		"2019": {
+			"CG": [6.57, 6.65, 6.9, 6.53],
+			"minCG": 6.53,
+			"maxCG": 6.9,
+			"count": 4,
+			"averageCG": 6.6625000000000005
+		}
+	},
+	"Bharat Forge Ltd(Pune)": {
+		"2017": {
+			"CG": [6.08],
+			"minCG": 6.08,
+			"maxCG": 6.08,
+			"count": 1,
+			"averageCG": 6.08
+		},
+		"2018": {
+			"CG": [5.45, 5.941],
+			"minCG": 5.45,
+			"maxCG": 5.941,
+			"count": 2,
+			"averageCG": 5.6955
+		},
+		"2019": {
+			"CG": [0.0, 6.2, 5.4],
+			"minCG": 0.0,
+			"maxCG": 6.2,
+			"count": 3,
+			"averageCG": 3.866666666666667
+		},
+		"2020": {
+			"CG": [7.71],
+			"minCG": 7.71,
+			"maxCG": 7.71,
+			"count": 1,
+			"averageCG": 7.71
+		}
+	},
+	"Blue Jeans": {
+		"2017": {
+			"CG": [7.47, 7.04, 7.06, 7.1, 7.11, 7.22, 8.3],
+			"minCG": 7.47,
+			"maxCG": 7.47,
+			"count": 1,
+			"averageCG": 7.47
+		},
+		"2018": {
+			"CG": [7.24, 6.9, 7.2379999999999995, 6.9],
+			"minCG": 6.9,
+			"maxCG": 7.24,
+			"count": 4,
+			"averageCG": 7.0695
+		},
+		"2019": {
+			"CG": [6.95, 6.89, 6.9, 6.9],
+			"minCG": 6.89,
+			"maxCG": 6.95,
+			"count": 4,
+			"averageCG": 6.91
+		},
+		"2020": {
+			"CG": [7.64, 7.91, 7.84, 7.79, 7.82, 7.53],
+			"minCG": 7.53,
+			"maxCG": 7.91,
+			"count": 6,
+			"averageCG": 7.755
+		}
+	},
+	"CA TECHNOLOGIES": {
+		"2017": {
+			"CG": [6.2, 6.22, 6.4, 6.4, 6.45, 6.8799, 6.9, 7.07, 7.08, 7.13],
+			"minCG": 6.2,
+			"maxCG": 7.13,
+			"count": 10,
+			"averageCG": 6.67299
+		}
+	},
+	"Cadence, Pune": {
+		"2017": {
+			"CG": [7.25, 7.56],
+			"minCG": 7.25,
+			"maxCG": 7.56,
+			"count": 2,
+			"averageCG": 7.404999999999999
+		}
+	},
+	"Capillary Technologies": {
+		"2017": {
+			"CG": [7.27, 7.58],
+			"minCG": 7.27,
+			"maxCG": 7.58,
+			"count": 2,
+			"averageCG": 7.425
+		},
+		"2018": {
+			"CG": [7.056, 7.31],
+			"minCG": 7.056,
+			"maxCG": 7.31,
+			"count": 2,
+			"averageCG": 7.183
+		},
+		"2019": {
+			"CG": [6.76, 7.52],
+			"minCG": 6.76,
+			"maxCG": 7.52,
+			"count": 2,
+			"averageCG": 7.14
+		}
+	},
+	"Center for artificial intelligence and robotics": {
+		"2017": {
+			"CG": [7.49, 7.2],
+			"minCG": 7.49,
+			"maxCG": 7.49,
+			"count": 1,
+			"averageCG": 7.49
+		}
+	},
+	"Central Leather Research Institute (CLRI), Chennai": {
+		"2017": {
+			"CG": [6.8],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		},
+		"2019": {
+			"CG": [5.62],
+			"minCG": 5.62,
+			"maxCG": 5.62,
+			"count": 1,
+			"averageCG": 5.62
+		},
+		"2020": {
+			"CG": [7.93],
+			"minCG": 7.93,
+			"maxCG": 7.93,
+			"count": 1,
+			"averageCG": 7.93
+		}
+	},
+	"Century Rayon": {
+		"2017": {
+			"CG": [6.59],
+			"minCG": 6.59,
+			"maxCG": 6.59,
+			"count": 1,
+			"averageCG": 6.59
+		}
+	},
+	"Cerner": {
+		"2017": {
+			"CG": [5.5, 5.5, 5.5],
+			"minCG": 5.5,
+			"maxCG": 5.5,
+			"count": 3,
+			"averageCG": 5.5
+		}
+	},
+	"Cisco Systems (India) Pvt. Ltd - Software Engineering , Hyderabad": {
+		"2017": {
+			"CG": [6.74, 7.02],
+			"minCG": 6.74,
+			"maxCG": 7.02,
+			"count": 2,
+			"averageCG": 6.88
+		}
+	},
+	"Cisco Systems (India) Pvt. Ltd - Software Engineering(Bangalore)": {
+		"2017": {
+			"CG": [6.99, 7.4270000000000005],
+			"minCG": 6.99,
+			"maxCG": 7.4270000000000005,
+			"count": 2,
+			"averageCG": 7.208500000000001
+		},
+		"2018": {
+			"CG": [7.3, 8.3, 7.19, 8.9, 8.85],
+			"minCG": 7.19,
+			"maxCG": 8.9,
+			"count": 5,
+			"averageCG": 8.108
+		},
+		"2019": {
+			"CG": [8.06],
+			"minCG": 8.06,
+			"maxCG": 8.06,
+			"count": 1,
+			"averageCG": 8.06
+		},
+		"2020": {
+			"CG": [8.6, 8.581],
+			"minCG": 8.581,
+			"maxCG": 8.6,
+			"count": 2,
+			"averageCG": 8.590499999999999
+		}
+	},
+	"Credit Suisse": {
+		"2017": {
+			"CG": [
+				6.94, 7.03, 7.1, 7.1, 7.34, 7.44, 7.44, 7.52, 7.52, 7.66, 7.73,
+				8.5, 8.76
+			],
+			"minCG": 6.94,
+			"maxCG": 8.76,
+			"count": 13,
+			"averageCG": 7.544615384615384
+		},
+		"2018": {
+			"CG": [
+				6.74, 8.22, 6.79, 8.15, 6.92, 6.56, 7.44, 7.15, 7.36, 7.52,
+				7.74, 7.78, 7.83, 7.2, 7.564, 7.35, 7.8, 7.05, 6.84, 7.42, 7.71,
+				6.8, 7.12, 8.16
+			],
+			"minCG": 6.56,
+			"maxCG": 8.22,
+			"count": 24,
+			"averageCG": 7.383916666666667
+		},
+		"2019": {
+			"CG": [
+				7.3, 7.05, 7.48, 7.87, 7.45, 7.01, 7.4, 7.86, 7.07, 6.75, 7.44,
+				7.8, 7.12, 8.49, 7.25, 7.462000000000001
+			],
+			"minCG": 6.75,
+			"maxCG": 8.49,
+			"count": 16,
+			"averageCG": 7.4251249999999995
+		}
+	},
+	"DBOI MUMBAI": {
+		"2017": {
+			"CG": [6.59, 6.78, 6.98, 7.824, 7.97],
+			"minCG": 6.59,
+			"maxCG": 7.97,
+			"count": 5,
+			"averageCG": 7.2288
+		}
+	},
+	"DBOI Operations": {
+		"2017": {
+			"CG": [6.56, 7.38, 7.78, 8.11],
+			"minCG": 6.56,
+			"maxCG": 8.11,
+			"count": 4,
+			"averageCG": 7.4575
+		}
+	},
+	"DCPL": {
+		"2017": {
+			"CG": [6.11, 6.7, 6.7],
+			"minCG": 6.11,
+			"maxCG": 6.7,
+			"count": 3,
+			"averageCG": 6.503333333333334
+		},
+		"2019": {
+			"CG": [6.0],
+			"minCG": 6.0,
+			"maxCG": 6.0,
+			"count": 1,
+			"averageCG": 6.0
+		}
+	},
+	"Dell R&D(Bangalore)": {
+		"2017": {
+			"CG": [6.67],
+			"minCG": 6.67,
+			"maxCG": 6.67,
+			"count": 1,
+			"averageCG": 6.67
+		},
+		"2018": {
+			"CG": [6.3, 6.25],
+			"minCG": 6.25,
+			"maxCG": 6.3,
+			"count": 2,
+			"averageCG": 6.275
+		},
+		"2019": {
+			"CG": [6.56, 8.4, 6.54, 6.2, 6.09],
+			"minCG": 6.09,
+			"maxCG": 8.4,
+			"count": 5,
+			"averageCG": 6.758
+		}
+	},
+	"Deloitte hyd": {
+		"2017": {
+			"CG": [7.14],
+			"minCG": 7.14,
+			"maxCG": 7.14,
+			"count": 1,
+			"averageCG": 7.14
+		}
+	},
+	"Dolat Capital, Mumbai": {
+		"2017": {
+			"CG": [6.1],
+			"minCG": 6.1,
+			"maxCG": 6.1,
+			"count": 1,
+			"averageCG": 6.1
+		}
+	},
+	"DUCERE TECHNOLOGIES": {
+		"2017": {
+			"CG": [6.08, 6.91],
+			"minCG": 6.08,
+			"maxCG": 6.91,
+			"count": 2,
+			"averageCG": 6.495
+		}
+	},
+	"Edelweiss Financial Services": {
+		"2017": {
+			"CG": [7.03, 7.12],
+			"minCG": 7.03,
+			"maxCG": 7.12,
+			"count": 2,
+			"averageCG": 7.075
+		}
+	},
+	"EMC": {
+		"2017": {
+			"CG": [6.2, 6.68, 6.76],
+			"minCG": 6.2,
+			"maxCG": 6.76,
+			"count": 3,
+			"averageCG": 6.546666666666667
+		}
+	},
+	"EnSci": {
+		"2017": {
+			"CG": [7.2, 7.19],
+			"minCG": 7.2,
+			"maxCG": 7.2,
+			"count": 1,
+			"averageCG": 7.2
+		}
+	},
+	"Ericsson Global India Pvt. Ltd.(Bangalore)": {
+		"2017": {
+			"CG": [7.195, 7.29, 7.47, 7.66],
+			"minCG": 7.195,
+			"maxCG": 7.66,
+			"count": 4,
+			"averageCG": 7.40375
+		},
+		"2018": {
+			"CG": [7.01, 7.4910000000000005, 7.17, 7.364],
+			"minCG": 7.01,
+			"maxCG": 7.4910000000000005,
+			"count": 4,
+			"averageCG": 7.25875
+		}
+	},
+	"Futures First Gurgaon": {
+		"2017": {
+			"CG": [7.4, 7.52],
+			"minCG": 7.4,
+			"maxCG": 7.52,
+			"count": 2,
+			"averageCG": 7.46
+		}
+	},
+	"Genpact(Bangalore)": {
+		"2017": {
+			"CG": [6.1, 6.1, 6.2, 6.54, 6.59, 6.71, 6.77, 7.06],
+			"minCG": 6.1,
+			"maxCG": 7.06,
+			"count": 8,
+			"averageCG": 6.508749999999999
+		},
+		"2018": {
+			"CG": [6.58, 6.67, 7.21, 6.8, 6.8],
+			"minCG": 6.58,
+			"maxCG": 7.21,
+			"count": 5,
+			"averageCG": 6.812
+		},
+		"2019": {
+			"CG": [6.68, 6.52, 6.23, 6.32, 6.3, 6.3, 6.4, 6.3, 6.29, 6.5],
+			"minCG": 6.23,
+			"maxCG": 6.68,
+			"count": 10,
+			"averageCG": 6.383999999999999
+		}
+	},
+	"Geometric Limited , Pune": {
+		"2017": {
+			"CG": [6.8, 7.3],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		}
+	},
+	"GGK Technologies - Mobile App Development , Hyderabad": {
+		"2017": {
+			"CG": [6.27, 6.3, 6.43, 6.43, 6.5, 6.7, 6.76],
+			"minCG": 6.27,
+			"maxCG": 6.76,
+			"count": 7,
+			"averageCG": 6.484285714285714
+		}
+	},
+	"GiftXOXO ": {
+		"2017": {
+			"CG": [5.92, 6.05],
+			"minCG": 5.92,
+			"maxCG": 6.05,
+			"count": 2,
+			"averageCG": 5.984999999999999
+		}
+	},
+	"Goldman Sachs": {
+		"2017": {
+			"CG": [7.52, 7.52, 7.6, 7.65, 7.76],
+			"minCG": 7.52,
+			"maxCG": 7.76,
+			"count": 5,
+			"averageCG": 7.609999999999999
+		}
+	},
+	"Grasim pulp and fibre division, Mumbai": {
+		"2017": {
+			"CG": [7.57],
+			"minCG": 7.57,
+			"maxCG": 7.57,
+			"count": 1,
+			"averageCG": 7.57
+		}
+	},
+	"Halliburton technology centre, Pune": {
+		"2017": {
+			"CG": [7.14],
+			"minCG": 7.14,
+			"maxCG": 7.14,
+			"count": 1,
+			"averageCG": 7.14
+		}
+	},
+	"Here Maps": {
+		"2017": {
+			"CG": [6.4, 6.88, 6.9, 6.92, 6.95, 6.97, 6.98],
+			"minCG": 6.4,
+			"maxCG": 6.98,
+			"count": 7,
+			"averageCG": 6.857142857142857
+		},
+		"2018": {
+			"CG": [6.81, 6.74, 6.3, 7.99],
+			"minCG": 6.3,
+			"maxCG": 7.99,
+			"count": 4,
+			"averageCG": 6.960000000000001
+		},
+		"2019": {
+			"CG": [6.41, 6.502999999999999, 6.3, 7.24],
+			"minCG": 6.3,
+			"maxCG": 7.24,
+			"count": 4,
+			"averageCG": 6.613250000000001
+		}
+	},
+	"HERON - A Paraxel company": {
+		"2017": {
+			"CG": [5.9, 6.08, 6.38],
+			"minCG": 5.9,
+			"maxCG": 6.38,
+			"count": 3,
+			"averageCG": 6.12
+		}
+	},
+	"Hotstar (  Star TV )": {
+		"2017": {
+			"CG": [7.85, 8.1],
+			"minCG": 7.85,
+			"maxCG": 8.1,
+			"count": 2,
+			"averageCG": 7.975
+		}
+	},
+	"IDeaS, Software development": {
+		"2017": {
+			"CG": [0.0, 6.16, 6.2, 6.45, 6.45, 6.75, 6.9],
+			"minCG": 0.0,
+			"maxCG": 6.9,
+			"count": 7,
+			"averageCG": 5.558571428571428
+		}
+	},
+	"IFB Goa": {
+		"2017": {
+			"CG": [6.33],
+			"minCG": 6.33,
+			"maxCG": 6.33,
+			"count": 1,
+			"averageCG": 6.33
+		}
+	},
+	"IMI Mobiles, Hyderabad": {
+		"2017": {
+			"CG": [4.66, 4.95, 5.09, 5.2, 5.81, 5.86, 6.07, 6.3, 7.52],
+			"minCG": 4.66,
+			"maxCG": 7.52,
+			"count": 9,
+			"averageCG": 5.717777777777777
+		}
+	},
+	"Infinera - VLSI Testing": {
+		"2017": {
+			"CG": [6.971, 7.34],
+			"minCG": 6.971,
+			"maxCG": 7.34,
+			"count": 2,
+			"averageCG": 7.1555
+		}
+	},
+	"InMobi - Software Development, Bangalore": {
+		"2017": {
+			"CG": [7.42],
+			"minCG": 7.42,
+			"maxCG": 7.42,
+			"count": 1,
+			"averageCG": 7.42
+		},
+		"2018": {
+			"CG": [7.2, 7.14, 7.12],
+			"minCG": 7.12,
+			"maxCG": 7.2,
+			"count": 3,
+			"averageCG": 7.153333333333333
+		},
+		"2019": {
+			"CG": [7.87, 8.01],
+			"minCG": 7.87,
+			"maxCG": 8.01,
+			"count": 2,
+			"averageCG": 7.9399999999999995
+		}
+	},
+	"Intel (Bangalore)": {
+		"2017": {
+			"CG": [
+				6.64, 6.66, 6.76, 6.85, 6.89, 6.89, 7.01, 7.13, 7.34, 7.34, 7.4,
+				7.42, 7.5, 7.87, 8.33, 8.86
+			],
+			"minCG": 6.64,
+			"maxCG": 8.86,
+			"count": 16,
+			"averageCG": 7.305625000000001
+		},
+		"2018": {
+			"CG": [7.86, 6.93, 7.54, 7.46, 7.08, 7.49, 7.74, 7.93, 7.35, 7.67],
+			"minCG": 6.93,
+			"maxCG": 7.93,
+			"count": 10,
+			"averageCG": 7.505
+		},
+		"2019": {
+			"CG": [7.22, 7.89, 7.46, 7.33, 7.38, 7.05, 7.9, 7.0],
+			"minCG": 7.0,
+			"maxCG": 7.9,
+			"count": 8,
+			"averageCG": 7.40375
+		},
+		"2020": {
+			"CG": [
+				8.53, 8.31, 8.3, 8.27, 8.27, 8.26, 8.24, 8.21, 8.17, 8.14, 7.97,
+				7.96, 7.92, 7.9, 7.4, 7.3, 7.23, 7.2, 7.17, 7.17, 7.06, 7.04,
+				6.97, 6.91, 8.26, 8.16, 8.07, 8.06, 8.03, 7.97,
+				7.872999999999999, 7.87, 7.08, 8.11, 8.46, 8.24, 8.22, 7.269,
+				8.07, 8.3, 8.13, 7.01, 8.3
+			],
+			"minCG": 6.91,
+			"maxCG": 8.53,
+			"count": 43,
+			"averageCG": 7.846093023255813
+		}
+	},
+	"J P Morgan Services -Centralized Research Group(CRG) , Mumbai": {
+		"2017": {
+			"CG": [7.63, 8.4],
+			"minCG": 7.63,
+			"maxCG": 8.4,
+			"count": 2,
+			"averageCG": 8.015
+		},
+		"2018": {
+			"CG": [8.29, 7.85, 8.29, 8.602],
+			"minCG": 7.85,
+			"maxCG": 8.602,
+			"count": 4,
+			"averageCG": 8.258
+		},
+		"2019": {
+			"CG": [
+				7.68, 7.67, 7.74, 7.38, 8.03, 8.01, 8.2, 7.75, 8.2, 8.69, 7.8
+			],
+			"minCG": 7.38,
+			"maxCG": 8.69,
+			"count": 11,
+			"averageCG": 7.922727272727272
+		}
+	},
+	"JDA Software Solutions(Bangalore)": {
+		"2017": {
+			"CG": [6.5, 6.61, 6.83, 6.84, 6.85, 7.2, 7.61, 8.28],
+			"minCG": 6.5,
+			"maxCG": 8.28,
+			"count": 8,
+			"averageCG": 7.09
+		},
+		"2018": {
+			"CG": [6.1, 7.1, 6.8, 5.97],
+			"minCG": 5.97,
+			"maxCG": 7.1,
+			"count": 4,
+			"averageCG": 6.4925
+		},
+		"2019": {
+			"CG": [5.32, 5.85],
+			"minCG": 5.32,
+			"maxCG": 5.85,
+			"count": 2,
+			"averageCG": 5.585
+		}
+	},
+	"JDA Software Solutions(Hyderabad)": {
+		"2017": {
+			"CG": [5.75, 5.85, 7.0],
+			"minCG": 5.75,
+			"maxCG": 7.0,
+			"count": 3,
+			"averageCG": 6.2
+		},
+		"2018": {
+			"CG": [5.64, 6.3, 6.72, 6.89],
+			"minCG": 5.64,
+			"maxCG": 6.89,
+			"count": 4,
+			"averageCG": 6.3875
+		}
+	},
+	"John F. Welch Technology Centre (GE)": {
+		"2017": {
+			"CG": [8.2, 9.14],
+			"minCG": 8.2,
+			"maxCG": 9.14,
+			"count": 2,
+			"averageCG": 8.67
+		},
+		"2018": {
+			"CG": [7.72, 7.89, 9.03],
+			"minCG": 7.72,
+			"maxCG": 9.03,
+			"count": 3,
+			"averageCG": 8.213333333333333
+		},
+		"2019": {
+			"CG": [8.2, 7.51, 8.552999999999999, 8.99, 7.19, 7.7],
+			"minCG": 7.19,
+			"maxCG": 8.99,
+			"count": 6,
+			"averageCG": 8.023833333333334
+		}
+	},
+	"JP Morgan Chase - Technology , Bangalore": {
+		"2017": {
+			"CG": [7.22, 7.32, 7.52],
+			"minCG": 7.22,
+			"maxCG": 7.52,
+			"count": 3,
+			"averageCG": 7.353333333333333
+		},
+		"2018": {
+			"CG": [7.29, 6.89, 7.09, 6.9, 6.99],
+			"minCG": 6.89,
+			"maxCG": 7.29,
+			"count": 5,
+			"averageCG": 7.032000000000001
+		},
+		"2019": {
+			"CG": [7.62, 7.6, 7.79, 7.87, 7.66],
+			"minCG": 7.6,
+			"maxCG": 7.87,
+			"count": 5,
+			"averageCG": 7.708
+		}
+	},
+	"JPMC": {
+		"2017": {
+			"CG": [6.5, 6.54, 7.3, 8.5, 6.777],
+			"minCG": 6.5,
+			"maxCG": 8.5,
+			"count": 4,
+			"averageCG": 7.21
+		}
+	},
+	"JPMC CIB Operations(Bangalore)": {
+		"2017": {
+			"CG": [6.72, 6.74, 7.12, 7.21, 7.3],
+			"minCG": 6.72,
+			"maxCG": 7.3,
+			"count": 5,
+			"averageCG": 7.018000000000001
+		},
+		"2018": {
+			"CG": [6.75, 6.78],
+			"minCG": 6.75,
+			"maxCG": 6.78,
+			"count": 2,
+			"averageCG": 6.765000000000001
+		}
+	},
+	"JPMC CIB Operations(Mumbai)": {
+		"2017": {
+			"CG": [6.8, 6.82, 7.33],
+			"minCG": 6.8,
+			"maxCG": 7.33,
+			"count": 3,
+			"averageCG": 6.983333333333334
+		},
+		"2018": {
+			"CG": [6.83, 6.67, 7.26],
+			"minCG": 6.67,
+			"maxCG": 7.26,
+			"count": 3,
+			"averageCG": 6.919999999999999
+		}
+	},
+	"JPMC CIB ROBOTICS AUTOMATION": {
+		"2017": {
+			"CG": [6.48, 6.81, 6.83, 7.034, 7.15],
+			"minCG": 6.48,
+			"maxCG": 7.15,
+			"count": 5,
+			"averageCG": 6.860799999999999
+		}
+	},
+	"Jpms - global markets": {
+		"2017": {
+			"CG": [8.65],
+			"minCG": 8.65,
+			"maxCG": 8.65,
+			"count": 1,
+			"averageCG": 8.65
+		}
+	},
+	"JPMS GRC": {
+		"2017": {
+			"CG": [7.53, 7.77, 8.76],
+			"minCG": 7.53,
+			"maxCG": 8.76,
+			"count": 3,
+			"averageCG": 8.020000000000001
+		}
+	},
+	"JPMS Quant": {
+		"2017": {
+			"CG": [7.5, 7.5, 7.7, 7.904, 8.38, 8.81, 8.83, 8.83, 8.92, 9.2],
+			"minCG": 7.5,
+			"maxCG": 9.2,
+			"count": 10,
+			"averageCG": 8.357400000000002
+		}
+	},
+	"Klientas": {
+		"2017": {
+			"CG": [5.9],
+			"minCG": 5.9,
+			"maxCG": 5.9,
+			"count": 1,
+			"averageCG": 5.9
+		},
+		"2019": {
+			"CG": [5.47],
+			"minCG": 5.47,
+			"maxCG": 5.47,
+			"count": 1,
+			"averageCG": 5.47
+		}
+	},
+	"Leap Consulting": {
+		"2017": {
+			"CG": [5.25],
+			"minCG": 5.25,
+			"maxCG": 5.25,
+			"count": 1,
+			"averageCG": 5.25
+		}
+	},
+	"LHD INDIA(BHOPAL)": {
+		"2017": {
+			"CG": [5.56, 6.56],
+			"minCG": 5.56,
+			"maxCG": 6.56,
+			"count": 2,
+			"averageCG": 6.06
+		}
+	},
+	"Market Data Forecast": {
+		"2017": {
+			"CG": [5.48, 5.54, 6.03, 6.07, 6.1],
+			"minCG": 5.48,
+			"maxCG": 6.1,
+			"count": 5,
+			"averageCG": 5.843999999999999
+		}
+	},
+	"Mcx": {
+		"2017": {
+			"CG": [5.2],
+			"minCG": 5.2,
+			"maxCG": 5.2,
+			"count": 1,
+			"averageCG": 5.2
+		}
+	},
+	"Media iQ, Bangalore": {
+		"2017": {
+			"CG": [
+				6.77, 7.11, 7.12, 7.12, 7.18, 7.25, 7.28, 7.38, 7.48, 8.1, 8.52
+			],
+			"minCG": 6.77,
+			"maxCG": 8.52,
+			"count": 11,
+			"averageCG": 7.391818181818181
+		},
+		"2018": {
+			"CG": [7.6, 8.04, 7.523, 7.84, 7.744],
+			"minCG": 7.523,
+			"maxCG": 8.04,
+			"count": 5,
+			"averageCG": 7.7494
+		},
+		"2019": {
+			"CG": [7.7, 7.3],
+			"minCG": 7.3,
+			"maxCG": 7.7,
+			"count": 2,
+			"averageCG": 7.5
+		}
+	},
+	"Mentor Graphics(Noida)": {
+		"2017": {
+			"CG": [7.11, 7.12, 7.15, 7.26, 7.27, 7.35, 7.65],
+			"minCG": 7.11,
+			"maxCG": 7.65,
+			"count": 7,
+			"averageCG": 7.272857142857142
+		},
+		"2018": {
+			"CG": [7.06, 7.31, 7.57],
+			"minCG": 7.06,
+			"maxCG": 7.57,
+			"count": 3,
+			"averageCG": 7.313333333333333
+		}
+	},
+	"Mercedes Benz(Bangalore)": {
+		"2017": {
+			"CG": [8.02, 8.64, 8.72, 9.22],
+			"minCG": 8.02,
+			"maxCG": 9.22,
+			"count": 4,
+			"averageCG": 8.65
+		},
+		"2018": {
+			"CG": [9.146, 9.16],
+			"minCG": 9.146,
+			"maxCG": 9.16,
+			"count": 2,
+			"averageCG": 9.153
+		},
+		"2019": {
+			"CG": [8.056000000000001, 8.03, 8.44, 7.87],
+			"minCG": 7.87,
+			"maxCG": 8.44,
+			"count": 4,
+			"averageCG": 8.098999999999998
+		}
+	},
+	"Microsoft": {
+		"2017": {
+			"CG": [9.016],
+			"minCG": 9.016,
+			"maxCG": 9.016,
+			"count": 1,
+			"averageCG": 9.016
+		}
+	},
+	"Mol De Analytics, Hyd": {
+		"2017": {
+			"CG": [6.029],
+			"minCG": 6.029,
+			"maxCG": 6.029,
+			"count": 1,
+			"averageCG": 6.029
+		},
+		"2019": {
+			"CG": [7.84],
+			"minCG": 7.84,
+			"maxCG": 7.84,
+			"count": 1,
+			"averageCG": 7.84
+		}
+	},
+	"Mordor intelligence": {
+		"2017": {
+			"CG": [
+				5.3, 5.31, 5.31, 5.6, 5.8, 5.84, 6.08, 6.085, 6.1, 6.2, 6.475,
+				6.5, 6.66, 6.801, 6.845, 7.1
+			],
+			"minCG": 5.3,
+			"maxCG": 7.1,
+			"count": 16,
+			"averageCG": 6.125374999999999
+		}
+	},
+	"Morningstar(Mumbai)": {
+		"2017": {
+			"CG": [6.82, 7.48],
+			"minCG": 6.82,
+			"maxCG": 7.48,
+			"count": 2,
+			"averageCG": 7.15
+		},
+		"2018": {
+			"CG": [6.44],
+			"minCG": 6.44,
+			"maxCG": 6.44,
+			"count": 1,
+			"averageCG": 6.44
+		},
+		"2019": {
+			"CG": [7.47],
+			"minCG": 7.47,
+			"maxCG": 7.47,
+			"count": 1,
+			"averageCG": 7.47
+		}
+	},
+	"MSCI (Global Implementation Services)(Mumbai)": {
+		"2017": {
+			"CG": [8.54, 8.87],
+			"minCG": 8.54,
+			"maxCG": 8.87,
+			"count": 2,
+			"averageCG": 8.704999999999998
+		},
+		"2018": {
+			"CG": [7.27],
+			"minCG": 7.27,
+			"maxCG": 7.27,
+			"count": 1,
+			"averageCG": 7.27
+		}
+	},
+	"MSCI (IMR)(Mumbai)": {
+		"2017": {
+			"CG": [7.15, 7.4, 7.5],
+			"minCG": 7.15,
+			"maxCG": 7.5,
+			"count": 3,
+			"averageCG": 7.3500000000000005
+		},
+		"2018": {
+			"CG": [8.05],
+			"minCG": 8.05,
+			"maxCG": 8.05,
+			"count": 1,
+			"averageCG": 8.05
+		},
+		"2019": {
+			"CG": [8.05],
+			"minCG": 8.05,
+			"maxCG": 8.05,
+			"count": 1,
+			"averageCG": 8.05
+		}
+	},
+	"Mu Sigma": {
+		"2017": {
+			"CG": [6.8],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		}
+	},
+	"Multi Commodity Exchange of India Ltd.(Mumbai)": {
+		"2017": {
+			"CG": [5.78],
+			"minCG": 5.78,
+			"maxCG": 5.78,
+			"count": 1,
+			"averageCG": 5.78
+		},
+		"2018": {
+			"CG": [6.12],
+			"minCG": 6.12,
+			"maxCG": 6.12,
+			"count": 1,
+			"averageCG": 6.12
+		}
+	},
+	"My POS Technologies Pvt. Ltd.(Mumbai)": {
+		"2017": {
+			"CG": [7.04, 7.404],
+			"minCG": 7.04,
+			"maxCG": 7.404,
+			"count": 2,
+			"averageCG": 7.2219999999999995
+		},
+		"2018": {
+			"CG": [6.2],
+			"minCG": 6.2,
+			"maxCG": 6.2,
+			"count": 1,
+			"averageCG": 6.2
+		}
+	},
+	"My Smart Price Hyderabad": {
+		"2017": {
+			"CG": [6.4],
+			"minCG": 6.4,
+			"maxCG": 6.4,
+			"count": 1,
+			"averageCG": 6.4
+		}
+	},
+	"Mytrah Energy": {
+		"2017": {
+			"CG": [7.82],
+			"minCG": 7.82,
+			"maxCG": 7.82,
+			"count": 1,
+			"averageCG": 7.82
+		}
+	},
+	"NAHI": {
+		"2017": {
+			"CG": [0.0],
+			"minCG": 0.0,
+			"maxCG": 0.0,
+			"count": 1,
+			"averageCG": 0.0
+		}
+	},
+	"National Aerospace Laboratories(Bangalore)": {
+		"2017": {
+			"CG": [6.9, 7.7],
+			"minCG": 6.9,
+			"maxCG": 7.7,
+			"count": 2,
+			"averageCG": 7.300000000000001
+		},
+		"2018": {
+			"CG": [6.13, 6.46],
+			"minCG": 6.13,
+			"maxCG": 6.46,
+			"count": 2,
+			"averageCG": 6.295
+		},
+		"2020": {
+			"CG": [8.44, 7.07, 7.09, 7.6],
+			"minCG": 7.07,
+			"maxCG": 8.44,
+			"count": 4,
+			"averageCG": 7.550000000000001
+		}
+	},
+	"National Centre for Biological Sciences, Bangalore": {
+		"2017": {
+			"CG": [7.45, 8.7],
+			"minCG": 7.45,
+			"maxCG": 7.45,
+			"count": 1,
+			"averageCG": 7.45
+		},
+		"2019": {
+			"CG": [6.71, 7.1],
+			"minCG": 6.71,
+			"maxCG": 7.1,
+			"count": 2,
+			"averageCG": 6.904999999999999
+		}
+	},
+	"NCAER": {
+		"2017": {
+			"CG": [6.26],
+			"minCG": 6.26,
+			"maxCG": 6.26,
+			"count": 1,
+			"averageCG": 6.26
+		}
+	},
+	"Next Education India Pvt. Ltd.": {
+		"2017": {
+			"CG": [6.0, 6.03, 6.1, 6.38, 6.39, 6.6, 6.69, 4.82],
+			"minCG": 6.0,
+			"maxCG": 6.69,
+			"count": 7,
+			"averageCG": 6.312857142857142
+		}
+	},
+	"NISTADS New Delhi ": {
+		"2017": {
+			"CG": [4.41, 4.5],
+			"minCG": 4.41,
+			"maxCG": 4.41,
+			"count": 1,
+			"averageCG": 4.41
+		}
+	},
+	"Nomura": {
+		"2017": {
+			"CG": [7.53],
+			"minCG": 7.53,
+			"maxCG": 7.53,
+			"count": 1,
+			"averageCG": 7.53
+		},
+		"2019": {
+			"CG": [8.49],
+			"minCG": 8.49,
+			"maxCG": 8.49,
+			"count": 1,
+			"averageCG": 8.49
+		},
+		"2020": {
+			"CG": [7.5],
+			"minCG": 7.5,
+			"maxCG": 7.5,
+			"count": 1,
+			"averageCG": 7.5
+		}
+	},
+	"Nomura Global Finance(Mumbai)": {
+		"2017": {
+			"CG": [7.7],
+			"minCG": 7.7,
+			"maxCG": 7.7,
+			"count": 1,
+			"averageCG": 7.7
+		},
+		"2018": {
+			"CG": [7.44],
+			"minCG": 7.44,
+			"maxCG": 7.44,
+			"count": 1,
+			"averageCG": 7.44
+		},
+		"2019": {
+			"CG": [7.64, 7.07, 7.12, 7.16],
+			"minCG": 7.07,
+			"maxCG": 7.64,
+			"count": 4,
+			"averageCG": 7.2475000000000005
+		}
+	},
+	"Nomura Global Risk(Mumbai)": {
+		"2017": {
+			"CG": [7.14, 7.61, 7.7, 8.06],
+			"minCG": 7.14,
+			"maxCG": 8.06,
+			"count": 4,
+			"averageCG": 7.6274999999999995
+		},
+		"2018": {
+			"CG": [7.813, 7.9, 7.28],
+			"minCG": 7.28,
+			"maxCG": 7.9,
+			"count": 3,
+			"averageCG": 7.664333333333334
+		},
+		"2019": {
+			"CG": [7.56, 7.672999999999999, 7.35],
+			"minCG": 7.35,
+			"maxCG": 7.672999999999999,
+			"count": 3,
+			"averageCG": 7.527666666666666
+		},
+		"2020": {
+			"CG": [8.22, 8.38],
+			"minCG": 8.22,
+			"maxCG": 8.38,
+			"count": 2,
+			"averageCG": 8.3
+		}
+	},
+	"NR equimpents": {
+		"2017": {
+			"CG": [6.09],
+			"minCG": 6.09,
+			"maxCG": 6.09,
+			"count": 1,
+			"averageCG": 6.09
+		}
+	},
+	"Nucleus Software Export Ltd(Noida)": {
+		"2017": {
+			"CG": [6.44, 6.45, 6.56, 6.62, 6.7, 6.72, 6.8, 6.83, 6.96],
+			"minCG": 6.44,
+			"maxCG": 6.96,
+			"count": 9,
+			"averageCG": 6.6755555555555555
+		},
+		"2018": {
+			"CG": [6.49, 6.18, 6.31, 6.4, 7.42, 6.32],
+			"minCG": 6.18,
+			"maxCG": 7.42,
+			"count": 6,
+			"averageCG": 6.5200000000000005
+		},
+		"2019": {
+			"CG": [6.1, 6.65],
+			"minCG": 6.1,
+			"maxCG": 6.65,
+			"count": 2,
+			"averageCG": 6.375
+		},
+		"2020": {
+			"CG": [
+				7.21, 7.4, 7.115, 6.7, 6.76, 6.693, 7.115, 7.06,
+				6.712999999999999, 7.0
+			],
+			"minCG": 6.693,
+			"maxCG": 7.4,
+			"count": 10,
+			"averageCG": 6.9766
+		}
+	},
+	"Nvidia Graphics - Hardware(Bangalore)": {
+		"2017": {
+			"CG": [
+				8.013, 8.013, 8.2, 8.2, 8.25, 8.36, 8.47, 8.56, 8.64, 8.77, 8.92
+			],
+			"minCG": 8.013,
+			"maxCG": 8.92,
+			"count": 11,
+			"averageCG": 8.399636363636363
+		},
+		"2018": {
+			"CG": [
+				8.03, 8.38, 8.632, 8.198, 8.7, 9.121, 8.71, 8.26, 8.45, 8.03,
+				8.62, 8.7, 8.22, 8.55
+			],
+			"minCG": 8.03,
+			"maxCG": 9.121,
+			"count": 14,
+			"averageCG": 8.4715
+		},
+		"2019": {
+			"CG": [8.25, 8.31, 8.24, 7.86, 9.06],
+			"minCG": 7.86,
+			"maxCG": 9.06,
+			"count": 5,
+			"averageCG": 8.344000000000001
+		},
+		"2020": {
+			"CG": [
+				8.46, 8.31, 8.56, 8.95, 8.812999999999999, 9.075, 8.51, 8.39,
+				8.664, 8.51
+			],
+			"minCG": 8.31,
+			"maxCG": 9.075,
+			"count": 10,
+			"averageCG": 8.624200000000002
+		}
+	},
+	"Nvidia Graphics - Hardware(Hyderabad)": {
+		"2017": {
+			"CG": [7.59, 8.2],
+			"minCG": 7.59,
+			"maxCG": 8.2,
+			"count": 2,
+			"averageCG": 7.895
+		},
+		"2018": {
+			"CG": [7.962999999999999],
+			"minCG": 7.962999999999999,
+			"maxCG": 7.962999999999999,
+			"count": 1,
+			"averageCG": 7.962999999999999
+		}
+	},
+	"Nvidia Graphics - Software Systems(Pune)": {
+		"2017": {
+			"CG": [7.001, 7.01, 7.1, 7.15, 7.17, 7.38, 7.48, 7.79],
+			"minCG": 7.001,
+			"maxCG": 7.79,
+			"count": 8,
+			"averageCG": 7.2601249999999995
+		},
+		"2018": {
+			"CG": [7.4, 7.49, 7.27, 7.38],
+			"minCG": 7.27,
+			"maxCG": 7.49,
+			"count": 4,
+			"averageCG": 7.385
+		}
+	},
+	"Nvidia Graphics - Software(Hyderabad)": {
+		"2017": {
+			"CG": [7.53, 7.63, 7.8, 7.86],
+			"minCG": 7.53,
+			"maxCG": 7.86,
+			"count": 4,
+			"averageCG": 7.705
+		},
+		"2018": {
+			"CG": [7.71],
+			"minCG": 7.71,
+			"maxCG": 7.71,
+			"count": 1,
+			"averageCG": 7.71
+		}
+	},
+	"Nvidia Graphics -Software(Bangalore)": {
+		"2017": {
+			"CG": [7.83, 7.93, 7.98, 8.0, 8.22, 8.34, 8.34, 8.45, 8.46],
+			"minCG": 7.83,
+			"maxCG": 8.46,
+			"count": 9,
+			"averageCG": 8.172222222222224
+		},
+		"2018": {
+			"CG": [
+				7.63, 7.68, 8.13, 7.62, 7.75, 8.084, 7.74, 7.44, 8.19, 7.56,
+				7.63
+			],
+			"minCG": 7.44,
+			"maxCG": 8.19,
+			"count": 11,
+			"averageCG": 7.768545454545455
+		},
+		"2019": {
+			"CG": [7.7],
+			"minCG": 7.7,
+			"maxCG": 7.7,
+			"count": 1,
+			"averageCG": 7.7
+		},
+		"2020": {
+			"CG": [8.59, 8.51, 9.06],
+			"minCG": 8.51,
+			"maxCG": 9.06,
+			"count": 3,
+			"averageCG": 8.72
+		}
+	},
+	"Nvidia Graphics Bangalore": {
+		"2017": {
+			"CG": [8.22, 8.8],
+			"minCG": 8.22,
+			"maxCG": 8.8,
+			"count": 2,
+			"averageCG": 8.510000000000002
+		}
+	},
+	"Of Business.com": {
+		"2017": {
+			"CG": [6.19],
+			"minCG": 6.19,
+			"maxCG": 6.19,
+			"count": 1,
+			"averageCG": 6.19
+		}
+	},
+	"Orange business services": {
+		"2017": {
+			"CG": [6.0],
+			"minCG": 6.0,
+			"maxCG": 6.0,
+			"count": 1,
+			"averageCG": 6.0
+		}
+	},
+	"Paypal(Chennai)": {
+		"2017": {
+			"CG": [7.05, 7.11, 7.12, 7.2, 7.41, 7.41, 7.41],
+			"minCG": 7.05,
+			"maxCG": 7.41,
+			"count": 7,
+			"averageCG": 7.244285714285714
+		},
+		"2018": {
+			"CG": [7.04, 7.34, 7.43, 7.1],
+			"minCG": 7.04,
+			"maxCG": 7.43,
+			"count": 4,
+			"averageCG": 7.227499999999999
+		}
+	},
+	"Petasense - Services & App Development(Bangalore)": {
+		"2017": {
+			"CG": [6.86, 7.02, 7.02, 8.16],
+			"minCG": 6.86,
+			"maxCG": 8.16,
+			"count": 4,
+			"averageCG": 7.265
+		},
+		"2018": {
+			"CG": [7.14],
+			"minCG": 7.14,
+			"maxCG": 7.14,
+			"count": 1,
+			"averageCG": 7.14
+		},
+		"2019": {
+			"CG": [6.9, 7.31, 6.95],
+			"minCG": 6.9,
+			"maxCG": 7.31,
+			"count": 3,
+			"averageCG": 7.053333333333334
+		},
+		"2020": {
+			"CG": [7.82],
+			"minCG": 7.82,
+			"maxCG": 7.82,
+			"count": 1,
+			"averageCG": 7.82
+		}
+	},
+	"Predible Health": {
+		"2017": {
+			"CG": [5.0],
+			"minCG": 5.0,
+			"maxCG": 5.0,
+			"count": 1,
+			"averageCG": 5.0
+		}
+	},
+	"PricewaterhouseCoopers (PWC)(Bangalore)": {
+		"2017": {
+			"CG": [7.0, 7.9],
+			"minCG": 7.0,
+			"maxCG": 7.9,
+			"count": 2,
+			"averageCG": 7.45
+		},
+		"2018": {
+			"CG": [8.31, 8.53, 6.52],
+			"minCG": 6.52,
+			"maxCG": 8.53,
+			"count": 3,
+			"averageCG": 7.786666666666666
+		},
+		"2019": {
+			"CG": [7.06],
+			"minCG": 7.06,
+			"maxCG": 7.06,
+			"count": 1,
+			"averageCG": 7.06
+		}
+	},
+	"PricewaterhouseCoopers (PWC)(Delhi)": {
+		"2017": {
+			"CG": [6.83, 7.05, 7.5, 7.71],
+			"minCG": 6.83,
+			"maxCG": 7.71,
+			"count": 4,
+			"averageCG": 7.2725
+		},
+		"2018": {
+			"CG": [7.28, 7.25],
+			"minCG": 7.25,
+			"maxCG": 7.28,
+			"count": 2,
+			"averageCG": 7.265000000000001
+		}
+	},
+	"PricewaterhouseCoopers (PWC)(Hyderabad)": {
+		"2017": {
+			"CG": [7.6],
+			"minCG": 7.6,
+			"maxCG": 7.6,
+			"count": 1,
+			"averageCG": 7.6
+		},
+		"2018": {
+			"CG": [6.47, 7.56, 6.52, 6.3],
+			"minCG": 6.3,
+			"maxCG": 7.56,
+			"count": 4,
+			"averageCG": 6.7124999999999995
+		}
+	},
+	"PricewaterhouseCoopers (PWC)(Mumbai)": {
+		"2017": {
+			"CG": [6.44, 6.64, 6.94, 7.4],
+			"minCG": 6.44,
+			"maxCG": 7.4,
+			"count": 4,
+			"averageCG": 6.855
+		},
+		"2018": {
+			"CG": [7.5, 7.15],
+			"minCG": 7.15,
+			"maxCG": 7.5,
+			"count": 2,
+			"averageCG": 7.325
+		},
+		"2019": {
+			"CG": [8.55, 8.04],
+			"minCG": 8.04,
+			"maxCG": 8.55,
+			"count": 2,
+			"averageCG": 8.295
+		}
+	},
+	"Qubole(Bangalore)": {
+		"2017": {
+			"CG": [7.66, 8.15, 8.27, 8.39],
+			"minCG": 7.66,
+			"maxCG": 8.39,
+			"count": 4,
+			"averageCG": 8.1175
+		},
+		"2018": {
+			"CG": [8.16, 8.14],
+			"minCG": 8.14,
+			"maxCG": 8.16,
+			"count": 2,
+			"averageCG": 8.15
+		},
+		"2019": {
+			"CG": [8.59, 8.6, 8.54, 8.57, 8.55, 8.51],
+			"minCG": 8.51,
+			"maxCG": 8.6,
+			"count": 6,
+			"averageCG": 8.559999999999999
+		},
+		"2020": {
+			"CG": [8.55, 8.544, 8.44, 8.29],
+			"minCG": 8.29,
+			"maxCG": 8.55,
+			"count": 4,
+			"averageCG": 8.456
+		}
+	},
+	"RAchem pharma": {
+		"2017": {
+			"CG": [5.1, 5.2],
+			"minCG": 5.1,
+			"maxCG": 5.2,
+			"count": 2,
+			"averageCG": 5.15
+		}
+	},
+	"Ramco Systems": {
+		"2017": {
+			"CG": [5.8, 6.19, 6.44],
+			"minCG": 5.8,
+			"maxCG": 6.44,
+			"count": 3,
+			"averageCG": 6.1433333333333335
+		}
+	},
+	"Reflexis Systems India Pvt Ltd.(Pune)": {
+		"2017": {
+			"CG": [5.92],
+			"minCG": 5.92,
+			"maxCG": 5.92,
+			"count": 1,
+			"averageCG": 5.92
+		},
+		"2018": {
+			"CG": [5.8, 6.57, 6.89, 6.36, 5.67, 6.01],
+			"minCG": 5.67,
+			"maxCG": 6.89,
+			"count": 6,
+			"averageCG": 6.216666666666666
+		},
+		"2019": {
+			"CG": [5.32, 5.95, 6.26, 6.2, 6.24, 6.19, 6.3, 6.4],
+			"minCG": 5.32,
+			"maxCG": 6.4,
+			"count": 8,
+			"averageCG": 6.107499999999999
+		},
+		"2020": {
+			"CG": [7.78, 7.79, 7.67],
+			"minCG": 7.67,
+			"maxCG": 7.79,
+			"count": 3,
+			"averageCG": 7.746666666666667
+		}
+	},
+	"ReportGarden Technologies Pvt. LTd.(Hyderabad)": {
+		"2017": {
+			"CG": [5.67, 6.48, 7.33],
+			"minCG": 5.67,
+			"maxCG": 7.33,
+			"count": 3,
+			"averageCG": 6.493333333333333
+		},
+		"2018": {
+			"CG": [6.18, 6.2, 6.3],
+			"minCG": 6.18,
+			"maxCG": 6.3,
+			"count": 3,
+			"averageCG": 6.226666666666667
+		},
+		"2019": {
+			"CG": [5.9, 5.83, 6.2, 5.92, 5.82],
+			"minCG": 5.82,
+			"maxCG": 6.2,
+			"count": 5,
+			"averageCG": 5.934
+		}
+	},
+	"Rite Infotech Pvt Ltd": {
+		"2017": {
+			"CG": [5.7],
+			"minCG": 5.7,
+			"maxCG": 5.7,
+			"count": 1,
+			"averageCG": 5.7
+		},
+		"2020": {
+			"CG": [6.82],
+			"minCG": 6.82,
+			"maxCG": 6.82,
+			"count": 1,
+			"averageCG": 6.82
+		}
+	},
+	"Robert Bosch Center for Cyber Physical Systems(Bangalore)": {
+		"2017": {
+			"CG": [6.95, 7.1],
+			"minCG": 6.95,
+			"maxCG": 7.1,
+			"count": 2,
+			"averageCG": 7.025
+		},
+		"2018": {
+			"CG": [7.0],
+			"minCG": 7.0,
+			"maxCG": 7.0,
+			"count": 1,
+			"averageCG": 7.0
+		}
+	},
+	"S.R. Batliboi, Mumbai": {
+		"2017": {
+			"CG": [6.53, 6.58],
+			"minCG": 6.53,
+			"maxCG": 6.53,
+			"count": 1,
+			"averageCG": 6.53
+		}
+	},
+	"Sabre": {
+		"2017": {
+			"CG": [6.56, 6.565, 6.6, 6.61, 6.76],
+			"minCG": 6.56,
+			"maxCG": 6.76,
+			"count": 5,
+			"averageCG": 6.619
+		}
+	},
+	"Samsung R &D Institute - Image & Video Processing(Bangalore)": {
+		"2017": {
+			"CG": [
+				6.53, 6.54, 6.59, 6.64, 6.72, 6.84, 6.852, 6.89, 6.9, 6.94,
+				7.01, 7.06, 7.08, 7.15
+			],
+			"minCG": 6.53,
+			"maxCG": 7.15,
+			"count": 14,
+			"averageCG": 6.838714285714287
+		},
+		"2018": {
+			"CG": [7.52, 6.94, 7.14],
+			"minCG": 6.94,
+			"maxCG": 7.52,
+			"count": 3,
+			"averageCG": 7.2
+		}
+	},
+	"Sattva Media and Consulting Pvt. Ltd.": {
+		"2017": {
+			"CG": [6.75, 6.75],
+			"minCG": 6.75,
+			"maxCG": 6.75,
+			"count": 2,
+			"averageCG": 6.75
+		},
+		"2019": {
+			"CG": [6.82],
+			"minCG": 6.82,
+			"maxCG": 6.82,
+			"count": 1,
+			"averageCG": 6.82
+		},
+		"2020": {
+			"CG": [7.64],
+			"minCG": 7.64,
+			"maxCG": 7.64,
+			"count": 1,
+			"averageCG": 7.64
+		}
+	},
+	"Searce ": {
+		"2017": {
+			"CG": [5.68, 7.14],
+			"minCG": 5.68,
+			"maxCG": 7.14,
+			"count": 2,
+			"averageCG": 6.41
+		}
+	},
+	"SERC": {
+		"2017": {
+			"CG": [9.17, 9.37],
+			"minCG": 9.17,
+			"maxCG": 9.37,
+			"count": 2,
+			"averageCG": 9.27
+		}
+	},
+	"Siftery": {
+		"2017": {
+			"CG": [6.8, 6.86],
+			"minCG": 6.8,
+			"maxCG": 6.86,
+			"count": 2,
+			"averageCG": 6.83
+		}
+	},
+	"SKF India Ltd.(Bangalore)": {
+		"2017": {
+			"CG": [6.69],
+			"minCG": 6.69,
+			"maxCG": 6.69,
+			"count": 1,
+			"averageCG": 6.69
+		},
+		"2018": {
+			"CG": [6.03],
+			"minCG": 6.03,
+			"maxCG": 6.03,
+			"count": 1,
+			"averageCG": 6.03
+		}
+	},
+	"SKF India Ltd.(Pune)": {
+		"2017": {
+			"CG": [6.48],
+			"minCG": 6.48,
+			"maxCG": 6.48,
+			"count": 1,
+			"averageCG": 6.48
+		}
+	},
+	"Skoda Auto India Pvt. Ltd.(Aurangabad)": {
+		"2017": {
+			"CG": [7.2],
+			"minCG": 7.2,
+			"maxCG": 7.2,
+			"count": 1,
+			"averageCG": 7.2
+		},
+		"2018": {
+			"CG": [7.1],
+			"minCG": 7.1,
+			"maxCG": 7.1,
+			"count": 1,
+			"averageCG": 7.1
+		},
+		"2019": {
+			"CG": [5.56],
+			"minCG": 5.56,
+			"maxCG": 5.56,
+			"count": 1,
+			"averageCG": 5.56
+		}
+	},
+	"Skoda Auto India Pvt. Ltd.(Mumbai)": {
+		"2017": {
+			"CG": [7.31, 7.37, 7.6],
+			"minCG": 7.31,
+			"maxCG": 7.6,
+			"count": 3,
+			"averageCG": 7.426666666666667
+		},
+		"2018": {
+			"CG": [6.2, 6.13, 6.23, 8.8, 6.82],
+			"minCG": 6.13,
+			"maxCG": 8.8,
+			"count": 5,
+			"averageCG": 6.836000000000001
+		}
+	},
+	"Societe Generale": {
+		"2017": {
+			"CG": [6.8],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		}
+	},
+	"StateStreet Global Advisors(Bangalore)": {
+		"2017": {
+			"CG": [7.0],
+			"minCG": 7.0,
+			"maxCG": 7.0,
+			"count": 1,
+			"averageCG": 7.0
+		},
+		"2018": {
+			"CG": [7.64, 7.6],
+			"minCG": 7.6,
+			"maxCG": 7.64,
+			"count": 2,
+			"averageCG": 7.619999999999999
+		}
+	},
+	"Swiggy": {
+		"2017": {
+			"CG": [6.36, 7.1, 6.3, 6.41, 6.46],
+			"minCG": 6.36,
+			"maxCG": 7.1,
+			"count": 2,
+			"averageCG": 6.73
+		},
+		"2018": {
+			"CG": [8.65, 7.92, 7.2, 7.32, 7.15, 7.6],
+			"minCG": 7.15,
+			"maxCG": 8.65,
+			"count": 6,
+			"averageCG": 7.640000000000001
+		},
+		"2019": {
+			"CG": [8.16, 7.59, 8.17, 8.46, 7.65, 7.79, 7.6, 7.88],
+			"minCG": 7.59,
+			"maxCG": 8.46,
+			"count": 8,
+			"averageCG": 7.9125000000000005
+		}
+	},
+	"Synergiz Global(Hyderabad)": {
+		"2017": {
+			"CG": [5.7, 7.78],
+			"minCG": 5.7,
+			"maxCG": 7.78,
+			"count": 2,
+			"averageCG": 6.74
+		},
+		"2018": {
+			"CG": [6.63],
+			"minCG": 6.63,
+			"maxCG": 6.63,
+			"count": 1,
+			"averageCG": 6.63
+		}
+	},
+	"TapChief(Bangalore)": {
+		"2017": {
+			"CG": ["NaN"],
+			"minCG": "NaN",
+			"maxCG": "NaN",
+			"count": 1,
+			"averageCG": "NaN"
+		},
+		"2018": {
+			"CG": [6.72],
+			"minCG": 6.72,
+			"maxCG": 6.72,
+			"count": 1,
+			"averageCG": 6.72
+		},
+		"2019": {
+			"CG": [6.85],
+			"minCG": 6.85,
+			"maxCG": 6.85,
+			"count": 1,
+			"averageCG": 6.85
+		}
+	},
+	"Tata Autocomp Systems Ltd.(Pune)": {
+		"2017": {
+			"CG": [6.57],
+			"minCG": 6.57,
+			"maxCG": 6.57,
+			"count": 1,
+			"averageCG": 6.57
+		},
+		"2018": {
+			"CG": [6.77],
+			"minCG": 6.77,
+			"maxCG": 6.77,
+			"count": 1,
+			"averageCG": 6.77
+		},
+		"2019": {
+			"CG": [6.07],
+			"minCG": 6.07,
+			"maxCG": 6.07,
+			"count": 1,
+			"averageCG": 6.07
+		}
+	},
+	"Tata Chemical Innovation Center(Pune)": {
+		"2017": {
+			"CG": [6.74, 6.98],
+			"minCG": 6.74,
+			"maxCG": 6.98,
+			"count": 2,
+			"averageCG": 6.86
+		},
+		"2018": {
+			"CG": [6.3],
+			"minCG": 6.3,
+			"maxCG": 6.3,
+			"count": 1,
+			"averageCG": 6.3
+		},
+		"2019": {
+			"CG": [6.95],
+			"minCG": 6.95,
+			"maxCG": 6.95,
+			"count": 1,
+			"averageCG": 6.95
+		}
+	},
+	"Tata Motors Ltd.(Jamshedpur)": {
+		"2017": {
+			"CG": [6.04, 6.06, 6.26, 6.26, 6.72, 6.4],
+			"minCG": 6.04,
+			"maxCG": 6.26,
+			"count": 4,
+			"averageCG": 6.154999999999999
+		},
+		"2018": {
+			"CG": [5.88, 5.9],
+			"minCG": 5.88,
+			"maxCG": 5.9,
+			"count": 2,
+			"averageCG": 5.890000000000001
+		}
+	},
+	"Tata Motors Ltd.(Lucknow)": {
+		"2017": {
+			"CG": [
+				3.8, 4.75, 5.1, 5.1, 5.25, 5.31, 5.35, 5.61, 5.67, 5.85, 6.06,
+				6.17, 6.31, 6.4, 6.5
+			],
+			"minCG": 3.8,
+			"maxCG": 6.5,
+			"count": 15,
+			"averageCG": 5.548666666666667
+		},
+		"2018": {
+			"CG": [6.52, 6.71],
+			"minCG": 6.52,
+			"maxCG": 6.71,
+			"count": 2,
+			"averageCG": 6.615
+		}
+	},
+	"Tata Motors Ltd.(Pune)": {
+		"2017": {
+			"CG": [
+				6.59, 6.83, 6.87, 6.96, 7.34, 7.4, 7.45, 7.452999999999999, 7.6,
+				7.63, 7.67
+			],
+			"minCG": 6.59,
+			"maxCG": 7.67,
+			"count": 11,
+			"averageCG": 7.25390909090909
+		},
+		"2018": {
+			"CG": [6.65, 6.4, 6.9510000000000005, 6.35, 6.99, 6.22, 6.4, 6.71],
+			"minCG": 6.22,
+			"maxCG": 6.99,
+			"count": 8,
+			"averageCG": 6.583875
+		},
+		"2019": {
+			"CG": [7.08, 6.72],
+			"minCG": 6.72,
+			"maxCG": 7.08,
+			"count": 2,
+			"averageCG": 6.9
+		}
+	},
+	"Tata Motors, Pantnagar": {
+		"2017": {
+			"CG": [6.7, 7.85],
+			"minCG": 6.7,
+			"maxCG": 7.85,
+			"count": 2,
+			"averageCG": 7.275
+		}
+	},
+	"Tau Films": {
+		"2017": {
+			"CG": [6.3, 6.82],
+			"minCG": 6.3,
+			"maxCG": 6.82,
+			"count": 2,
+			"averageCG": 6.5600000000000005
+		}
+	},
+	"Techture Structures Pvt Ltd.": {
+		"2017": {
+			"CG": [6.0, 7.34, 7.46],
+			"minCG": 6.0,
+			"maxCG": 7.46,
+			"count": 3,
+			"averageCG": 6.933333333333334
+		},
+		"2019": {
+			"CG": [5.1, 4.74, 5.7],
+			"minCG": 4.74,
+			"maxCG": 5.1,
+			"count": 2,
+			"averageCG": 4.92
+		},
+		"2020": {
+			"CG": [6.41, 6.39],
+			"minCG": 6.39,
+			"maxCG": 6.41,
+			"count": 2,
+			"averageCG": 6.4
+		}
+	},
+	"TESCO Hindustan Service Centre(Bangalore)": {
+		"2017": {
+			"CG": [6.81, 7.4],
+			"minCG": 6.81,
+			"maxCG": 7.4,
+			"count": 2,
+			"averageCG": 7.105
+		},
+		"2018": {
+			"CG": [7.25],
+			"minCG": 7.25,
+			"maxCG": 7.25,
+			"count": 1,
+			"averageCG": 7.25
+		},
+		"2019": {
+			"CG": [7.222, 6.9],
+			"minCG": 6.9,
+			"maxCG": 7.222,
+			"count": 2,
+			"averageCG": 7.061
+		}
+	},
+	"Texas Instruments (I) Pvt. Ltd (Bangalore)": {
+		"2017": {
+			"CG": [7.97, 8.33, 8.65, 8.8],
+			"minCG": 7.97,
+			"maxCG": 8.8,
+			"count": 4,
+			"averageCG": 8.4375
+		},
+		"2018": {
+			"CG": [8.5, 8.58, 8.33, 7.89],
+			"minCG": 7.89,
+			"maxCG": 8.58,
+			"count": 4,
+			"averageCG": 8.325
+		},
+		"2019": {
+			"CG": [8.97, 8.7, 8.36, 8.08],
+			"minCG": 8.08,
+			"maxCG": 8.97,
+			"count": 4,
+			"averageCG": 8.5275
+		},
+		"2020": {
+			"CG": [8.06, 8.97, 8.7, 9.62],
+			"minCG": 8.06,
+			"maxCG": 9.62,
+			"count": 4,
+			"averageCG": 8.8375
+		}
+	},
+	"The diagram works": {
+		"2017": {
+			"CG": [8.77],
+			"minCG": 8.77,
+			"maxCG": 8.77,
+			"count": 1,
+			"averageCG": 8.77
+		}
+	},
+	"TimeInc ": {
+		"2017": {
+			"CG": [6.25],
+			"minCG": 6.25,
+			"maxCG": 6.25,
+			"count": 1,
+			"averageCG": 6.25
+		}
+	},
+	"Tonbo Imaging Pvt Ltd.": {
+		"2017": {
+			"CG": [7.1, 7.36, 8.18],
+			"minCG": 7.1,
+			"maxCG": 8.18,
+			"count": 3,
+			"averageCG": 7.546666666666667
+		},
+		"2018": {
+			"CG": [7.86],
+			"minCG": 7.86,
+			"maxCG": 7.86,
+			"count": 1,
+			"averageCG": 7.86
+		}
+	},
+	"UST Global": {
+		"2017": {
+			"CG": [5.1, 5.25, 5.26, 5.42, 5.46, 5.81, 6.03, 6.03, 6.12],
+			"minCG": 5.1,
+			"maxCG": 6.12,
+			"count": 9,
+			"averageCG": 5.608888888888889
+		},
+		"2018": {
+			"CG": [
+				5.35, 4.271, 4.92, 5.94, 5.447, 6.142, 5.78, 5.62, 4.97, 6.2
+			],
+			"minCG": 4.271,
+			"maxCG": 6.142,
+			"count": 8,
+			"averageCG": 5.43375
+		},
+		"2019": {
+			"CG": [
+				6.1, 5.52, 5.65, 5.9, 5.67, 5.46, 5.73, 5.0, 6.0, 6.0, 0.0, 5.8
+			],
+			"minCG": 0.0,
+			"maxCG": 6.1,
+			"count": 12,
+			"averageCG": 5.235833333333333
+		}
+	},
+	"VMS (Vakil Mehta Seth) Consultants Private Limited(Mumbai)": {
+		"2017": {
+			"CG": [7.82],
+			"minCG": 7.82,
+			"maxCG": 7.82,
+			"count": 1,
+			"averageCG": 7.82
+		},
+		"2018": {
+			"CG": [6.38, 5.617999999999999],
+			"minCG": 5.617999999999999,
+			"maxCG": 6.38,
+			"count": 2,
+			"averageCG": 5.999
+		}
+	},
+	"VMWare Bangalore": {
+		"2017": {
+			"CG": [7.26, 7.44, 7.46],
+			"minCG": 7.26,
+			"maxCG": 7.46,
+			"count": 3,
+			"averageCG": 7.386666666666667
+		}
+	},
+	"Walmart": {
+		"2017": {
+			"CG": [
+				7.05, 7.07, 7.25, 7.4, 7.4, 7.53, 7.57, 7.574, 7.83, 8.24, 8.25
+			],
+			"minCG": 7.05,
+			"maxCG": 8.25,
+			"count": 11,
+			"averageCG": 7.560363636363636
+		}
+	},
+	"WorldQuant, Mumbai": {
+		"2017": {
+			"CG": [8.2, 8.47],
+			"minCG": 8.2,
+			"maxCG": 8.47,
+			"count": 2,
+			"averageCG": 8.335
+		}
+	},
+	"Xilinx India Technology Services Pvt. Ltd.(Hyderabad)": {
+		"2017": {
+			"CG": [7.73, 7.96, 8.21, 8.95],
+			"minCG": 7.73,
+			"maxCG": 8.95,
+			"count": 4,
+			"averageCG": 8.2125
+		},
+		"2018": {
+			"CG": [7.2, 7.27, 8.25, 7.35],
+			"minCG": 7.2,
+			"maxCG": 8.25,
+			"count": 4,
+			"averageCG": 7.5175
+		},
+		"2019": {
+			"CG": [6.88],
+			"minCG": 6.88,
+			"maxCG": 6.88,
+			"count": 1,
+			"averageCG": 6.88
+		},
+		"2020": {
+			"CG": [8.07, 7.91, 7.52, 7.33, 7.09, 7.33, 7.5, 7.39, 8.26, 8.23],
+			"minCG": 7.09,
+			"maxCG": 8.26,
+			"count": 10,
+			"averageCG": 7.663000000000001
+		}
+	},
+	"Yrals digitals India Pvt Ltd": {
+		"2017": {
+			"CG": [6.45],
+			"minCG": 6.45,
+			"maxCG": 6.45,
+			"count": 1,
+			"averageCG": 6.45
+		}
+	},
+	"Zeotap India Pvt. Ltd.(Bangalore)": {
+		"2017": {
+			"CG": [7.27, 7.28, 7.43],
+			"minCG": 7.27,
+			"maxCG": 7.43,
+			"count": 3,
+			"averageCG": 7.326666666666667
+		},
+		"2018": {
+			"CG": [7.89, 7.68, 7.523, 7.3],
+			"minCG": 7.3,
+			"maxCG": 7.89,
+			"count": 4,
+			"averageCG": 7.59825
+		},
+		"2019": {
+			"CG": [7.86, 7.88, 7.54, 7.77],
+			"minCG": 7.54,
+			"maxCG": 7.88,
+			"count": 4,
+			"averageCG": 7.7625
+		},
+		"2020": {
+			"CG": [8.168, 8.204],
+			"minCG": 8.168,
+			"maxCG": 8.204,
+			"count": 2,
+			"averageCG": 8.186
+		}
+	},
+	"Zinnov Management Consulting Pvt. Ltd.,(Bangalore)": {
+		"2017": {
+			"CG": [6.862, 7.131, 7.15, 7.16, 7.2, 7.28],
+			"minCG": 6.862,
+			"maxCG": 7.28,
+			"count": 6,
+			"averageCG": 7.1305000000000005
+		},
+		"2018": {
+			"CG": [7.48, 7.002000000000001],
+			"minCG": 7.002000000000001,
+			"maxCG": 7.48,
+			"count": 2,
+			"averageCG": 7.2410000000000005
+		},
+		"2019": {
+			"CG": [6.33, 5.9],
+			"minCG": 5.9,
+			"maxCG": 6.33,
+			"count": 2,
+			"averageCG": 6.115
+		},
+		"2020": {
+			"CG": [7.31, 8.86, 8.18, 7.2, 7.53, 7.38, 7.29, 7.09, 7.15, 6.99],
+			"minCG": 6.99,
+			"maxCG": 8.86,
+			"count": 10,
+			"averageCG": 7.498
+		}
+	},
+	"Zoomcar": {
+		"2017": {
+			"CG": [7.03, 7.23, 8.18],
+			"minCG": 7.03,
+			"maxCG": 7.23,
+			"count": 2,
+			"averageCG": 7.130000000000001
+		}
+	},
+	"Aditya Birla Group -Data and Analytics(Bangalore)": {
+		"2018": {
+			"CG": [7.824],
+			"minCG": 7.824,
+			"maxCG": 7.824,
+			"count": 1,
+			"averageCG": 7.824
+		},
+		"2019": {
+			"CG": [7.25],
+			"minCG": 7.25,
+			"maxCG": 7.25,
+			"count": 1,
+			"averageCG": 7.25
+		},
+		"2020": {
+			"CG": [7.4, 7.92, 7.806],
+			"minCG": 7.4,
+			"maxCG": 7.92,
+			"count": 3,
+			"averageCG": 7.708666666666667
+		}
+	},
+	"Aditya Birla Insulators(Halol)": {
+		"2018": {
+			"CG": [5.2],
+			"minCG": 5.2,
+			"maxCG": 5.2,
+			"count": 1,
+			"averageCG": 5.2
+		},
+		"2019": {
+			"CG": [0.0],
+			"minCG": 0.0,
+			"maxCG": 0.0,
+			"count": 1,
+			"averageCG": 0.0
+		},
+		"2020": {
+			"CG": [6.27, 6.28, 5.25],
+			"minCG": 5.25,
+			"maxCG": 6.28,
+			"count": 3,
+			"averageCG": 5.933333333333334
+		}
+	},
+	"Aditya Birla Science & Technology Company Ltd.(Mumbai)": {
+		"2018": {
+			"CG": [5.54],
+			"minCG": 5.54,
+			"maxCG": 5.54,
+			"count": 1,
+			"averageCG": 5.54
+		},
+		"2019": {
+			"CG": [5.08],
+			"minCG": 5.08,
+			"maxCG": 5.08,
+			"count": 1,
+			"averageCG": 5.08
+		},
+		"2020": {
+			"CG": [8.61],
+			"minCG": 8.61,
+			"maxCG": 8.61,
+			"count": 1,
+			"averageCG": 8.61
+		}
+	},
+	"Adobe Systems(Bangalore)": {
+		"2018": {
+			"CG": [7.65, 6.41],
+			"minCG": 6.41,
+			"maxCG": 7.65,
+			"count": 2,
+			"averageCG": 7.03
+		},
+		"2019": {
+			"CG": [8.32, 8.34, 8.44, 8.29],
+			"minCG": 8.29,
+			"maxCG": 8.44,
+			"count": 4,
+			"averageCG": 8.3475
+		}
+	},
+	"Adobe Systems(Noida)": {
+		"2018": {
+			"CG": [7.52, 7.62, 7.44],
+			"minCG": 7.44,
+			"maxCG": 7.62,
+			"count": 3,
+			"averageCG": 7.526666666666667
+		},
+		"2019": {
+			"CG": [7.41],
+			"minCG": 7.41,
+			"maxCG": 7.41,
+			"count": 1,
+			"averageCG": 7.41
+		}
+	},
+	"AFour Technologies(Pune)": {
+		"2018": {
+			"CG": [6.01],
+			"minCG": 6.01,
+			"maxCG": 6.01,
+			"count": 1,
+			"averageCG": 6.01
+		},
+		"2019": {
+			"CG": [6.87],
+			"minCG": 6.87,
+			"maxCG": 6.87,
+			"count": 1,
+			"averageCG": 6.87
+		},
+		"2020": {
+			"CG": [7.4, 7.426, 7.27, 7.48],
+			"minCG": 7.27,
+			"maxCG": 7.48,
+			"count": 4,
+			"averageCG": 7.394
+		}
+	},
+	"Alexa Apps(Hyderabad)": {
+		"2018": {
+			"CG": [6.9],
+			"minCG": 6.9,
+			"maxCG": 6.9,
+			"count": 1,
+			"averageCG": 6.9
+		}
+	},
+	"American Express - Big Data Labs (BDL)(Bangalore)": {
+		"2018": {
+			"CG": [8.04, 8.88, 8.17],
+			"minCG": 8.04,
+			"maxCG": 8.88,
+			"count": 3,
+			"averageCG": 8.363333333333335
+		},
+		"2019": {
+			"CG": [8.75, 8.35, 8.67],
+			"minCG": 8.35,
+			"maxCG": 8.75,
+			"count": 3,
+			"averageCG": 8.590000000000002
+		}
+	},
+	"American Express (RIM- C)(Bangalore)": {
+		"2018": {
+			"CG": [7.19],
+			"minCG": 7.19,
+			"maxCG": 7.19,
+			"count": 1,
+			"averageCG": 7.19
+		},
+		"2019": {
+			"CG": [6.685, 6.95],
+			"minCG": 6.685,
+			"maxCG": 6.95,
+			"count": 2,
+			"averageCG": 6.8175
+		}
+	},
+	"American Express India (RIM- C)(Gurgaon)": {
+		"2018": {
+			"CG": [6.55, 6.77],
+			"minCG": 6.55,
+			"maxCG": 6.77,
+			"count": 2,
+			"averageCG": 6.66
+		},
+		"2019": {
+			"CG": [6.55],
+			"minCG": 6.55,
+			"maxCG": 6.55,
+			"count": 1,
+			"averageCG": 6.55
+		}
+	},
+	"Apollo Tyres Ltd. Advanced Engineering centre(Chennai)": {
+		"2018": {
+			"CG": [6.6, 6.14],
+			"minCG": 6.14,
+			"maxCG": 6.6,
+			"count": 2,
+			"averageCG": 6.369999999999999
+		}
+	},
+	"Apple India Pvt Limited(Hyderabad)": {
+		"2018": {
+			"CG": [8.4, 8.452, 8.47, 8.4],
+			"minCG": 8.4,
+			"maxCG": 8.47,
+			"count": 4,
+			"averageCG": 8.4305
+		},
+		"2019": {
+			"CG": [8.85, 7.95],
+			"minCG": 7.95,
+			"maxCG": 8.85,
+			"count": 2,
+			"averageCG": 8.4
+		},
+		"2020": {
+			"CG": [8.88, 8.2],
+			"minCG": 8.2,
+			"maxCG": 8.88,
+			"count": 2,
+			"averageCG": 8.54
+		}
+	},
+	"ARM Embedded Technologies Private Limited(Noida)": {
+		"2018": {
+			"CG": [7.45, 7.37],
+			"minCG": 7.37,
+			"maxCG": 7.45,
+			"count": 2,
+			"averageCG": 7.41
+		}
+	},
+	"Auquan(Bangalore)": {
+		"2018": {
+			"CG": [5.94],
+			"minCG": 5.94,
+			"maxCG": 5.94,
+			"count": 1,
+			"averageCG": 5.94
+		}
+	},
+	"Baldor Technologies Pvt Ltd(Mumbai)": {
+		"2018": {
+			"CG": [7.42, 6.65],
+			"minCG": 6.65,
+			"maxCG": 7.42,
+			"count": 2,
+			"averageCG": 7.035
+		},
+		"2019": {
+			"CG": [6.84, 6.95],
+			"minCG": 6.84,
+			"maxCG": 6.95,
+			"count": 2,
+			"averageCG": 6.895
+		}
+	},
+	"Bosch Research and Technology center(Bangalore)": {
+		"2018": {
+			"CG": [6.138],
+			"minCG": 6.138,
+			"maxCG": 6.138,
+			"count": 1,
+			"averageCG": 6.138
+		},
+		"2019": {
+			"CG": [5.57, 7.0, 6.75, 6.54],
+			"minCG": 5.57,
+			"maxCG": 7.0,
+			"count": 4,
+			"averageCG": 6.465
+		},
+		"2020": {
+			"CG": [7.39, 7.11, 7.27, 7.05, 7.24],
+			"minCG": 7.05,
+			"maxCG": 7.39,
+			"count": 5,
+			"averageCG": 7.212000000000001
+		}
+	},
+	"Central Electronics Engineering Research Institute(Pilani)": {
+		"2018": {
+			"CG": [4.84],
+			"minCG": 4.84,
+			"maxCG": 4.84,
+			"count": 1,
+			"averageCG": 4.84
+		},
+		"2020": {
+			"CG": [7.07],
+			"minCG": 7.07,
+			"maxCG": 7.07,
+			"count": 1,
+			"averageCG": 7.07
+		}
+	},
+	"Centre for Artificial Intelligence & Robotics(Bangalore)": {
+		"2018": {
+			"CG": [5.9, 5.74],
+			"minCG": 5.74,
+			"maxCG": 5.9,
+			"count": 2,
+			"averageCG": 5.82
+		}
+	},
+	"Cloudcherry Analytics Pvt Ltd(Bangalore)": {
+		"2018": {
+			"CG": [7.07, 7.67, 7.2139999999999995],
+			"minCG": 7.07,
+			"maxCG": 7.67,
+			"count": 3,
+			"averageCG": 7.3180000000000005
+		},
+		"2019": {
+			"CG": [6.62],
+			"minCG": 6.62,
+			"maxCG": 6.62,
+			"count": 1,
+			"averageCG": 6.62
+		}
+	},
+	"Cohesity Storage Solutions India Pvt. Ltd.(Bangalore)": {
+		"2018": {
+			"CG": [8.037],
+			"minCG": 8.037,
+			"maxCG": 8.037,
+			"count": 1,
+			"averageCG": 8.037
+		},
+		"2019": {
+			"CG": [8.713, 8.718],
+			"minCG": 8.713,
+			"maxCG": 8.718,
+			"count": 2,
+			"averageCG": 8.715499999999999
+		}
+	},
+	"Crigloo(Chennai)": {
+		"2018": {
+			"CG": [7.09],
+			"minCG": 7.09,
+			"maxCG": 7.09,
+			"count": 1,
+			"averageCG": 7.09
+		}
+	},
+	"DBOI - Credit Risk(Mumbai)": {
+		"2018": {
+			"CG": [7.87, 6.7, 6.82],
+			"minCG": 6.7,
+			"maxCG": 7.87,
+			"count": 3,
+			"averageCG": 7.13
+		}
+	},
+	"DBOI - MLRM, Risk Methodology & NFRM(Mumbai)": {
+		"2018": {
+			"CG": [7.0, 6.95, 6.6],
+			"minCG": 6.6,
+			"maxCG": 7.0,
+			"count": 3,
+			"averageCG": 6.849999999999999
+		}
+	},
+	"DBOI - Trading Risk & PL(Mumbai)": {
+		"2018": {
+			"CG": [7.27, 6.92],
+			"minCG": 6.92,
+			"maxCG": 7.27,
+			"count": 2,
+			"averageCG": 7.095
+		}
+	},
+	"Dextra(New delhi)": {
+		"2018": {
+			"CG": [6.2],
+			"minCG": 6.2,
+			"maxCG": 6.2,
+			"count": 1,
+			"averageCG": 6.2
+		}
+	},
+	"Ecom Express Pvt. Ltd.(Delhi)": {
+		"2018": {
+			"CG": [6.78, 7.5],
+			"minCG": 6.78,
+			"maxCG": 7.5,
+			"count": 2,
+			"averageCG": 7.140000000000001
+		},
+		"2020": {
+			"CG": [8.1, 7.78, 6.6, 7.9, 7.8, 8.25, 8.22],
+			"minCG": 8.1,
+			"maxCG": 8.1,
+			"count": 1,
+			"averageCG": 8.1
+		}
+	},
+	"Ecozen Solutions (P) Ltd.(Pune)": {
+		"2018": {
+			"CG": [7.34, 9.243, 9.24],
+			"minCG": 7.34,
+			"maxCG": 9.243,
+			"count": 3,
+			"averageCG": 8.607666666666667
+		}
+	},
+	"Ericsson Global India Pvt. Ltd.(Chennai)": {
+		"2018": {
+			"CG": [6.9, 6.92, 7.0],
+			"minCG": 6.9,
+			"maxCG": 7.0,
+			"count": 3,
+			"averageCG": 6.94
+		},
+		"2019": {
+			"CG": [6.44, 6.6],
+			"minCG": 6.44,
+			"maxCG": 6.6,
+			"count": 2,
+			"averageCG": 6.52
+		}
+	},
+	"Ericsson Global India Pvt. Ltd.(Gurgaon)": {
+		"2017": {
+			"CG": [7.04, 7.35],
+			"minCG": 7.04,
+			"maxCG": 7.35,
+			"count": 2,
+			"averageCG": 7.195
+		},
+		"2018": {
+			"CG": [7.18, 6.7],
+			"minCG": 6.7,
+			"maxCG": 7.18,
+			"count": 2,
+			"averageCG": 6.9399999999999995
+		}
+	},
+	"Ericsson India Global Services Pvt. Ltd(Noida)": {
+		"2018": {
+			"CG": [6.9, 6.48],
+			"minCG": 6.48,
+			"maxCG": 6.9,
+			"count": 2,
+			"averageCG": 6.69
+		}
+	},
+	"Ernst & Young (Advisory Services)(Gurgaon)": {
+		"2018": {
+			"CG": [7.76],
+			"minCG": 7.76,
+			"maxCG": 7.76,
+			"count": 1,
+			"averageCG": 7.76
+		}
+	},
+	"Ernst & Young Global Delivery Services(Bangalore)": {
+		"2018": {
+			"CG": [6.466, 6.01, 6.38],
+			"minCG": 6.01,
+			"maxCG": 6.466,
+			"count": 3,
+			"averageCG": 6.285333333333333
+		},
+		"2019": {
+			"CG": [6.49, 6.3, 6.7],
+			"minCG": 6.3,
+			"maxCG": 6.7,
+			"count": 3,
+			"averageCG": 6.496666666666666
+		}
+	},
+	"Exponential Data (Mumbai)": {
+		"2018": {
+			"CG": [5.52],
+			"minCG": 5.52,
+			"maxCG": 5.52,
+			"count": 1,
+			"averageCG": 5.52
+		}
+	},
+	"Fidelity Investments(Bangalore)": {
+		"2018": {
+			"CG": [7.59, 7.41],
+			"minCG": 7.41,
+			"maxCG": 7.59,
+			"count": 2,
+			"averageCG": 7.5
+		},
+		"2019": {
+			"CG": [8.11, 7.42, 7.4, 7.692, 7.71],
+			"minCG": 7.4,
+			"maxCG": 8.11,
+			"count": 5,
+			"averageCG": 7.6664
+		}
+	},
+	"FreshWorks Inc(Chennai)": {
+		"2018": {
+			"CG": [6.05],
+			"minCG": 6.05,
+			"maxCG": 6.05,
+			"count": 1,
+			"averageCG": 6.05
+		}
+	},
+	"Frost & Sullivan(Chennai)": {
+		"2018": {
+			"CG": [5.88],
+			"minCG": 5.88,
+			"maxCG": 5.88,
+			"count": 1,
+			"averageCG": 5.88
+		}
+	},
+	"GGK Technologies - Mobile Services(Hyderabad)": {
+		"2018": {
+			"CG": [5.852, 5.8, 6.43, 5.26, 6.13, 5.55, 6.17],
+			"minCG": 5.26,
+			"maxCG": 6.43,
+			"count": 7,
+			"averageCG": 5.884571428571428
+		}
+	},
+	"Grasim Industries, Pulp and Fibre Division(Mumbai)": {
+		"2018": {
+			"CG": [7.63],
+			"minCG": 7.63,
+			"maxCG": 7.63,
+			"count": 1,
+			"averageCG": 7.63
+		},
+		"2019": {
+			"CG": [5.8],
+			"minCG": 5.8,
+			"maxCG": 5.8,
+			"count": 1,
+			"averageCG": 5.8
+		},
+		"2020": {
+			"CG": [6.96],
+			"minCG": 6.96,
+			"maxCG": 6.96,
+			"count": 1,
+			"averageCG": 6.96
+		}
+	},
+	"HAPPAY (VA Tech Ventures Pvt Ltd.)(Bangalore)": {
+		"2018": {
+			"CG": [6.56],
+			"minCG": 6.56,
+			"maxCG": 6.56,
+			"count": 1,
+			"averageCG": 6.56
+		},
+		"2019": {
+			"CG": [6.6, 7.06, 6.71],
+			"minCG": 6.6,
+			"maxCG": 7.06,
+			"count": 3,
+			"averageCG": 6.79
+		}
+	},
+	"HCL Technologies(Bangalore)": {
+		"2018": {
+			"CG": [7.37, 6.2, 5.792000000000001],
+			"minCG": 5.792000000000001,
+			"maxCG": 7.37,
+			"count": 3,
+			"averageCG": 6.454000000000001
+		},
+		"2020": {
+			"CG": [7.64, 7.811],
+			"minCG": 7.64,
+			"maxCG": 7.811,
+			"count": 2,
+			"averageCG": 7.7255
+		}
+	},
+	"Healthcare Technology Innovation Centre (HTIC)(Chennai)": {
+		"2018": {
+			"CG": [6.72],
+			"minCG": 6.72,
+			"maxCG": 6.72,
+			"count": 1,
+			"averageCG": 6.72
+		},
+		"2019": {
+			"CG": [5.44],
+			"minCG": 5.44,
+			"maxCG": 5.44,
+			"count": 1,
+			"averageCG": 5.44
+		}
+	},
+	"Hindalco Innovation Centre - Semifab, Taloja(Mumbai)": {
+		"2018": {
+			"CG": [6.26],
+			"minCG": 6.26,
+			"maxCG": 6.26,
+			"count": 1,
+			"averageCG": 6.26
+		},
+		"2019": {
+			"CG": [6.224],
+			"minCG": 6.224,
+			"maxCG": 6.224,
+			"count": 1,
+			"averageCG": 6.224
+		}
+	},
+	"Hindustan Unilever Research Centre(Bangalore)": {
+		"2018": {
+			"CG": [6.0, 8.39, 7.432, 7.5, 7.98, 8.03],
+			"minCG": 6.0,
+			"maxCG": 8.39,
+			"count": 6,
+			"averageCG": 7.555333333333334
+		},
+		"2019": {
+			"CG": [6.34, 5.94, 6.54, 5.9],
+			"minCG": 5.9,
+			"maxCG": 6.54,
+			"count": 4,
+			"averageCG": 6.18
+		}
+	},
+	"Hourglass Research(Mumbai)": {
+		"2018": {
+			"CG": [6.2, 7.0],
+			"minCG": 6.2,
+			"maxCG": 7.0,
+			"count": 2,
+			"averageCG": 6.6
+		},
+		"2019": {
+			"CG": [7.51],
+			"minCG": 7.51,
+			"maxCG": 7.51,
+			"count": 1,
+			"averageCG": 7.51
+		},
+		"2020": {
+			"CG": [7.27, 7.27, 7.43],
+			"minCG": 7.27,
+			"maxCG": 7.43,
+			"count": 3,
+			"averageCG": 7.323333333333333
+		}
+	},
+	"HSBC(Bangalore)": {
+		"2018": {
+			"CG": [6.83],
+			"minCG": 6.83,
+			"maxCG": 6.83,
+			"count": 1,
+			"averageCG": 6.83
+		}
+	},
+	"HyperVerge, Inc(Bangalore)": {
+		"2018": {
+			"CG": [7.93, 7.98],
+			"minCG": 7.93,
+			"maxCG": 7.98,
+			"count": 2,
+			"averageCG": 7.955
+		}
+	},
+	"IBM India Software Group (Pune)": {
+		"2018": {
+			"CG": [6.49, 6.05],
+			"minCG": 6.05,
+			"maxCG": 6.49,
+			"count": 2,
+			"averageCG": 6.27
+		}
+	},
+	"IBM India Software Group(Bangalore)": {
+		"2018": {
+			"CG": [6.5, 6.58, 6.82, 6.3, 7.62, 8.38, 6.68],
+			"minCG": 6.3,
+			"maxCG": 8.38,
+			"count": 7,
+			"averageCG": 6.982857142857143
+		}
+	},
+	"IDeaS - SAS - Software Development(Pune)": {
+		"2018": {
+			"CG": [6.81, 6.15, 6.36, 5.76],
+			"minCG": 5.76,
+			"maxCG": 6.81,
+			"count": 4,
+			"averageCG": 6.27
+		},
+		"2019": {
+			"CG": [6.16, 6.97, 6.2139999999999995],
+			"minCG": 6.16,
+			"maxCG": 6.97,
+			"count": 3,
+			"averageCG": 6.4479999999999995
+		}
+	},
+	"IMI Connect Product Development(Hyderabad)": {
+		"2018": {
+			"CG": [5.922999999999999],
+			"minCG": 5.922999999999999,
+			"maxCG": 5.922999999999999,
+			"count": 1,
+			"averageCG": 5.922999999999999
+		}
+	},
+	"IMI Mobile R&D(Hyderabad)": {
+		"2018": {
+			"CG": [8.16, 6.91],
+			"minCG": 6.91,
+			"maxCG": 8.16,
+			"count": 2,
+			"averageCG": 7.535
+		},
+		"2019": {
+			"CG": [6.56, 6.65, 6.55, 6.9, 6.49],
+			"minCG": 6.49,
+			"maxCG": 6.9,
+			"count": 5,
+			"averageCG": 6.630000000000001
+		}
+	},
+	"InMobi- Business Development(Bangalore)": {
+		"2017": {
+			"CG": [6.81, 6.9, 6.95, 7.07, 7.22, 7.31, 8.35],
+			"minCG": 6.81,
+			"maxCG": 8.35,
+			"count": 7,
+			"averageCG": 7.230000000000001
+		},
+		"2018": {
+			"CG": [
+				7.02, 7.54, 7.65, 7.39, 7.65, 8.38, 6.92, 6.7, 7.35, 7.8, 7.651,
+				6.98, 7.65, 7.53, 7.1, 8.7, 7.75
+			],
+			"minCG": 6.7,
+			"maxCG": 8.7,
+			"count": 17,
+			"averageCG": 7.515352941176471
+		},
+		"2019": {
+			"CG": [8.61, 7.63, 7.39, 7.14],
+			"minCG": 7.14,
+			"maxCG": 8.61,
+			"count": 4,
+			"averageCG": 7.6925
+		}
+	},
+	"J P Morgan Services - Quant(Mumbai)": {
+		"2017": {
+			"CG": [8.24],
+			"minCG": 8.24,
+			"maxCG": 8.24,
+			"count": 1,
+			"averageCG": 8.24
+		},
+		"2018": {
+			"CG": [8.94, 9.1],
+			"minCG": 8.94,
+			"maxCG": 9.1,
+			"count": 2,
+			"averageCG": 9.02
+		}
+	},
+	"J P Morgan Services- Global Markets Group(GMG)(Mumbai)": {
+		"2017": {
+			"CG": [],
+			"minCG": 7.55,
+			"maxCG": 7.55,
+			"count": 1,
+			"averageCG": 7.55
+		},
+		"2018": {
+			"CG": [7.89, 8.33, 8.48, 8.34, 7.93, 8.96],
+			"minCG": 7.89,
+			"maxCG": 8.96,
+			"count": 6,
+			"averageCG": 8.321666666666667
+		},
+		"2019": {
+			"CG": [8.98, 8.8, 8.69],
+			"minCG": 8.69,
+			"maxCG": 8.98,
+			"count": 3,
+			"averageCG": 8.823333333333332
+		}
+	},
+	"J P Morgan services- Global research Centre(GRC)(Mumbai)": {
+		"2018": {
+			"CG": [8.5, 8.64, 7.9, 8.31, 7.6, 8.267999999999999, 7.215],
+			"minCG": 7.215,
+			"maxCG": 8.64,
+			"count": 7,
+			"averageCG": 8.061857142857145
+		},
+		"2019": {
+			"CG": [8.47, 7.77, 7.59, 7.74, 7.49, 7.68, 7.4, 7.38, 7.81],
+			"minCG": 7.38,
+			"maxCG": 8.47,
+			"count": 9,
+			"averageCG": 7.703333333333333
+		}
+	},
+	"Jarvis Technology and Strategy Consulting Pvt. Ltd.(Mumbai)": {
+		"2018": {
+			"CG": [5.88, 6.67, 7.1, 6.58, 6.25, 5.92],
+			"minCG": 5.88,
+			"maxCG": 7.1,
+			"count": 6,
+			"averageCG": 6.3999999999999995
+		}
+	},
+	"JPMC - Technology(Hyderabad)": {
+		"2018": {
+			"CG": [7.47, 6.95, 7.28, 7.15, 6.7],
+			"minCG": 6.7,
+			"maxCG": 7.47,
+			"count": 5,
+			"averageCG": 7.110000000000001
+		},
+		"2019": {
+			"CG": [7.39, 7.08, 7.15, 7.36, 7.81],
+			"minCG": 7.08,
+			"maxCG": 7.81,
+			"count": 5,
+			"averageCG": 7.358
+		}
+	},
+	"JPMC - Technology(Mumbai)": {
+		"2018": {
+			"CG": [7.0, 7.13, 7.74, 7.93, 7.3],
+			"minCG": 7.0,
+			"maxCG": 7.93,
+			"count": 5,
+			"averageCG": 7.419999999999999
+		},
+		"2019": {
+			"CG": [7.73, 7.78, 7.34, 7.64],
+			"minCG": 7.34,
+			"maxCG": 7.78,
+			"count": 4,
+			"averageCG": 7.6225000000000005
+		}
+	},
+	"Knorr-Bremse Technology Center India Private Limited(Pune)": {
+		"2018": {
+			"CG": [6.62],
+			"minCG": 6.62,
+			"maxCG": 6.62,
+			"count": 1,
+			"averageCG": 6.62
+		}
+	},
+	"Kristal.AI(Bangalore)": {
+		"2018": {
+			"CG": [7.59],
+			"minCG": 7.59,
+			"maxCG": 7.59,
+			"count": 1,
+			"averageCG": 7.59
+		},
+		"2019": {
+			"CG": [7.56, 7.55, 7.69],
+			"minCG": 7.55,
+			"maxCG": 7.69,
+			"count": 3,
+			"averageCG": 7.6000000000000005
+		}
+	},
+	"Lowes India(Bangalore)": {
+		"2018": {
+			"CG": [7.05, 6.93],
+			"minCG": 6.93,
+			"maxCG": 7.05,
+			"count": 2,
+			"averageCG": 6.99
+		}
+	},
+	"LV Prasad Eye Institute(Hyderabad)": {
+		"2018": {
+			"CG": [5.78],
+			"minCG": 5.78,
+			"maxCG": 5.78,
+			"count": 1,
+			"averageCG": 5.78
+		}
+	},
+	"Mahle Behr India Services(Pune)": {
+		"2018": {
+			"CG": [5.13],
+			"minCG": 5.13,
+			"maxCG": 5.13,
+			"count": 1,
+			"averageCG": 5.13
+		}
+	},
+	"Minda Corporation(Pune)": {
+		"2018": {
+			"CG": [5.0, 5.0],
+			"minCG": 5.0,
+			"maxCG": 5.0,
+			"count": 2,
+			"averageCG": 5.0
+		}
+	},
+	"National Chemical Laboratory(Pune)": {
+		"2017": {
+			"CG": [7.58],
+			"minCG": 7.58,
+			"maxCG": 7.58,
+			"count": 1,
+			"averageCG": 7.58
+		},
+		"2018": {
+			"CG": [6.2],
+			"minCG": 6.2,
+			"maxCG": 6.2,
+			"count": 1,
+			"averageCG": 6.2
+		},
+		"2020": {
+			"CG": [7.51, 8.74],
+			"minCG": 7.51,
+			"maxCG": 8.74,
+			"count": 2,
+			"averageCG": 8.125
+		}
+	},
+	"National Entrepreneurship Network(Bangalore)": {
+		"2017": {
+			"CG": [6.42, 7.25],
+			"minCG": 6.42,
+			"maxCG": 6.42,
+			"count": 1,
+			"averageCG": 6.42
+		},
+		"2018": {
+			"CG": [6.13, 6.28],
+			"minCG": 6.13,
+			"maxCG": 6.28,
+			"count": 2,
+			"averageCG": 6.205
+		}
+	},
+	"Next Gen (Non IT) (Mumbai)": {
+		"2018": {
+			"CG": [7.43, 7.21],
+			"minCG": 7.21,
+			"maxCG": 7.43,
+			"count": 2,
+			"averageCG": 7.32
+		}
+	},
+	"Next Gen PMS (Non IT)(Delhi)": {
+		"2018": {
+			"CG": [6.82, 7.1],
+			"minCG": 6.82,
+			"maxCG": 7.1,
+			"count": 2,
+			"averageCG": 6.96
+		}
+	},
+	"NextGen PMS - IT(Bangalore)": {
+		"2017": {
+			"CG": [6.4, 6.43, 6.5, 6.64, 7.2, 7.2, 7.3, 7.33, 7.62, 10.0],
+			"minCG": 6.4,
+			"maxCG": 10.0,
+			"count": 10,
+			"averageCG": 7.2620000000000005
+		},
+		"2018": {
+			"CG": [7.346, 8.01, 7.68, 7.64, 8.26, 7.936],
+			"minCG": 7.346,
+			"maxCG": 8.26,
+			"count": 6,
+			"averageCG": 7.812
+		}
+	},
+	"NextGen PMS Pvt. Ltd - Non IT(Bangalore)": {
+		"2018": {
+			"CG": [7.03, 6.43, 7.28, 7.8],
+			"minCG": 6.43,
+			"maxCG": 7.8,
+			"count": 4,
+			"averageCG": 7.135000000000001
+		}
+	},
+	"Nomura - FinTech(Mumbai)": {
+		"2018": {
+			"CG": [8.41, 8.1],
+			"minCG": 8.1,
+			"maxCG": 8.41,
+			"count": 2,
+			"averageCG": 8.254999999999999
+		},
+		"2020": {
+			"CG": [7.71],
+			"minCG": 7.71,
+			"maxCG": 7.71,
+			"count": 1,
+			"averageCG": 7.71
+		}
+	},
+	"Nomura Global Markets(Mumbai)": {
+		"2018": {
+			"CG": [7.19, 8.2],
+			"minCG": 7.19,
+			"maxCG": 8.2,
+			"count": 2,
+			"averageCG": 7.695
+		},
+		"2019": {
+			"CG": [7.63, 7.989, 7.6, 7.95, 8.15],
+			"minCG": 7.6,
+			"maxCG": 8.15,
+			"count": 5,
+			"averageCG": 7.8638
+		},
+		"2020": {
+			"CG": [7.7, 7.7],
+			"minCG": 7.7,
+			"maxCG": 7.7,
+			"count": 2,
+			"averageCG": 7.7
+		}
+	},
+	"Novartis(Hyderabad)": {
+		"2018": {
+			"CG": [6.67, 6.73],
+			"minCG": 6.67,
+			"maxCG": 6.73,
+			"count": 2,
+			"averageCG": 6.7
+		},
+		"2019": {
+			"CG": [6.5, 6.98, 6.62, 6.94],
+			"minCG": 6.5,
+			"maxCG": 6.98,
+			"count": 4,
+			"averageCG": 6.760000000000001
+		}
+	},
+	"Nutanix Technologies India Pvt Ltd - MTS(Bangalore)": {
+		"2018": {
+			"CG": [8.71, 8.57, 8.54, 8.65, 8.55],
+			"minCG": 8.54,
+			"maxCG": 8.71,
+			"count": 5,
+			"averageCG": 8.604
+		},
+		"2019": {
+			"CG": [8.82, 8.77, 9.19, 8.2, 9.04, 8.91, 8.92, 8.92, 8.837, 8.21],
+			"minCG": 8.2,
+			"maxCG": 9.19,
+			"count": 10,
+			"averageCG": 8.7817
+		},
+		"2020": {
+			"CG": [
+				9.65, 9.6, 9.5, 9.25, 9.16, 9.14, 9.1, 9.06, 8.83, 8.8, 8.65,
+				8.54, 9.56, 8.82, 9.426, 8.82
+			],
+			"minCG": 8.54,
+			"maxCG": 9.65,
+			"count": 16,
+			"averageCG": 9.119124999999999
+		}
+	},
+	"Oracle India Pvt Ltd.(Bangalore)": {
+		"2018": {
+			"CG": [7.5, 7.46, 7.59, 8.235, 7.57, 7.57],
+			"minCG": 7.46,
+			"maxCG": 8.235,
+			"count": 6,
+			"averageCG": 7.654166666666668
+		},
+		"2020": {
+			"CG": [8.61, 8.771],
+			"minCG": 8.61,
+			"maxCG": 8.771,
+			"count": 2,
+			"averageCG": 8.6905
+		}
+	},
+	"Oracle India Pvt Ltd.(Hyderabad)": {
+		"2018": {
+			"CG": [7.45, 7.47, 7.53, 7.41],
+			"minCG": 7.41,
+			"maxCG": 7.53,
+			"count": 4,
+			"averageCG": 7.465
+		},
+		"2020": {
+			"CG": [8.25, 8.61, 8.5, 8.45, 8.36, 8.33, 8.27],
+			"minCG": 8.25,
+			"maxCG": 8.61,
+			"count": 7,
+			"averageCG": 8.395714285714286
+		}
+	},
+	"OYO Rooms(Gurgaon)": {
+		"2018": {
+			"CG": [7.05, 7.26],
+			"minCG": 7.05,
+			"maxCG": 7.26,
+			"count": 2,
+			"averageCG": 7.154999999999999
+		},
+		"2019": {
+			"CG": [7.05, 7.38, 8.02, 7.09, 7.03, 7.71, 7.04, 7.61],
+			"minCG": 7.03,
+			"maxCG": 8.02,
+			"count": 8,
+			"averageCG": 7.36625
+		}
+	},
+	"OYO Rooms(Hyderabad)": {
+		"2018": {
+			"CG": [7.77],
+			"minCG": 7.77,
+			"maxCG": 7.77,
+			"count": 1,
+			"averageCG": 7.77
+		},
+		"2019": {
+			"CG": [7.18, 7.05, 7.04, 7.14, 7.04],
+			"minCG": 7.04,
+			"maxCG": 7.18,
+			"count": 5,
+			"averageCG": 7.090000000000001
+		}
+	},
+	"PAYPAL(Bangalore)": {
+		"2018": {
+			"CG": [7.93, 7.82],
+			"minCG": 7.82,
+			"maxCG": 7.93,
+			"count": 2,
+			"averageCG": 7.875
+		}
+	},
+	"PaySense(Mumbai)": {
+		"2018": {
+			"CG": [6.38],
+			"minCG": 6.38,
+			"maxCG": 6.38,
+			"count": 1,
+			"averageCG": 6.38
+		}
+	},
+	"Piramal Group(Mumbai)": {
+		"2018": {
+			"CG": [7.52, 7.65, 7.42],
+			"minCG": 7.42,
+			"maxCG": 7.65,
+			"count": 3,
+			"averageCG": 7.53
+		},
+		"2019": {
+			"CG": [7.66, 7.02, 6.77, 8.04, 6.86],
+			"minCG": 6.77,
+			"maxCG": 8.04,
+			"count": 5,
+			"averageCG": 7.2700000000000005
+		}
+	},
+	"Pluss Advanced Technologies Pvt. Ltd.(Gurgaon)": {
+		"2018": {
+			"CG": [4.8],
+			"minCG": 4.8,
+			"maxCG": 4.8,
+			"count": 1,
+			"averageCG": 4.8
+		}
+	},
+	"Postman(Bangalore)": {
+		"2018": {
+			"CG": [6.81, 6.88],
+			"minCG": 6.81,
+			"maxCG": 6.88,
+			"count": 2,
+			"averageCG": 6.845
+		}
+	},
+	"PricewaterhouseCoopers (PWC)(Chennai)": {
+		"2018": {
+			"CG": [7.11, 6.382999999999999],
+			"minCG": 6.382999999999999,
+			"maxCG": 7.11,
+			"count": 2,
+			"averageCG": 6.746499999999999
+		}
+	},
+	"QUANTIPHI(Mumbai)": {
+		"2018": {
+			"CG": [6.9, 6.9],
+			"minCG": 6.9,
+			"maxCG": 6.9,
+			"count": 2,
+			"averageCG": 6.9
+		},
+		"2019": {
+			"CG": [7.09, 8.35, 7.23, 7.12],
+			"minCG": 7.09,
+			"maxCG": 8.35,
+			"count": 4,
+			"averageCG": 7.447500000000001
+		}
+	},
+	"Reckitt Benckiser(Gurgaon)": {
+		"2018": {
+			"CG": [7.67],
+			"minCG": 7.67,
+			"maxCG": 7.67,
+			"count": 1,
+			"averageCG": 7.67
+		}
+	},
+	"Reliance Jio(Bangalore)": {
+		"2018": {
+			"CG": [7.7, 7.15, 7.65],
+			"minCG": 7.15,
+			"maxCG": 7.7,
+			"count": 3,
+			"averageCG": 7.5
+		}
+	},
+	"Reliance Jio(Mumbai)": {
+		"2018": {
+			"CG": [7.14, 7.25, 7.17],
+			"minCG": 7.14,
+			"maxCG": 7.25,
+			"count": 3,
+			"averageCG": 7.186666666666667
+		}
+	},
+	"Rivigo Services Pvt Ltd(Gurgaon)": {
+		"2018": {
+			"CG": [7.45],
+			"minCG": 7.45,
+			"maxCG": 7.45,
+			"count": 1,
+			"averageCG": 7.45
+		},
+		"2019": {
+			"CG": [7.56],
+			"minCG": 7.56,
+			"maxCG": 7.56,
+			"count": 1,
+			"averageCG": 7.56
+		},
+		"2020": {
+			"CG": [7.806],
+			"minCG": 7.806,
+			"maxCG": 7.806,
+			"count": 1,
+			"averageCG": 7.806
+		}
+	},
+	"S.R. BATLIBOI & CO. LLP(Chennai)": {
+		"2018": {
+			"CG": [6.72, 6.58],
+			"minCG": 6.58,
+			"maxCG": 6.72,
+			"count": 2,
+			"averageCG": 6.65
+		}
+	},
+	"Samhita Social Ventures(Mumbai)": {
+		"2018": {
+			"CG": [6.1],
+			"minCG": 6.1,
+			"maxCG": 6.1,
+			"count": 1,
+			"averageCG": 6.1
+		}
+	},
+	"Samsung R &D Institute - Intelligent Services(Bangalore)": {
+		"2018": {
+			"CG": [7.034, 7.31, 7.085, 6.94],
+			"minCG": 6.94,
+			"maxCG": 7.31,
+			"count": 4,
+			"averageCG": 7.09225
+		}
+	},
+	"Samsung R &D Institute - Networks(Bangalore)": {
+		"2018": {
+			"CG": [7.41, 7.12, 7.18],
+			"minCG": 7.12,
+			"maxCG": 7.41,
+			"count": 3,
+			"averageCG": 7.236666666666667
+		}
+	},
+	"Samsung Semiconductor India R&D Center(Bangalore)": {
+		"2018": {
+			"CG": [8.4, 7.6, 8.12],
+			"minCG": 7.6,
+			"maxCG": 8.4,
+			"count": 3,
+			"averageCG": 8.04
+		},
+		"2019": {
+			"CG": [7.94, 8.53, 7.62, 7.88, 7.65, 8.01, 7.81, 7.8, 7.68],
+			"minCG": 7.62,
+			"maxCG": 8.53,
+			"count": 9,
+			"averageCG": 7.879999999999999
+		},
+		"2020": {
+			"CG": [
+				7.2, 7.13, 7.23, 7.11, 7.33, 7.795, 7.1579999999999995, 7.97,
+				7.27, 7.89
+			],
+			"minCG": 7.11,
+			"maxCG": 7.97,
+			"count": 10,
+			"averageCG": 7.4083
+		}
+	},
+	"Spicer India Ltd.(Pune)": {
+		"2018": {
+			"CG": [6.43],
+			"minCG": 6.43,
+			"maxCG": 6.43,
+			"count": 1,
+			"averageCG": 6.43
+		},
+		"2019": {
+			"CG": [6.49, 5.0, 5.17],
+			"minCG": 5.0,
+			"maxCG": 6.49,
+			"count": 3,
+			"averageCG": 5.553333333333334
+		}
+	},
+	"Spicer India Ltd.(Satara)": {
+		"2018": {
+			"CG": [5.59],
+			"minCG": 5.59,
+			"maxCG": 5.59,
+			"count": 1,
+			"averageCG": 5.59
+		}
+	},
+	"ST Microelectronics(I) Pvt.Ltd.(Greater noida)": {
+		"2018": {
+			"CG": [6.97],
+			"minCG": 6.97,
+			"maxCG": 6.97,
+			"count": 1,
+			"averageCG": 6.97
+		}
+	},
+	"Structural Engineering Research Centre(Chennai)": {
+		"2018": {
+			"CG": [6.91],
+			"minCG": 6.91,
+			"maxCG": 6.91,
+			"count": 1,
+			"averageCG": 6.91
+		}
+	},
+	"Sun Mobility(Bangalore)": {
+		"2018": {
+			"CG": [6.5],
+			"minCG": 6.5,
+			"maxCG": 6.5,
+			"count": 1,
+			"averageCG": 6.5
+		},
+		"2019": {
+			"CG": [6.67, 6.67],
+			"minCG": 6.67,
+			"maxCG": 6.67,
+			"count": 2,
+			"averageCG": 6.67
+		},
+		"2020": {
+			"CG": [7.33],
+			"minCG": 7.33,
+			"maxCG": 7.33,
+			"count": 1,
+			"averageCG": 7.33
+		}
+	},
+	"Thinkerbell Labs (Bangalore)": {
+		"2018": {
+			"CG": [7.466],
+			"minCG": 7.466,
+			"maxCG": 7.466,
+			"count": 1,
+			"averageCG": 7.466
+		},
+		"2019": {
+			"CG": [6.3, 6.2, 6.48, 7.0, 7.16, 6.07, 6.43, 6.9],
+			"minCG": 6.07,
+			"maxCG": 7.16,
+			"count": 8,
+			"averageCG": 6.5675
+		}
+	},
+	"Thorogood(Bangalore)": {
+		"2018": {
+			"CG": [7.35, 7.19, 6.94],
+			"minCG": 6.94,
+			"maxCG": 7.35,
+			"count": 3,
+			"averageCG": 7.16
+		},
+		"2019": {
+			"CG": [7.96, 7.4],
+			"minCG": 7.4,
+			"maxCG": 7.96,
+			"count": 2,
+			"averageCG": 7.68
+		},
+		"2020": {
+			"CG": [8.81, 8.65],
+			"minCG": 8.65,
+			"maxCG": 8.81,
+			"count": 2,
+			"averageCG": 8.73
+		}
+	},
+	"Udhyam Learning Foundatation(Bangalore)": {
+		"2018": {
+			"CG": [6.5],
+			"minCG": 6.5,
+			"maxCG": 6.5,
+			"count": 1,
+			"averageCG": 6.5
+		}
+	},
+	"UltraTech Cement Limited (Ahura Centre)(Mumbai)": {
+		"2018": {
+			"CG": [6.25, 6.35],
+			"minCG": 6.25,
+			"maxCG": 6.35,
+			"count": 2,
+			"averageCG": 6.3
+		}
+	},
+	"United Airlines Business Services Pvt. Ltd.(Gurgaon)": {
+		"2018": {
+			"CG": [7.15, 7.31],
+			"minCG": 7.15,
+			"maxCG": 7.31,
+			"count": 2,
+			"averageCG": 7.23
+		}
+	},
+	"UPGRAD(Mumbai)": {
+		"2018": {
+			"CG": [6.3, 6.1, 6.1979999999999995],
+			"minCG": 6.1,
+			"maxCG": 6.3,
+			"count": 3,
+			"averageCG": 6.199333333333333
+		},
+		"2019": {
+			"CG": [7.16, 6.74, 7.1],
+			"minCG": 6.74,
+			"maxCG": 7.16,
+			"count": 3,
+			"averageCG": 7.0
+		},
+		"2020": {
+			"CG": [
+				7.76, 7.72, 7.63, 7.6, 7.56, 7.5, 7.47, 7.42, 7.412999999999999,
+				7.35, 7.32, 7.261, 7.195, 7.13, 7.05, 7.727, 7.2139999999999995,
+				7.857, 7.7, 7.48, 7.44, 7.25, 7.51
+			],
+			"minCG": 7.05,
+			"maxCG": 7.857,
+			"count": 23,
+			"averageCG": 7.458999999999998
+		}
+	},
+	"Wealth India Financial Services Pvt. Ltd(Bangalore)": {
+		"2018": {
+			"CG": [6.2, 6.92],
+			"minCG": 6.2,
+			"maxCG": 6.92,
+			"count": 2,
+			"averageCG": 6.5600000000000005
+		},
+		"2019": {
+			"CG": [6.76],
+			"minCG": 6.76,
+			"maxCG": 6.76,
+			"count": 1,
+			"averageCG": 6.76
+		}
+	},
+	"wheels Eye(Gurgaon)": {
+		"2018": {
+			"CG": [5.54],
+			"minCG": 5.54,
+			"maxCG": 5.54,
+			"count": 1,
+			"averageCG": 5.54
+		}
+	},
+	"Zinnov Management Consulting Pvt. Ltd (IT Project)(Bangalore)": {
+		"2018": {
+			"CG": [5.16],
+			"minCG": 5.16,
+			"maxCG": 5.16,
+			"count": 1,
+			"averageCG": 5.16
+		},
+		"2020": {
+			"CG": [8.07, 7.86],
+			"minCG": 7.86,
+			"maxCG": 8.07,
+			"count": 2,
+			"averageCG": 7.965
+		}
+	},
+	"ASA Industries(Noida)": {
+		"2019": {
+			"CG": [5.83],
+			"minCG": 5.83,
+			"maxCG": 5.83,
+			"count": 1,
+			"averageCG": 5.83
+		},
+		"2020": {
+			"CG": [7.85, 7.95],
+			"minCG": 7.85,
+			"maxCG": 7.95,
+			"count": 2,
+			"averageCG": 7.9
+		}
+	},
+	"AlmaConnect(New delhi)": {
+		"2019": {
+			"CG": [6.96],
+			"minCG": 6.96,
+			"maxCG": 6.96,
+			"count": 1,
+			"averageCG": 6.96
+		},
+		"2020": {
+			"CG": [7.21, 7.2, 7.04, 5.75, 6.81, 7.13, 7.1, 7.1, 7.22],
+			"minCG": 5.75,
+			"maxCG": 7.22,
+			"count": 9,
+			"averageCG": 6.9511111111111115
+		}
+	},
+	"Amazon Professional Services(Bangalore)": {
+		"2019": {
+			"CG": [7.7, 6.99],
+			"minCG": 6.99,
+			"maxCG": 7.7,
+			"count": 2,
+			"averageCG": 7.345000000000001
+		}
+	},
+	"American Express - Machine Learning & Artificial Intelligence(Gurgaon)": {
+		"2019": {
+			"CG": [9.0],
+			"minCG": 9.0,
+			"maxCG": 9.0,
+			"count": 1,
+			"averageCG": 9.0
+		}
+	},
+	"American Express - Technology(Bangalore)": {
+		"2019": {
+			"CG": [7.8, 8.05],
+			"minCG": 7.8,
+			"maxCG": 8.05,
+			"count": 2,
+			"averageCG": 7.925000000000001
+		}
+	},
+	"American Express - Technology(Gurgaon)": {
+		"2019": {
+			"CG": [7.75, 7.67],
+			"minCG": 7.67,
+			"maxCG": 7.75,
+			"count": 2,
+			"averageCG": 7.71
+		}
+	},
+	"American Express - Capabilities EDA(Gurgaon)": {
+		"2019": {
+			"CG": [6.77, 6.6],
+			"minCG": 6.6,
+			"maxCG": 6.77,
+			"count": 2,
+			"averageCG": 6.685
+		}
+	},
+	"Ansysco / Anchemco(Parwanoo)": {
+		"2019": {
+			"CG": [5.622999999999999],
+			"minCG": 5.622999999999999,
+			"maxCG": 5.622999999999999,
+			"count": 1,
+			"averageCG": 5.622999999999999
+		}
+	},
+	"Arup India Pvt. Ltd.(Hyderabad)": {
+		"2019": {
+			"CG": [0.0],
+			"minCG": 0.0,
+			"maxCG": 0.0,
+			"count": 1,
+			"averageCG": 0.0
+		}
+	},
+	"Avaamo(Bangalore)": {
+		"2019": {
+			"CG": [7.17, 8.44, 7.3],
+			"minCG": 7.17,
+			"maxCG": 8.44,
+			"count": 3,
+			"averageCG": 7.636666666666667
+		}
+	},
+	"Ayro Retail Solutions Pvt. Ltd.(Mumbai)": {
+		"2019": {
+			"CG": [7.31],
+			"minCG": 7.31,
+			"maxCG": 7.31,
+			"count": 1,
+			"averageCG": 7.31
+		}
+	},
+	"B.G.Shirke Construction Technology Pvt. Ltd.(Pune)": {
+		"2019": {
+			"CG": [7.93],
+			"minCG": 7.93,
+			"maxCG": 7.93,
+			"count": 1,
+			"averageCG": 7.93
+		}
+	},
+	"Bajaj Auto(Pune)": {
+		"2019": {
+			"CG": [8.0],
+			"minCG": 8.0,
+			"maxCG": 8.0,
+			"count": 1,
+			"averageCG": 8.0
+		}
+	},
+	"Cogoport - Non Tech(Mumbai)": {
+		"2019": {
+			"CG": [6.91, 7.08, 7.15, 6.93],
+			"minCG": 6.91,
+			"maxCG": 7.15,
+			"count": 4,
+			"averageCG": 7.0175
+		}
+	},
+	"Cogoport \u2013 Tech(Mumbai)": {
+		"2019": {
+			"CG": [7.67],
+			"minCG": 7.67,
+			"maxCG": 7.67,
+			"count": 1,
+			"averageCG": 7.67
+		}
+	},
+	"Couture AI(Bangalore)": {
+		"2019": {
+			"CG": [7.49, 8.2],
+			"minCG": 7.49,
+			"maxCG": 8.2,
+			"count": 2,
+			"averageCG": 7.845
+		},
+		"2020": {
+			"CG": [7.888, 7.84, 7.78, 7.69, 7.54],
+			"minCG": 7.54,
+			"maxCG": 7.888,
+			"count": 5,
+			"averageCG": 7.7476
+		}
+	},
+	"DBOI - Counterparty Credit Ratings(Mumbai)": {
+		"2019": {
+			"CG": [6.95, 6.71],
+			"minCG": 6.71,
+			"maxCG": 6.95,
+			"count": 2,
+			"averageCG": 6.83
+		},
+		"2020": {
+			"CG": [5.5, 6.37, 7.1, 7.08],
+			"minCG": 5.5,
+			"maxCG": 7.1,
+			"count": 4,
+			"averageCG": 6.512499999999999
+		}
+	},
+	"DBOI - Market Risk Analysis & Control(Mumbai)": {
+		"2019": {
+			"CG": [7.8, 6.83],
+			"minCG": 6.83,
+			"maxCG": 7.8,
+			"count": 2,
+			"averageCG": 7.3149999999999995
+		},
+		"2020": {
+			"CG": [6.7, 6.6, 8.6, 6.65, 6.95, 8.29, 8.43],
+			"minCG": 6.6,
+			"maxCG": 8.6,
+			"count": 7,
+			"averageCG": 7.46
+		}
+	},
+	"DBOI - Market Data Strategy and Analytics(Mumbai)": {
+		"2019": {
+			"CG": [6.63],
+			"minCG": 6.63,
+			"maxCG": 6.63,
+			"count": 1,
+			"averageCG": 6.63
+		}
+	},
+	"DBOI - Business Finance(Mumbai)": {
+		"2019": {
+			"CG": [6.76, 7.26, 6.76, 0.0],
+			"minCG": 0.0,
+			"maxCG": 7.26,
+			"count": 4,
+			"averageCG": 5.195
+		},
+		"2020": {
+			"CG": [9.34],
+			"minCG": 9.34,
+			"maxCG": 9.34,
+			"count": 1,
+			"averageCG": 9.34
+		}
+	},
+	"DBOI - Risk Metrics Quality Assurance and Analysis(Mumbai)": {
+		"2019": {
+			"CG": [6.44],
+			"minCG": 6.44,
+			"maxCG": 6.44,
+			"count": 1,
+			"averageCG": 6.44
+		}
+	},
+	"DataM Intelligene 4Market research(Hyderabad)": {
+		"2019": {
+			"CG": [6.5],
+			"minCG": 6.5,
+			"maxCG": 6.5,
+			"count": 1,
+			"averageCG": 6.5
+		}
+	},
+	"Divgi TorqTransfer Systems Pvt. Ltd.": {
+		"2019": {
+			"CG": [6.5],
+			"minCG": 6.5,
+			"maxCG": 6.5,
+			"count": 1,
+			"averageCG": 6.5
+		}
+	},
+	"Egnify Technologies(Hyderabad)": {
+		"2019": {
+			"CG": [5.5],
+			"minCG": 5.5,
+			"maxCG": 5.5,
+			"count": 1,
+			"averageCG": 5.5
+		}
+	},
+	"Elucidata Data Consulting Pvt. Ltd.(New Delhi)": {
+		"2019": {
+			"CG": [8.3],
+			"minCG": 8.3,
+			"maxCG": 8.3,
+			"count": 1,
+			"averageCG": 8.3
+		}
+	},
+	"Fidelity Investments(Chennai)": {
+		"2019": {
+			"CG": [6.67],
+			"minCG": 6.67,
+			"maxCG": 6.67,
+			"count": 1,
+			"averageCG": 6.67
+		}
+	},
+	"Futures First Info Services Pvt Ltd(Hyderabad)": {
+		"2019": {
+			"CG": [6.1],
+			"minCG": 6.1,
+			"maxCG": 6.1,
+			"count": 1,
+			"averageCG": 6.1
+		}
+	},
+	"GE Appliances(Hyderabad)": {
+		"2019": {
+			"CG": [6.94],
+			"minCG": 6.94,
+			"maxCG": 6.94,
+			"count": 1,
+			"averageCG": 6.94
+		}
+	},
+	"GEP(Hyderabad)": {
+		"2019": {
+			"CG": [6.43],
+			"minCG": 6.43,
+			"maxCG": 6.43,
+			"count": 1,
+			"averageCG": 6.43
+		}
+	},
+	"GEP(Navi mumbai)": {
+		"2019": {
+			"CG": [7.3],
+			"minCG": 7.3,
+			"maxCG": 7.3,
+			"count": 1,
+			"averageCG": 7.3
+		}
+	},
+	"Gilbarco Veeder Root(Mumbai)": {
+		"2019": {
+			"CG": [6.624],
+			"minCG": 6.624,
+			"maxCG": 6.624,
+			"count": 1,
+			"averageCG": 6.624
+		}
+	},
+	"Goldman Sachs - Investment Banking(Bangalore)": {
+		"2019": {
+			"CG": [9.21, 7.96, 8.44],
+			"minCG": 7.96,
+			"maxCG": 9.21,
+			"count": 3,
+			"averageCG": 8.536666666666667
+		}
+	},
+	"Goldman Sachs - Operations(Bangalore)": {
+		"2017": {
+			"CG": [7.04],
+			"minCG": 7.04,
+			"maxCG": 7.04,
+			"count": 1,
+			"averageCG": 7.04
+		},
+		"2018": {
+			"CG": [7.6, 8.1],
+			"minCG": 7.6,
+			"maxCG": 8.1,
+			"count": 2,
+			"averageCG": 7.85
+		},
+		"2019": {
+			"CG": [6.98, 6.55, 6.59],
+			"minCG": 6.55,
+			"maxCG": 6.98,
+			"count": 3,
+			"averageCG": 6.706666666666667
+		}
+	},
+	"Grasim Industries Ltd.(Nagda)": {
+		"2019": {
+			"CG": [4.6],
+			"minCG": 4.6,
+			"maxCG": 4.6,
+			"count": 1,
+			"averageCG": 4.6
+		}
+	},
+	"GroupM Media India Pvt Ltd. Location(Gurgaon)": {
+		"2019": {
+			"CG": [7.55],
+			"minCG": 7.55,
+			"maxCG": 7.55,
+			"count": 1,
+			"averageCG": 7.55
+		}
+	},
+	"Groww- Software Development, Bangalore": {
+		"2019": {
+			"CG": [7.36, 7.1],
+			"minCG": 7.1,
+			"maxCG": 7.36,
+			"count": 2,
+			"averageCG": 7.23
+		},
+		"2020": {
+			"CG": [8.059, 8.047, 8.65],
+			"minCG": 8.047,
+			"maxCG": 8.65,
+			"count": 3,
+			"averageCG": 8.252
+		}
+	},
+	"Groww- Business Analyst, Bangalore": {
+		"2019": {
+			"CG": [7.64, 7.33],
+			"minCG": 7.33,
+			"maxCG": 7.64,
+			"count": 2,
+			"averageCG": 7.484999999999999
+		}
+	},
+	"Haptik(Mumbai)": {
+		"2019": {
+			"CG": [6.09],
+			"minCG": 6.09,
+			"maxCG": 6.09,
+			"count": 1,
+			"averageCG": 6.09
+		}
+	},
+	"IBM Security - Fiberlink(Pune)": {
+		"2019": {
+			"CG": [6.01],
+			"minCG": 6.01,
+			"maxCG": 6.01,
+			"count": 1,
+			"averageCG": 6.01
+		}
+	},
+	"IBM Security - Fiberlink(Bangalore)": {
+		"2019": {
+			"CG": [6.44, 6.24],
+			"minCG": 6.24,
+			"maxCG": 6.44,
+			"count": 2,
+			"averageCG": 6.34
+		}
+	},
+	"IDFC First Bank(Mumbai)": {
+		"2019": {
+			"CG": [7.9],
+			"minCG": 7.9,
+			"maxCG": 7.9,
+			"count": 1,
+			"averageCG": 7.9
+		},
+		"2020": {
+			"CG": [6.96],
+			"minCG": 6.96,
+			"maxCG": 6.96,
+			"count": 1,
+			"averageCG": 6.96
+		}
+	},
+	"IFB Industries(Goa)": {
+		"2019": {
+			"CG": [6.67, 5.34, 5.56, 5.8, 6.38],
+			"minCG": 5.34,
+			"maxCG": 6.67,
+			"count": 5,
+			"averageCG": 5.95
+		}
+	},
+	"IMI Digital R&D(Hyderabad)": {
+		"2019": {
+			"CG": [6.35],
+			"minCG": 6.35,
+			"maxCG": 6.35,
+			"count": 1,
+			"averageCG": 6.35
+		}
+	},
+	"IMS Health(Bangalore)": {
+		"2019": {
+			"CG": [0.0],
+			"minCG": 0.0,
+			"maxCG": 0.0,
+			"count": 1,
+			"averageCG": 0.0
+		}
+	},
+	"Indian Institute of Petroleum(Dehradun)": {
+		"2019": {
+			"CG": [7.0],
+			"minCG": 7.0,
+			"maxCG": 7.0,
+			"count": 1,
+			"averageCG": 7.0
+		}
+	},
+	"Infinera(Bangalore)": {
+		"2019": {
+			"CG": [7.86, 7.94],
+			"minCG": 7.86,
+			"maxCG": 7.94,
+			"count": 2,
+			"averageCG": 7.9
+		}
+	},
+	"JP Morgan Services - GKN Quantitative Research \u2013 Fintech (Mumbai)": {
+		"2019": {
+			"CG": [7.93],
+			"minCG": 7.93,
+			"maxCG": 7.93,
+			"count": 1,
+			"averageCG": 7.93
+		}
+	},
+	"JP Morgan Services - GKN Data Science \u2013 Fintech (Mumbai)": {
+		"2019": {
+			"CG": [8.72, 8.45],
+			"minCG": 8.45,
+			"maxCG": 8.72,
+			"count": 2,
+			"averageCG": 8.585
+		}
+	},
+	"JP Morgan Services - GKN Risk Analytics \u2013 Finance(Bangalore)": {
+		"2019": {
+			"CG": [8.12],
+			"minCG": 8.12,
+			"maxCG": 8.12,
+			"count": 1,
+			"averageCG": 8.12
+		}
+	},
+	"JP Morgan Services - GKN Markets & Treasury Risk \u2013 Finance(Mumbai)": {
+		"2019": {
+			"CG": [8.4, 8.78, 8.88, 8.33],
+			"minCG": 8.33,
+			"maxCG": 8.88,
+			"count": 4,
+			"averageCG": 8.5975
+		}
+	},
+	"JP Morgan Services - GKN Model Risk Governance & Review \u2013 Finance(Bangalore)": {
+		"2019": {
+			"CG": [7.0],
+			"minCG": 7.0,
+			"maxCG": 7.0,
+			"count": 1,
+			"averageCG": 7.0
+		}
+	},
+	"Kaarvan Services Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [6.15],
+			"minCG": 6.15,
+			"maxCG": 6.15,
+			"count": 1,
+			"averageCG": 6.15
+		}
+	},
+	"KocharTech(Gurgaon)": {
+		"2019": {
+			"CG": [5.56],
+			"minCG": 5.56,
+			"maxCG": 5.56,
+			"count": 1,
+			"averageCG": 5.56
+		}
+	},
+	"Kruzr Mobility Technology Solutions Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [5.85, 6.1, 6.74, 6.27],
+			"minCG": 5.85,
+			"maxCG": 6.74,
+			"count": 4,
+			"averageCG": 6.239999999999999
+		}
+	},
+	"Lenskart(Bangalore)": {
+		"2019": {
+			"CG": [6.46],
+			"minCG": 6.46,
+			"maxCG": 6.46,
+			"count": 1,
+			"averageCG": 6.46
+		}
+	},
+	"Linarc India Pvt. Ltd.(Chennai)": {
+		"2019": {
+			"CG": [6.5, 5.6, 5.52],
+			"minCG": 5.52,
+			"maxCG": 6.5,
+			"count": 3,
+			"averageCG": 5.873333333333332
+		}
+	},
+	"LogisticsNow(Mumbai)": {
+		"2019": {
+			"CG": [6.4],
+			"minCG": 6.4,
+			"maxCG": 6.4,
+			"count": 1,
+			"averageCG": 6.4
+		}
+	},
+	"Lowe\u2019 Services India Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [7.47, 7.43, 7.35],
+			"minCG": 7.35,
+			"maxCG": 7.47,
+			"count": 3,
+			"averageCG": 7.416666666666667
+		}
+	},
+	"MSCI - Applied Data Intelligence(Mumbai)": {
+		"2019": {
+			"CG": [7.64],
+			"minCG": 7.64,
+			"maxCG": 7.64,
+			"count": 1,
+			"averageCG": 7.64
+		}
+	},
+	"MSCI - Performance IT \u2013 Index(Mumbai)": {
+		"2019": {
+			"CG": [7.36],
+			"minCG": 7.36,
+			"maxCG": 7.36,
+			"count": 1,
+			"averageCG": 7.36
+		}
+	},
+	"MapMyIndia": {
+		"2019": {
+			"CG": [6.8, 6.67],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		},
+		"2020": {
+			"CG": [7.4, 6.69, 6.73],
+			"minCG": 7.4,
+			"maxCG": 7.4,
+			"count": 1,
+			"averageCG": 7.4
+		}
+	},
+	"Maybank Labs Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [7.6, 7.1],
+			"minCG": 7.1,
+			"maxCG": 7.6,
+			"count": 2,
+			"averageCG": 7.35
+		}
+	},
+	"Mech Mocha Internet Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [6.8, 7.1, 7.45],
+			"minCG": 6.8,
+			"maxCG": 7.45,
+			"count": 3,
+			"averageCG": 7.116666666666666
+		}
+	},
+	"Mentor Graphics(Bangalore)": {
+		"2019": {
+			"CG": [7.34],
+			"minCG": 7.34,
+			"maxCG": 7.34,
+			"count": 1,
+			"averageCG": 7.34
+		}
+	},
+	"Micron Technology operation India(Bangalore)": {
+		"2019": {
+			"CG": [6.71],
+			"minCG": 6.71,
+			"maxCG": 6.71,
+			"count": 1,
+			"averageCG": 6.71
+		}
+	},
+	"National Council for Cement and Building Materials(Ballabgarh)": {
+		"2019": {
+			"CG": [4.6],
+			"minCG": 4.6,
+			"maxCG": 4.6,
+			"count": 1,
+			"averageCG": 4.6
+		},
+		"2020": {
+			"CG": [6.89],
+			"minCG": 6.89,
+			"maxCG": 6.89,
+			"count": 1,
+			"averageCG": 6.89
+		}
+	},
+	"National Council of Applied Economic Research(New delhi)": {
+		"2019": {
+			"CG": [6.91],
+			"minCG": 6.91,
+			"maxCG": 6.91,
+			"count": 1,
+			"averageCG": 6.91
+		}
+	},
+	"Nreach Online Services Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [6.29, 6.67],
+			"minCG": 6.29,
+			"maxCG": 6.67,
+			"count": 2,
+			"averageCG": 6.48
+		}
+	},
+	"OfBusiness(Gurgaon)": {
+		"2019": {
+			"CG": [7.05, 7.03],
+			"minCG": 7.03,
+			"maxCG": 7.05,
+			"count": 2,
+			"averageCG": 7.04
+		}
+	},
+	"OYO Rooms(Bangalore)": {
+		"2019": {
+			"CG": [7.14, 7.6, 8.12, 7.26, 7.7, 7.32, 7.19],
+			"minCG": 7.14,
+			"maxCG": 8.12,
+			"count": 7,
+			"averageCG": 7.475714285714285
+		}
+	},
+	"PricewaterhouseCoopers (PWC)(Gurgaon)": {
+		"2019": {
+			"CG": [7.676, 7.82, 7.21, 7.15],
+			"minCG": 7.15,
+			"maxCG": 7.82,
+			"count": 4,
+			"averageCG": 7.464
+		}
+	},
+	"Publicis Sapient (Bangalore)": {
+		"2019": {
+			"CG": [
+				7.4, 6.75, 6.81, 6.54, 6.26, 6.7, 6.2, 6.23, 6.46, 6.53, 7.2,
+				6.51
+			],
+			"minCG": 6.2,
+			"maxCG": 7.4,
+			"count": 12,
+			"averageCG": 6.6325
+		}
+	},
+	"Quantiphi Analytics(Bangalore)": {
+		"2019": {
+			"CG": [7.92, 6.7, 6.66],
+			"minCG": 6.66,
+			"maxCG": 7.92,
+			"count": 3,
+			"averageCG": 7.093333333333334
+		}
+	},
+	"SRF Ltd.(Gurgaon)": {
+		"2017": {
+			"CG": [6.3, 6.63, 6.67],
+			"minCG": 6.3,
+			"maxCG": 6.67,
+			"count": 3,
+			"averageCG": 6.533333333333334
+		},
+		"2019": {
+			"CG": [5.5, 5.78],
+			"minCG": 5.5,
+			"maxCG": 5.78,
+			"count": 2,
+			"averageCG": 5.640000000000001
+		}
+	},
+	"Servicenow Software Development India(Hyderabad)": {
+		"2019": {
+			"CG": [
+				6.6, 6.55, 7.59, 6.95, 6.65, 6.545, 6.95, 6.75,
+				6.968999999999999, 6.72, 6.75, 6.97, 6.72, 6.64
+			],
+			"minCG": 6.545,
+			"maxCG": 7.59,
+			"count": 14,
+			"averageCG": 6.811
+		}
+	},
+	"Shell Technology Center(Bangalore)": {
+		"2019": {
+			"CG": [6.78],
+			"minCG": 6.78,
+			"maxCG": 6.78,
+			"count": 1,
+			"averageCG": 6.78
+		}
+	},
+	"Siemens PLM Software(Pune)": {
+		"2019": {
+			"CG": [6.5, 6.2],
+			"minCG": 6.2,
+			"maxCG": 6.5,
+			"count": 2,
+			"averageCG": 6.35
+		}
+	},
+	"Society for Health Information Systems Programme(Noida)": {
+		"2019": {
+			"CG": [6.4, 5.41],
+			"minCG": 5.41,
+			"maxCG": 6.4,
+			"count": 2,
+			"averageCG": 5.905
+		}
+	},
+	"Splash Math(Gurgaon)": {
+		"2019": {
+			"CG": [5.0, 5.22],
+			"minCG": 5.0,
+			"maxCG": 5.22,
+			"count": 2,
+			"averageCG": 5.109999999999999
+		}
+	},
+	"Stellar Software Technologies Pvt. Ltd(Bangalore)": {
+		"2019": {
+			"CG": [5.52, 5.75],
+			"minCG": 5.52,
+			"maxCG": 5.75,
+			"count": 2,
+			"averageCG": 5.635
+		}
+	},
+	"Swift(Bangalore)": {
+		"2019": {
+			"CG": [5.98],
+			"minCG": 5.98,
+			"maxCG": 5.98,
+			"count": 1,
+			"averageCG": 5.98
+		}
+	},
+	"Symantec Software Solutions Pvt. Ltd.(Bangalore)": {
+		"2017": {
+			"CG": [6.67, 6.8, 6.82, 6.89, 6.92],
+			"minCG": 6.67,
+			"maxCG": 6.92,
+			"count": 5,
+			"averageCG": 6.82
+		},
+		"2018": {
+			"CG": [6.58, 6.87],
+			"minCG": 6.58,
+			"maxCG": 6.58,
+			"count": 1,
+			"averageCG": 6.58
+		},
+		"2019": {
+			"CG": [6.74, 6.85],
+			"minCG": 6.74,
+			"maxCG": 6.85,
+			"count": 2,
+			"averageCG": 6.795
+		}
+	},
+	"Symphony Fintech Solutions Pvt. Ltd.(Pune)": {
+		"2019": {
+			"CG": [6.8, 6.9, 7.84],
+			"minCG": 6.8,
+			"maxCG": 7.84,
+			"count": 3,
+			"averageCG": 7.18
+		}
+	},
+	"Tata Motors Ltd.(Sanand)": {
+		"2019": {
+			"CG": [6.4],
+			"minCG": 6.4,
+			"maxCG": 6.4,
+			"count": 1,
+			"averageCG": 6.4
+		}
+	},
+	"Tega Industries Ltd.(Kalyani )": {
+		"2019": {
+			"CG": [0.0],
+			"minCG": 0.0,
+			"maxCG": 0.0,
+			"count": 1,
+			"averageCG": 0.0
+		}
+	},
+	"Tega Industries SEZ Ltd(Dahej)": {
+		"2019": {
+			"CG": [6.3],
+			"minCG": 6.3,
+			"maxCG": 6.3,
+			"count": 1,
+			"averageCG": 6.3
+		}
+	},
+	"Think and learn(Bangalore)": {
+		"2019": {
+			"CG": [6.7, 6.84],
+			"minCG": 6.7,
+			"maxCG": 6.84,
+			"count": 2,
+			"averageCG": 6.77
+		}
+	},
+	"UBER(Hyderabad)": {
+		"2019": {
+			"CG": [8.27, 7.18, 8.1, 7.22],
+			"minCG": 7.18,
+			"maxCG": 8.27,
+			"count": 4,
+			"averageCG": 7.692499999999999
+		}
+	},
+	"UBS Business Solutions (India) Private Limited": {
+		"2018": {
+			"CG": [6.3, 8.49, 6.62, 7.4, 6.8, 7.4, 6.3, 6.7, 6.97],
+			"minCG": 6.3,
+			"maxCG": 8.49,
+			"count": 4,
+			"averageCG": 7.202500000000001
+		},
+		"2019": {
+			"CG": [
+				7.74, 6.06, 6.2, 6.18, 6.15, 7.12, 6.93, 5.9, 5.92, 6.8, 6.93
+			],
+			"minCG": 5.9,
+			"maxCG": 7.74,
+			"count": 11,
+			"averageCG": 6.53909090909091
+		},
+		"2020": {
+			"CG": [
+				7.98, 8.15, 8.0, 7.4, 7.472, 7.55, 7.87, 6.45, 7.78, 8.102,
+				7.81, 7.52, 7.51, 7.452999999999999, 7.8, 8.073, 8.22, 7.94,
+				7.45, 7.414, 7.42, 8.13, 7.382000000000001, 7.64, 8.255,
+				7.332999999999999, 7.71
+			],
+			"minCG": 6.45,
+			"maxCG": 8.255,
+			"count": 27,
+			"averageCG": 7.696814814814814
+		}
+	},
+	"Udaan(Bangalore)": {
+		"2019": {
+			"CG": [
+				7.46, 6.9, 7.141, 6.76, 7.6, 7.86, 7.68, 7.27, 7.15, 8.16, 5.94,
+				4.4
+			],
+			"minCG": 4.4,
+			"maxCG": 8.16,
+			"count": 12,
+			"averageCG": 7.02675
+		},
+		"2020": {
+			"CG": [9.132, 8.971, 8.47, 8.6, 8.4],
+			"minCG": 8.4,
+			"maxCG": 9.132,
+			"count": 5,
+			"averageCG": 8.7146
+		}
+	},
+	"UnitedLex(Bangalore)": {
+		"2019": {
+			"CG": [6.76, 6.52],
+			"minCG": 6.52,
+			"maxCG": 6.76,
+			"count": 2,
+			"averageCG": 6.64
+		}
+	},
+	"VMware Software India Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [6.9],
+			"minCG": 6.9,
+			"maxCG": 6.9,
+			"count": 1,
+			"averageCG": 6.9
+		},
+		"2020": {
+			"CG": [8.09, 8.31, 8.1, 8.14, 8.172, 8.46],
+			"minCG": 8.09,
+			"maxCG": 8.46,
+			"count": 6,
+			"averageCG": 8.212
+		}
+	},
+	"Vedantu(Bangalore)": {
+		"2019": {
+			"CG": [6.04],
+			"minCG": 6.04,
+			"maxCG": 6.04,
+			"count": 1,
+			"averageCG": 6.04
+		}
+	},
+	"Viacom18 Media Pvt. Ltd": {
+		"2017": {
+			"CG": [6.4, 7.46, 8.3, 8.77],
+			"minCG": 6.4,
+			"maxCG": 8.77,
+			"count": 4,
+			"averageCG": 7.7325
+		},
+		"2018": {
+			"CG": [7.58, 7.22],
+			"minCG": 7.22,
+			"maxCG": 7.58,
+			"count": 2,
+			"averageCG": 7.4
+		},
+		"2019": {
+			"CG": [7.38, 7.86, 7.18],
+			"minCG": 7.18,
+			"maxCG": 7.86,
+			"count": 3,
+			"averageCG": 7.473333333333334
+		},
+		"2020": {
+			"CG": [8.32, 8.18, 8.19],
+			"minCG": 8.18,
+			"maxCG": 8.32,
+			"count": 3,
+			"averageCG": 8.229999999999999
+		}
+	},
+	"Vitor Healthsciences Pvt. Ltd.(Bangalore)": {
+		"2019": {
+			"CG": [5.4, 5.17, 4.81],
+			"minCG": 4.81,
+			"maxCG": 5.4,
+			"count": 3,
+			"averageCG": 5.126666666666666
+		}
+	},
+	"Vitrak Fintech Pvt. Ltd.(Gurgaon)": {
+		"2019": {
+			"CG": [5.97, 6.61],
+			"minCG": 5.97,
+			"maxCG": 6.61,
+			"count": 2,
+			"averageCG": 6.29
+		}
+	},
+	"Yale University(Norway)": {
+		"2019": {
+			"CG": [9.84],
+			"minCG": 9.84,
+			"maxCG": 9.84,
+			"count": 1,
+			"averageCG": 9.84
+		}
+	},
+	"Zendrive India Pvt Ltd(Bangalore)": {
+		"2017": {
+			"CG": [8.38, 7.49],
+			"minCG": 8.38,
+			"maxCG": 8.38,
+			"count": 1,
+			"averageCG": 8.38
+		},
+		"2019": {
+			"CG": [7.65, 7.7, 7.55, 7.62],
+			"minCG": 7.55,
+			"maxCG": 7.7,
+			"count": 4,
+			"averageCG": 7.630000000000001
+		}
+	},
+	"eGovernments Foundation(Bangalore)": {
+		"2019": {
+			"CG": [7.0, 6.0, 6.91, 6.8],
+			"minCG": 6.0,
+			"maxCG": 7.0,
+			"count": 4,
+			"averageCG": 6.6775
+		},
+		"2020": {
+			"CG": [7.4, 7.45, 7.39, 7.49],
+			"minCG": 7.39,
+			"maxCG": 7.49,
+			"count": 4,
+			"averageCG": 7.432500000000001
+		}
+	},
+	"shipsy(Gurgaon)": {
+		"2019": {
+			"CG": [5.89],
+			"minCG": 5.89,
+			"maxCG": 5.89,
+			"count": 1,
+			"averageCG": 5.89
+		}
+	},
+	"10dem Education, Delhi": {
+		"2020": {
+			"CG": [6.638999999999999],
+			"minCG": 6.638999999999999,
+			"maxCG": 6.638999999999999,
+			"count": 1,
+			"averageCG": 6.638999999999999
+		}
+	},
+	"ABB": {
+		"2020": {
+			"CG": [8.03],
+			"minCG": 8.03,
+			"maxCG": 8.03,
+			"count": 1,
+			"averageCG": 8.03
+		}
+	},
+	"Abhyas Edu technologies": {
+		"2020": {
+			"CG": [7.412999999999999],
+			"minCG": 7.412999999999999,
+			"maxCG": 7.412999999999999,
+			"count": 1,
+			"averageCG": 7.412999999999999
+		}
+	},
+	"Airmeet": {
+		"2020": {
+			"CG": [7.86],
+			"minCG": 7.86,
+			"maxCG": 7.86,
+			"count": 1,
+			"averageCG": 7.86
+		}
+	},
+	"Alien Developers, Hyderabad": {
+		"2020": {
+			"CG": [5.07, 6.9],
+			"minCG": 5.07,
+			"maxCG": 6.9,
+			"count": 2,
+			"averageCG": 5.985
+		}
+	},
+	"Altruism Solutions Pvt. Ltd, Kolkata": {
+		"2020": {
+			"CG": [6.32, 6.28],
+			"minCG": 6.28,
+			"maxCG": 6.32,
+			"count": 2,
+			"averageCG": 6.300000000000001
+		}
+	},
+	"ALW Lighting ": {
+		"2020": {
+			"CG": [7.41, 7.32],
+			"minCG": 7.32,
+			"maxCG": 7.41,
+			"count": 2,
+			"averageCG": 7.365
+		}
+	},
+	"Amazon ML": {
+		"2020": {
+			"CG": [9.38, 9.27, 8.76],
+			"minCG": 9.38,
+			"maxCG": 9.38,
+			"count": 1,
+			"averageCG": 9.38
+		}
+	},
+	"Amazon Professional Services, Delhi": {
+		"2020": {
+			"CG": [8.445, 8.32],
+			"minCG": 8.32,
+			"maxCG": 8.445,
+			"count": 2,
+			"averageCG": 8.3825
+		}
+	},
+	"Asanify, Kolkata": {
+		"2020": {
+			"CG": [6.85],
+			"minCG": 6.85,
+			"maxCG": 6.85,
+			"count": 1,
+			"averageCG": 6.85
+		}
+	},
+	"Ascendo.ai": {
+		"2020": {
+			"CG": [6.02],
+			"minCG": 6.02,
+			"maxCG": 6.02,
+			"count": 1,
+			"averageCG": 6.02
+		}
+	},
+	"ASCO Numatics India Pvt. Ltd. (Emerson Automation Solutions) , Chennai": {
+		"2020": {
+			"CG": [8.34, 7.92],
+			"minCG": 7.92,
+			"maxCG": 8.34,
+			"count": 2,
+			"averageCG": 8.129999999999999
+		}
+	},
+	"Asteria Aerospace": {
+		"2020": {
+			"CG": [7.86, 7.84, 7.712000000000001],
+			"minCG": 7.712000000000001,
+			"maxCG": 7.86,
+			"count": 3,
+			"averageCG": 7.803999999999999
+		}
+	},
+	"Atyati Technologies": {
+		"2020": {
+			"CG": [7.41],
+			"minCG": 7.41,
+			"maxCG": 7.41,
+			"count": 1,
+			"averageCG": 7.41
+		}
+	},
+	"Blue yonder JDA Hyderabad ": {
+		"2020": {
+			"CG": [7.64],
+			"minCG": 7.64,
+			"maxCG": 7.64,
+			"count": 1,
+			"averageCG": 7.64
+		}
+	},
+	"Blue Yonder JDA, Bangalore": {
+		"2020": {
+			"CG": [8.21, 8.21, 8.28, 8.46, 7.92, 7.9, 7.77, 7.72, 7.77],
+			"minCG": 7.72,
+			"maxCG": 8.46,
+			"count": 9,
+			"averageCG": 8.026666666666666
+		}
+	},
+	"BNY Mellon Technologies, Pune": {
+		"2020": {
+			"CG": [
+				8.73, 9.15, 8.37, 8.34, 8.306000000000001, 7.91, 9.49, 8.45,
+				8.762, 8.481, 8.34, 8.48, 8.37, 9.462, 8.67, 8.44
+			],
+			"minCG": 7.91,
+			"maxCG": 9.49,
+			"count": 16,
+			"averageCG": 8.6094375
+		}
+	},
+	"BNY Mellon Technology, Chennai": {
+		"2020": {
+			"CG": [8.4],
+			"minCG": 8.4,
+			"maxCG": 8.4,
+			"count": 1,
+			"averageCG": 8.4
+		}
+	},
+	"Bogmalo Foods LLP": {
+		"2020": {
+			"CG": [7.17],
+			"minCG": 7.17,
+			"maxCG": 7.17,
+			"count": 1,
+			"averageCG": 7.17
+		}
+	},
+	"Bridge Your Network Inc, Bangalore": {
+		"2020": {
+			"CG": [7.81, 7.515],
+			"minCG": 7.515,
+			"maxCG": 7.81,
+			"count": 2,
+			"averageCG": 7.6625
+		}
+	},
+	"Bruce Clay, Gurugram": {
+		"2020": {
+			"CG": [5.12],
+			"minCG": 5.12,
+			"maxCG": 5.12,
+			"count": 1,
+			"averageCG": 5.12
+		}
+	},
+	"Bunch Microtechnologies Pvt Ltd , Noida": {
+		"2020": {
+			"CG": [7.34, 7.44, 7.45, 7.412999999999999, 7.29],
+			"minCG": 7.29,
+			"maxCG": 7.45,
+			"count": 5,
+			"averageCG": 7.3866
+		}
+	},
+	"Calypso": {
+		"2020": {
+			"CG": [7.39],
+			"minCG": 7.39,
+			"maxCG": 7.39,
+			"count": 1,
+			"averageCG": 7.39
+		}
+	},
+	"CASHe": {
+		"2020": {
+			"CG": [7.28],
+			"minCG": 7.28,
+			"maxCG": 7.28,
+			"count": 1,
+			"averageCG": 7.28
+		}
+	},
+	"CDAC Pune": {
+		"2020": {
+			"CG": [7.52, 6.7, 6.7],
+			"minCG": 6.7,
+			"maxCG": 7.52,
+			"count": 3,
+			"averageCG": 6.973333333333333
+		}
+	},
+	"Centre For Development Of Imaging Technology , Trivandrum": {
+		"2020": {
+			"CG": [6.6],
+			"minCG": 6.6,
+			"maxCG": 6.6,
+			"count": 1,
+			"averageCG": 6.6
+		}
+	},
+	"Christensen Investor Relations (I) Pvt. Ltd. , Mumbai": {
+		"2020": {
+			"CG": [6.57],
+			"minCG": 6.57,
+			"maxCG": 6.57,
+			"count": 1,
+			"averageCG": 6.57
+		}
+	},
+	"Cisco Systems - Hardware, Bangalore": {
+		"2020": {
+			"CG": [9.58, 9.25],
+			"minCG": 9.25,
+			"maxCG": 9.58,
+			"count": 2,
+			"averageCG": 9.415
+		}
+	},
+	"CityFlo": {
+		"2020": {
+			"CG": [8.0],
+			"minCG": 8.0,
+			"maxCG": 8.0,
+			"count": 1,
+			"averageCG": 8.0
+		}
+	},
+	"Class 21A": {
+		"2020": {
+			"CG": [6.8],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		}
+	},
+	"Class Plus (Non Tech), Noida": {
+		"2020": {
+			"CG": [6.96, 6.89],
+			"minCG": 6.89,
+			"maxCG": 6.96,
+			"count": 2,
+			"averageCG": 6.925
+		}
+	},
+	"Classplus": {
+		"2020": {
+			"CG": [7.26, 6.95],
+			"minCG": 6.95,
+			"maxCG": 7.26,
+			"count": 2,
+			"averageCG": 7.105
+		}
+	},
+	"ClearPack Automation, Noida": {
+		"2020": {
+			"CG": [7.28],
+			"minCG": 7.28,
+			"maxCG": 7.28,
+			"count": 1,
+			"averageCG": 7.28
+		}
+	},
+	"ClearTax": {
+		"2020": {
+			"CG": [
+				7.87, 7.61, 7.571000000000001, 7.558, 7.528, 7.457999999999999,
+				7.43, 7.422999999999999, 7.41, 7.12, 7.1
+			],
+			"minCG": 7.1,
+			"maxCG": 7.87,
+			"count": 11,
+			"averageCG": 7.461636363636364
+		}
+	},
+	"CoffeeBeans Consulting": {
+		"2020": {
+			"CG": [7.15, 7.03],
+			"minCG": 7.03,
+			"maxCG": 7.15,
+			"count": 2,
+			"averageCG": 7.09
+		}
+	},
+	"COGOS IT, Bangalore": {
+		"2020": {
+			"CG": [7.89, 7.36, 7.36, 7.41, 7.4, 7.4, 7.84, 6.72, 6.72, 7.37],
+			"minCG": 6.72,
+			"maxCG": 7.89,
+			"count": 10,
+			"averageCG": 7.3469999999999995
+		}
+	},
+	"CriticalRiver Technologies Pvt Ltd": {
+		"2020": {
+			"CG": [6.71],
+			"minCG": 6.71,
+			"maxCG": 6.71,
+			"count": 1,
+			"averageCG": 6.71
+		}
+	},
+	"CSIR- INDIAN INSTITUTE OF PETROLEUM": {
+		"2020": {
+			"CG": [7.04, 7.9],
+			"minCG": 7.04,
+			"maxCG": 7.9,
+			"count": 2,
+			"averageCG": 7.470000000000001
+		}
+	},
+	"CueMath Learn Pvt Ltd Bangalore": {
+		"2020": {
+			"CG": [7.35, 7.46, 6.94, 7.276, 7.6, 6.95],
+			"minCG": 6.94,
+			"maxCG": 7.6,
+			"count": 6,
+			"averageCG": 7.262666666666667
+		}
+	},
+	"Curious Bee Innovations Pvt. Ltd. (Askation), Bangalore": {
+		"2020": {
+			"CG": [7.89],
+			"minCG": 7.89,
+			"maxCG": 7.89,
+			"count": 1,
+			"averageCG": 7.89
+		}
+	},
+	"DBOI - Financial Analytics": {
+		"2020": {
+			"CG": [6.72],
+			"minCG": 6.72,
+			"maxCG": 6.72,
+			"count": 1,
+			"averageCG": 6.72
+		}
+	},
+	"DBOI Pune - Risk Metrics Analytics": {
+		"2020": {
+			"CG": [6.79],
+			"minCG": 6.79,
+			"maxCG": 6.79,
+			"count": 1,
+			"averageCG": 6.79
+		}
+	},
+	"DemandMatrix": {
+		"2020": {
+			"CG": [7.35],
+			"minCG": 7.35,
+			"maxCG": 7.35,
+			"count": 1,
+			"averageCG": 7.35
+		}
+	},
+	"Divgi TTS   Pune": {
+		"2020": {
+			"CG": [6.71],
+			"minCG": 6.71,
+			"maxCG": 6.71,
+			"count": 1,
+			"averageCG": 6.71
+		}
+	},
+	"DMI Finance Pvt Ltd, New Delhi": {
+		"2020": {
+			"CG": [8.44, 7.93, 7.56],
+			"minCG": 7.56,
+			"maxCG": 8.44,
+			"count": 3,
+			"averageCG": 7.976666666666666
+		}
+	},
+	"Door Sabha Nigam Ltd, Chennai": {
+		"2020": {
+			"CG": [7.26, 7.3, 7.3, 7.31],
+			"minCG": 7.26,
+			"maxCG": 7.31,
+			"count": 4,
+			"averageCG": 7.2924999999999995
+		}
+	},
+	"Dunzo Digital Pvt Ltd": {
+		"2020": {
+			"CG": [8.36, 8.241, 9.81],
+			"minCG": 8.241,
+			"maxCG": 9.81,
+			"count": 3,
+			"averageCG": 8.803666666666667
+		}
+	},
+	"DVARA E-REGISTRY": {
+		"2020": {
+			"CG": [7.8],
+			"minCG": 7.8,
+			"maxCG": 7.8,
+			"count": 1,
+			"averageCG": 7.8
+		}
+	},
+	"E-connect solutions": {
+		"2020": {
+			"CG": [6.35, 6.551, 6.4],
+			"minCG": 6.35,
+			"maxCG": 6.551,
+			"count": 3,
+			"averageCG": 6.433666666666667
+		}
+	},
+	"E2open Inc. , Bangalore": {
+		"2020": {
+			"CG": [7.922999999999999, 7.441],
+			"minCG": 7.441,
+			"maxCG": 7.922999999999999,
+			"count": 2,
+			"averageCG": 7.6819999999999995
+		}
+	},
+	"Emptycup (Non Tech) - Bangalore": {
+		"2020": {
+			"CG": [7.7, 7.32],
+			"minCG": 7.32,
+			"maxCG": 7.7,
+			"count": 2,
+			"averageCG": 7.51
+		}
+	},
+	"Enterpreneurship Development and Innovation Institute , Chennai": {
+		"2020": {
+			"CG": [6.952999999999999, 7.11, 6.69],
+			"minCG": 6.69,
+			"maxCG": 7.11,
+			"count": 3,
+			"averageCG": 6.917666666666666
+		}
+	},
+	"Everwell Health Solutions": {
+		"2020": {
+			"CG": [7.46, 7.38, 7.33],
+			"minCG": 7.33,
+			"maxCG": 7.46,
+			"count": 3,
+			"averageCG": 7.390000000000001
+		}
+	},
+	"Experian": {
+		"2020": {
+			"CG": [7.39],
+			"minCG": 7.39,
+			"maxCG": 7.39,
+			"count": 1,
+			"averageCG": 7.39
+		}
+	},
+	"Express Stores - Non tech": {
+		"2020": {
+			"CG": [7.8],
+			"minCG": 7.8,
+			"maxCG": 7.8,
+			"count": 1,
+			"averageCG": 7.8
+		}
+	},
+	"Express Stores - Tech": {
+		"2020": {
+			"CG": [7.26, 8.39],
+			"minCG": 7.26,
+			"maxCG": 7.26,
+			"count": 1,
+			"averageCG": 7.26
+		}
+	},
+	"Give foundation, Bangalore": {
+		"2020": {
+			"CG": [7.077000000000001, 6.94, 6.93, 6.9, 6.93],
+			"minCG": 6.9,
+			"maxCG": 7.077000000000001,
+			"count": 5,
+			"averageCG": 6.9554
+		}
+	},
+	"Goscale technologies": {
+		"2020": {
+			"CG": [7.19],
+			"minCG": 7.19,
+			"maxCG": 7.19,
+			"count": 1,
+			"averageCG": 7.19
+		}
+	},
+	"GreyOrange Robotics, New Delhi": {
+		"2020": {
+			"CG": [6.88, 6.87],
+			"minCG": 6.87,
+			"maxCG": 6.88,
+			"count": 2,
+			"averageCG": 6.875
+		}
+	},
+	"HealthRX by Baja Finserv Health Ltd, Pune": {
+		"2020": {
+			"CG": [8.88, 8.596, 8.32, 8.38, 8.48],
+			"minCG": 8.32,
+			"maxCG": 8.88,
+			"count": 5,
+			"averageCG": 8.531200000000002
+		}
+	},
+	"HelloThinkster": {
+		"2020": {
+			"CG": [8.05, 7.9, 7.87],
+			"minCG": 7.87,
+			"maxCG": 8.05,
+			"count": 3,
+			"averageCG": 7.94
+		}
+	},
+	"Heraizen Technologies Pvt Ltd ,Bangalore": {
+		"2020": {
+			"CG": [7.23, 7.22, 7.97, 7.3, 7.24, 7.3, 7.43, 7.53, 7.67],
+			"minCG": 7.22,
+			"maxCG": 7.97,
+			"count": 9,
+			"averageCG": 7.432222222222222
+		}
+	},
+	"Hevo Technologies India Pvt. Ltd. , Bangalore": {
+		"2020": {
+			"CG": [8.13, 8.01, 7.955, 8.21],
+			"minCG": 7.955,
+			"maxCG": 8.21,
+			"count": 4,
+			"averageCG": 8.07625
+		}
+	},
+	"Honc.io": {
+		"2020": {
+			"CG": [7.21],
+			"minCG": 7.21,
+			"maxCG": 7.21,
+			"count": 1,
+			"averageCG": 7.21
+		}
+	},
+	"i-exceed": {
+		"2020": {
+			"CG": [7.72, 7.63, 7.58, 7.58],
+			"minCG": 7.58,
+			"maxCG": 7.72,
+			"count": 4,
+			"averageCG": 7.6274999999999995
+		}
+	},
+	"IGCAR, Kalpakkam": {
+		"2020": {
+			"CG": [6.95, 8.775, 6.96, 7.89],
+			"minCG": 6.95,
+			"maxCG": 8.775,
+			"count": 4,
+			"averageCG": 7.643750000000001
+		}
+	},
+	"IMarc Services Noida": {
+		"2020": {
+			"CG": [7.48],
+			"minCG": 7.48,
+			"maxCG": 7.48,
+			"count": 1,
+			"averageCG": 7.48
+		}
+	},
+	"IndiaBuys(non tech)": {
+		"2020": {
+			"CG": [7.462999999999999],
+			"minCG": 7.462999999999999,
+			"maxCG": 7.462999999999999,
+			"count": 1,
+			"averageCG": 7.462999999999999
+		}
+	},
+	"Indian Electrical & Electronics Manufacturers\u2019 Association(New Delhi)": {
+		"2020": {
+			"CG": [6.9, 6.55],
+			"minCG": 6.55,
+			"maxCG": 6.9,
+			"count": 2,
+			"averageCG": 6.725
+		}
+	},
+	"Indogulf Fertilizers Ltd., Jagdishpur": {
+		"2020": {
+			"CG": [6.505],
+			"minCG": 6.505,
+			"maxCG": 6.505,
+			"count": 1,
+			"averageCG": 6.505
+		}
+	},
+	"IndustryARC , Hyderabad": {
+		"2020": {
+			"CG": [6.905],
+			"minCG": 6.905,
+			"maxCG": 6.905,
+			"count": 1,
+			"averageCG": 6.905
+		}
+	},
+	"Innoviti Payment Solutions": {
+		"2020": {
+			"CG": [7.89],
+			"minCG": 7.89,
+			"maxCG": 7.89,
+			"count": 1,
+			"averageCG": 7.89
+		}
+	},
+	"Invento markerspaces": {
+		"2020": {
+			"CG": [7.2],
+			"minCG": 7.2,
+			"maxCG": 7.2,
+			"count": 1,
+			"averageCG": 7.2
+		}
+	},
+	"Inzpera, Mumbai": {
+		"2020": {
+			"CG": [6.58],
+			"minCG": 6.58,
+			"maxCG": 6.58,
+			"count": 1,
+			"averageCG": 6.58
+		}
+	},
+	"JK cements": {
+		"2020": {
+			"CG": [6.48],
+			"minCG": 6.48,
+			"maxCG": 6.48,
+			"count": 1,
+			"averageCG": 6.48
+		}
+	},
+	"JP Morgan CIB R&A Global Research": {
+		"2020": {
+			"CG": [7.49, 7.09, 7.93],
+			"minCG": 7.09,
+			"maxCG": 7.93,
+			"count": 3,
+			"averageCG": 7.503333333333333
+		}
+	},
+	"JP Morgan CIB R&A Markets (Derivatives Analyst Group)": {
+		"2020": {
+			"CG": [8.59],
+			"minCG": 8.59,
+			"maxCG": 8.59,
+			"count": 1,
+			"averageCG": 8.59
+		}
+	},
+	"JPMS - GR&C - Corporate Risk - Risk Project Solutions, Bangalore": {
+		"2020": {
+			"CG": [8.73, 8.454],
+			"minCG": 8.454,
+			"maxCG": 8.73,
+			"count": 2,
+			"averageCG": 8.592
+		}
+	},
+	"JPMS - Quantitative Research": {
+		"2020": {
+			"CG": [8.76, 8.78, 9.14],
+			"minCG": 8.76,
+			"maxCG": 9.14,
+			"count": 3,
+			"averageCG": 8.893333333333333
+		}
+	},
+	"JPMS (Fintech) CIB R&A Banking (CRG), Mumbai": {
+		"2020": {
+			"CG": [7.206],
+			"minCG": 7.206,
+			"maxCG": 7.206,
+			"count": 1,
+			"averageCG": 7.206
+		}
+	},
+	"JPMS Cards Risk Strategy Analytics": {
+		"2020": {
+			"CG": [7.81],
+			"minCG": 7.81,
+			"maxCG": 7.81,
+			"count": 1,
+			"averageCG": 7.81
+		}
+	},
+	"JPMS CIB Data Science": {
+		"2020": {
+			"CG": [9.48],
+			"minCG": 9.48,
+			"maxCG": 9.48,
+			"count": 1,
+			"averageCG": 9.48
+		}
+	},
+	"JPMS CIB R&A Banking (CRG) (Fintech)": {
+		"2020": {
+			"CG": [7.37],
+			"minCG": 7.37,
+			"maxCG": 7.37,
+			"count": 1,
+			"averageCG": 7.37
+		}
+	},
+	"JPMS CIB R&A Global Research": {
+		"2020": {
+			"CG": [7.64, 8.8, 8.935, 7.65, 8.79, 8.55, 8.06, 7.426, 7.64],
+			"minCG": 7.426,
+			"maxCG": 8.935,
+			"count": 8,
+			"averageCG": 8.231375
+		}
+	},
+	"JPMS CIB R&A Markets Equity Derivatives Trading & Structuring": {
+		"2020": {
+			"CG": [9.12],
+			"minCG": 9.12,
+			"maxCG": 9.12,
+			"count": 1,
+			"averageCG": 9.12
+		}
+	},
+	"JPMS Credit Portfolio Analytics": {
+		"2020": {
+			"CG": [8.46, 8.46],
+			"minCG": 8.46,
+			"maxCG": 8.46,
+			"count": 2,
+			"averageCG": 8.46
+		}
+	},
+	"JPMS GR&C Auto Risk Strategy Analytics": {
+		"2020": {
+			"CG": [7.019],
+			"minCG": 7.019,
+			"maxCG": 7.019,
+			"count": 1,
+			"averageCG": 7.019
+		}
+	},
+	"JPMS GR&C Cards Risk Strategy Analytics": {
+		"2020": {
+			"CG": [7.85],
+			"minCG": 7.85,
+			"maxCG": 7.85,
+			"count": 1,
+			"averageCG": 7.85
+		}
+	},
+	"JPMS GR&C CCB Business Banking Reporting Strategy ": {
+		"2020": {
+			"CG": [9.131],
+			"minCG": 9.131,
+			"maxCG": 9.131,
+			"count": 1,
+			"averageCG": 9.131
+		}
+	},
+	"JPMS GR&C Credit Forecasting Strategy": {
+		"2020": {
+			"CG": [7.52, 7.18],
+			"minCG": 7.18,
+			"maxCG": 7.52,
+			"count": 2,
+			"averageCG": 7.35
+		}
+	},
+	"JPMS GR&C Credit Portfolio Analytics": {
+		"2020": {
+			"CG": [8.24],
+			"minCG": 8.24,
+			"maxCG": 8.24,
+			"count": 1,
+			"averageCG": 8.24
+		}
+	},
+	"JPMS GR&C Credit Risk-Counterparty Credit Infrastructure & Capital, Mumbai": {
+		"2020": {
+			"CG": [7.64, 8.45],
+			"minCG": 7.64,
+			"maxCG": 8.45,
+			"count": 2,
+			"averageCG": 8.045
+		}
+	},
+	"JPMS GR&C firm wide risk reporting": {
+		"2020": {
+			"CG": [8.69],
+			"minCG": 8.69,
+			"maxCG": 8.69,
+			"count": 1,
+			"averageCG": 8.69
+		}
+	},
+	"JPMS Investment Markets and Principal Risk": {
+		"2020": {
+			"CG": [8.64],
+			"minCG": 8.64,
+			"maxCG": 8.64,
+			"count": 1,
+			"averageCG": 8.64
+		}
+	},
+	"JPMS Wholesale Credit Solutions - Data Science": {
+		"2020": {
+			"CG": [9.62],
+			"minCG": 9.62,
+			"maxCG": 9.62,
+			"count": 1,
+			"averageCG": 9.62
+		}
+	},
+	"Jupiter Mumbai": {
+		"2020": {
+			"CG": [8.6, 9.65, 8.62, 7.7, 8.95],
+			"minCG": 7.7,
+			"maxCG": 9.65,
+			"count": 5,
+			"averageCG": 8.703999999999999
+		}
+	},
+	"Keysight Technologies, Kolkata": {
+		"2020": {
+			"CG": [7.44, 7.4910000000000005],
+			"minCG": 7.44,
+			"maxCG": 7.4910000000000005,
+			"count": 2,
+			"averageCG": 7.4655000000000005
+		}
+	},
+	"Lechler India": {
+		"2020": {
+			"CG": [7.6],
+			"minCG": 7.6,
+			"maxCG": 7.6,
+			"count": 1,
+			"averageCG": 7.6
+		}
+	},
+	"Lemnisk": {
+		"2020": {
+			"CG": [7.84, 7.63],
+			"minCG": 7.63,
+			"maxCG": 7.84,
+			"count": 2,
+			"averageCG": 7.734999999999999
+		}
+	},
+	"Maritime research center Pune": {
+		"2020": {
+			"CG": [7.1, 7.06],
+			"minCG": 7.06,
+			"maxCG": 7.1,
+			"count": 2,
+			"averageCG": 7.08
+		}
+	},
+	"Matdev Investment Advisers, Bangalore": {
+		"2020": {
+			"CG": [7.0],
+			"minCG": 7.0,
+			"maxCG": 7.0,
+			"count": 1,
+			"averageCG": 7.0
+		}
+	},
+	"Megh Computing": {
+		"2020": {
+			"CG": [6.7],
+			"minCG": 6.7,
+			"maxCG": 6.7,
+			"count": 1,
+			"averageCG": 6.7
+		}
+	},
+	"Mehta hospital": {
+		"2020": {
+			"CG": [6.029],
+			"minCG": 6.029,
+			"maxCG": 6.029,
+			"count": 1,
+			"averageCG": 6.029
+		}
+	},
+	"Mobileum, Bangalore": {
+		"2020": {
+			"CG": [7.317],
+			"minCG": 7.317,
+			"maxCG": 7.317,
+			"count": 1,
+			"averageCG": 7.317
+		}
+	},
+	"Mocxa Health": {
+		"2020": {
+			"CG": [6.16],
+			"minCG": 6.16,
+			"maxCG": 6.16,
+			"count": 1,
+			"averageCG": 6.16
+		}
+	},
+	"Molde Analytics India Pvt. Ltd.(Hyderabad)": {
+		"2020": {
+			"CG": [7.93],
+			"minCG": 7.93,
+			"maxCG": 7.93,
+			"count": 1,
+			"averageCG": 7.93
+		}
+	},
+	"Morgan Stanley Advantages Services Mumbai": {
+		"2020": {
+			"CG": [8.47, 8.07, 8.47],
+			"minCG": 8.07,
+			"maxCG": 8.47,
+			"count": 3,
+			"averageCG": 8.336666666666666
+		}
+	},
+	"Morning Star- Index Data Calculation": {
+		"2020": {
+			"CG": [6.86],
+			"minCG": 6.86,
+			"maxCG": 6.86,
+			"count": 1,
+			"averageCG": 6.86
+		}
+	},
+	"MorningStar Index  Sales and Operations": {
+		"2020": {
+			"CG": [7.78],
+			"minCG": 7.78,
+			"maxCG": 7.78,
+			"count": 1,
+			"averageCG": 7.78
+		}
+	},
+	"Morningstar-Indexes-Data and Content ": {
+		"2020": {
+			"CG": [8.47],
+			"minCG": 8.47,
+			"maxCG": 8.47,
+			"count": 1,
+			"averageCG": 8.47
+		}
+	},
+	"MSCI - Application of Data Science in Investment Management": {
+		"2020": {
+			"CG": [7.67],
+			"minCG": 7.67,
+			"maxCG": 7.67,
+			"count": 1,
+			"averageCG": 7.67
+		}
+	},
+	"MSCI Index and Research, Mumbai": {
+		"2020": {
+			"CG": [7.3],
+			"minCG": 7.3,
+			"maxCG": 7.3,
+			"count": 1,
+			"averageCG": 7.3
+		}
+	},
+	"My Smart Price - Non Tech , Hyderabad": {
+		"2020": {
+			"CG": [7.89, 7.85, 8.05],
+			"minCG": 7.85,
+			"maxCG": 8.05,
+			"count": 3,
+			"averageCG": 7.93
+		}
+	},
+	"My Smart Price - Tech, Hyderabad ": {
+		"2020": {
+			"CG": [7.223, 7.22, 7.25],
+			"minCG": 7.22,
+			"maxCG": 7.25,
+			"count": 3,
+			"averageCG": 7.230999999999999
+		}
+	},
+	"MyHQ - NonTech": {
+		"2020": {
+			"CG": [7.45],
+			"minCG": 7.45,
+			"maxCG": 7.45,
+			"count": 1,
+			"averageCG": 7.45
+		}
+	},
+	"MyHQ (Justwork technologies) TECH": {
+		"2020": {
+			"CG": [7.83, 7.98],
+			"minCG": 7.83,
+			"maxCG": 7.98,
+			"count": 2,
+			"averageCG": 7.905
+		}
+	},
+	"myHQ Non Tech, New Delhi": {
+		"2020": {
+			"CG": [7.69, 7.3, 7.13, 7.13, 6.15, 7.18],
+			"minCG": 6.15,
+			"maxCG": 7.69,
+			"count": 6,
+			"averageCG": 7.096666666666667
+		}
+	},
+	"myhq Workspace": {
+		"2020": {
+			"CG": [7.36],
+			"minCG": 7.36,
+			"maxCG": 7.36,
+			"count": 1,
+			"averageCG": 7.36
+		}
+	},
+	"Mysmartprice (Non-Tech)": {
+		"2020": {
+			"CG": [7.97],
+			"minCG": 7.97,
+			"maxCG": 7.97,
+			"count": 1,
+			"averageCG": 7.97
+		}
+	},
+	"namaste.fit , Pune": {
+		"2020": {
+			"CG": [5.93],
+			"minCG": 5.93,
+			"maxCG": 5.93,
+			"count": 1,
+			"averageCG": 5.93
+		}
+	},
+	"National Instruments, Bangalore": {
+		"2017": {
+			"CG": [7.1],
+			"minCG": 7.1,
+			"maxCG": 7.1,
+			"count": 1,
+			"averageCG": 7.1
+		},
+		"2019": {
+			"CG": [7.69],
+			"minCG": 7.69,
+			"maxCG": 7.69,
+			"count": 1,
+			"averageCG": 7.69
+		},
+		"2020": {
+			"CG": [7.06, 6.97, 6.97, 6.73],
+			"minCG": 6.73,
+			"maxCG": 7.06,
+			"count": 4,
+			"averageCG": 6.9325
+		}
+	},
+	"Natures velvet lifecare": {
+		"2020": {
+			"CG": [6.66],
+			"minCG": 6.66,
+			"maxCG": 6.66,
+			"count": 1,
+			"averageCG": 6.66
+		}
+	},
+	"NBC Bearings": {
+		"2020": {
+			"CG": [7.02, 7.0],
+			"minCG": 7.0,
+			"maxCG": 7.02,
+			"count": 2,
+			"averageCG": 7.01
+		}
+	},
+	"NCL Pune": {
+		"2017": {
+			"CG": [7.34],
+			"minCG": 7.34,
+			"maxCG": 7.34,
+			"count": 1,
+			"averageCG": 7.34
+		},
+		"2020": {
+			"CG": [8.97],
+			"minCG": 8.97,
+			"maxCG": 8.97,
+			"count": 1,
+			"averageCG": 8.97
+		}
+	},
+	"NetApp,Bangalore": {
+		"2017": {
+			"CG": [7.11, 7.29],
+			"minCG": 7.11,
+			"maxCG": 7.29,
+			"count": 2,
+			"averageCG": 7.2
+		},
+		"2020": {
+			"CG": [7.85, 7.901],
+			"minCG": 7.85,
+			"maxCG": 7.901,
+			"count": 2,
+			"averageCG": 7.8755
+		}
+	},
+	"NIRDPR": {
+		"2020": {
+			"CG": [6.8, 6.6],
+			"minCG": 6.6,
+			"maxCG": 6.8,
+			"count": 2,
+			"averageCG": 6.699999999999999
+		}
+	},
+	"Niyo Solutions (Non Core)": {
+		"2020": {
+			"CG": [8.18],
+			"minCG": 8.18,
+			"maxCG": 8.18,
+			"count": 1,
+			"averageCG": 8.18
+		}
+	},
+	"Niyo Solutions-Tech": {
+		"2020": {
+			"CG": [7.75],
+			"minCG": 7.75,
+			"maxCG": 7.75,
+			"count": 1,
+			"averageCG": 7.75
+		}
+	},
+	"Nobroker": {
+		"2020": {
+			"CG": [8.46],
+			"minCG": 8.46,
+			"maxCG": 8.46,
+			"count": 1,
+			"averageCG": 8.46
+		}
+	},
+	"Nomura Wholesale Strategy ": {
+		"2020": {
+			"CG": [8.7],
+			"minCG": 8.7,
+			"maxCG": 8.7,
+			"count": 1,
+			"averageCG": 8.7
+		}
+	},
+	"Nomura- Change Management Team": {
+		"2020": {
+			"CG": [6.943],
+			"minCG": 6.943,
+			"maxCG": 6.943,
+			"count": 1,
+			"averageCG": 6.943
+		}
+	},
+	"OKCredit": {
+		"2020": {
+			"CG": [
+				7.74, 7.82, 7.51, 8.14, 7.78, 7.56, 7.731, 7.67, 7.53, 8.2,
+				7.506
+			],
+			"minCG": 7.506,
+			"maxCG": 8.2,
+			"count": 11,
+			"averageCG": 7.744272727272729
+		}
+	},
+	"Pepper content": {
+		"2020": {
+			"CG": [6.42],
+			"minCG": 6.42,
+			"maxCG": 6.42,
+			"count": 1,
+			"averageCG": 6.42
+		}
+	},
+	"Perfios Software Solutions Pvt. Ltd. ,Bangalore": {
+		"2020": {
+			"CG": [6.63, 7.03],
+			"minCG": 6.63,
+			"maxCG": 7.03,
+			"count": 2,
+			"averageCG": 6.83
+		}
+	},
+	"Petasense Technologies, Hyderabad": {
+		"2020": {
+			"CG": [8.67, 8.79, 8.47],
+			"minCG": 8.47,
+			"maxCG": 8.79,
+			"count": 3,
+			"averageCG": 8.643333333333333
+		}
+	},
+	"PharmEasy": {
+		"2020": {
+			"CG": [
+				7.77, 7.69, 7.6, 7.593, 7.54, 7.5, 7.3, 7.3, 7.07, 7.06, 7.27,
+				7.08, 7.4, 7.119, 6.94, 7.76
+			],
+			"minCG": 6.94,
+			"maxCG": 7.77,
+			"count": 16,
+			"averageCG": 7.3745
+		}
+	},
+	"Pixxel": {
+		"2020": {
+			"CG": [9.12, 7.84, 8.29],
+			"minCG": 9.12,
+			"maxCG": 9.12,
+			"count": 1,
+			"averageCG": 9.12
+		}
+	},
+	"Praktice.ai": {
+		"2020": {
+			"CG": [7.09, 6.67, 6.63, 6.971, 6.75],
+			"minCG": 6.63,
+			"maxCG": 7.09,
+			"count": 5,
+			"averageCG": 6.8222000000000005
+		}
+	},
+	"Process 9 - Document Translation System, Gurgaon": {
+		"2020": {
+			"CG": [6.22],
+			"minCG": 6.22,
+			"maxCG": 6.22,
+			"count": 1,
+			"averageCG": 6.22
+		}
+	},
+	"Pyrotech- Udaipur": {
+		"2020": {
+			"CG": [7.26, 7.61],
+			"minCG": 7.26,
+			"maxCG": 7.61,
+			"count": 2,
+			"averageCG": 7.4350000000000005
+		}
+	},
+	"Questo": {
+		"2020": {
+			"CG": [6.78],
+			"minCG": 6.78,
+			"maxCG": 6.78,
+			"count": 1,
+			"averageCG": 6.78
+		}
+	},
+	"Qzense Labs": {
+		"2020": {
+			"CG": [7.8],
+			"minCG": 7.8,
+			"maxCG": 7.8,
+			"count": 1,
+			"averageCG": 7.8
+		}
+	},
+	"ReferralYogi Technologies Pvt. Ltd.": {
+		"2020": {
+			"CG": [7.71, 7.62],
+			"minCG": 7.62,
+			"maxCG": 7.71,
+			"count": 2,
+			"averageCG": 7.665
+		}
+	},
+	"Rupeek Fintech , Bangalore": {
+		"2020": {
+			"CG": [8.19, 8.17],
+			"minCG": 8.17,
+			"maxCG": 8.19,
+			"count": 2,
+			"averageCG": 8.18
+		}
+	},
+	"Rupifi Tech": {
+		"2020": {
+			"CG": [8.12, 8.1, 8.05],
+			"minCG": 8.05,
+			"maxCG": 8.12,
+			"count": 3,
+			"averageCG": 8.09
+		}
+	},
+	"Rupify non tech": {
+		"2020": {
+			"CG": [7.382000000000001, 8.07],
+			"minCG": 7.382000000000001,
+			"maxCG": 8.07,
+			"count": 2,
+			"averageCG": 7.726000000000001
+		}
+	},
+	"Samsung Semiconductor India Research - Software": {
+		"2020": {
+			"CG": [7.8, 7.68, 7.94, 7.7, 7.78, 7.96],
+			"minCG": 7.68,
+			"maxCG": 7.96,
+			"count": 6,
+			"averageCG": 7.81
+		}
+	},
+	"SAP Labs": {
+		"2020": {
+			"CG": [8.89, 8.86, 8.54, 8.39],
+			"minCG": 8.39,
+			"maxCG": 8.89,
+			"count": 4,
+			"averageCG": 8.67
+		}
+	},
+	"Saras Analytics": {
+		"2020": {
+			"CG": [7.414, 7.53],
+			"minCG": 7.414,
+			"maxCG": 7.53,
+			"count": 2,
+			"averageCG": 7.4719999999999995
+		}
+	},
+	"SEDEMAC Mechatronics": {
+		"2020": {
+			"CG": [6.39],
+			"minCG": 6.39,
+			"maxCG": 6.39,
+			"count": 1,
+			"averageCG": 6.39
+		}
+	},
+	"Sensei technologies": {
+		"2020": {
+			"CG": [7.05, 6.93],
+			"minCG": 6.93,
+			"maxCG": 7.05,
+			"count": 2,
+			"averageCG": 6.99
+		}
+	},
+	"SequelOne": {
+		"2020": {
+			"CG": [7.79, 7.7, 7.63],
+			"minCG": 7.63,
+			"maxCG": 7.79,
+			"count": 3,
+			"averageCG": 7.706666666666667
+		}
+	},
+	"Short hills non tech ": {
+		"2020": {
+			"CG": [7.24],
+			"minCG": 7.24,
+			"maxCG": 7.24,
+			"count": 1,
+			"averageCG": 7.24
+		}
+	},
+	"ShortHills Pvt Ltd, Gurgaon": {
+		"2020": {
+			"CG": [7.3],
+			"minCG": 7.3,
+			"maxCG": 7.3,
+			"count": 1,
+			"averageCG": 7.3
+		}
+	},
+	"ShortHills Tech Pvt Ltd": {
+		"2020": {
+			"CG": [7.294, 7.1],
+			"minCG": 7.1,
+			"maxCG": 7.294,
+			"count": 2,
+			"averageCG": 7.196999999999999
+		}
+	},
+	"Skillovate Learning Pvt Ltd-Tech ,Pune ": {
+		"2020": {
+			"CG": [6.39],
+			"minCG": 6.39,
+			"maxCG": 6.39,
+			"count": 1,
+			"averageCG": 6.39
+		}
+	},
+	"Skillovate Non Tech, Pune": {
+		"2020": {
+			"CG": [5.9],
+			"minCG": 5.9,
+			"maxCG": 5.9,
+			"count": 1,
+			"averageCG": 5.9
+		}
+	},
+	"Sleepiz, Pune": {
+		"2020": {
+			"CG": [8.54],
+			"minCG": 8.54,
+			"maxCG": 8.54,
+			"count": 1,
+			"averageCG": 8.54
+		}
+	},
+	"SmartHelio Sarl. Noida": {
+		"2020": {
+			"CG": [7.32],
+			"minCG": 7.32,
+			"maxCG": 7.32,
+			"count": 1,
+			"averageCG": 7.32
+		}
+	},
+	"Sopan, Ahmedabad": {
+		"2020": {
+			"CG": [7.13],
+			"minCG": 7.13,
+			"maxCG": 7.13,
+			"count": 1,
+			"averageCG": 7.13
+		}
+	},
+	"Spenny": {
+		"2020": {
+			"CG": [7.813],
+			"minCG": 7.813,
+			"maxCG": 7.813,
+			"count": 1,
+			"averageCG": 7.813
+		}
+	},
+	"Structural engineering research center Chennai": {
+		"2020": {
+			"CG": [6.6],
+			"minCG": 6.6,
+			"maxCG": 6.6,
+			"count": 1,
+			"averageCG": 6.6
+		}
+	},
+	"Synchrony": {
+		"2020": {
+			"CG": [
+				8.22, 8.137, 8.11, 8.09, 8.01, 7.99, 7.84, 7.84, 7.99, 8.171,
+				8.02, 7.84
+			],
+			"minCG": 7.84,
+			"maxCG": 8.22,
+			"count": 12,
+			"averageCG": 8.0215
+		}
+	},
+	"Takshila Learning ": {
+		"2020": {
+			"CG": [6.9, 6.97, 7.16],
+			"minCG": 6.9,
+			"maxCG": 7.16,
+			"count": 3,
+			"averageCG": 7.010000000000001
+		}
+	},
+	"Tata Digital Health": {
+		"2020": {
+			"CG": [8.62, 8.495, 8.26, 7.5, 7.77, 8.28],
+			"minCG": 7.5,
+			"maxCG": 8.62,
+			"count": 6,
+			"averageCG": 8.154166666666667
+		}
+	},
+	"TNSTC ": {
+		"2020": {
+			"CG": [6.638999999999999, 7.04, 7.0, 6.47, 6.97],
+			"minCG": 6.47,
+			"maxCG": 7.04,
+			"count": 5,
+			"averageCG": 6.8238
+		}
+	},
+	"Trell Experiences Pvt Ltd , Bangalore": {
+		"2020": {
+			"CG": [
+				7.6, 7.47, 7.6, 7.6, 7.28, 8.25, 8.28, 8.224, 7.25, 6.27, 8.89,
+				8.4, 7.5, 7.61, 6.3, 7.57, 6.01, 8.07, 8.0
+			],
+			"minCG": 6.01,
+			"maxCG": 8.89,
+			"count": 19,
+			"averageCG": 7.588105263157893
+		}
+	},
+	"Trifacta Software Inc.": {
+		"2020": {
+			"CG": [7.96, 8.11],
+			"minCG": 7.96,
+			"maxCG": 8.11,
+			"count": 2,
+			"averageCG": 8.035
+		}
+	},
+	"TVS MOTORS, HOSUR": {
+		"2020": {
+			"CG": [7.63, 6.36, 6.22, 7.89, 7.68, 6.9],
+			"minCG": 6.22,
+			"maxCG": 7.89,
+			"count": 6,
+			"averageCG": 7.113333333333333
+		}
+	},
+	"VCTIP Pvt Ltd": {
+		"2020": {
+			"CG": [7.13, 7.93, 7.27],
+			"minCG": 7.13,
+			"maxCG": 7.93,
+			"count": 3,
+			"averageCG": 7.4433333333333325
+		}
+	},
+	"Vinilok solutions (easymedico)": {
+		"2020": {
+			"CG": [6.4],
+			"minCG": 6.4,
+			"maxCG": 6.4,
+			"count": 1,
+			"averageCG": 6.4
+		}
+	},
+	"VOZIQ INDIA Pvt Ltd": {
+		"2020": {
+			"CG": [7.26, 7.54],
+			"minCG": 7.26,
+			"maxCG": 7.54,
+			"count": 2,
+			"averageCG": 7.4
+		}
+	},
+	"Wakeup tech , Gurgaon": {
+		"2020": {
+			"CG": [7.25],
+			"minCG": 7.25,
+			"maxCG": 7.25,
+			"count": 1,
+			"averageCG": 7.25
+		}
+	},
+	"Wavelabs Technologies , Hyderabad": {
+		"2020": {
+			"CG": [7.66, 7.55],
+			"minCG": 7.55,
+			"maxCG": 7.66,
+			"count": 2,
+			"averageCG": 7.605
+		}
+	},
+	"Wealthy, Bangalore ": {
+		"2020": {
+			"CG": [6.82],
+			"minCG": 6.82,
+			"maxCG": 6.82,
+			"count": 1,
+			"averageCG": 6.82
+		}
+	},
+	"WILLIAM O NEIL": {
+		"2020": {
+			"CG": [8.371, 8.11, 8.32],
+			"minCG": 8.11,
+			"maxCG": 8.371,
+			"count": 3,
+			"averageCG": 8.267000000000001
+		}
+	},
+	"Wisemonk Services Pvt Ltd ": {
+		"2020": {
+			"CG": [7.355, 7.31, 7.31],
+			"minCG": 7.31,
+			"maxCG": 7.355,
+			"count": 3,
+			"averageCG": 7.324999999999999
+		}
+	},
+	"Worley Parsons": {
+		"2017": {
+			"CG": [5.6, 5.83, 6.0, 6.4, 5.92, 6.94],
+			"minCG": 5.6,
+			"maxCG": 6.4,
+			"count": 4,
+			"averageCG": 5.9575
+		},
+		"2018": {
+			"CG": [5.55],
+			"minCG": 5.55,
+			"maxCG": 5.55,
+			"count": 1,
+			"averageCG": 5.55
+		},
+		"2019": {
+			"CG": [5.4],
+			"minCG": 5.4,
+			"maxCG": 5.4,
+			"count": 1,
+			"averageCG": 5.4
+		},
+		"2020": {
+			"CG": [6.56, 6.51],
+			"minCG": 6.51,
+			"maxCG": 6.56,
+			"count": 2,
+			"averageCG": 6.535
+		}
+	},
+	"Zaggle Prepaid Ocean Services Pvt. Ltd": {
+		"2020": {
+			"CG": [
+				7.72, 7.61, 7.58, 7.51, 7.68, 7.61, 6.91, 7.6, 7.71, 7.71, 7.63,
+				7.269, 7.56, 8.0, 7.64, 7.52, 8.08, 7.58, 7.5, 7.265, 7.64,
+				7.774
+			],
+			"minCG": 6.91,
+			"maxCG": 8.08,
+			"count": 22,
+			"averageCG": 7.595363636363635
+		}
+	},
+	"Zee5 bangalore": {
+		"2020": {
+			"CG": [6.8],
+			"minCG": 6.8,
+			"maxCG": 6.8,
+			"count": 1,
+			"averageCG": 6.8
+		}
+	},
+	"Zinnov Consulting, Gurgaon": {
+		"2020": {
+			"CG": [7.3, 7.17, 7.18, 7.4],
+			"minCG": 7.17,
+			"maxCG": 7.4,
+			"count": 4,
+			"averageCG": 7.262499999999999
+		}
+	},
+	"Zinnov Managment ": {
+		"2020": {
+			"CG": [7.43],
+			"minCG": 7.43,
+			"maxCG": 7.43,
+			"count": 1,
+			"averageCG": 7.43
+		}
+	},
+	"Zomentum, Bangalore": {
+		"2020": {
+			"CG": [7.51, 8.13, 8.074, 8.065, 7.41],
+			"minCG": 7.51,
+			"maxCG": 7.51,
+			"count": 1,
+			"averageCG": 7.51
+		}
+	},
+	"ZS Associates": {
+		"2020": {
+			"CG": [7.52],
+			"minCG": 7.52,
+			"maxCG": 7.52,
+			"count": 1,
+			"averageCG": 7.52
+		}
+	},
+	"Zwende Design Tech Pvt Ltd - Nontech , Bangalore": {
+		"2020": {
+			"CG": [7.09],
+			"minCG": 7.09,
+			"maxCG": 7.09,
+			"count": 1,
+			"averageCG": 7.09
+		}
+	}
+}

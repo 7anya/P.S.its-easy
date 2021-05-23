@@ -6,6 +6,7 @@ import {
 	VictoryZoomContainer,
 } from 'victory';
 import { VictoryChart } from 'victory';
+import './chart.css';
 
 export const ChartComponent = ({
 	xvalues,
@@ -16,7 +17,6 @@ export const ChartComponent = ({
 	allStationInfo,
 	getKeyValue,
 }) => {
-
 	return (
 		<>
 			<VictoryChart
