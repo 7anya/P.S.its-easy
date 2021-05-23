@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 import json
-
+# fetch chronicles
 client = MongoClient(
     "mongodb+srv://psitseasy_admin:tanjon@cluster0.d4jpb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
@@ -15,8 +15,34 @@ for x in allData:
     x['_id'] = 0
 # print(allData)
 
-chronicles = json.dumps(allData)
+tempChronicles = allData
+dic = {}
+for each in tempChronicles:
+    name = each["name"]
+    del (each['name'])
+    del (each['_id'])
+    dic[name] = each
 
+chronicles = json.dumps(dic)
+
+# station details part
+
+stationDetails = db.ps2_sem1_responses_array
+stationDetails = list(stationDetails.find())
+for x in stationDetails:
+    x['_id'] = 0
+
+details = {}
+for each in stationDetails:
+    name = each["name"]
+    del (each['name'])
+    del (each['_id'])
+    details[name] = each
+
+details = json.dumps(details)
+
+
+# enter user in DB
 userdb = client.get_database("users")
 users = userdb.users
 

@@ -131,7 +131,9 @@ def send_csv():
 def send_chronicles():
     return models.chronicles
 
-
+@app.route('/api/stationDetails', methods=["GET"])
+def send_stationDetails():
+    return models.details
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
