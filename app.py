@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, redirect, url_for, session, request, render_template
 from authlib.integrations.flask_client import OAuth
 import os
@@ -12,7 +14,7 @@ import threading
 from scaperOperations import *
 import time
 import models
-
+import json
 # App config
 app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
@@ -131,9 +133,17 @@ def send_csv():
 def send_chronicles():
     return models.chronicles
 
+
 @app.route('/api/stationDetails', methods=["GET"])
 def send_stationDetails():
     return models.details
+
+
+@app.route('/api/noOfUsers', methods=["GET"])
+def noOfUsers():
+    return json.dumps(models.users.count_documents({}))
+
+
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
