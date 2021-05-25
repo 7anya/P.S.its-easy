@@ -29,7 +29,7 @@ const App = () => {
 	return (
 		<Scrollbars style={{ width: '100vw', height: '100vh' }}>
 			<Router>
-				<NavBar />
+				<NavBar user={user} />
 				<Switch>
 					<Route exact path="/">
 						<HomePage user={user} />

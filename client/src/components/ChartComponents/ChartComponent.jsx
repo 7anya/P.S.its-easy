@@ -36,7 +36,7 @@ export const ChartComponent = ({
 				}
 			>
 				<VictoryAxis
-					label="Station Names"
+					label="Station Names (Pinch in to zoom and move)"
 					style={{
 						tickLabels: {
 							fontSize: 12,

@@ -4,18 +4,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import NotificationsIcon from '@material-ui/icons/Motorcycle';
-import LoginIcon from '@material-ui/icons/ExitToApp';
-import RegisterIcon from '@material-ui/icons/ListAlt';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Link from '@material-ui/core/Link';
 import { Button } from '@material-ui/core';
-// import logo from '../../resources/ps-file.png';
-// import { CustomThemeContext } from '../../context/CustomThemeProvider';
+import LogOut from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -52,13 +46,22 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function Navbar(props) {
+function Navbar({ user }) {
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+	const [serverURL, setServerURL] = React.useState('');
+
+	React.useEffect(() => {
+		if (window.location.host === 'localhost:3000') {
+			setServerURL('http://localhost:5000/');
+		} else {
+			setServerURL('/');
+		}
+	}, []);
 
 	const handleProfileMenuOpen = (event) => {
 		setAnchorEl(event.currentTarget);
@@ -108,45 +111,49 @@ function Navbar(props) {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			{/* <MenuItem>
-				<IconButton
-					aria-label="show 11 new notifications"
-					color="inherit"
-				>
-					<Badge badgeContent={11} color="secondary">
-						<NotificationsIcon />
-					</Badge>
-				</IconButton>
-				<p>Notifications</p>
-			</MenuItem> */}
-			{/* <MenuItem>
-				<IconButton
-					aria-label="account of current user"
-					aria-controls="primary-search-account-menu"
-					aria-haspopup="true"
-					color="inherit"
-				>
-					<LoginIcon />
-				</IconButton>
-				<p>Login</p>
-			</MenuItem> */}
-			<MenuItem>
-				<Button color="inherit">
-					<Link href="/ps2/responses" underline="none">
-						PS-2 Responses
-					</Link>
-				</Button>
-			</MenuItem>
-			<MenuItem>
-				<Button color="inherit">
-					<Link href="/ps2/chronicles" underline="none">
-						PS-2 Chronicles
-					</Link>
-				</Button>
-			</MenuItem>
+			{user ? (
+				<>
+					<MenuItem>
+						<Button color="inherit">
+							<Link href="/ps2/responses" underline="none">
+								PS-2 Responses
+							</Link>
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button color="inherit">
+							<Link href="/ps2/chronicles" underline="none">
+								PS-2 Chronicles
+							</Link>
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button color="inherit">
+							<Link
+								href={serverURL + 'api/logout'}
+								underline="none"
+							>
+								Logout
+							</Link>
+						</Button>
+					</MenuItem>
+				</>
+			) : (
+				<>
+					<MenuItem>
+						<Button color="inherit">
+							<Link
+								href={serverURL + 'api/login'}
+								underline="none"
+							>
+								Login
+							</Link>
+						</Button>
+					</MenuItem>
+				</>
+			)}
 		</Menu>
 	);
-	// const { currentTheme, setTheme } = React.useContext(CustomThemeContext);
 
 	return (
 		<div className={classes.grow}>
@@ -174,92 +181,35 @@ function Navbar(props) {
 
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
-						{/* {props.auth.isAuthenticated ? (
+						{user ? (
 							<>
-								<IconButton
-									color="inherit"
-									onClick={() => {
-										if (currentTheme === 'light')
-											setTheme('dark');
-										else setTheme('light');
-									}}
+								<Link href="/ps2/responses" underline="none">
+									<Button color="inherit">
+										PS-2 Responses
+									</Button>
+								</Link>
+								<Link href="/ps2/chronicles" underline="none">
+									<Button color="inherit">
+										PS-2 Chronicles
+									</Button>
+								</Link>
+								<Link
+									href={serverURL + 'api/logout'}
+									underline="none"
 								>
-									{currentTheme === 'dark' ? (
-										<Brightness7Icon />
-									) : (
-										<Brightness3Icon />
-									)}
-								</IconButton>
-								<IconButton
-									aria-label="show 17 new notifications"
-									color="inherit"
-									href="/events"
-								>
-									<CalIcon />
-								</IconButton>
-								<IconButton
-									aria-label="show 17 new notifications"
-									color="inherit"
-									href="/orders"
-								>
-									<NotificationsIcon />
-								</IconButton>
-
-								<Button
-									color="inherit"
-									onClick={() => props.logoutUser()}
-								>
-									Logout
-								</Button>
+									<Button color="inherit">Logout</Button>
+								</Link>
 							</>
 						) : (
 							<>
-								<IconButton
-									color="inherit"
-									onClick={() => {
-										if (currentTheme === 'light')
-											setTheme('dark');
-										else setTheme('light');
-									}}
+								<Link
+									href={serverURL + 'api/login'}
+									underline="none"
 								>
-									{currentTheme === 'dark' ? (
-										<Brightness7Icon />
-									) : (
-										<Brightness3Icon />
-									)}
-								</IconButton>
-								<Button color="inherit">
-									<Link
-										color="inherit"
-										underline="none"
-										href="/login"
-									>
-										Login
-									</Link>
-								</Button>
-
-								<Button color="inherit">
-									<Link
-										color="inherit"
-										underline="none"
-										href="/register"
-									>
-										Register
-									</Link>
-								</Button>
+									<Button color="inherit">Log in</Button>
+								</Link>
 							</>
-						)} */}
-						<Button color="inherit">
-							<Link href="/ps2/responses" underline="none">
-								PS-2 Responses
-							</Link>
-						</Button>
-
-						<Button color="inherit">
-							<Link href="/ps2/chronicles" underline="none">
-								PS-2 Chronicles
-							</Link>
-						</Button>
+						)}
 					</div>
 					<div className={classes.sectionMobile}>
 						<IconButton
