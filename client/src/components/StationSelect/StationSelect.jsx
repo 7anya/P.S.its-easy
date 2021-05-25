@@ -1,4 +1,4 @@
-import { makeStyles, Paper } from '@material-ui/core';
+import { makeStyles, Paper, Typography } from '@material-ui/core';
 import SearchBar from 'material-ui-search-bar';
 import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
@@ -100,6 +100,7 @@ const StationSelect = ({
 					onCancelSearch={() => handleSearch('')}
 					style={{ marginBottom: '20px' }}
 				/>
+
 				<Scrollbars
 					style={{ height: '59vh' }}
 					renderThumbVertical={({ style, ...props }) => (
@@ -114,6 +115,9 @@ const StationSelect = ({
 						/>
 					)}
 				>
+					<Typography variant="h6" color="primary">
+						Stations
+					</Typography>
 					{stations.slice(index.start, index.end).map((station) => {
 						return (
 							<BigAccordion

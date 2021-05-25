@@ -7,41 +7,23 @@ const ShowingTypo = ({ index, dataPoints }) => {
 			{window.innerWidth < 800 ? (
 				<>
 					<Typography component="span" color="secondary">
-						{index.start + 1}
-						{' - '}
-					</Typography>
-					<Typography component="span" color="secondary">
-						{index.end}{' '}
-					</Typography>
-					<Typography component="span" color="secondary">
-						of{' '}
-					</Typography>
-					<Typography component="span" color="secondary">
-						{dataPoints.length}{' '}
+						Page
+						{' ' + index.end / 15 + ' of ' + dataPoints.length / 15}
 					</Typography>
 				</>
 			) : (
 				<>
 					<Typography component="span" color="secondary">
-						Showing{' '}
+						Page{' '}
 					</Typography>
 					<Typography component="span" style={{ color: '#ffd39c' }}>
-						{index.start + 1}{' '}
-					</Typography>
-					<Typography component="span" color="secondary">
-						to{' '}
-					</Typography>
-					<Typography component="span" style={{ color: '#ffd39c' }}>
-						{index.end}{' '}
+						{index.end / 15}{' '}
 					</Typography>
 					<Typography component="span" color="secondary">
 						of{' '}
 					</Typography>
 					<Typography component="span" style={{ color: '#ffd39c' }}>
-						{dataPoints.length}{' '}
-					</Typography>
-					<Typography component="span" color="secondary">
-						Results{' '}
+						{dataPoints.length / 15}{' '}
 					</Typography>
 				</>
 			)}

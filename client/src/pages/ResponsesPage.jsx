@@ -10,6 +10,7 @@ import fuzz from 'fuzzball';
 import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesButtonGroup';
 import ResponseDisplayPaper from '../components/ResponseDisplayPaper/ResponseDisplayPaper';
 import ResponseMobileAccord from '../components/ResponseMobileAccord/ResponseMobileAccord';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-let data = require('../dataset/ps2_sem1_responses.json');
+// let data = require('../dataset/ps2_sem1_responses.json');
 
 function useQuery() {
 	return new URLSearchParams(useLocation().search);
@@ -63,6 +64,7 @@ const ResponsesPage = () => {
 	const classes = useStyles();
 	const query = useQuery();
 
+	const [data, setData] = useState({});
 	const [dataPoints, setDataPoints] = useState([]);
 	const [xvalues, setXvalues] = useState([]);
 	const [index, setIndex] = useState({ start: 0, end: 0 });
@@ -76,6 +78,18 @@ const ResponsesPage = () => {
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
+		if (sessionStorage.getItem('ps2_sem1_responses')) {
+			setData(JSON.parse(sessionStorage.getItem('ps2_sem1_responses')));
+		} else {
+			axios.get('/api/stationDetails').then((resp) => {
+				setData(resp.data);
+				sessionStorage.setItem(
+					'ps2_sem1_responses',
+					JSON.stringify(resp.data)
+				);
+			});
+		}
+
 		const searchParam = query.get('search');
 		if (searchParam) {
 			setMainSearch(searchParam);
@@ -211,7 +225,7 @@ const ResponsesPage = () => {
 		setDataPoints(points);
 		setXvalues(x);
 		setAllStationInfo(newInfo);
-	}, [choice, search, slider]);
+	}, [choice, search, slider, data]);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);

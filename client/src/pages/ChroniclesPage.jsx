@@ -1,10 +1,11 @@
 import { Grid, makeStyles } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
-import data from '../dataset/chronicles_combined_new.json';
+// import data from '../dataset/chronicles_combined_new.json';
 import WriteUp from '../components/WriteUp/WriteUp';
 import StationSelect from '../components/StationSelect/StationSelect';
-import fuzz from "fuzzball";
+import fuzz from 'fuzzball';
 import { useLocation } from 'react-router';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -54,13 +55,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function useQuery() {
-  return new URLSearchParams(useLocation().search);
+	return new URLSearchParams(useLocation().search);
 }
 
 function ChroniclesPage() {
 	const classes = useStyles();
 	const query = useQuery();
 
+	const [data, setData] = useState({});
 	const [stations, setStations] = useState([]);
 	const [full, setFull] = useState([]);
 	const [bio, setBio] = useState([]);
@@ -74,10 +76,22 @@ function ChroniclesPage() {
 	const [details, setDetails] = useState({ name: '', id: '' });
 
 	useEffect(() => {
-		const searchParam = query.get("search");
+		if (sessionStorage.getItem('ps2_sem1_chronicles')) {
+			setData(JSON.parse(sessionStorage.getItem('ps2_sem1_chronicles')));
+		} else {
+			axios.get('/api/chronicles').then((resp) => {
+				setData(resp.data);
+				sessionStorage.setItem(
+					'ps2_sem1_chronicles',
+					JSON.stringify(resp.data)
+				);
+			});
+		}
+
+		const searchParam = query.get('search');
 		if (searchParam) {
 			setSearch(searchParam);
-			query.delete("search");
+			query.delete('search');
 		}
 	}, []);
 
@@ -114,24 +128,28 @@ function ChroniclesPage() {
 			setIsNextDisabled(true);
 		}
 		setFull(newArray);
-	}, []);
+	}, [data]);
 
 	useEffect(() => {
 		let newStations;
 		if (search !== '') {
 			newStations = full.filter((each) => {
-			return fuzz.partial_ratio(each.name.toLowerCase(), search.toLowerCase()) > 90;
-			//return each.name.toLowerCase().includes(search);
-		});
-		
+				return (
+					fuzz.partial_ratio(
+						each.name.toLowerCase(),
+						search.toLowerCase()
+					) > 90
+				);
+				//return each.name.toLowerCase().includes(search);
+			});
 		} else {
 			newStations = full.filter((each) => {
-			//return fuzz.partial_ratio(each.name.toLowerCase(), search.toLowerCase()) > 95;
-			return each.name.toLowerCase().includes(search);
-		});
+				//return fuzz.partial_ratio(each.name.toLowerCase(), search.toLowerCase()) > 95;
+				return each.name.toLowerCase().includes(search);
+			});
 		}
-		
-setStations(newStations);
+
+		setStations(newStations);
 		if (newStations.length > 15) {
 			setIndex({ start: 0, end: 15 });
 			setIsNextDisabled(false);
@@ -142,10 +160,6 @@ setStations(newStations);
 			setIsNextDisabled(true);
 		}
 	}, [search, full]);
-
-	useEffect(() => {
-		console.log(window.innerWidth);
-	}, []);
 
 	return (
 		<div className={classes.root}>
