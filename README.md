@@ -2,6 +2,8 @@
 
 A web application to display and browse Practice school stations and its chronicles in a easy to use web interface.
 
+# How to use?
+- Go to the website <>, and log in with BITS mail ID. (We had to use Google log in as we letting Allotment details of students on the open internet dint seem like the best idea, so its only to identify user as a BITSIAN, we dont take any other information)
 
 # Features
 - See last 4 years CGPA trends for all stations in a intuitive boxplot graph, with search and CGPA fiters.
