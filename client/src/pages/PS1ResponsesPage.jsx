@@ -60,7 +60,7 @@ function useQuery() {
 	return new URLSearchParams(useLocation().search);
 }
 
-const ResponsesPage = () => {
+const PS1ResponsesPage = () => {
 	const classes = useStyles();
 	const query = useQuery();
 
@@ -78,13 +78,13 @@ const ResponsesPage = () => {
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
-		if (sessionStorage.getItem('ps2_sem1_responses')) {
-			setData(JSON.parse(sessionStorage.getItem('ps2_sem1_responses')));
+		if (sessionStorage.getItem('ps1_responses')) {
+			setData(JSON.parse(sessionStorage.getItem('ps1_responses')));
 		} else {
-			axios.get('/api/stationDetails').then((resp) => {
+			axios.get('/api/stationDetailsPS1').then((resp) => {
 				setData(resp.data);
 				sessionStorage.setItem(
-					'ps2_sem1_responses',
+					'ps1_responses',
 					JSON.stringify(resp.data)
 				);
 			});
@@ -107,6 +107,11 @@ const ResponsesPage = () => {
 				if (key.toLowerCase().includes(search.toLowerCase())) {
 					//console.log(key);
 					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2021') &&
+						data[key]['2021']
+					)
+						y.push(...data[key]['2021']['CG']);
 					if (
 						(choice === 'Overall' || choice === '2020') &&
 						data[key]['2020']
@@ -160,6 +165,11 @@ const ResponsesPage = () => {
 				) {
 					//console.log(key);
 					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2021') &&
+						data[key]['2021']
+					)
+						y.push(...data[key]['2021']['CG']);
 					if (
 						(choice === 'Overall' || choice === '2020') &&
 						data[key]['2020']
@@ -328,7 +338,7 @@ const ResponsesPage = () => {
 					<Grid item xs={4}>
 						<ResponseDisplayPaper
 							stationDetails={stationDetails}
-							type="PS2"
+							type="PS1"
 						/>
 						<Paper elevation={10} className={classes.paper2}>
 							<SearchComponent
@@ -336,7 +346,7 @@ const ResponsesPage = () => {
 								setMainChoice={setMainChoice}
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
-								type="PS2"
+								type="PS1"
 							/>
 						</Paper>
 					</Grid>
@@ -346,4 +356,4 @@ const ResponsesPage = () => {
 	);
 };
 
-export default ResponsesPage;
+export default PS1ResponsesPage;

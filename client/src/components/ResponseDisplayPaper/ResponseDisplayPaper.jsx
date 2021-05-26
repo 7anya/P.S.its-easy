@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const ResponseDisplayPaper = ({ stationDetails }) => {
+const ResponseDisplayPaper = ({ stationDetails, type }) => {
 	const classes = useStyles();
 	return (
 		<Paper elevation={3} className={classes.paper1}>
@@ -27,21 +27,23 @@ const ResponseDisplayPaper = ({ stationDetails }) => {
 					<div key={stationDetails.name}>
 						<FadeIn>
 							<DetailsTypo stationDetails={stationDetails} />
-							<Link
-								underline="none"
-								href={
-									'/ps2/chronicles?search=' +
-									stationDetails.name
-								}
-							>
-								<Button
-									variant="outlined"
-									color="primary"
-									style={{ marginTop: '10px' }}
+							{type === 'PS2' && (
+								<Link
+									underline="none"
+									href={
+										'/ps2/chronicles?search=' +
+										stationDetails.name
+									}
 								>
-									Checkout It's Chronicles
-								</Button>
-							</Link>
+									<Button
+										variant="outlined"
+										color="primary"
+										style={{ marginTop: '10px' }}
+									>
+										Checkout It's Chronicles
+									</Button>
+								</Link>
+							)}
 						</FadeIn>
 					</div>
 				) : (

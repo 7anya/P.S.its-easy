@@ -25,6 +25,7 @@ function FilterComponent({
 	setMainChoice,
 	setMainSlider,
 	mainSearch,
+	type,
 }) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
@@ -65,10 +66,16 @@ function FilterComponent({
 					onChange={(e) => setChoice(e.target.value)}
 				>
 					<MenuItem value={'Overall'}>Overall</MenuItem>
-					<MenuItem value={'2020'}>2020</MenuItem>
-					<MenuItem value={'2019'}>2019</MenuItem>
-					<MenuItem value={'2018'}>2018</MenuItem>
-					<MenuItem value={'2017'}>2017</MenuItem>
+					{type === 'PS1' ? (
+						<MenuItem value={'2021'}>2021</MenuItem>
+					) : (
+						<>
+							<MenuItem value={'2020'}>2020</MenuItem>
+							<MenuItem value={'2019'}>2019</MenuItem>
+							<MenuItem value={'2018'}>2018</MenuItem>
+							<MenuItem value={'2017'}>2017</MenuItem>
+						</>
+					)}
 				</Select>
 			</FormControl>
 			<Typography id="range-slider" gutterBottom>

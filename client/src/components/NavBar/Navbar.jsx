@@ -183,6 +183,11 @@ function Navbar({ user }) {
 					<div className={classes.sectionDesktop}>
 						{user ? (
 							<>
+								<Link href="/ps1/responses" underline="none">
+									<Button color="inherit">
+										PS-1 Responses
+									</Button>
+								</Link>
 								<Link href="/ps2/responses" underline="none">
 									<Button color="inherit">
 										PS-2 Responses

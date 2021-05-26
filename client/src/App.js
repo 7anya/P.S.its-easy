@@ -13,6 +13,7 @@ import ChroniclesPage from './pages/ChroniclesPage';
 import { Scrollbars } from 'react-custom-scrollbars';
 import HomePage from './pages/HomePage';
 import axios from 'axios';
+import PS1ResponsesPage from './pages/PS1ResponsesPage';
 
 const App = () => {
 	const [user, setUser] = useState(null);
@@ -36,6 +37,9 @@ const App = () => {
 					</Route>
 					<Route exact path="/ps2/responses">
 						<ResponsesPage />
+					</Route>
+					<Route exact path="/ps1/responses">
+						<PS1ResponsesPage />
 					</Route>
 					<Route exact path="/ps2/chronicles">
 						<ChroniclesPage />
