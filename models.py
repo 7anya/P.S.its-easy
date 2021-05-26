@@ -25,21 +25,38 @@ for each in tempChronicles:
 
 chronicles = json.dumps(dic)
 
-# station details part
+# station details part for ps2
 
-stationDetails = db.ps2_sem1_responses_array
-stationDetails = list(stationDetails.find())
-for x in stationDetails:
+stationDetailsPS2 = db.ps2_sem1_responses_array
+stationDetailsPS2 = list(stationDetailsPS2.find())
+for x in stationDetailsPS2:
     x['_id'] = 0
 
 details = {}
-for each in stationDetails:
+for each in stationDetailsPS2:
     name = each["name"]
     del (each['name'])
     del (each['_id'])
     details[name] = each
 
 details = json.dumps(details)
+
+# station details part for ps1
+ps1db = client.get_database("ps1")
+stationDetailsPS1 = ps1db.ps1_2021_responses_array
+stationDetailsPS1 = list(stationDetailsPS1.find())
+for x in stationDetailsPS1:
+    x['_id'] = 0
+
+detailsps1 = {}
+for each in stationDetailsPS1:
+    name = each["name"]
+    del (each['name'])
+    del (each['_id'])
+    detailsps1[name] = each
+
+detailsps1 = json.dumps(detailsps1)
+
 
 
 # enter user in DB

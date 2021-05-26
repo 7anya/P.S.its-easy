@@ -138,6 +138,9 @@ def send_chronicles():
 def send_stationDetails():
     return models.details
 
+@app.route('/api/stationDetailsPS1', methods=["GET"])
+def send_stationDetails_PS1():
+    return models.detailsps1
 
 @app.route('/api/noOfUsers', methods=["GET"])
 def noOfUsers():
