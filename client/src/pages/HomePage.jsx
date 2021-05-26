@@ -74,7 +74,7 @@ const HomePage = ({ user }) => {
 								BITSians{' '}
 							</Typography>
 							<Typography component="span" variant="h6">
-								using psitseasy!
+								onboard :)
 							</Typography>
 						</Typography>
 						<div style={{ textAlign: 'center' }}>
@@ -200,7 +200,7 @@ const HomePage = ({ user }) => {
 										BITSians{' '}
 									</Typography>
 									<Typography component="span" variant="h6">
-										using psitseasy!
+										onboard :)
 									</Typography>
 								</Typography>
 								{user ? (

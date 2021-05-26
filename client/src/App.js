@@ -15,6 +15,7 @@ import HomePage from './pages/HomePage';
 import axios from 'axios';
 import PS1ResponsesPage from './pages/PS1ResponsesPage';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import ProjectBankPage from './pages/ProjectBankPage';
 
 const App = () => {
 	const [user, setUser] = useState(null);
@@ -50,6 +51,11 @@ const App = () => {
 						exact
 						path="/ps2/chronicles"
 						Component={ChroniclesPage}
+					/>
+					<ProtectedRoute
+						exact
+						path="/projectBank"
+						Component={ProjectBankPage}
 					/>
 					{/* <Route exact path="/ps2/responses">
 						<ResponsesPage />

@@ -27,8 +27,10 @@ const useStyles = makeStyles((theme) => ({
 const WriteUp = ({ fade, details, bio }) => {
 	const classes = useStyles();
 	return (
-		<Paper className={classes.chartContainer}>
-			{/* <Typography
+		<>
+			{fade ? (
+				<Paper className={classes.chartContainer}>
+					{/* <Typography
 							component="h1"
 							align="center"
 							variant="h4"
@@ -36,118 +38,170 @@ const WriteUp = ({ fade, details, bio }) => {
 						>
 							PS-2 Chronicles
 						</Typography> */}
-			<Scroll>
-				<DetailPara fade={fade} details={details} />
-				{details.name === '' ? (
-					<Fade in={fade}>
-						<Typography
-							style={{ marginTop: '50px' }}
-							color="textSecondary"
-							align="center"
-						>
-							Please select a student to view their Chronicles
-							Write-Up!
-						</Typography>
-					</Fade>
-				) : (
-					bio.map((line) => {
-						if (check(line, 'short summary of work done')) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Short Summary Of Work Done :"
-								/>
-							);
-						} else if (
-							check(line, 'tools used') ||
-							check(line, 'tool used')
-						) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Tools Used :"
-								/>
-							);
-						} else if (check(line, 'objectives of the project')) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Objectives of The Project :"
-								/>
-							);
-						} else if (check(line, 'outcomes of the project')) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Outcomes Of The Project :"
-								/>
-							);
-						} else if (check(line, 'major learning')) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Major Learning Outcomes :"
-								/>
-							);
-						} else if (
-							check(
-								line,
-								'brief description of working environment'
-							)
-						) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Brief Description of Working Environment :"
-								/>
-							);
-						} else if (
-							check(line, 'details of papers/patents') ||
-							check(line, 'details of papers / patents')
-						) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Details of Papers/Patents :"
-								/>
-							);
-						} else if (check(line, 'academic courses relevant')) {
-							return (
-								<TitlePara
-									fade={fade}
-									line={line}
-									heading="Academic Courses Relevant :"
-								/>
-							);
-						} else if (check(line, 'student write-up')) {
-							return (
-								<Fade in={fade}>
-									<Typography
-										component="p"
-										type="body1"
-									></Typography>
-								</Fade>
-							);
-						} else {
-							return (
-								<Fade in={fade}>
-									<Typography component="p" type="body1">
-										{line}
-									</Typography>
-								</Fade>
-							);
-						}
-					})
-				)}
-			</Scroll>
-		</Paper>
+					<Scroll>
+						<DetailPara fade={fade} details={details} />
+						{details.name === '' ? (
+							<Fade in={fade}>
+								<Typography
+									style={{ marginTop: '50px' }}
+									color="textSecondary"
+									align="center"
+								>
+									Please select a student to view their
+									Chronicles Write-Up!
+								</Typography>
+							</Fade>
+						) : (
+							bio.map((line) => {
+								if (check(line, 'short summary of work done')) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Short Summary Of Work Done :"
+										/>
+									);
+								} else if (
+									check(line, 'tools used') ||
+									check(line, 'tool used')
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Tools Used :"
+										/>
+									);
+								} else if (
+									check(line, 'objectives of the project')
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Objectives of The Project :"
+										/>
+									);
+								} else if (
+									check(line, 'outcomes of the project')
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Outcomes Of The Project :"
+										/>
+									);
+								} else if (check(line, 'major learning')) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Major Learning Outcomes :"
+										/>
+									);
+								} else if (
+									check(
+										line,
+										'brief description of working environment'
+									)
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Brief Description of Working Environment :"
+										/>
+									);
+								} else if (
+									check(line, 'details of papers/patents') ||
+									check(line, 'details of papers / patents')
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Details of Papers/Patents :"
+										/>
+									);
+								} else if (
+									check(line, 'academic courses relevant')
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Academic Courses Relevant :"
+										/>
+									);
+								} else if (check(line, 'student write-up')) {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+											></Typography>
+										</Fade>
+									);
+								} else {
+									return (
+										<Fade in={fade}>
+											<Typography
+												component="p"
+												type="body1"
+											>
+												{line}
+											</Typography>
+										</Fade>
+									);
+								}
+							})
+						)}
+					</Scroll>
+				</Paper>
+			) : (
+				bio.map((line) => {
+					if (check(line, 'project:')) {
+						return (
+							<TitlePara line={line} heading="Project Number :" />
+						);
+					} else if (check(line, 'title:')) {
+						return (
+							<TitlePara
+								line={line}
+								heading="Title of Project :"
+							/>
+						);
+					} else if (check(line, 'description:')) {
+						return (
+							<TitlePara
+								line={line}
+								heading="Description of The Project :"
+							/>
+						);
+					} else if (check(line, 'skills:')) {
+						return <TitlePara line={line} heading="Skills :" />;
+					} else if (check(line, 'students required:')) {
+						return (
+							<TitlePara
+								line={line}
+								heading="Students Required :"
+							/>
+						);
+					} else if (check(line, 'min cgpa')) {
+						return <TitlePara line={line} heading="Min CGPA :" />;
+					} else if (check(line, 'max cgpa')) {
+						return <TitlePara line={line} heading="Max CGPA :" />;
+					} else {
+						return (
+							<Typography component="p" type="body1">
+								{line}
+							</Typography>
+						);
+					}
+				})
+			)}
+		</>
 	);
 };
 
