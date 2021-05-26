@@ -1,5 +1,10 @@
 # P.S.Its easy.
 
+to start server 
+
+. venv/bin/activate
+python app.py
+
 A web application to display and browse Practice school stations and its chronicles in a easy to use web interface.
 
 # How to use?
