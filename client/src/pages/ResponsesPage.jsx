@@ -98,6 +98,7 @@ const ResponsesPage = () => {
 	}, []);
 
 	useEffect(() => {
+		setStationDetails({});
 		let points = [];
 		let x = [];
 		let newInfo = {};
@@ -229,6 +230,7 @@ const ResponsesPage = () => {
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
+		setStationDetails({});
 
 		if (index.end + 15 < dataPoints.length) {
 			setIndex({ start: index.start + 15, end: index.end + 15 });
@@ -241,6 +243,8 @@ const ResponsesPage = () => {
 	};
 
 	const handlePrevious = () => {
+		setStationDetails({});
+
 		if (index.start - 15 > 0) {
 			setIndex({ start: index.start - 15, end: index.end - 15 });
 			setIsNextDisabled(false);

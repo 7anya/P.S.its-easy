@@ -45,9 +45,11 @@ const ResponseDisplayPaper = ({ stationDetails }) => {
 						</FadeIn>
 					</div>
 				) : (
-					<Typography variant="h6" component="h1" key={'hi'}>
-						Hover over a station to print more details!
-					</Typography>
+					<FadeIn>
+						<Typography variant="h6" component="h1" key={'hi'}>
+							Hover over a station to print more details!
+						</Typography>
+					</FadeIn>
 				)}
 			</FadeIn>
 		</Paper>

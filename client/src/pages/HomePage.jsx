@@ -14,53 +14,178 @@ const HomePage = ({ user }) => {
 	}, []);
 	return (
 		<>
-			<Grid container>
-				<Grid
-					item
-					xs={6}
-					style={{ padding: '50px', position: 'relative' }}
-				>
-					<Banner style={{ position: 'absolute', left: 20 }} />
-				</Grid>
-				<Grid
-					item
-					xs={6}
-					style={{ padding: '50px', paddingLeft: '100px' }}
-				>
-					<Typography component="h1" variant="h1" align="center">
-						ps its easyyyyyyy
-						{user ? (
-							<>
-								<Typography
-									component="h4"
-									variant="h4"
-									color="textSecondary"
-									style={{ marginTop: '50px' }}
-								>
-									Welcome {user.name} !
-								</Typography>
+			{window.innerWidth <= '800' ? (
+				<>
+					<Grid
+						container
+						alignItems="center"
+						direction="row"
+						justify="center"
+						style={{
+							height: '80vh',
+							padding: '5%',
+							backgroundImage: `url("/undraw_Charts_re_5qe9.svg")`,
+							backgroundSize: '90%',
+							backgroundRepeat: 'no-repeat',
+							backgroundPosition: 'center',
+						}}
+					>
+						<Typography component="h2" variant="h2" align="center">
+							ps its easyyyyyyy
+						</Typography>
+						<div style={{ textAlign: 'center' }}>
+							{user ? (
+								<>
+									<Typography
+										component="h4"
+										variant="h4"
+										color="textSecondary"
+										style={{ marginTop: '50px' }}
+									>
+										Welcome {user.name} !
+									</Typography>
+									<Link
+										underline="none"
+										href={serverURL + 'api/logout'}
+									>
+										<Button
+											variant="outlined"
+											color="primary"
+										>
+											Log Out
+										</Button>
+									</Link>
+								</>
+							) : (
 								<Link
 									underline="none"
-									href={serverURL + 'api/logout'}
+									href={serverURL + 'api/login'}
 								>
 									<Button variant="outlined" color="primary">
-										Log Out
+										Log In with Google
 									</Button>
 								</Link>
-							</>
-						) : (
-							<Link
-								underline="none"
-								href={serverURL + 'api/login'}
+							)}
+						</div>
+					</Grid>
+					<Typography align="center" component="h6" variant="h6">
+						<Typography component="span" variant="h6">
+							Made with 💜 by{' '}
+						</Typography>
+						<Link
+							href="https://www.jonathansamuel.me/"
+							target="_blank"
+							underline="none"
+						>
+							<Typography
+								component="span"
+								color="primary"
+								variant="h6"
 							>
-								<Button variant="outlined" color="primary">
-									Log In with Google
-								</Button>
-							</Link>
-						)}
+								Jonny{' '}
+							</Typography>
+						</Link>
+
+						<Typography component="span" variant="h6">
+							and{' '}
+						</Typography>
+						<Typography
+							component="span"
+							color="primary"
+							variant="h6"
+						>
+							Tan
+						</Typography>
 					</Typography>
+				</>
+			) : (
+				<Grid
+					container
+					alignItems="center"
+					direction="row"
+					justify="center"
+					style={{ height: '90vh' }}
+				>
+					<Grid item xs={6} style={{}}>
+						<Banner />
+					</Grid>
+					<Grid
+						item
+						xs={6}
+						style={{ paddingLeft: '5vw', paddingRight: '5vw' }}
+					>
+						<Typography component="h1" variant="h1" align="center">
+							ps its easyyyyyyy
+							{user ? (
+								<>
+									<Typography
+										component="h4"
+										variant="h4"
+										color="textSecondary"
+										style={{ marginTop: '50px' }}
+									>
+										Welcome {user.name} !
+									</Typography>
+									<Link
+										underline="none"
+										href={serverURL + 'api/logout'}
+									>
+										<Button
+											variant="outlined"
+											color="primary"
+										>
+											Log Out
+										</Button>
+									</Link>
+								</>
+							) : (
+								<Link
+									underline="none"
+									href={serverURL + 'api/login'}
+								>
+									<Button variant="outlined" color="primary">
+										Log In with Google
+									</Button>
+								</Link>
+							)}
+						</Typography>
+						<Typography
+							align="center"
+							component="h6"
+							variant="h6"
+							style={{ marginTop: '5vh' }}
+						>
+							<Typography component="span" variant="h5">
+								Made with 💜 by{' '}
+							</Typography>
+							<Link
+								href="https://www.jonathansamuel.me/"
+								target="_blank"
+								underline="none"
+							>
+								<Typography
+									component="span"
+									color="primary"
+									variant="h5"
+								>
+									Jonny{' '}
+								</Typography>
+							</Link>
+
+							<Typography component="span" variant="h5">
+								and{' '}
+							</Typography>
+							<Typography
+								component="span"
+								color="primary"
+								variant="h5"
+							>
+								Tan
+							</Typography>
+						</Typography>
+					</Grid>
 				</Grid>
-			</Grid>
+			)}
 		</>
 	);
 };
