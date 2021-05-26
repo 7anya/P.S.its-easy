@@ -16,10 +16,12 @@ const HomePage = ({ user }) => {
 
 		axios.get('/api/noOfUsers').then((res) => {
 			let i = 1;
-			setInterval(() => {
+			let counter = setInterval(() => {
 				if (i <= res.data) {
 					setUsers(i);
 					i++;
+				} else {
+					clearInterval(counter);
 				}
 			}, 100);
 		});
