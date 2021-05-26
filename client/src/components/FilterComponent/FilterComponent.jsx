@@ -58,25 +58,33 @@ function FilterComponent({
 				<InputLabel id="demo-simple-select-label">
 					Select Year
 				</InputLabel>
-				<Select
-					labelId="demo-simple-select-label"
-					id="demo-simple-select"
-					value={choice}
-					label="Select Year"
-					onChange={(e) => setChoice(e.target.value)}
-				>
-					<MenuItem value={'Overall'}>Overall</MenuItem>
-					{type === 'PS1' ? (
+				{type === 'PS1' ? (
+					<Select
+						labelId="demo-simple-select-label"
+						id="demo-simple-select"
+						value={choice}
+						label="Select Year"
+						onChange={(e) => setChoice(e.target.value)}
+					>
+						<MenuItem value={'Overall'}>Overall</MenuItem>
 						<MenuItem value={'2021'}>2021</MenuItem>
-					) : (
-						<>
-							<MenuItem value={'2020'}>2020</MenuItem>
-							<MenuItem value={'2019'}>2019</MenuItem>
-							<MenuItem value={'2018'}>2018</MenuItem>
-							<MenuItem value={'2017'}>2017</MenuItem>
-						</>
-					)}
-				</Select>
+					</Select>
+				) : (
+					<Select
+						labelId="demo-simple-select-label"
+						id="demo-simple-select"
+						value={choice}
+						label="Select Year"
+						onChange={(e) => setChoice(e.target.value)}
+					>
+						<MenuItem value={'Overall'}>Overall</MenuItem>
+
+						<MenuItem value={'2020'}>2020</MenuItem>
+						<MenuItem value={'2019'}>2019</MenuItem>
+						<MenuItem value={'2018'}>2018</MenuItem>
+						<MenuItem value={'2017'}>2017</MenuItem>
+					</Select>
+				)}
 			</FormControl>
 			<Typography id="range-slider" gutterBottom>
 				CGPA range

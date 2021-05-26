@@ -14,6 +14,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import HomePage from './pages/HomePage';
 import axios from 'axios';
 import PS1ResponsesPage from './pages/PS1ResponsesPage';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 const App = () => {
 	const [user, setUser] = useState(null);
@@ -21,7 +22,7 @@ const App = () => {
 	useEffect(() => {
 		axios.get('/api/isUser').then((resp) => {
 			if (resp.data !== 'No user found' && resp.status === 200) {
-				console.log(resp.data);
+				//console.log(resp.data);
 				setUser(resp.data);
 			}
 		});
@@ -35,15 +36,30 @@ const App = () => {
 					<Route exact path="/">
 						<HomePage user={user} />
 					</Route>
-					<Route exact path="/ps2/responses">
+					<ProtectedRoute
+						exact
+						path="/ps2/responses"
+						Component={ResponsesPage}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps1/responses"
+						Component={PS1ResponsesPage}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/chronicles"
+						Component={ChroniclesPage}
+					/>
+					{/* <Route exact path="/ps2/responses">
 						<ResponsesPage />
-					</Route>
-					<Route exact path="/ps1/responses">
+					</Route> */}
+					{/* <Route exact path="/ps1/responses">
 						<PS1ResponsesPage />
 					</Route>
 					<Route exact path="/ps2/chronicles">
 						<ChroniclesPage />
-					</Route>
+					</Route> */}
 
 					<Route path="*">
 						<Redirect to={{ pathname: '/' }} />
