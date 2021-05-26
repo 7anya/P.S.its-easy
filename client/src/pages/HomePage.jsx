@@ -133,13 +133,19 @@ const HomePage = ({ user }) => {
 						<Typography component="span" variant="h6">
 							and{' '}
 						</Typography>
-						<Typography
-							component="span"
-							color="primary"
-							variant="h6"
+						<Link
+							href="https://github.com/7anya"
+							target="_blank"
+							underline="none"
 						>
-							Tan
-						</Typography>
+							<Typography
+								component="span"
+								color="primary"
+								variant="h6"
+							>
+								Tan
+							</Typography>
+						</Link>
 					</Typography>
 				</>
 			) : (
@@ -254,13 +260,19 @@ const HomePage = ({ user }) => {
 						<Typography component="span" variant="h5">
 							and{' '}
 						</Typography>
-						<Typography
-							component="span"
-							color="primary"
-							variant="h5"
+						<Link
+							href="https://github.com/7anya"
+							target="_blank"
+							underline="none"
 						>
-							Tan
-						</Typography>
+							<Typography
+								component="span"
+								color="primary"
+								variant="h5"
+							>
+								Tan
+							</Typography>
+						</Link>
 					</Typography>
 				</>
 			)}
