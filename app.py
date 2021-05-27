@@ -163,5 +163,5 @@ if __name__ == "__main__":
     # th = threading.Thread(target=runScriptAfterInterval)
     # th.start()
     app.debug = True
-    app.run()
+    app.run(host="0.0.0.0")
     # th.join()
