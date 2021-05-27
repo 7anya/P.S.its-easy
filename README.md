@@ -2,9 +2,8 @@
 
 to start server 
 
-. venv/bin/activate
-
-python app.py
+`docker run --rm -d --name ps-its-easy --network <some-network> -v <absolute-path-to-this-repo>:/root rust:alpine /bin/sh ~/entrypoint.sh`
+_Note: Alternatively, you can expose the port instead of using --network, if you don't have a reverse proxy_
 
 A web application to display and browse Practice school stations and its chronicles in a easy to use web interface.
 

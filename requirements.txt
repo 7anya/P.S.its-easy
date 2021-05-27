@@ -1,4 +1,5 @@
-﻿Authlib==0.14.1
+﻿wheel
+Authlib==0.14.1
 certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
@@ -20,3 +21,7 @@ requests==2.23.0
 six==1.14.0
 urllib3==1.25.8
 Werkzeug==1.0.1
+flask_sqlalchemy
+flask_statistics
+pymongo
+dnspython
