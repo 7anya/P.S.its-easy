@@ -3,3 +3,4 @@ venv/
 secret/
 __pycache__/
 .cache/
+database.db
