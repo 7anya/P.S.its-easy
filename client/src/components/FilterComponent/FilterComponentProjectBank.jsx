@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(5),
 		marginLeft: '0px',
 		marginRight: '0px',
-		minWidth: 220,
+		width: '100%',
 	},
 }));
 
@@ -68,13 +68,17 @@ function FilterComponentProjectBank({
 
 					<MenuItem value={'IT'}>IT</MenuItem>
 					<MenuItem value={'Electronics'}>Electronics</MenuItem>
-					<MenuItem value={'Mechanical'}>Mechanical</MenuItem>
-					<MenuItem value={'Chemical'}>Chemical</MenuItem>
-					<MenuItem value={'Infrastructure'}>Infrastructure</MenuItem>
-
 					<MenuItem value={'Finance and Mgmt'}>
 						Finance and Mgmt
 					</MenuItem>
+					<MenuItem value={'Mechanical'}>Mechanical</MenuItem>
+					<MenuItem value={'Govt Research Lab'}>
+						Govt Research Lab
+					</MenuItem>
+					<MenuItem value={'Health Care'}>Health Care</MenuItem>
+					<MenuItem value={'Chemical'}>Chemical</MenuItem>
+					<MenuItem value={'Infrastructure'}>Infrastructure</MenuItem>
+					<MenuItem value={'Others'}>Others</MenuItem>
 					<MenuItem value={'nan'}>Not Specified</MenuItem>
 				</Select>
 			</FormControl>

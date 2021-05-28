@@ -17,6 +17,7 @@ import FilterComponentProjectBank from '../components/FilterComponent/FilterComp
 import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesButtonGroup';
 import ButtonSelect from '../components/StationSelect/ButtonSelect';
 import { CSVLink, CSVDownload } from 'react-csv';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -84,10 +85,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const data = require('../dataset/ps2_sem1_2020_pref.json');
+//const data = require('../dataset/ps2_sem1_2020_pref.json');
 
 const ProjectBankPage = () => {
 	const classes = useStyles();
+
+	const [data, setData] = useState([]);
 	const [dataPoints, setDataPoints] = useState([]);
 	const [index, setIndex] = useState({ start: 0, end: 0 });
 	const [isNextDisabled, setIsNextDisabled] = useState(true);
@@ -95,6 +98,12 @@ const ProjectBankPage = () => {
 	const [choice, setMainChoice] = useState('All');
 	const [search, setMainSearch] = useState('');
 	const [slider, setMainSlider] = useState([0, 100000]);
+
+	useEffect(() => {
+		axios.get('/api/problembank').then((res) => {
+			setData(res.data);
+		});
+	}, []);
 
 	useEffect(() => {
 		let newPoints = [];
@@ -125,34 +134,30 @@ const ProjectBankPage = () => {
 			setIsNextDisabled(true);
 		}
 		setDataPoints(newPoints);
-	}, [search, choice, slider]);
+	}, [search, choice, slider, data]);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
 
-		setTimeout(() => {
-			if (index.end + 15 < dataPoints.length) {
-				setIndex({ start: index.start + 15, end: index.end + 15 });
-				setIsPrevDisabled(false);
-			} else if (index.start + 15 <= dataPoints.length) {
-				setIndex({ start: index.start + 15, end: dataPoints.length });
-				setIsPrevDisabled(false);
-				setIsNextDisabled(true);
-			}
-		}, 200);
+		if (index.end + 15 < dataPoints.length) {
+			setIndex({ start: index.start + 15, end: index.end + 15 });
+			setIsPrevDisabled(false);
+		} else if (index.start + 15 <= dataPoints.length) {
+			setIndex({ start: index.start + 15, end: dataPoints.length });
+			setIsPrevDisabled(false);
+			setIsNextDisabled(true);
+		}
 	};
 
 	const handlePrevious = () => {
-		setTimeout(() => {
-			if (index.start - 15 > 0) {
-				setIndex({ start: index.start - 15, end: index.end - 15 });
-				setIsNextDisabled(false);
-			} else if (index.end - 15 >= 0) {
-				setIndex({ start: 0, end: 15 });
-				setIsPrevDisabled(true);
-				setIsNextDisabled(false);
-			}
-		}, 200);
+		if (index.start - 15 > 0) {
+			setIndex({ start: index.start - 15, end: index.end - 15 });
+			setIsNextDisabled(false);
+		} else if (index.end - 15 >= 0) {
+			setIndex({ start: 0, end: 15 });
+			setIsPrevDisabled(true);
+			setIsNextDisabled(false);
+		}
 	};
 
 	return (

@@ -4,3 +4,4 @@ secret/
 __pycache__/
 .cache/
 database.db
+ps-its-easy.key
