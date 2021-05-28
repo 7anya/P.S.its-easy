@@ -9,12 +9,13 @@ For enabling ssh access to the container:
 1. Change the public key in .ssh/authorized_keys, you can generate new ones by using `ssh-keygen -f filename -t ecdsa` on any linux system  
 2. If you don't have a reverse proxy, you should expose and map the port 22 of the container to the host using `-p ` in the `docker run` command  
 3. ssh using `ssh <path-to-private-key> root@<host-path> -p <port-mapped-in-host>`  
+4. You have nano and git there for small file changes. Please only use `./restart.sh` in the home directory to restart the server
 _Note: If you are a new contributor to the official site at psitseasy.ml, please get the ssh keys from another maintainer_
   
 A web application to display and browse Practice school stations and its chronicles in a easy to use web interface.
 
 # How to use?
-- Go to the website <>, and log in with BITS mail ID. (We had to use Google log in as we letting Allotment details of students on the open internet dint seem like the best idea, so its only to identify user as a BITSIAN, we dont take any other information)
+- Go to the website <psitseasy.ml>, and log in with BITS mail ID. (We had to use Google log in as we letting Allotment details of students on the open internet dint seem like the best idea, so its only to identify user as a BITSIAN, we dont take any other information)
 
 # Features
 - See last 4 years CGPA trends for all stations in a intuitive boxplot graph, with search and CGPA fiters.
