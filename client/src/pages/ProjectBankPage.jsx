@@ -2,19 +2,33 @@ import {
 	Accordion,
 	AccordionDetails,
 	AccordionSummary,
+	Button,
 	Grid,
+	Link,
 	makeStyles,
+	Paper,
 	Typography,
 } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import Scrollbars from 'react-custom-scrollbars';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import WriteUp from '../components/WriteUp/WriteUp';
+import FilterComponentProjectBank from '../components/FilterComponent/FilterComponentProjectBank';
+import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesButtonGroup';
+import ButtonSelect from '../components/StationSelect/ButtonSelect';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 		height: '90vh',
+	},
+	mainComp: {
+		padding: theme.spacing(3),
+		height: '100%',
+	},
+	down: {
+		paddingRight: theme.spacing(3),
+		padding: theme.spacing(6),
 	},
 	paper1: {
 		padding: theme.spacing(3),
@@ -29,11 +43,11 @@ const useStyles = makeStyles((theme) => ({
 		borderStyle: 'solid',
 	},
 	paper2: {
-		padding: theme.spacing(4),
+		padding: theme.spacing(3),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
-		margin: '40px',
-		marginTop: '0px',
+		marginLeft: theme.spacing(6),
+		marginRight: theme.spacing(3),
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
 		borderWidth: '2px',
@@ -45,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	chartContainer: {
 		height: '100%',
-		marginTop: '10px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.secondary.main,
 		borderWidth: '2px',
@@ -80,7 +93,7 @@ const ProjectBankPage = () => {
 	const [isPrevDisabled, setIsPrevDisabled] = useState(true);
 	const [choice, setMainChoice] = useState('All');
 	const [search, setMainSearch] = useState('');
-	const [slider, setMainSlider] = useState([0, 1000000]);
+	const [slider, setMainSlider] = useState([0, 100000]);
 
 	useEffect(() => {
 		let newPoints = [];
@@ -113,6 +126,34 @@ const ProjectBankPage = () => {
 		setDataPoints(newPoints);
 	}, [search, choice, slider]);
 
+	const handleNext = () => {
+		// console.log(allStationInfo);
+
+		setTimeout(() => {
+			if (index.end + 15 < dataPoints.length) {
+				setIndex({ start: index.start + 15, end: index.end + 15 });
+				setIsPrevDisabled(false);
+			} else if (index.start + 15 <= dataPoints.length) {
+				setIndex({ start: index.start + 15, end: dataPoints.length });
+				setIsPrevDisabled(false);
+				setIsNextDisabled(true);
+			}
+		}, 200);
+	};
+
+	const handlePrevious = () => {
+		setTimeout(() => {
+			if (index.start - 15 > 0) {
+				setIndex({ start: index.start - 15, end: index.end - 15 });
+				setIsNextDisabled(false);
+			} else if (index.end - 15 >= 0) {
+				setIndex({ start: 0, end: 15 });
+				setIsPrevDisabled(true);
+				setIsNextDisabled(false);
+			}
+		}, 200);
+	};
+
 	return (
 		<div className={classes.root}>
 			{window.innerWidth <= '800' ? (
@@ -122,7 +163,7 @@ const ProjectBankPage = () => {
 					container
 					direction="row"
 					spacing={0}
-					style={{ padding: '20px', height: '100%' }}
+					className={classes.mainComp}
 				>
 					<Grid
 						item
@@ -199,6 +240,69 @@ const ProjectBankPage = () => {
 										<AccordionDetails
 											style={{ display: 'block' }}
 										>
+											<div
+												style={{
+													position: 'absolute',
+													left: '60%',
+												}}
+											>
+												<Link
+													underline="none"
+													href={
+														'/ps2/responses?search=' +
+														station['Company Name']
+													}
+													target="_blank"
+												>
+													<Button
+														variant="outlined"
+														color="secondary"
+														style={{
+															display: 'block',
+															marginBottom:
+																'10px',
+														}}
+														fullWidth
+													>
+														Checkout Previous
+														Responses
+													</Button>
+												</Link>
+												<Link
+													underline="none"
+													href={
+														'/ps2/chronicles?search=' +
+														station['Company Name']
+													}
+													target="_blank"
+												>
+													<Button
+														variant="outlined"
+														color="secondary"
+														style={{
+															display: 'block',
+														}}
+														fullWidth
+													>
+														Checkout Previous
+														Chronicles
+													</Button>
+												</Link>
+											</div>
+
+											<div>
+												<Typography
+													component="span"
+													color="secondary"
+												>
+													Stipend :{' '}
+												</Typography>
+												<Typography component="span">
+													{'₹ ' +
+														station['Stipend (UG)']}
+												</Typography>
+											</div>
+
 											<WriteUp
 												bio={station['Projects'].split(
 													'\n'
@@ -209,7 +313,40 @@ const ProjectBankPage = () => {
 								))}
 						</Scrollbars>
 					</Grid>
-					<Grid item sm={4} xs={12}></Grid>
+					<Grid item sm={4} xs={12}>
+						<Paper elevation={10} className={classes.paper2}>
+							<FilterComponentProjectBank
+								mainSearch={search}
+								setMainChoice={setMainChoice}
+								setMainSearch={setMainSearch}
+								setMainSlider={setMainSlider}
+							/>
+						</Paper>
+						<div style={{ marginTop: '20px' }}>
+							<ButtonSelect
+								isPrevDisabled={isPrevDisabled}
+								handlePrevious={handlePrevious}
+								isNextDisabled={isNextDisabled}
+								handleNext={handleNext}
+								stations={dataPoints}
+								index={index}
+							/>
+						</div>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							className={classes.down}
+						>
+							<Button
+								variant="outlined"
+								color="primary"
+								fullWidth
+							>
+								Download CSV
+							</Button>
+						</Grid>
+					</Grid>
 				</Grid>
 			)}
 		</div>
