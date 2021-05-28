@@ -125,6 +125,11 @@ def send_stationDetails_PS1():
     return models.detailsps1
 
 
+@app.route('/api/problembank', methods=["GET"])
+def send_bank():
+    return models.bank
+
+
 @app.route('/api/noOfUsers', methods=["GET"])
 def noOfUsers():
     return json.dumps(models.users.count_documents({}))
