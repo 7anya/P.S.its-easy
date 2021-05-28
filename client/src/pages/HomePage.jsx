@@ -119,7 +119,7 @@ const HomePage = ({ user }) => {
 							Made with 💜 by{' '}
 						</Typography>
 						<Link
-							href="https://www.jonathansamuel.me/"
+							href="https://github.com/Joe2k"
 							target="_blank"
 							underline="none"
 						>
@@ -246,7 +246,7 @@ const HomePage = ({ user }) => {
 							Made with 💜 by{' '}
 						</Typography>
 						<Link
-							href="https://www.jonathansamuel.me/"
+							href="https://github.com/Joe2k"
 							target="_blank"
 							underline="none"
 						>
