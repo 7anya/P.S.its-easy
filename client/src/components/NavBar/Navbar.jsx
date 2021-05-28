@@ -183,6 +183,11 @@ function Navbar({ user }) {
 					<div className={classes.sectionDesktop}>
 						{user ? (
 							<>
+								<Link href="/projectBank" underline="none">
+									<Button color="secondary">
+										Project Bank '20
+									</Button>
+								</Link>
 								<Link href="/ps1/responses" underline="none">
 									<Button color="inherit">
 										PS-1 Responses
