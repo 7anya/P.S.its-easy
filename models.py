@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import json
+
 # fetch chronicles
 client = MongoClient(
     "mongodb+srv://psitseasy_admin:tanjon@cluster0.d4jpb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
@@ -57,8 +58,23 @@ for each in stationDetailsPS1:
 
 detailsps1 = json.dumps(detailsps1)
 
+# problem bank
+problembankdb = client.get_database("pref")
+problembank = problembankdb.ps2_sem1_2020_pref
 
+problembank = list(problembank.find())
+for x in problembank:
+    x['_id'] = 0
 
+bank = []
+for each in problembank:
+    # name = each["Company Name"]
+    # del (each['Company Name'])
+    del (each['_id'])
+    bank.append(each)
+
+bank = json.dumps(bank)
+# print(bank)
 # enter user in DB
 userdb = client.get_database("users")
 users = userdb.users
