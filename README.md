@@ -1,10 +1,16 @@
 # P.S.Its easy.
 
-to start server 
+Start Server 
 
-`docker run --rm -d --name ps-its-easy --network <some-network> -v <absolute-path-to-this-repo>:/root rust:alpine /bin/sh ~/entrypoint.sh`
-_Note: Alternatively, you can expose the port instead of using --network, if you don't have a reverse proxy_
-
+`docker run --rm -d --name ps-its-easy --network <some-network> -v <absolute-path-to-this-repo>:/root rust:alpine /bin/sh ~/entrypoint.sh`  
+_Note: Alternatively, you can expose the port instead of using --network, if you don't have a reverse proxy_  
+  
+For enabling ssh access to the container:  
+1. Change the public key in .ssh/authorized_keys, you can generate new ones by using `ssh-keygen -f filename -t ecdsa` on any linux system  
+2. If you don't have a reverse proxy, you should expose and map the port 22 of the container to the host using `-p ` in the `docker run` command  
+3. ssh using `ssh <path-to-private-key> root@<host-path> -p <port-mapped-in-host>`  
+_Note: If you are a new contributor to the official site at psitseasy.ml, please get the ssh keys from another maintainer_
+  
 A web application to display and browse Practice school stations and its chronicles in a easy to use web interface.
 
 # How to use?
