@@ -1,2 +1,5 @@
 jonnyvenv/
 venv/
+secret/
+__pycache__/
+.cache/
