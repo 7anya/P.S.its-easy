@@ -24,7 +24,8 @@ sed -i 's/ash/bash/' /etc/passwd
 
 # Install dependencies and run the flask server
 pip install -r requirements.txt -I
-python3 app.py &
+# python3 app.py &
+gunicorn -w 4 -b :5000 app:app &
 
 # So that the container lives on across python restarts
 while true; do sleep 1d; done
