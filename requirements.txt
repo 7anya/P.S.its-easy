@@ -25,3 +25,4 @@ flask_sqlalchemy
 flask_statistics
 pymongo
 dnspython
+gunicorn
