@@ -16,6 +16,7 @@ import WriteUp from '../components/WriteUp/WriteUp';
 import FilterComponentProjectBank from '../components/FilterComponent/FilterComponentProjectBank';
 import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesButtonGroup';
 import ButtonSelect from '../components/StationSelect/ButtonSelect';
+import { CSVLink, CSVDownload } from 'react-csv';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -243,7 +244,7 @@ const ProjectBankPage = () => {
 											<div
 												style={{
 													position: 'absolute',
-													left: '60%',
+													left: '70%',
 												}}
 											>
 												<Link
@@ -264,8 +265,7 @@ const ProjectBankPage = () => {
 														}}
 														fullWidth
 													>
-														Checkout Previous
-														Responses
+														Checkout Responses
 													</Button>
 												</Link>
 												<Link
@@ -284,8 +284,7 @@ const ProjectBankPage = () => {
 														}}
 														fullWidth
 													>
-														Checkout Previous
-														Chronicles
+														Checkout Chronicles
 													</Button>
 												</Link>
 											</div>
@@ -338,13 +337,22 @@ const ProjectBankPage = () => {
 							alignItems="center"
 							className={classes.down}
 						>
-							<Button
-								variant="outlined"
-								color="primary"
-								fullWidth
+							<CSVLink
+								data={data}
+								style={{
+									textDecoration: 'none',
+									width: '100%',
+								}}
+								filename={'StationDetails.csv'}
 							>
-								Download CSV
-							</Button>
+								<Button
+									variant="outlined"
+									color="primary"
+									fullWidth
+								>
+									Download CSV
+								</Button>
+							</CSVLink>
 						</Grid>
 					</Grid>
 				</Grid>

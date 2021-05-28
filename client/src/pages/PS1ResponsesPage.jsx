@@ -159,8 +159,18 @@ const PS1ResponsesPage = () => {
 			for (const key in data) {
 				if (
 					fuzz.partial_ratio(
-						key.toLowerCase(),
-						search.toLowerCase()
+						key
+							.toLowerCase()
+							.replace('private', '')
+							.replace('pvt', '')
+							.replace('limited', '')
+							.replace('ltd', ''),
+						search
+							.toLowerCase()
+							.replace('private', '')
+							.replace('pvt', '')
+							.replace('limited', '')
+							.replace('ltd', '')
 					) > 90
 				) {
 					//console.log(key);

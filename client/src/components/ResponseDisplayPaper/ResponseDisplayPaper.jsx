@@ -34,6 +34,7 @@ const ResponseDisplayPaper = ({ stationDetails, type }) => {
 										'/ps2/chronicles?search=' +
 										stationDetails.name
 									}
+									target="_blank"
 								>
 									<Button
 										variant="outlined"

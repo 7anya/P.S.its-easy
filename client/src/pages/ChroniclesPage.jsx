@@ -136,8 +136,18 @@ function ChroniclesPage() {
 			newStations = full.filter((each) => {
 				return (
 					fuzz.partial_ratio(
-						each.name.toLowerCase(),
-						search.toLowerCase()
+						each.name
+							.toLowerCase()
+							.replace('private', '')
+							.replace('pvt', '')
+							.replace('limited', '')
+							.replace('ltd', ''),
+						search
+							.toLowerCase()
+							.replace('private', '')
+							.replace('pvt', '')
+							.replace('limited', '')
+							.replace('ltd', '')
 					) > 90
 				);
 				//return each.name.toLowerCase().includes(search);
