@@ -19,7 +19,7 @@ import json
 app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
-
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MODE = "PROD"  # Set to PROD or DEV
 
 db = SQLAlchemy(app)
