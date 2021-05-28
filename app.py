@@ -45,7 +45,7 @@ class Request(db.Model):
     mimetype = db.Column(db.String)
 
 
-# statistics = Statistics(app, db, Request)
+statistics = Statistics(app, db, Request)
 
 # Session config
 app.secret_key = "eeeeeeeeeeeeeeeeeeeeeeee"
