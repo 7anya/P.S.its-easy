@@ -50,7 +50,7 @@ class Request(db.Model):
 # Session config
 app.secret_key = "eeeeeeeeeeeeeeeeeeeeeeee"
 app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
+# app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
 
 # oAuth Setup
 oauth = OAuth(app)
