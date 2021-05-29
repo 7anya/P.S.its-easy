@@ -86,7 +86,8 @@ const HomePage = ({ user }) => {
 										color="textSecondary"
 										style={{ marginTop: '5%' }}
 									>
-										Welcome {user.name} !
+										Hey 👋{' '}
+										{user.name.replace(' ', '\u00A0')}
 									</Typography>
 									<Link
 										underline="none"
@@ -211,7 +212,7 @@ const HomePage = ({ user }) => {
 											color="textSecondary"
 											style={{ marginTop: '5%' }}
 										>
-											Welcome {user.name} !
+											Hey 👋 {user.name}
 										</Typography>
 										<Link
 											underline="none"

@@ -114,28 +114,29 @@ function Navbar({ user }) {
 			{user ? (
 				<>
 					<MenuItem>
-						<Button color="inherit">
-							<Link href="/ps2/responses" underline="none">
-								PS-2 Responses
-							</Link>
-						</Button>
+						<Link href="/projectBank" underline="none">
+							<Button color="secondary">Project Bank '20</Button>
+						</Link>
 					</MenuItem>
 					<MenuItem>
-						<Button color="inherit">
-							<Link href="/ps2/chronicles" underline="none">
-								PS-2 Chronicles
-							</Link>
-						</Button>
+						<Link href="/ps1/responses" underline="none">
+							<Button color="inherit">PS-1 Responses</Button>
+						</Link>
 					</MenuItem>
 					<MenuItem>
-						<Button color="inherit">
-							<Link
-								href={serverURL + 'api/logout'}
-								underline="none"
-							>
-								Logout
-							</Link>
-						</Button>
+						<Link href="/ps2/responses" underline="none">
+							<Button color="inherit">PS-2 Responses</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/chronicles" underline="none">
+							<Button color="inherit">PS-2 Chronicles</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href={serverURL + 'api/logout'} underline="none">
+							<Button color="inherit">Logout</Button>
+						</Link>
 					</MenuItem>
 				</>
 			) : (
