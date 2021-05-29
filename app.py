@@ -10,7 +10,9 @@ from auth_decorator import login_required
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_statistics import Statistics
-
+from sqlalchemy import create_engine
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy import inspect
 import time
 import models
 import json
@@ -147,6 +149,23 @@ def not_found(e):
 
 if __name__ == "__main__":
     s = os.popen("python3 models.py")
-
+    engine = create_engine('sqlite:///database.db')
+    with engine.connect() as con:
+        con.execute("""CREATE TABLE IF NOT EXISTS `request` (
+	`index`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`response_time`	FLOAT,
+	`date`	DateTime,
+	`method`	String,
+	`size`	INTEGER,
+	`status_code`	INTEGER,
+	`path`	TEXT,
+	`user_agent`	TEXT,
+	`remote_address`	TEXT,
+	`exception`	TEXT,
+	`referrer`	TEXT,
+	`browser`	TEXT,
+	`platform`	TEXT,
+	`mimetype`	TEXT
+);""")
     app.debug = True
     app.run(host="0.0.0.0")
