@@ -23,7 +23,24 @@ app = Flask(__name__, static_folder='./client/build', static_url_path='/')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MODE = "PROD"  # Set to PROD or DEV
-
+engine = create_engine('sqlite:///database.db')
+with engine.connect() as con:
+    con.execute("""CREATE TABLE IF NOT EXISTS `request` (
+	`index`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`response_time`	FLOAT,
+	`date`	DateTime,
+	`method`	String,
+	`size`	INTEGER,
+	`status_code`	INTEGER,
+	`path`	TEXT,
+	`user_agent`	TEXT,
+	`remote_address`	TEXT,
+	`exception`	TEXT,
+	`referrer`	TEXT,
+	`browser`	TEXT,
+	`platform`	TEXT,
+	`mimetype`	TEXT
+);""")
 db = SQLAlchemy(app)
 
 
@@ -149,23 +166,6 @@ def not_found(e):
 
 if __name__ == "__main__":
     s = os.popen("python3 models.py")
-    engine = create_engine('sqlite:///database.db')
-    with engine.connect() as con:
-        con.execute("""CREATE TABLE IF NOT EXISTS `request` (
-	`index`	INTEGER PRIMARY KEY AUTOINCREMENT,
-	`response_time`	FLOAT,
-	`date`	DateTime,
-	`method`	String,
-	`size`	INTEGER,
-	`status_code`	INTEGER,
-	`path`	TEXT,
-	`user_agent`	TEXT,
-	`remote_address`	TEXT,
-	`exception`	TEXT,
-	`referrer`	TEXT,
-	`browser`	TEXT,
-	`platform`	TEXT,
-	`mimetype`	TEXT
-);""")
+
     app.debug = True
     app.run(host="0.0.0.0")
