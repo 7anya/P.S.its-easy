@@ -163,7 +163,23 @@ const ProjectBankPage = () => {
 	return (
 		<div className={classes.root}>
 			{window.innerWidth <= '800' ? (
-				<h5>This Page is not suitable on Mobile. Pls use laptop</h5>
+				<Grid
+					container
+					justify="center"
+					alignItems="center"
+					alignContent="center"
+					style={{ flexGrow: 1, height: '100%', padding: '10px' }}
+				>
+					<Typography
+						component="h5"
+						variant="h5"
+						color="textSecondary"
+						align="center"
+					>
+						This page is not yet supported on mobile. Please use a
+						bigger screen!
+					</Typography>
+				</Grid>
 			) : (
 				<Grid
 					container

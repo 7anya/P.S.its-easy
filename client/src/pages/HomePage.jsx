@@ -87,7 +87,11 @@ const HomePage = ({ user }) => {
 										style={{ marginTop: '5%' }}
 									>
 										Hey 👋{' '}
-										{user.name.replace(' ', '\u00A0')}
+										{user.name
+											.split(' ')
+											.slice(0, 2)
+											.join(' ')
+											.replace(' ', '\u00A0')}
 									</Typography>
 									<Link
 										underline="none"
@@ -212,7 +216,12 @@ const HomePage = ({ user }) => {
 											color="textSecondary"
 											style={{ marginTop: '5%' }}
 										>
-											Hey 👋 {user.name}
+											Hey 👋{' '}
+											{user.name
+												.split(' ')
+												.slice(0, 2)
+												.join(' ')
+												.replace(' ', '\u00A0')}
 										</Typography>
 										<Link
 											underline="none"

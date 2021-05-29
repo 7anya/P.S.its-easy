@@ -285,6 +285,7 @@ const ResponsesPage = () => {
 							xvalues={xvalues}
 							index={index}
 							allStationInfo={allStationInfo}
+							type="PS2"
 						/>
 					</Grid>
 					<Grid item xs={12}>

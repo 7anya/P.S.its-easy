@@ -10,7 +10,7 @@ import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const ResponseMobileAccord = ({ xvalues, allStationInfo, index }) => {
+const ResponseMobileAccord = ({ xvalues, allStationInfo, index, type }) => {
 	return (
 		<Scrollbars
 			style={{
@@ -68,20 +68,22 @@ const ResponseMobileAccord = ({ xvalues, allStationInfo, index }) => {
 							</Typography>
 							{allStationInfo[val].avg}
 						</Typography>
-						<Link
-							underline="none"
-							href={'/ps2/chronicles?search=' + val}
-						>
-							<Button
-								variant="outlined"
-								color="secondary"
-								style={{
-									marginTop: '10px',
-								}}
+						{type === 'PS2' && (
+							<Link
+								underline="none"
+								href={'/ps2/chronicles?search=' + val}
 							>
-								Checkout It's Chronicles
-							</Button>
-						</Link>
+								<Button
+									variant="outlined"
+									color="secondary"
+									style={{
+										marginTop: '10px',
+									}}
+								>
+									Checkout It's Chronicles
+								</Button>
+							</Link>
+						)}
 					</AccordionDetails>
 				</Accordion>
 			))}

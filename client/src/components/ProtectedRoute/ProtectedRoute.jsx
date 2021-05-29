@@ -9,7 +9,7 @@ function ProtectedRoute(props) {
 	useEffect(() => {
 		axios.get('/api/isUser').then((resp) => {
 			if (resp.data !== 'No user found' && resp.status === 200) {
-				console.log(resp.data);
+				//console.log(resp.data);
 				setUser(true);
 			} else {
 				setUser(false);
@@ -25,7 +25,6 @@ function ProtectedRoute(props) {
 				if (user === true) {
 					return <Component />;
 				} else if (user === false) {
-					console.log(user);
 					return (
 						<Redirect
 							to={{

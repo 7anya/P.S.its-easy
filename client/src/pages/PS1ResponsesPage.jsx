@@ -295,6 +295,7 @@ const PS1ResponsesPage = () => {
 							xvalues={xvalues}
 							index={index}
 							allStationInfo={allStationInfo}
+							type="PS1"
 						/>
 					</Grid>
 					<Grid item xs={12}>
