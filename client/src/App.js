@@ -16,11 +16,29 @@ import axios from 'axios';
 import PS1ResponsesPage from './pages/PS1ResponsesPage';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ProjectBankPage from './pages/ProjectBankPage';
+import {
+	Backdrop,
+	CircularProgress,
+	Fade,
+	makeStyles,
+} from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+	backdrop: {
+		zIndex: theme.zIndex.drawer + 1,
+		color: '#121212',
+	},
+}));
 
 const App = () => {
+	const classes = useStyles();
 	const [user, setUser] = useState(null);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
+		window.addEventListener('load', () => {
+			setLoading(false);
+		});
 		axios.get('/api/isUser').then((resp) => {
 			if (resp.data !== 'No user found' && resp.status === 200) {
 				//console.log(resp.data);
@@ -31,6 +49,11 @@ const App = () => {
 
 	return (
 		<Scrollbars style={{ width: '100vw', height: '100vh' }}>
+			<Fade in={loading}>
+				<Backdrop className={classes.backdrop} open={loading}>
+					<CircularProgress color="primary" />
+				</Backdrop>
+			</Fade>
 			<Router>
 				<NavBar user={user} />
 				<Switch>
@@ -57,15 +80,6 @@ const App = () => {
 						path="/projectBank"
 						Component={ProjectBankPage}
 					/>
-					{/* <Route exact path="/ps2/responses">
-						<ResponsesPage />
-					</Route> */}
-					{/* <Route exact path="/ps1/responses">
-						<PS1ResponsesPage />
-					</Route>
-					<Route exact path="/ps2/chronicles">
-						<ChroniclesPage />
-					</Route> */}
 
 					<Route path="*">
 						<Redirect to={{ pathname: '/' }} />

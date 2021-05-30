@@ -7,7 +7,7 @@ const ButtonSelect = ({
 	isNextDisabled,
 	handleNext,
 	stations,
-	index
+	index,
 }) => {
 	return (
 		<Grid container style={{ paddingLeft: '50px', paddingRight: '50px' }}>
@@ -35,7 +35,14 @@ const ButtonSelect = ({
 					direction="row"
 					justify="center"
 				>
-					<Typography align="center" color="primary" style={{ marginTop: "5px" }}>{index.start + 1} - {index.end} of {stations.length}</Typography>
+					<Typography
+						align="center"
+						color="primary"
+						style={{ marginTop: '5px' }}
+					>
+						{Math.min(index.start + 1, stations.length)} -{' '}
+						{index.end} of {stations.length}
+					</Typography>
 				</Grid>
 			</Grid>
 			<Grid item xs={4}>

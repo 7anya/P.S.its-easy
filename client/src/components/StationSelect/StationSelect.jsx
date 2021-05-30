@@ -5,6 +5,7 @@ import Scrollbars from 'react-custom-scrollbars';
 import BigAccordion from './BigAccordion';
 import ButtonSelect from './ButtonSelect';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 let pad = 4,
 	mar = 4;
@@ -83,19 +84,30 @@ const StationSelect = ({
 			setFadeAccordion(true);
 		}, 200);
 	};
+	const [localSearch, setLocalSearch] = React.useState(search);
 
-	const handleSearch = (newValue = search) => {
-		setFadeAccordion(false);
-		setTimeout(() => {
-			setSearch(newValue);
+	React.useEffect(() => {
+		const delayTimeout = setTimeout(() => {
+			setSearch(localSearch);
 			setFadeAccordion(true);
-		}, 1);
+		}, 2000);
+
+		return () => clearTimeout(delayTimeout);
+	}, [localSearch]);
+
+	const handleSearch = (newValue = localSearch) => {
+		setFadeAccordion(false);
+		setLocalSearch(newValue);
+
+		// setTimeout(() => {
+
+		// }, 0);
 	};
 	return (
 		<>
 			<Paper elevation={3} className={classes.paper2}>
 				<SearchBar
-					value={search}
+					value={localSearch}
 					onChange={(newValue) => handleSearch(newValue)}
 					onRequestSearch={handleSearch}
 					onCancelSearch={() => handleSearch('')}
@@ -119,20 +131,28 @@ const StationSelect = ({
 					<Typography variant="h6" color="primary">
 						Stations
 					</Typography>
-					{stations.slice(index.start, index.end).map((station) => {
-						return (
-							<BigAccordion
-								fade={fadeAccordion}
-								expandedTop={expandedTop}
-								setExpandedTop={setExpandedTop}
-								setExpandedBottom={setExpandedBottom}
-								expandedBottom={expandedBottom}
-								station={station}
-								classes={classes}
-								setStudent={setStudent}
-							/>
-						);
-					})}
+
+					{fadeAccordion &&
+						stations
+							.slice(index.start, index.end)
+							.map((station) => {
+								return (
+									<BigAccordion
+										fade={fadeAccordion}
+										expandedTop={expandedTop}
+										setExpandedTop={setExpandedTop}
+										setExpandedBottom={setExpandedBottom}
+										expandedBottom={expandedBottom}
+										station={station}
+										classes={classes}
+										setStudent={setStudent}
+									/>
+								);
+							})}
+
+					{!fadeAccordion && (
+						<CircularProgress style={{ marginTop: '10%' }} />
+					)}
 				</Scrollbars>
 			</Paper>
 			<ButtonSelect
