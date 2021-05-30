@@ -1,9 +1,9 @@
 from pymongo import MongoClient
 import json
-
+import keys
 # fetch chronicles
 client = MongoClient(
-    "mongodb+srv://psitseasy_admin:tanjon@cluster0.d4jpb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    f"""mongodb+srv://psitseasy_admin:{keys.mongo}@cluster0.d4jpb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority""")
 
 db = client.get_database("ps2sem1")
 
