@@ -33,6 +33,8 @@ object-assign
 
 /*! https://mths.be/codepointat v0.2.0 by @mathias */
 
+/*! loadCSS. [c]2020 Filament Group, Inc. MIT License */
+
 /**
  * @license
  * Lodash (Custom Build) lodash.com/license | Underscore.js 1.8.3 underscorejs.org/LICENSE
