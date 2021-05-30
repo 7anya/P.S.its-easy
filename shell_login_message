@@ -1,0 +1,11 @@
+\Welcome to PS it's easy's host!
+
+- This is an alpine docker container running on an always free Oracle Cloud ARM instance
+- Changes outside the home directory (/root) are not persistent across container reboots
+- To make sure your changes are reflected across container reboots, please utilise the entrypoint.sh script in /root
+- Also, restart.sh in /root is used to restart the server. Make sure you modify the script to reflect any changes in the calling command you may need
+- Don't forget to git push any changes you make in /root :) 
+
+You can change this message by modifying /etc/motd. For making it permanent, also modify shell_login_message in /root
+
+Thanks for contributing...!!!
