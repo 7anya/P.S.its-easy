@@ -6,3 +6,4 @@ __pycache__/
 database.db
 ps-its-easy.key
 nohup.out
+keys.py

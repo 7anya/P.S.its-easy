@@ -3,7 +3,7 @@ import json
 from flask import Flask, redirect, url_for, session, request, render_template
 from authlib.integrations.flask_client import OAuth
 import os
-
+import keys
 from datetime import timedelta
 
 from auth_decorator import login_required
@@ -74,8 +74,8 @@ app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
 oauth = OAuth(app)
 google = oauth.register(
     name='google',
-    client_id="1053080488870-u4r40p6eqkc30ori7hbmh97gds5dpdfc.apps.googleusercontent.com",
-    client_secret="SAe9CnsKCmdqiNJM-AJ2XTte",
+    client_id=keys.cid,
+    client_secret=keys.csecret,
     access_token_url='https://accounts.google.com/o/oauth2/token',
     access_token_params=None,
     authorize_url='https://accounts.google.com/o/oauth2/auth',
