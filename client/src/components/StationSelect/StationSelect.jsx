@@ -1,4 +1,10 @@
-import { makeStyles, Paper, TextField, Typography } from '@material-ui/core';
+import {
+	Grid,
+	makeStyles,
+	Paper,
+	TextField,
+	Typography,
+} from '@material-ui/core';
 import SearchBar from 'material-ui-search-bar';
 import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
@@ -149,6 +155,23 @@ const StationSelect = ({
 									/>
 								);
 							})}
+					{fadeAccordion && stations.length === 0 && (
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							style={{ height: '80%' }}
+						>
+							<Typography
+								component="h6"
+								variant="h6"
+								align="center"
+								color="textSecondary"
+							>
+								Sorry, No Results Were Found :(
+							</Typography>
+						</Grid>
+					)}
 
 					{!fadeAccordion && (
 						<CircularProgress style={{ marginTop: '10%' }} />

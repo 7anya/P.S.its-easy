@@ -8,7 +8,6 @@ import {
 import './App.css';
 import ResponsesPage from './pages/ResponsesPage';
 import NavBar from './components/NavBar/Navbar';
-import Column from './components/PrefferenceComponent/Column';
 import ChroniclesPage from './pages/ChroniclesPage';
 import { Scrollbars } from 'react-custom-scrollbars';
 import HomePage from './pages/HomePage';

@@ -207,130 +207,165 @@ const ProjectBankPage = () => {
 								/>
 							)}
 						>
-							{dataPoints
-								.slice(index.start, index.end)
-								.map((station) => (
-									<Accordion
-										style={{
-											borderBottom: '2px solid #ff6363',
-											margin: '15px',
-										}}
+							{dataPoints.length === 0 && (
+								<Grid
+									container
+									justify="center"
+									alignItems="center"
+									style={{ height: '100%' }}
+								>
+									<Typography
+										component="h5"
+										variant="h5"
+										align="center"
+										color="textSecondary"
 									>
-										<AccordionSummary
-											expandIcon={<ExpandMoreIcon />}
-											aria-controls="panel1a-content"
-											id="panel1a-header"
+										Sorry, No Results Were Found :(
+									</Typography>
+								</Grid>
+							)}
+							{dataPoints.length > 0 &&
+								dataPoints
+									.slice(index.start, index.end)
+									.map((station) => (
+										<Accordion
+											style={{
+												borderBottom:
+													'2px solid #ff6363',
+												margin: '15px',
+											}}
 										>
-											<Typography
-												className={classes.heading}
+											<AccordionSummary
+												expandIcon={<ExpandMoreIcon />}
+												aria-controls="panel1a-content"
+												id="panel1a-header"
 											>
-												{station['Company Name']}
-											</Typography>
-											<Typography
-												className={
-													classes.secondaryHeading
-												}
-											>
-												{station['Location']}
-											</Typography>
-											{station['Industry Domain'] ===
-											'nan' ? (
+												<Typography
+													className={classes.heading}
+												>
+													{station['Company Name']}
+												</Typography>
 												<Typography
 													className={
 														classes.secondaryHeading
 													}
 												>
-													-
+													{station['Location']}
 												</Typography>
-											) : (
-												<Typography
-													className={
-														classes.secondaryHeading
-													}
-												>
-													{station['Industry Domain']}
-												</Typography>
-											)}
-											<Typography
-												className={
-													classes.tertiaryHeading
-												}
-											>
-												{station['Preferred Branches']}
-											</Typography>
-										</AccordionSummary>
-										<AccordionDetails
-											style={{ display: 'block' }}
-										>
-											<div
-												style={{
-													position: 'absolute',
-													left: '70%',
-												}}
-											>
-												<Link
-													underline="none"
-													href={
-														'/ps2/responses?search=' +
-														station['Company Name']
-													}
-													target="_blank"
-												>
-													<Button
-														variant="outlined"
-														color="secondary"
-														style={{
-															display: 'block',
-															marginBottom:
-																'10px',
-														}}
-														fullWidth
+												{station['Industry Domain'] ===
+												'nan' ? (
+													<Typography
+														className={
+															classes.secondaryHeading
+														}
 													>
-														Checkout Responses
-													</Button>
-												</Link>
-												<Link
-													underline="none"
-													href={
-														'/ps2/chronicles?search=' +
-														station['Company Name']
-													}
-													target="_blank"
-												>
-													<Button
-														variant="outlined"
-														color="secondary"
-														style={{
-															display: 'block',
-														}}
-														fullWidth
+														-
+													</Typography>
+												) : (
+													<Typography
+														className={
+															classes.secondaryHeading
+														}
 													>
-														Checkout Chronicles
-													</Button>
-												</Link>
-											</div>
-
-											<div>
-												<Typography
-													component="span"
-													color="secondary"
-												>
-													Stipend :{' '}
-												</Typography>
-												<Typography component="span">
-													{'₹ ' +
-														station['Stipend (UG)']}
-												</Typography>
-											</div>
-
-											<WriteUp
-												bio={station['Projects'].split(
-													'\n'
+														{
+															station[
+																'Industry Domain'
+															]
+														}
+													</Typography>
 												)}
-											/>
-										</AccordionDetails>
-									</Accordion>
-								))}
+												<Typography
+													className={
+														classes.tertiaryHeading
+													}
+												>
+													{
+														station[
+															'Preferred Branches'
+														]
+													}
+												</Typography>
+											</AccordionSummary>
+											<AccordionDetails
+												style={{ display: 'block' }}
+											>
+												<div
+													style={{
+														position: 'absolute',
+														left: '70%',
+													}}
+												>
+													<Link
+														underline="none"
+														href={
+															'/ps2/responses?search=' +
+															station[
+																'Company Name'
+															]
+														}
+														target="_blank"
+													>
+														<Button
+															variant="outlined"
+															color="secondary"
+															style={{
+																display:
+																	'block',
+																marginBottom:
+																	'10px',
+															}}
+															fullWidth
+														>
+															Checkout Responses
+														</Button>
+													</Link>
+													<Link
+														underline="none"
+														href={
+															'/ps2/chronicles?search=' +
+															station[
+																'Company Name'
+															]
+														}
+														target="_blank"
+													>
+														<Button
+															variant="outlined"
+															color="secondary"
+															style={{
+																display:
+																	'block',
+															}}
+															fullWidth
+														>
+															Checkout Chronicles
+														</Button>
+													</Link>
+												</div>
+
+												<div>
+													<Typography
+														component="span"
+														color="secondary"
+													>
+														Stipend :{' '}
+													</Typography>
+													<Typography component="span">
+														{'₹ ' +
+															station[
+																'Stipend (UG)'
+															]}
+													</Typography>
+												</div>
+
+												<WriteUp
+													bio={station[
+														'Projects'
+													].split('\n')}
+												/>
+											</AccordionDetails>
+										</Accordion>
+									))}
 						</Scrollbars>
 					</Grid>
 					<Grid item sm={4} xs={12}>
