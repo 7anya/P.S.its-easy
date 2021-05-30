@@ -23,11 +23,17 @@ A Web Application to display, browse and filter Practice School Stations and it'
 # How to use?
 
 -   Go to the website [psitseasy.ml](https://psitseasy.ml/), and log in with BITS mail ID only. _(We had to use Google log in as we letting Allotment details of students on the open internet dint seem like the best idea, so its only to identify user as a BITSian, we don't take any other information)_
--   After Logging in you would be able to see different tabs in the Nav Bar. You can click and explore each on of them! For more details n each page checkout the **Features** section below.
+-   After Logging in you would be able to see different tabs in the Nav Bar. You can click and explore each on of them! For more details in each page checkout the **Features** section below.
 
-# Features
+# Features and Screenshots
 
-![Home](images/home.png)
+-   ## Home Page (Login with BITS mail only)
+
+    ![Home](images/home.png)
+
+-   ## Project Bank
+    Here you will be able to view and the **PS-2 Sem 1** Stations and their Projects
+
 ![Project Bank](images/projectBank.png)
 ![PS-1 Responses](images/ps1Responses.png)
 ![PS-2 Responses](images/ps2Responses.png)
