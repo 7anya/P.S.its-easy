@@ -1,7 +1,15 @@
-import { Button, Grid, Link, Typography } from '@material-ui/core';
+import {
+	Button,
+	Grid,
+	Icon,
+	IconButton,
+	Link,
+	Typography,
+} from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { ReactComponent as Banner } from '../resources/undraw_Charts_re_5qe9.svg';
+import { loadCSS } from 'fg-loadcss';
 
 const HomePage = ({ user }) => {
 	const [serverURL, setServerURL] = useState('');
@@ -26,6 +34,17 @@ const HomePage = ({ user }) => {
 			}, 100);
 		});
 	}, []);
+
+	React.useEffect(() => {
+		const node = loadCSS(
+			'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
+			document.querySelector('#font-awesome-css')
+		);
+
+		return () => {
+			node.parentNode.removeChild(node);
+		};
+	}, []);
 	return (
 		<>
 			{window.innerWidth <= '800' ? (
@@ -44,39 +63,84 @@ const HomePage = ({ user }) => {
 							// backgroundPosition: 'center',
 						}}
 					>
-						<Typography component="h2" variant="h2" align="center">
-							P.S. It's Easy
-						</Typography>
-						<Typography
-							component="h6"
-							variant="h6"
-							align="center"
-							style={{ marginTop: '5%' }}
-						>
-							<Typography component="span" variant="h6">
-								We have{' '}
-							</Typography>
+						<div>
 							<Typography
-								component="span"
-								variant="h6"
-								color="secondary"
+								component="h2"
+								variant="h2"
+								align="center"
 							>
-								{users}{' '}
+								P.S. It's Easy
 							</Typography>
-							<Typography component="span" variant="h6">
-								happy{' '}
-							</Typography>
+							<Grid
+								container
+								justify="center"
+								alignItems="center"
+							>
+								<Link
+									href="https://github.com/7anya/P.S.its-easy"
+									target="_blank"
+									underline="none"
+								>
+									<IconButton
+										color="primary"
+										component="span"
+									>
+										<Icon
+											className="fab fa-github"
+											color="primary"
+											fontSize="large"
+										></Icon>
+									</IconButton>
+								</Link>
+								<Link
+									href="https://one-to-tan.blogspot.com/2021/05/ps-its-easy.html"
+									target="_blank"
+									underline="none"
+								>
+									<IconButton
+										color="primary"
+										component="span"
+									>
+										<Icon
+											className="fab fa-blogger"
+											color="primary"
+											fontSize="large"
+										></Icon>
+									</IconButton>
+								</Link>
+							</Grid>
 							<Typography
-								component="span"
+								component="h6"
 								variant="h6"
-								color="secondary"
+								align="center"
+								style={{ marginTop: '5%' }}
 							>
-								BITSians{' '}
+								<Typography component="span" variant="h6">
+									We have{' '}
+								</Typography>
+								<Typography
+									component="span"
+									variant="h6"
+									color="secondary"
+								>
+									{users}{' '}
+								</Typography>
+								<Typography component="span" variant="h6">
+									happy{' '}
+								</Typography>
+								<Typography
+									component="span"
+									variant="h6"
+									color="secondary"
+								>
+									BITSians{' '}
+								</Typography>
+								<Typography component="span" variant="h6">
+									onboard :)
+								</Typography>
 							</Typography>
-							<Typography component="span" variant="h6">
-								onboard :)
-							</Typography>
-						</Typography>
+						</div>
+
 						<div style={{ textAlign: 'center' }}>
 							{user ? (
 								<>
@@ -178,51 +242,97 @@ const HomePage = ({ user }) => {
 								align="center"
 							>
 								P.S. It's Easy
-								<Typography
-									component="h6"
-									variant="h6"
-									align="center"
-									style={{ marginTop: '5%' }}
+							</Typography>
+							<Grid
+								container
+								justify="center"
+								alignItems="center"
+							>
+								<Link
+									href="https://github.com/7anya/P.S.its-easy"
+									target="_blank"
+									underline="none"
 								>
-									<Typography component="span" variant="h6">
-										We have{' '}
-									</Typography>
-									<Typography
+									<IconButton
+										color="primary"
 										component="span"
-										variant="h6"
-										color="secondary"
 									>
-										{users}{' '}
-									</Typography>
-									<Typography component="span" variant="h6">
-										happy{' '}
-									</Typography>
-									<Typography
+										<Icon
+											className="fab fa-github"
+											color="primary"
+											fontSize="large"
+										></Icon>
+									</IconButton>
+								</Link>
+								<Link
+									href="https://one-to-tan.blogspot.com/2021/05/ps-its-easy.html"
+									target="_blank"
+									underline="none"
+								>
+									<IconButton
+										color="primary"
 										component="span"
-										variant="h6"
-										color="secondary"
 									>
-										BITSians{' '}
-									</Typography>
-									<Typography component="span" variant="h6">
-										onboard :)
-									</Typography>
+										<Icon
+											className="fab fa-blogger"
+											color="primary"
+											fontSize="large"
+										></Icon>
+									</IconButton>
+								</Link>
+							</Grid>
+							<Typography
+								component="h6"
+								variant="h6"
+								align="center"
+								style={{ marginTop: '5%' }}
+							>
+								<Typography component="span" variant="h6">
+									We have{' '}
 								</Typography>
-								{user ? (
-									<>
-										<Typography
-											component="h4"
-											variant="h4"
-											color="textSecondary"
-											style={{ marginTop: '5%' }}
-										>
-											Hey 👋{' '}
-											{user.name
-												.split(' ')
-												.slice(0, 2)
-												.join(' ')
-												.replace(' ', '\u00A0')}
-										</Typography>
+								<Typography
+									component="span"
+									variant="h6"
+									color="secondary"
+								>
+									{users}{' '}
+								</Typography>
+								<Typography component="span" variant="h6">
+									happy{' '}
+								</Typography>
+								<Typography
+									component="span"
+									variant="h6"
+									color="secondary"
+								>
+									BITSians{' '}
+								</Typography>
+								<Typography component="span" variant="h6">
+									onboard :)
+								</Typography>
+							</Typography>
+							{user ? (
+								<>
+									<Typography
+										component="h4"
+										variant="h4"
+										color="textSecondary"
+										style={{ marginTop: '5%' }}
+										align="center"
+									>
+										Hey 👋{' '}
+										{user.name
+											.split(' ')
+											.slice(0, 2)
+											.join(' ')
+											.replace(' ', '\u00A0')}
+									</Typography>
+									<Grid
+										container
+										justify="center"
+										alignItems="center"
+										style={{ marginTop: '5%' }}
+									>
 										<Link
 											underline="none"
 											href={serverURL + 'api/logout'}
@@ -234,8 +344,15 @@ const HomePage = ({ user }) => {
 												Log Out
 											</Button>
 										</Link>
-									</>
-								) : (
+									</Grid>
+								</>
+							) : (
+								<Grid
+									container
+									justify="center"
+									alignItems="center"
+									style={{ marginTop: '5%' }}
+								>
 									<Link
 										underline="none"
 										href={serverURL + 'api/login'}
@@ -247,8 +364,8 @@ const HomePage = ({ user }) => {
 											Log In with Google
 										</Button>
 									</Link>
-								)}
-							</Typography>
+								</Grid>
+							)}
 						</Grid>
 					</Grid>
 					<Typography align="center" component="h6" variant="h6">
