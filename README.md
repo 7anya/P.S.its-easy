@@ -20,6 +20,8 @@
 
 A Web Application to display, browse and filter Practice School Stations and it's Chronicles over the past year with CG cutoff analytics in a easy to use web interface. There is also access to the latest Project Bank and the provision to download CSV to rearrange and update your preferences at PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Extension!
 
+Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.html) to know about all the features, tech stack and the story behind this! :)
+
 # How to use?
 
 -   Go to the website [psitseasy.ml](https://psitseasy.ml/), and log in with BITS mail ID only. _(We had to use Google log in as we letting Allotment details of students on the open internet dint seem like the best idea, so its only to identify user as a BITSian, we don't take any other information)_
