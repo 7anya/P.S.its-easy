@@ -31,7 +31,7 @@ const HomePage = ({ user }) => {
 				} else {
 					clearInterval(counter);
 				}
-			}, 100);
+			}, 5);
 		});
 	}, []);
 
