@@ -8,10 +8,10 @@
 <h2>All-in-one Web App for all your Practice School Allotment needs!</h2>
 
 <p float="left">
-<!-- <a href="https://github.com/7anya/P.S.its-easy">
-<img src="https://badges.pufler.dev/visits/7anya/P.S.its-easy?style=for-the-badge&color=red" /></a> -->
-<!-- <a href="https://github.com/7anya/P.S.its-easy">
-<img src="https://badges.pufler.dev/updated/7anya/P.S.its-easy?style=for-the-badge"  /></a> -->
+<a href="https://github.com/7anya/P.S.its-easy">
+<img src="https://badges.pufler.dev/visits/7anya/P.S.its-easy?style=for-the-badge&color=red" /></a>
+<a href="https://github.com/7anya/P.S.its-easy">
+<img src="https://badges.pufler.dev/updated/7anya/P.S.its-easy?style=for-the-badge"  /></a>
 </p>
 
 </div>
