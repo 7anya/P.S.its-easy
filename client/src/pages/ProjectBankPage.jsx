@@ -2,6 +2,7 @@ import {
 	Accordion,
 	AccordionDetails,
 	AccordionSummary,
+	Badge,
 	Button,
 	Grid,
 	Link,
@@ -245,6 +246,7 @@ const ProjectBankPage = () => {
 												>
 													{station['Company Name']}
 												</Typography>
+
 												<Typography
 													className={
 														classes.secondaryHeading
