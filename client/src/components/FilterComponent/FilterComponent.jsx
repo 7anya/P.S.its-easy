@@ -100,7 +100,7 @@ function FilterComponent({
 				step={0.1}
 			/>
 			<Button onClick={handleSubmit} variant="outlined" color="primary">
-				Apply!
+				Search
 			</Button>
 		</div>
 	);

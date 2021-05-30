@@ -97,7 +97,7 @@ function FilterComponentProjectBank({
 				step={1000}
 			/>
 			<Button onClick={handleSubmit} variant="outlined" color="primary">
-				Apply!
+				Search
 			</Button>
 		</div>
 	);
