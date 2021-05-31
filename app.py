@@ -130,26 +130,31 @@ def logout():
 
 
 @app.route('/api/chronicles', methods=["GET"])
+@login_required
 def send_chronicles():
     return models.chronicles
 
 
 @app.route('/api/stationDetails', methods=["GET"])
+@login_required
 def send_stationDetails():
     return models.details
 
 
 @app.route('/api/stationDetailsPS1', methods=["GET"])
+@login_required
 def send_stationDetails_PS1():
     return models.detailsps1
 
 
 @app.route('/api/problembank', methods=["GET"])
+@login_required
 def send_bank():
     return models.bank
 
 
 @app.route('/api/noOfUsers', methods=["GET"])
+@login_required
 def noOfUsers():
     return json.dumps(models.users.count_documents({}))
 
