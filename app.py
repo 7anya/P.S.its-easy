@@ -154,7 +154,7 @@ def send_bank():
 
 
 @app.route('/api/noOfUsers', methods=["GET"])
-@login_required
+# @login_required
 def noOfUsers():
     return json.dumps(models.users.count_documents({}))
 
