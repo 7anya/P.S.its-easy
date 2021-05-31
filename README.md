@@ -8,10 +8,10 @@
 <h2>All-in-one Web App for all your Practice School Allotment needs!</h2>
 
 <p float="left">
-<!-- <a href="https://github.com/7anya/P.S.its-easy">
-<img src="https://badges.pufler.dev/visits/7anya/P.S.its-easy?style=for-the-badge&color=red" /></a> -->
-<!-- <a href="https://github.com/7anya/P.S.its-easy">
-<img src="https://badges.pufler.dev/updated/7anya/P.S.its-easy?style=for-the-badge"  /></a> -->
+<a href="https://github.com/7anya/P.S.its-easy">
+<img src="https://badges.pufler.dev/visits/7anya/P.S.its-easy?style=for-the-badge&color=red" /></a>
+<a href="https://github.com/7anya/P.S.its-easy">
+<img src="https://badges.pufler.dev/updated/7anya/P.S.its-easy?style=for-the-badge"  /></a>
 </p>
 
 </div>
@@ -20,27 +20,54 @@
 
 A Web Application to display, browse and filter Practice School Stations and it's Chronicles over the past year with CG cutoff analytics in a easy to use web interface. There is also access to the latest Project Bank and the provision to download CSV to rearrange and update your preferences at PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Extension!
 
+Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.html) to know about all the features, tech stack and the story behind this! :)
+
 # How to use?
 
 -   Go to the website [psitseasy.ml](https://psitseasy.ml/), and log in with BITS mail ID only. _(We had to use Google log in as we letting Allotment details of students on the open internet dint seem like the best idea, so its only to identify user as a BITSian, we don't take any other information)_
--   After Logging in you would be able to see different tabs in the Nav Bar. You can click and explore each on of them! For more details n each page checkout the **Features** section below.
+-   After Logging in you would be able to see different tabs in the Nav Bar. You can click and explore each on of them! For more details in each page checkout the **Features** section below.
 
-# Features
+# Features and Screenshots
 
-![Home](images/home.png)
-![Project Bank](images/projectBank.png)
-![PS-1 Responses](images/ps1Responses.png)
-![PS-2 Responses](images/ps2Responses.png)
-![PS-2 Chronicles](images/ps2Chronicles.png)
+-   ## Home Page
 
--   See last 4 years CGPA trends for all stations in a intuitive boxplot graph, with search and CGPA fiters.
-    (The source of the data used was the crowd sourced information collected after PS2 allotment from 2017 to 2020)
+    -   Login with BITS mail only
+        ![Home](images/home.png)
 
--   Browse chronicles of last 4 years (2017-2020) with a few clicks and know first-hand accounts of people's experiences .
-    (SOURCE:official PS chronicles )
--   coming soon - download the latest Project bank from a few clicks into an CSV form. (CSV compatible with PS companion extension)
+-   ## Project Bank (Currently has PS2 Sem 1 2020 Details)
 
-# Screenshots
+    -   Here you will be able to view and the **PS-2 Sem 1 2020** Stations and their Projects. This will be updated at each PS cycle to the one thats currently going on. Now it's just dummy data from last year. When PS2 Sem 1 Details come in June this year we will update it and the station details will be updated approximately every 4 hrs automatically.
+    -   You can apply filters like domain, stipend and also search the name and location of the Station.
+    -   In each Station you can see all its details when you click on the dropdown.
+    -   You also get 2 buttons to checkout the previous year's chronicles and responses of the same station if available.
+    -   There is also a **Download CSV** button with which you can download all these. Then you can rearrange these stations by moving the rows according to your preferences and then uploading in PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Chrome Extension!
+        ![Project Bank](images/projectBank.png)
+
+-   ## PS-1 Responses
+
+    -   Here you can see the latest 2021 allotments which was properly collected by us this time.
+    -   There are over 1100 responses in this.
+    -   Currently there is only 2021 stats. We will try to add more previous years stats to it before the next PS-1 in the summer starts
+        ![PS-1 Responses](images/ps1Responses.png)
+
+-   ## PS-2 Responses
+
+    -   Here you can see the stats from the last 4 years **PS-2 Sem 1** Responses.
+    -   You can use filters for year, cgpa and search for station names.
+    -   You can zoom and move inside the box plot.
+    -   When you hover over a station the details will come up on the right.
+    -   You will also get a _Checkout it's chronicles_ button which will take you to the chronicles of that specific station if available.
+    -   In the next few months we will also add Sem 2 stats as well.
+        ![PS-2 Responses](images/ps2Responses.png)
+
+-   ## PS-2 Chronicles
+
+    -   Here you can see the chronicles of the past 4 years **PS-2 Sem 1**.
+    -   You can search for stations and view the different years drop downs and each dropdown be able to see the name of the student in the PS station.
+    -   Once you click on the name you can see the whole chronicle on the left.
+    -   There is also a _Checkout it's responses_ button which takes you to the responses page of that specific station.
+    -   We will expand it to accomodate Sem 2 chronicles as well in the near future.
+        ![PS-2 Chronicles](images/ps2Chronicles.png)
 
 # Disclaimer
 
