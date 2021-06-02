@@ -104,6 +104,14 @@ const ProjectBankPage = () => {
 	useEffect(() => {
 		axios.get('/api/problembank').then((res) => {
 			setData(res.data);
+			// let pref = {};
+			// res.data.forEach((d) => {
+			// 	let curPref = d['Preferred Branches'].split(',');
+			// 	curPref.forEach((p) => {
+			// 		pref[p] = {};
+			// 	});
+			// });
+			// console.log(pref);
 		});
 	}, []);
 

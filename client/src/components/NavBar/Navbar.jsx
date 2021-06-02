@@ -115,7 +115,9 @@ function Navbar({ user }) {
 				<>
 					<MenuItem>
 						<Link href="/projectBank" underline="none">
-							<Button color="secondary">Project Bank '20</Button>
+							<Button color="secondary">
+								Project Bank(PS-2/Sem-1) '21
+							</Button>
 						</Link>
 					</MenuItem>
 					<MenuItem>
@@ -186,7 +188,7 @@ function Navbar({ user }) {
 							<>
 								<Link href="/projectBank" underline="none">
 									<Button color="secondary">
-										Project Bank '20
+										Project Bank(PS-2/Sem-1) '21
 									</Button>
 								</Link>
 								<Link href="/ps1/responses" underline="none">
