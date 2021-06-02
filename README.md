@@ -37,10 +37,10 @@ Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.htm
 -   ## Project Bank (Currently has PS2 Sem 1 2020 Details)
 
     -   Here you will be able to view and the **PS-2 Sem 1 2020** Stations and their Projects. This will be updated at each PS cycle to the one thats currently going on. Now it's just dummy data from last year. When PS2 Sem 1 Details come in June this year we will update it and the station details will be updated approximately every 4 hrs automatically.
-    -   You can apply filters like domain, stipend and also search the name and location of the Station.
+    -   You can apply filters like domain, stipend, branch and also search the name and location of the Station.
     -   In each Station you can see all its details when you click on the dropdown.
     -   You also get 2 buttons to checkout the previous year's chronicles and responses of the same station if available.
-    -   There is also a **Download CSV** button with which you can download all these. Then you can rearrange these stations by moving the rows according to your preferences and then uploading in PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Chrome Extension!
+    -   There is also a **Download CSV** button with which you can download all the Station Details. Then you can rearrange these stations by moving the rows according to your preferences and then you can upload it in the PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Chrome Extension which is also built and maintained by us. So we will make sure both of these are compatible with each other all the time!
         ![Project Bank](images/projectBank.png)
 
 -   ## PS-1 Responses
