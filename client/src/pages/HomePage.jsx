@@ -27,11 +27,13 @@ const HomePage = ({ user }) => {
 			let counter = setInterval(() => {
 				if (i <= res.data) {
 					setUsers(i);
-					i++;
+					i += Math.ceil(res.data / 100);
+				} else if (users < res.data) {
+					setUsers(res.data);
 				} else {
 					clearInterval(counter);
 				}
-			}, 1);
+			}, 0);
 		});
 	}, []);
 
