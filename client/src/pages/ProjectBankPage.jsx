@@ -99,6 +99,7 @@ const ProjectBankPage = () => {
 	const [choice, setMainChoice] = useState('All');
 	const [search, setMainSearch] = useState('');
 	const [slider, setMainSlider] = useState([0, 100000]);
+	const [branch, setMainBranch] = useState('All');
 
 	useEffect(() => {
 		axios.get('/api/problembank').then((res) => {
@@ -120,7 +121,12 @@ const ProjectBankPage = () => {
 						d['Stipend (UG)'] >= slider[0] &&
 						d['Stipend (UG)'] <= slider[1]
 					) {
-						newPoints.push(d);
+						if (
+							branch === 'All' ||
+							d['Preferred Branches'].includes(branch)
+						) {
+							newPoints.push(d);
+						}
 					}
 				}
 			}
@@ -135,7 +141,7 @@ const ProjectBankPage = () => {
 			setIsNextDisabled(true);
 		}
 		setDataPoints(newPoints);
-	}, [search, choice, slider, data]);
+	}, [search, choice, slider, data, branch]);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
@@ -377,6 +383,7 @@ const ProjectBankPage = () => {
 								setMainChoice={setMainChoice}
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
+								setMainBranch={setMainBranch}
 							/>
 						</Paper>
 						<div style={{ marginTop: '20px' }}>
