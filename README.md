@@ -16,6 +16,10 @@
 
 </div>
 
+
+Note: Developers trying to fork and test. Please wait, we'll set up a test branch in a few days thats immediately ready to be worked on. This branch consists of hidden creds you may require
+
+
 # About
 
 A Web Application to display, browse and filter Practice School Stations and it's Chronicles over the past year with CG cutoff analytics in a easy to use web interface. There is also access to the latest Project Bank and the provision to download CSV to rearrange and update your preferences at PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Extension!
