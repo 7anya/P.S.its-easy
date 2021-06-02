@@ -32,7 +32,7 @@ function FilterComponentProjectBank({
 }) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
-	const [slider, setSlider] = useState([0, 100000]);
+	const [slider, setSlider] = useState([0, 150000]);
 	const [choice, setChoice] = useState('All');
 	const [branch, setBranch] = useState('All');
 
@@ -147,7 +147,7 @@ function FilterComponentProjectBank({
 				getAriaValueText={(value) => `₹ ${value / 1000}k`}
 				valueLabelFormat={(value) => `₹ ${value / 1000}k`}
 				min={0}
-				max={100000}
+				max={150000}
 				step={1000}
 			/>
 			<Button onClick={handleSubmit} variant="outlined" color="primary">
