@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 	down: {
 		paddingRight: theme.spacing(3),
 		padding: theme.spacing(6),
+		paddingTop: theme.spacing(3),
 	},
 	paper1: {
 		padding: theme.spacing(3),
@@ -423,6 +424,24 @@ const ProjectBankPage = () => {
 									Download CSV
 								</Button>
 							</CSVLink>
+							<Typography
+								component="p"
+								variant="body1"
+								color="textSecondary"
+								align="center"
+								style={{ padding: '10px' }}
+							>
+								You can reorder this CSV with any sheets app and
+								then upload it in the PSD portal with this
+								amazing{' '}
+								<Link
+									href="https://github.com/Joe2k/PS-Companion"
+									target="_blank"
+								>
+									PS&nbsp;Companion
+								</Link>{' '}
+								Extension :)
+							</Typography>
 						</Grid>
 					</Grid>
 				</Grid>
