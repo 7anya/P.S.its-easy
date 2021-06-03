@@ -16,9 +16,7 @@
 
 </div>
 
-
 Note: Developers trying to fork and test. Please wait, we'll set up a test branch in a few days thats immediately ready to be worked on. This branch consists of hidden creds you may require
-
 
 # About
 
@@ -38,9 +36,9 @@ Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.htm
     -   Login with BITS mail only
         ![Home](images/home.png)
 
--   ## Project Bank (Currently has PS2 Sem 1 2020 Details)
+-   ## Project Bank (Currently has latest PS2 Sem 1 2021 Details)
 
-    -   Here you will be able to view and the **PS-2 Sem 1 2020** Stations and their Projects. This will be updated at each PS cycle to the one thats currently going on. Now it's just dummy data from last year. When PS2 Sem 1 Details come in June this year we will update it and the station details will be updated approximately every 4 hrs automatically.
+    -   Here you will be able to view and the **PS-2 Sem 1 2021** Stations and their Projects. This will be updated at each PS cycle to the one thats currently going on. We currently have PS2 Sem 1 2021 Station Details which is being updated regularly.
     -   You can apply filters like domain, stipend, branch and also search the name and location of the Station.
     -   In each Station you can see all its details when you click on the dropdown.
     -   You also get 2 buttons to checkout the previous year's chronicles and responses of the same station if available.
