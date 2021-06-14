@@ -15,6 +15,7 @@ import axios from 'axios';
 import PS1ResponsesPage from './pages/PS1ResponsesPage';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ProjectBankPage from './pages/ProjectBankPage';
+import AllotmentForm from './pages/AllotmentForm';
 import {
 	Backdrop,
 	CircularProgress,
@@ -78,6 +79,11 @@ const App = () => {
 						exact
 						path="/projectBank"
 						Component={ProjectBankPage}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/form"
+						Component={AllotmentForm}
 					/>
 
 					<Route path="*">
