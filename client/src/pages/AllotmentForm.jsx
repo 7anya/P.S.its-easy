@@ -13,6 +13,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -39,12 +42,54 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function AllotmentForm() {
+export default function AllotmentForm(props) {
+	let history = useHistory();
+	// console.log(props);
+	const { user } = props;
 	const classes = useStyles();
-	const [campus, setCampus] = React.useState('Hyderabad');
+	const [form, setForm] = React.useState({
+		email: '',
+		name: '',
+		id: '',
+		campus: '',
+		cgpa: '',
+		station: '',
+	});
+	const [error, setError] = React.useState('');
+	const [stationNames, setStationNames] = React.useState([]);
 
 	const handleChange = (event) => {
-		setCampus(event.target.value);
+		if (event.target.id)
+			setForm({ ...form, [event.target.id]: event.target.value });
+		else setForm({ ...form, [event.target.name]: event.target.value });
+	};
+
+	React.useEffect(() => {
+		if (user) setForm({ ...form, email: user.email, name: user.name });
+	}, [user]);
+
+	React.useEffect(() => {
+		axios.get('/api/formStationNames').then((resp) => {
+			setStationNames(resp.data);
+		});
+	}, []);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		for (const property in form) {
+			if (form[property] === '') {
+				setError('Please fill all fields!');
+				return;
+			}
+		}
+		if (form.cgpa < 4 || form.cgpa > 10) {
+			setError('Please set the right CGPA!');
+			return;
+		}
+		setError('');
+		axios
+			.post('/api/formSubmit', form)
+			.then((resp) => history.push('/ps2/formResponses'));
 	};
 
 	return (
@@ -68,6 +113,8 @@ export default function AllotmentForm() {
 						name="email"
 						autoComplete="email"
 						autoFocus
+						value={form.email}
+						disabled
 					/>
 					<TextField
 						variant="outlined"
@@ -78,6 +125,8 @@ export default function AllotmentForm() {
 						label="Name"
 						name="name"
 						autoComplete="name"
+						value={form.name}
+						disabled
 					/>
 					<TextField
 						variant="outlined"
@@ -87,6 +136,8 @@ export default function AllotmentForm() {
 						id="id"
 						label="ID Number (eg. 2018AAPS0460H)"
 						name="id"
+						value={form.id}
+						onChange={handleChange}
 					/>
 					<FormControl
 						variant="outlined"
@@ -97,8 +148,9 @@ export default function AllotmentForm() {
 						</InputLabel>
 						<Select
 							labelId="demo-simple-select-outlined-label"
-							id="demo-simple-select-outlined"
-							value={campus}
+							id="campus"
+							name="campus"
+							value={form.campus}
 							onChange={handleChange}
 							label="Campus"
 						>
@@ -112,11 +164,13 @@ export default function AllotmentForm() {
 						margin="normal"
 						required
 						fullWidth
-						id="cg"
+						id="cgpa"
 						label="CGPA"
 						name="cg"
 						type="number"
 						inputProps={{ min: 4, max: 10, step: 0.1 }}
+						value={form.cgpa}
+						onChange={handleChange}
 					/>
 					<FormControl
 						variant="outlined"
@@ -127,22 +181,35 @@ export default function AllotmentForm() {
 						</InputLabel>
 						<Select
 							labelId="demo-simple-select-outlined-label"
-							id="demo-simple-select-outlined"
-							value={campus}
+							id="station"
+							value={form.station}
 							onChange={handleChange}
 							label="Campus"
+							name="station"
 						>
-							<MenuItem value={'Hyderabad'}>Hyderabad</MenuItem>
-							<MenuItem value={'Goa'}>Goa</MenuItem>
-							<MenuItem value={'Pilani'}>Pilani</MenuItem>
+							{stationNames.map((station) => (
+								<MenuItem name="station" value={station.name}>
+									{station.name}
+								</MenuItem>
+							))}
 						</Select>
 					</FormControl>
+					{error && (
+						<Alert
+							variant="outlined"
+							severity="error"
+							style={{ marginTop: '20px' }}
+						>
+							{error}
+						</Alert>
+					)}
 					<Button
 						type="submit"
 						fullWidth
 						variant="contained"
 						color="primary"
 						className={classes.submit}
+						onClick={handleSubmit}
 					>
 						Submit
 					</Button>

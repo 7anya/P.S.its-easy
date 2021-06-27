@@ -22,6 +22,7 @@ import {
 	Fade,
 	makeStyles,
 } from '@material-ui/core';
+import PS2FormResponses from './pages/PS2FormResponses';
 
 const useStyles = makeStyles((theme) => ({
 	backdrop: {
@@ -41,7 +42,7 @@ const App = () => {
 		});
 		axios.get('/api/isUser').then((resp) => {
 			if (resp.data !== 'No user found' && resp.status === 200) {
-				//console.log(resp.data);
+				// console.log(resp.data);
 				setUser(resp.data);
 			}
 		});
@@ -84,6 +85,11 @@ const App = () => {
 						exact
 						path="/ps2/form"
 						Component={AllotmentForm}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/formResponses"
+						Component={PS2FormResponses}
 					/>
 
 					<Route path="*">

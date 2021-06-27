@@ -4,6 +4,7 @@ import axios from 'axios';
 
 function ProtectedRoute(props) {
 	const [user, setUser] = useState(null);
+	const [userDetails, setUserDetails] = useState(null);
 	const { Component, ...rest } = props;
 
 	useEffect(() => {
@@ -11,6 +12,7 @@ function ProtectedRoute(props) {
 			if (resp.data !== 'No user found' && resp.status === 200) {
 				//console.log(resp.data);
 				setUser(true);
+				setUserDetails(resp.data);
 			} else {
 				setUser(false);
 			}
@@ -23,7 +25,7 @@ function ProtectedRoute(props) {
 			{...rest}
 			render={(props) => {
 				if (user === true) {
-					return <Component />;
+					return <Component user={userDetails} />;
 				} else if (user === false) {
 					return (
 						<Redirect
