@@ -152,6 +152,29 @@ def send_stationDetails_PS1():
 def send_bank():
     return models.bank
 
+@app.route('/api/formStationNames', methods=["GET"])
+@login_required
+def send_names():
+    return models.find_names()
+
+@app.route('/api/formResponses', methods=["GET"])
+@login_required
+def send_form_responses():
+    return models.form_responses()
+
+@app.route('/api/formResponsesDetailed', methods=["GET"])
+@login_required
+def send_form_detailed_responses():
+    return models.form_detailed_responses()
+
+@app.route('/api/formSubmit', methods=["POST"])
+@login_required
+def form_submit():
+    data = request.get_json()
+    models.form_submit(data)
+    return "Cool"
+    
+
 
 @app.route('/api/noOfUsers', methods=["GET"])
 # @login_required

@@ -114,6 +114,16 @@ function Navbar({ user }) {
 			{user ? (
 				<>
 					<MenuItem>
+						<Link href="/ps2/form" underline="none">
+							<Button color="secondary">PS2'21 Form</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/formResponses" underline="none">
+							<Button color="secondary">PS2'21 Responses</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
 						<Link href="/projectBank" underline="none">
 							<Button color="secondary">
 								Project Bank(PS-2/Sem-1) '21
@@ -186,6 +196,19 @@ function Navbar({ user }) {
 					<div className={classes.sectionDesktop}>
 						{user ? (
 							<>
+								<Link href="/ps2/form" underline="none">
+									<Button color="secondary">
+										PS2'21 Form
+									</Button>
+								</Link>
+								<Link
+									href="/ps2/formResponses"
+									underline="none"
+								>
+									<Button color="secondary">
+										PS2'21 Responses
+									</Button>
+								</Link>
 								<Link href="/projectBank" underline="none">
 									<Button color="secondary">
 										Project Bank(PS-2/Sem-1) '21
