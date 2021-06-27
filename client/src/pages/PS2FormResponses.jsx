@@ -140,6 +140,7 @@ const PS2FormResponses = () => {
 					if (y.length > 0) {
 						let min = 0,
 							max = 0,
+							count = 0,
 							avg = 0;
 						min = Math.min(...y);
 						min = Math.round(min * 100) / 100;
@@ -149,9 +150,10 @@ const PS2FormResponses = () => {
 							y.reduce((a, b) => parseInt(a) + parseInt(b)) /
 							y.length;
 						avg = Math.round(avg * 100) / 100;
+						count = y.length;
 						newInfo = {
 							...newInfo,
-							[key]: { min, max, avg },
+							[key]: { min, max, avg, count },
 						};
 						//console.log(slider[0], slider[1]);
 						if (max >= slider[0] && min <= slider[1]) {
@@ -210,6 +212,7 @@ const PS2FormResponses = () => {
 					if (y.length > 0) {
 						let min = 0,
 							max = 0,
+							count = 0,
 							avg = 0;
 						min = Math.min(...y);
 						min = Math.round(min * 100) / 100;
@@ -217,9 +220,10 @@ const PS2FormResponses = () => {
 						max = Math.round(max * 100) / 100;
 						avg = y.reduce((a, b) => a + b, 0) / y.length;
 						avg = Math.round(avg * 100) / 100;
+						count = y.length;
 						newInfo = {
 							...newInfo,
-							[key]: { min, max, avg },
+							[key]: { min, max, avg, count },
 						};
 						//console.log(slider[0], slider[1]);
 						if (max >= slider[0] && min <= slider[1]) {

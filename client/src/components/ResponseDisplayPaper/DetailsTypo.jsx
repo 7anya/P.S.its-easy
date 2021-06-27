@@ -44,6 +44,18 @@ const DetailsTypo = ({ stationDetails }) => {
 				</Typography>
 				{stationDetails.median}
 			</Typography>
+			{stationDetails.count && (
+				<Typography variant="body1" component="p">
+					<Typography
+						component="span"
+						variant="body1"
+						style={{ color: '#ffd39c' }}
+					>
+						Count:{' '}
+					</Typography>
+					{stationDetails.count}
+				</Typography>
+			)}
 		</>
 	);
 };
