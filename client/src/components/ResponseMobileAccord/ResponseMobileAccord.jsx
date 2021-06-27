@@ -68,6 +68,18 @@ const ResponseMobileAccord = ({ xvalues, allStationInfo, index, type }) => {
 							</Typography>
 							{allStationInfo[val].avg}
 						</Typography>
+						{allStationInfo[val].count && (
+							<Typography variant="body1" component="p">
+								<Typography
+									component="span"
+									variant="body1"
+									style={{ color: '#ffd39c' }}
+								>
+									Count:{' '}
+								</Typography>
+								{allStationInfo[val].count}
+							</Typography>
+						)}
 						{type === 'PS2' && (
 							<Link
 								underline="none"

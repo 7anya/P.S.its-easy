@@ -119,6 +119,9 @@ export const ChartComponent = ({
 													median: getKeyValue(
 														allStationInfo
 													)(props.datum.x).avg,
+													count: getKeyValue(
+														allStationInfo
+													)(props.datum.x).count,
 												});
 
 												return {
@@ -263,6 +266,9 @@ export const ChartComponent = ({
 													median: getKeyValue(
 														allStationInfo
 													)(props.datum.x).avg,
+													count: getKeyValue(
+														allStationInfo
+													)(props.datum.x).count,
 												});
 
 												return {
@@ -407,6 +413,9 @@ export const ChartComponent = ({
 													median: getKeyValue(
 														allStationInfo
 													)(props.datum.x).avg,
+													count: getKeyValue(
+														allStationInfo
+													)(props.datum.x).count,
 												});
 
 												return {
@@ -551,6 +560,9 @@ export const ChartComponent = ({
 													median: getKeyValue(
 														allStationInfo
 													)(props.datum.x).avg,
+													count: getKeyValue(
+														allStationInfo
+													)(props.datum.x).count,
 												});
 
 												return {
@@ -695,6 +707,9 @@ export const ChartComponent = ({
 													median: getKeyValue(
 														allStationInfo
 													)(props.datum.x).avg,
+													count: getKeyValue(
+														allStationInfo
+													)(props.datum.x).count,
 												});
 
 												return {
