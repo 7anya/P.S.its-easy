@@ -1,9 +1,11 @@
 from pymongo import MongoClient
 import json
 import keys
-# fetch chronicles
+
 client = MongoClient(
     f"""mongodb+srv://psitseasy_admin:{keys.mongo}@cluster0.d4jpb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority""")
+
+# PS2 Sem 1 Chronicles
 
 db = client.get_database("ps2sem1")
 
@@ -25,6 +27,29 @@ for each in tempChronicles:
     dic[name] = each
 
 chronicles = json.dumps(dic)
+
+# PS2 Sem 2 Chronicles
+
+db = client.get_database("ps2sem2")
+
+records = db.chronicles_combined_sem2_new_array
+
+print(records.count_documents({}))
+
+allData = list(records.find())
+for x in allData:
+    x['_id'] = 0
+# print(allData)
+
+tempChronicles = allData
+dic = {}
+for each in tempChronicles:
+    name = each["name"]
+    del (each['name'])
+    del (each['_id'])
+    dic[name] = each
+
+chronicles_sem2 = json.dumps(dic)
 
 # station details part for ps2
 

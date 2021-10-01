@@ -134,6 +134,11 @@ def logout():
 def send_chronicles():
     return models.chronicles
 
+@app.route('/api/chronicles2', methods=["GET"])
+@login_required
+def send_chronicles_sem2():
+    return models.chronicles_sem2
+
 
 @app.route('/api/stationDetails', methods=["GET"])
 @login_required

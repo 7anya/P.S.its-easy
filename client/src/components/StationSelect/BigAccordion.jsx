@@ -29,7 +29,7 @@ const BigAccordion = ({
 		setExpandedBottom(isExpanded ? panel : false);
 	};
 
-	const years = ['2017', '2018', '2019', '2020'];
+	const years = ['2017', '2018', '2019', '2020', '2021'];
 	return (
 		<Fade in={fade}>
 			<Accordion
@@ -65,6 +65,7 @@ const BigAccordion = ({
 					</Link>
 					{years.map((year) => {
 						return (
+							station[year] &&
 							station[year].length > 0 && (
 								<Accordion
 									expanded={expandedBottom === year}

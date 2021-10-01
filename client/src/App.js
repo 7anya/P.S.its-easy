@@ -9,6 +9,7 @@ import './App.css';
 import ResponsesPage from './pages/ResponsesPage';
 import NavBar from './components/NavBar/Navbar';
 import ChroniclesPage from './pages/ChroniclesPage';
+import ChroniclesPageSem2 from './pages/ChroniclesPageSem2';
 import { Scrollbars } from 'react-custom-scrollbars';
 import HomePage from './pages/HomePage';
 import axios from 'axios';
@@ -75,6 +76,11 @@ const App = () => {
 						exact
 						path="/ps2/chronicles"
 						Component={ChroniclesPage}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/chronicles/sem2"
+						Component={ChroniclesPageSem2}
 					/>
 					<ProtectedRoute
 						exact

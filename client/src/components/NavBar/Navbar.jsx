@@ -230,6 +230,14 @@ function Navbar({ user }) {
 									</Button>
 								</Link>
 								<Link
+									href="/ps2/chronicles/sem2"
+									underline="none"
+								>
+									<Button color="inherit">
+										PS-2 Sem-2 Chronicles
+									</Button>
+								</Link>
+								<Link
 									href={serverURL + 'api/logout'}
 									underline="none"
 								>
