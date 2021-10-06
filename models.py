@@ -53,6 +53,7 @@ chronicles_sem2 = json.dumps(dic)
 
 # station details part for ps2
 
+db = client.get_database("ps2sem1")
 stationDetailsPS2 = db.ps2_sem1_responses_array
 stationDetailsPS2 = list(stationDetailsPS2.find())
 for x in stationDetailsPS2:
