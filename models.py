@@ -213,7 +213,6 @@ def form_detailed_responses():
 userdb = client.get_database("users")
 users = userdb.users
 
-
 def insertIfDoesntExist(userinfo):
     finduser = list(users.find({"email": userinfo['email'], "verified_email": True}))
     print("number of users", len(finduser))
