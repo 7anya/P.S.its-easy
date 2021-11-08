@@ -1,0 +1,128 @@
+version: '2.0'
+
+stories:
+    - story: happy path
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: mood_great
+          - action: utter_happy
+
+    - story: sad path 1
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: mood_unhappy
+          - action: utter_cheer_up
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+
+    - story: sad path 2
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: mood_unhappy
+          - action: utter_cheer_up
+          - action: utter_did_that_help
+          - intent: deny
+          - action: utter_goodbye
+
+    - story: ps 1 without station
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+          - action: utter_ask_station_name
+          - intent: inform
+            entities:
+                - station_name: 'Microsoft'
+          - action: utter_ask_ps_number
+          - intent: inform
+            entities:
+                - ps_number: 'ps1'
+          - action: action_station_details
+
+    - story: ps 2 without station
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+          - action: utter_ask_station_name
+          - intent: inform
+            entities:
+                - station_name: 'Amazon'
+          - action: utter_ask_ps_number
+          - intent: inform
+            entities:
+                - ps_number: 'ps2'
+          - action: utter_ask_sem_number
+          - intent: inform
+            entities:
+                - sem_number: 'sem2'
+          - action: action_station_details
+
+    - story: ps 1 with station
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+            entities:
+                - station_name: 'Credit Suisse'
+          - action: utter_ask_ps_number
+          - intent: inform
+            entities:
+                - ps_number: 'ps1'
+          - action: action_station_details
+
+    - story: ps 2 with station
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+            entities:
+                - station_name: 'Goldman Sachs'
+          - action: utter_ask_ps_number
+          - intent: inform
+            entities:
+                - ps_number: 'ps2'
+          - action: utter_ask_sem_number
+          - intent: inform
+            entities:
+                - sem_number: 'sem1'
+          - action: action_station_details
+
+    - story: ps 1 full
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+            entities:
+                - station_name: 'Amazon'
+                - ps_number: 'ps1'
+          - action: action_station_details
+
+    - story: ps 2 without sem
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+            entities:
+                - station_name: 'Goldman Sachs'
+                - ps_number: 'ps2'
+          - action: utter_ask_sem_number
+          - intent: inform
+            entities:
+                - sem_number: 'sem2'
+          - action: action_station_details
+
+    - story: ps 2 full
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: inform
+            entities:
+                - station_name: 'Goldman Sachs'
+                - ps_number: 'ps2'
+                - sem_number: 'sem1'
+          - action: action_station_details

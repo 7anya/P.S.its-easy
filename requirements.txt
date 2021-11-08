@@ -26,3 +26,5 @@ flask_statistics
 pymongo
 dnspython
 gunicorn
+python-Levenshtein
+thefuzz

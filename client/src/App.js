@@ -10,6 +10,7 @@ import ResponsesPage from './pages/ResponsesPage';
 import NavBar from './components/NavBar/Navbar';
 import ChroniclesPage from './pages/ChroniclesPage';
 import ChroniclesPageSem2 from './pages/ChroniclesPageSem2';
+import ChroniclesPagePS1 from './pages/ChroniclesPagePS1';
 import { Scrollbars } from 'react-custom-scrollbars';
 import HomePage from './pages/HomePage';
 import axios from 'axios';
@@ -81,6 +82,11 @@ const App = () => {
 						exact
 						path="/ps2/chronicles/sem2"
 						Component={ChroniclesPageSem2}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps1/chronicles"
+						Component={ChroniclesPagePS1}
 					/>
 					<ProtectedRoute
 						exact

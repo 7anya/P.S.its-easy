@@ -81,7 +81,7 @@ const ResponsesPage = () => {
 		if (sessionStorage.getItem('ps2_sem1_responses')) {
 			setData(JSON.parse(sessionStorage.getItem('ps2_sem1_responses')));
 		} else {
-			axios.get('/api/stationDetails').then((resp) => {
+			axios.get('/api/stationDetailsSem1').then((resp) => {
 				setData(resp.data);
 				sessionStorage.setItem(
 					'ps2_sem1_responses',

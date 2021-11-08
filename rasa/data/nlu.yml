@@ -1,0 +1,145 @@
+version: '2.0'
+
+nlu:
+    - intent: greet
+      examples: |
+          - hey
+          - hello
+          - hi
+          - hello there
+          - good morning
+          - good evening
+          - moin
+          - hey there
+          - let's go
+          - hey dude
+          - goodmorning
+          - goodevening
+          - good afternoon
+
+    - intent: goodbye
+      examples: |
+          - good afternoon
+          - cu
+          - good by
+          - cee you later
+          - good night
+          - bye
+          - goodbye
+          - have a nice day
+          - see you around
+          - bye bye
+          - see you later
+
+    - intent: affirm
+      examples: |
+          - yes
+          - y
+          - indeed
+          - of course
+          - that sounds good
+          - correct
+
+    - intent: deny
+      examples: |
+          - no
+          - n
+          - never
+          - I don't think so
+          - don't like that
+          - no way
+          - not really
+
+    - intent: mood_great
+      examples: |
+          - perfect
+          - great
+          - amazing
+          - feeling like a king
+          - wonderful
+          - I am feeling very good
+          - I am great
+          - I am amazing
+          - I am going to save the world
+          - super stoked
+          - extremely good
+          - so so perfect
+          - so good
+          - so perfect
+
+    - intent: mood_unhappy
+      examples: |
+          - my day was horrible
+          - I am sad
+          - I don't feel very well
+          - I am disappointed
+          - super sad
+          - I'm so sad
+          - sad
+          - very sad
+          - unhappy
+          - not good
+          - not very good
+          - extremly sad
+          - so saad
+          - so sad
+
+    - intent: bot_challenge
+      examples: |
+          - are you a bot?
+          - are you a human?
+          - am I talking to a bot?
+          - am I talking to a human?
+
+    - intent: inform
+      examples: |
+          - what's the cgpa cutoff
+          - what is the minimum cg required?
+          - what is the average cgpa
+          - can I get the details of [Microsoft](station_name)?
+          - what is the cutoff for [Apple](station_name)?
+          - can I get the cutoff for [Amazon](station_name) for [PS1](ps_number)
+          - can I get the cgpa for [Swiggy](station_name) in [ps2](ps_number)?
+          - get me the details of [Groww](station_name) for [ps2](ps_number) in [sem 2](sem_number)
+          - [cisco](station_name) for [PS2](ps_number) in [sem1](sem_number)
+          - I want to get the details of [Flipkart](station_name) in [PS2] for [semester 1](sem_number)
+          - [Texas Instruments](station_name)
+          - [Amazon ML](station_name)
+          - [ps1](ps_number)
+          - [PS 2](ps_number)
+          - [sem 1](sem_number)
+          - [Sem2](sem_number)
+
+    - synonym: ps1
+      examples: |
+          - ps 1
+          - PS 1
+          - PS1
+          - pS1
+          - Ps 1
+
+    - synonym: ps2
+      examples: |
+          - ps 2
+          - PS 2
+          - PS2
+          - pS2
+          - Ps 2
+
+    - synonym: sem1
+      examples: |
+          - sem 1
+          - Sem 1
+          - SEM1
+          - sEM 1
+          - semester 1
+          - semester1
+
+    - synonym: sem2
+      examples: |
+          - sem 2
+          - Sem 2
+          - SEM2
+          - sEM 2
+          - semester 2
+          - semester2

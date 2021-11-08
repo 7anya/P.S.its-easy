@@ -13,6 +13,7 @@ from flask_statistics import Statistics
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
 from sqlalchemy import inspect
+from thefuzz import process
 import time
 import models
 import json
@@ -139,17 +140,72 @@ def send_chronicles():
 def send_chronicles_sem2():
     return models.chronicles_sem2
 
-
-@app.route('/api/stationDetails', methods=["GET"])
+@app.route('/api/chroniclesps1', methods=["GET"])
 @login_required
-def send_stationDetails():
-    return models.details
+def send_chronicles_ps1():
+    return models.chronicles_ps1
+
+
+@app.route('/api/stationDetailsSem1', methods=["GET"])
+@login_required
+def send_stationDetailsSem1():
+    return models.details_sem1
+
+@app.route('/api/stationDetailsSem2', methods=["GET"])
+@login_required
+def send_stationDetailsSem2():
+    return models.details_sem2
 
 
 @app.route('/api/stationDetailsPS1', methods=["GET"])
 @login_required
 def send_stationDetails_PS1():
     return models.detailsps1
+
+@app.route('/api/rasa/stationDetails', methods=["POST"])
+def send_stationDetails():
+    ps2sem1 = json.loads(models.details_sem1)
+    ps2sem2 = json.loads(models.details_sem2)
+    ps1 = json.loads(models.detailsps1)
+
+    query = request.get_json()
+    
+    if query["ps"] == "ps1":
+        choices = ps1.keys()
+        search_results = process.extract(query["name"], choices, limit=20)
+
+        results = {}
+
+        for i in search_results:
+            if i[1] > 80:
+                results[i[0]] = ps1[i[0]]
+
+        return results
+    elif query["ps"] == "ps2":
+        if query["sem"] == "sem1":
+            choices = ps2sem1.keys()
+            search_results = process.extract(query["name"], choices, limit=20)
+
+            results = {}
+
+            for i in search_results:
+                if i[1] > 80:
+                    results[i[0]] = ps2sem1[i[0]]
+
+            return results
+        elif query["sem"] == "sem2":
+            choices = ps2sem2.keys()
+            search_results = process.extract(query["name"], choices, limit=20)
+
+            results = {}
+
+            for i in search_results:
+                if i[1] > 80:
+                    results[i[0]] = ps2sem2[i[0]]
+
+            return results
+
+    return "bad request"
 
 
 @app.route('/api/problembank', methods=["GET"])

@@ -1,0 +1,79 @@
+version: '2.0'
+
+config:
+    store_entities_as_slots: true
+
+intents:
+    - greet
+    - goodbye
+    - affirm
+    - deny
+    - mood_great
+    - mood_unhappy
+    - bot_challenge
+    - inform
+
+actions:
+    - action_station_details
+
+entities:
+    - station_name
+    - ps_number
+    - sem_number
+
+slots:
+    station_name:
+        type: text
+    ps_number:
+        type: categorical
+        values:
+            - ps1
+            - ps2
+    sem_number:
+        type: categorical
+        values:
+            - sem1
+            - sem2
+
+responses:
+    utter_greet:
+        - text: 'Hey! How are you?'
+
+    utter_cheer_up:
+        - text: 'Here is something to cheer you up:'
+          image: 'https://i.imgur.com/nGF1K8f.jpg'
+
+    utter_did_that_help:
+        - text: 'Did that help you?'
+
+    utter_happy:
+        - text: 'Great, carry on!'
+
+    utter_goodbye:
+        - text: 'Bye'
+
+    utter_iamabot:
+        - text: 'I am a bot, powered by Rasa.'
+
+    utter_ask_station_name:
+        - text: 'What is the station name you want the details for?'
+
+    utter_ask_ps_number:
+        - text: 'Which PS you want the results for?'
+          buttons:
+              - title: 'PS1'
+                payload: /inform{{"ps_number":"ps1"}}
+              - title: 'PS2'
+                payload: /inform{{"ps_number":"ps2"}}
+
+    utter_ask_sem_number:
+        - text: 'Which PS semester you want the results for?'
+          buttons:
+              - title: 'Sem 1'
+                payload: /inform{{"sem_number":"sem1"}}
+              - title: 'Sem 2'
+                payload: /inform{{"sem_number":"sem2"}}
+
+session_config:
+    session_expiration_time: 60
+    carry_over_slots_to_new_session: true

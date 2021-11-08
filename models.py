@@ -5,6 +5,29 @@ import keys
 client = MongoClient(
     f"""mongodb+srv://psitseasy_admin:{keys.mongo}@cluster0.d4jpb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority""")
 
+# PS1 Chronicles
+
+db = client.get_database("ps1")
+
+records = db.chronicles_combined_ps1_array
+
+print(records.count_documents({}))
+
+allData = list(records.find())
+for x in allData:
+    x['_id'] = 0
+# print(allData)
+
+tempChronicles = allData
+dic = {}
+for each in tempChronicles:
+    name = each["name"]
+    del (each['name'])
+    del (each['_id'])
+    dic[name] = each
+
+chronicles_ps1 = json.dumps(dic)
+
 # PS2 Sem 1 Chronicles
 
 db = client.get_database("ps2sem1")
@@ -51,7 +74,7 @@ for each in tempChronicles:
 
 chronicles_sem2 = json.dumps(dic)
 
-# station details part for ps2
+# station details part for ps2 sem 1
 
 db = client.get_database("ps2sem1")
 stationDetailsPS2 = db.ps2_sem1_responses_array
@@ -66,7 +89,24 @@ for each in stationDetailsPS2:
     del (each['_id'])
     details[name] = each
 
-details = json.dumps(details)
+details_sem1 = json.dumps(details)
+
+# station details part for ps2 sem 2
+
+db = client.get_database("ps2sem2")
+stationDetailsPS2 = db.ps2_sem2_responses_final
+stationDetailsPS2 = list(stationDetailsPS2.find())
+for x in stationDetailsPS2:
+    x['_id'] = 0
+
+details = {}
+for each in stationDetailsPS2:
+    name = each["name"]
+    del (each['name'])
+    del (each['_id'])
+    details[name] = each
+
+details_sem2 = json.dumps(details)
 
 # station details part for ps1
 ps1db = client.get_database("ps1")

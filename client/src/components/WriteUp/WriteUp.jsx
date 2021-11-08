@@ -134,6 +134,35 @@ const WriteUp = ({ fade, details, bio }) => {
 											heading="Academic Courses Relevant :"
 										/>
 									);
+								} else if (check(line, 'ps-i experience')) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="PS-I Experience :"
+										/>
+									);
+								} else if (check(line, 'learning outcome')) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="Learning Outcome :"
+										/>
+									);
+								} else if (
+									check(
+										line,
+										'ps-i is an exposure oriented course'
+									)
+								) {
+									return (
+										<TitlePara
+											fade={fade}
+											line={line}
+											heading="PS-I is an Exposure Oriented Course :"
+										/>
+									);
 								} else if (check(line, 'student write-up')) {
 									return (
 										<Fade in={fade}>

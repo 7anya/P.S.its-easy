@@ -58,35 +58,21 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 		<title>P.S. It's Easy</title>
-		<script
-			data-ad-client="ca-pub-7279564869169904"
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-		></script>
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
-		<!-- Trial -->
-		<!-- <ins
-			class="adsbygoogle"
-			style="display: block"
-			data-ad-client="ca-pub-7279564869169904"
-			data-ad-slot="4377812563"
-			data-ad-format="auto"
-			data-full-width-responsive="true"
-		></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script> -->
-		<!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    --></body>
+		<div
+			id="rasa-chat-widget"
+			data-websocket-url="http://localhost:5005/socket.io"
+			data-font="Roboto"
+			data-primary="#bb86fc"
+			data-primary-highlight="#ff6363"
+			data-avatar-background="#ff6363"
+		></div>
+		<script
+			src="https://unpkg.com/@rasahq/rasa-chat"
+			type="application/javascript"
+		></script>
+	</body>
 </html>
