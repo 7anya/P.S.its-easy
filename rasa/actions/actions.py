@@ -27,23 +27,30 @@ class ActionGetStationDetails(Action):
         ps = tracker.get_slot('ps_number')
         sem = tracker.get_slot('sem_number')
 
-        url = 'http://localhost:5000/api/rasa/stationDetails'
+        url = 'https://psitseasy.ml/api/rasa/stationDetails'
         json = {
             'name' : station,
             'ps' : ps,
             'sem' : sem
         }
         res = requests.post(url, json=json)
-        stations = res.json()
 
-        response = ""
-        
-        for x in stations:
-            station_response = "Station Name - {} \n".format(x)
-            for y in stations[x]:
-                station_response += "Year - {} \n Max CGPA - {} \n Min CGPA - {} \n Avg CGPA - {} \n".format(y, stations[x][y]["maxCG"], stations[x][y]["minCG"], stations[x][y]["averageCG"])
-            response += station_response + "\n"
+        if (
+            res.status_code != 204 and
+            res.headers["content-type"].strip().startswith("application/json")
+        ):
+            stations = res.json()
 
-        dispatcher.utter_message(response)
+            response = ""
+            
+            for x in stations:
+                station_response = "Station Name - {} \n".format(x)
+                for y in stations[x]:
+                    station_response += "Year - {} \n Max CGPA - {} \n Min CGPA - {} \n Avg CGPA - {} \n".format(y, stations[x][y]["maxCG"], stations[x][y]["minCG"], stations[x][y]["averageCG"])
+                response += station_response + "\n"
+
+            dispatcher.utter_message(response)
+        else:
+            dispatcher.utter_message("Sorry, No results were found for that station. Please try for other stations!")
 
         return []
