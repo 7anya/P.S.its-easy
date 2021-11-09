@@ -27,12 +27,48 @@ const ResponseDisplayPaper = ({ stationDetails, type }) => {
 					<div key={stationDetails.name}>
 						<FadeIn>
 							<DetailsTypo stationDetails={stationDetails} />
-							{type === 'PS2' && (
+							{type === 'PS1' && (
 								<Link
 									underline="none"
 									href={
-										'/ps2/chronicles?search=' +
-										stationDetails.name
+										'/ps1/chronicles?search=' +
+										stationDetails.name.split(' ')[0]
+									}
+									target="_blank"
+								>
+									<Button
+										variant="outlined"
+										color="primary"
+										style={{ marginTop: '10px' }}
+									>
+										Checkout It's Chronicles
+									</Button>
+								</Link>
+							)}
+							{type === 'PS2Sem1' && (
+								<Link
+									underline="none"
+									href={
+										'/ps2/sem1/chronicles?search=' +
+										stationDetails.name.split(' ')[0]
+									}
+									target="_blank"
+								>
+									<Button
+										variant="outlined"
+										color="primary"
+										style={{ marginTop: '10px' }}
+									>
+										Checkout It's Chronicles
+									</Button>
+								</Link>
+							)}
+							{type === 'PS2Sem2' && (
+								<Link
+									underline="none"
+									href={
+										'/ps2/sem2/chronicles?search=' +
+										stationDetails.name.split(' ')[0]
 									}
 									target="_blank"
 								>

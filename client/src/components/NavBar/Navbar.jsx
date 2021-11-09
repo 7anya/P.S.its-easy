@@ -10,6 +10,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import Link from '@material-ui/core/Link';
 import { Button } from '@material-ui/core';
 import LogOut from '@material-ui/icons/ExitToApp';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -50,6 +51,41 @@ function Navbar({ user }) {
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+	const [anchorEl1, setAnchorEl1] = React.useState(null);
+	const open1 = Boolean(anchorEl1);
+	const handleClick1 = (event) => {
+		setAnchorEl1(event.currentTarget);
+	};
+	const handleClose1 = () => {
+		setAnchorEl1(null);
+	};
+
+	const [anchorEl2, setAnchorEl2] = React.useState(null);
+	const open2 = Boolean(anchorEl2);
+	const handleClick2 = (event) => {
+		setAnchorEl2(event.currentTarget);
+	};
+	const handleClose2 = () => {
+		setAnchorEl2(null);
+	};
+	const [anchorEl3, setAnchorEl3] = React.useState(null);
+	const open3 = Boolean(anchorEl3);
+	const handleClick3 = (event) => {
+		setAnchorEl3(event.currentTarget);
+	};
+	const handleClose3 = () => {
+		setAnchorEl3(null);
+	};
+
+	const [anchorEl4, setAnchorEl4] = React.useState(null);
+	const open4 = Boolean(anchorEl4);
+	const handleClick4 = (event) => {
+		setAnchorEl4(event.currentTarget);
+	};
+	const handleClose4 = () => {
+		setAnchorEl4(null);
+	};
 
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -196,47 +232,200 @@ function Navbar({ user }) {
 					<div className={classes.sectionDesktop}>
 						{user ? (
 							<>
-								<Link href="/ps2/form" underline="none">
-									<Button color="secondary">
-										PS2'21 Form
+								<div>
+									<Button
+										id="demo-positioned-button"
+										aria-controls="demo-positioned-menu"
+										aria-haspopup="true"
+										aria-expanded={
+											open4 ? 'true' : undefined
+										}
+										onClick={handleClick4}
+										color="secondary"
+										endIcon={<KeyboardArrowDownIcon />}
+									>
+										PS-2 Sem-1 '21
 									</Button>
-								</Link>
-								<Link
-									href="/ps2/formResponses"
-									underline="none"
-								>
-									<Button color="secondary">
-										PS2'21 Responses
-									</Button>
-								</Link>
+									<Menu
+										id="demo-positioned-menu"
+										aria-labelledby="demo-positioned-button"
+										anchorEl={anchorEl4}
+										open={open4}
+										onClose={handleClose4}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+									>
+										<MenuItem onClick={handleClose4}>
+											<Link
+												href="/ps2/form"
+												underline="none"
+											>
+												PS-2 Sem-1 '21 Form
+											</Link>
+										</MenuItem>
+										<MenuItem onClick={handleClose4}>
+											<Link
+												href="/ps1/chronicles"
+												underline="none"
+											>
+												PS-2 Sem-1 '21 Responses
+											</Link>
+										</MenuItem>
+									</Menu>
+								</div>
 								<Link href="/projectBank" underline="none">
 									<Button color="secondary">
 										Project Bank(PS-2/Sem-1) '21
 									</Button>
 								</Link>
-								<Link href="/ps1/responses" underline="none">
-									<Button color="inherit">
-										PS-1 Responses
+								<div>
+									<Button
+										id="demo-positioned-button"
+										aria-controls="demo-positioned-menu"
+										aria-haspopup="true"
+										aria-expanded={
+											open1 ? 'true' : undefined
+										}
+										onClick={handleClick1}
+										color="primary"
+										endIcon={<KeyboardArrowDownIcon />}
+									>
+										PS-1
 									</Button>
-								</Link>
-								<Link href="/ps2/responses" underline="none">
-									<Button color="inherit">
-										PS-2 Responses
+									<Menu
+										id="demo-positioned-menu"
+										aria-labelledby="demo-positioned-button"
+										anchorEl={anchorEl1}
+										open={open1}
+										onClose={handleClose1}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+									>
+										<MenuItem onClick={handleClose1}>
+											<Link
+												href="/ps1/responses"
+												underline="none"
+											>
+												PS-1 Responses
+											</Link>
+										</MenuItem>
+										<MenuItem onClick={handleClose1}>
+											<Link
+												href="/ps1/chronicles"
+												underline="none"
+											>
+												PS-1 Chronicles
+											</Link>
+										</MenuItem>
+									</Menu>
+								</div>
+								<div>
+									<Button
+										id="demo-positioned-button"
+										aria-controls="demo-positioned-menu"
+										aria-haspopup="true"
+										aria-expanded={
+											open2 ? 'true' : undefined
+										}
+										onClick={handleClick2}
+										color="primary"
+										endIcon={<KeyboardArrowDownIcon />}
+									>
+										PS-2 Sem-1
 									</Button>
-								</Link>
-								<Link href="/ps2/chronicles" underline="none">
-									<Button color="inherit">
-										PS-2 Chronicles
+									<Menu
+										id="demo-positioned-menu"
+										aria-labelledby="demo-positioned-button"
+										anchorEl={anchorEl2}
+										open={open2}
+										onClose={handleClose2}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+									>
+										<MenuItem onClick={handleClose2}>
+											<Link
+												href="/ps2/sem1/responses"
+												underline="none"
+											>
+												PS-2 Sem-1 Responses
+											</Link>
+										</MenuItem>
+										<MenuItem onClick={handleClose2}>
+											<Link
+												href="/ps2/sem1/chronicles"
+												underline="none"
+											>
+												PS-2 Sem-1 Chronicles
+											</Link>
+										</MenuItem>
+									</Menu>
+								</div>
+								<div>
+									<Button
+										id="demo-positioned-button"
+										aria-controls="demo-positioned-menu"
+										aria-haspopup="true"
+										aria-expanded={
+											open3 ? 'true' : undefined
+										}
+										onClick={handleClick3}
+										color="primary"
+										endIcon={<KeyboardArrowDownIcon />}
+									>
+										PS-2 Sem-2
 									</Button>
-								</Link>
-								<Link
-									href="/ps2/chronicles/sem2"
-									underline="none"
-								>
-									<Button color="inherit">
-										PS-2 Sem-2 Chronicles
-									</Button>
-								</Link>
+									<Menu
+										id="demo-positioned-menu"
+										aria-labelledby="demo-positioned-button"
+										anchorEl={anchorEl3}
+										open={open3}
+										onClose={handleClose3}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+									>
+										<MenuItem onClick={handleClose3}>
+											<Link
+												href="/ps2/sem2/responses"
+												underline="none"
+											>
+												PS-2 Sem-2 Responses
+											</Link>
+										</MenuItem>
+										<MenuItem onClick={handleClose3}>
+											<Link
+												href="/ps1/chronicles"
+												underline="none"
+											>
+												PS-2 Sem-2 Chronicles
+											</Link>
+										</MenuItem>
+									</Menu>
+								</div>
+
 								<Link
 									href={serverURL + 'api/logout'}
 									underline="none"

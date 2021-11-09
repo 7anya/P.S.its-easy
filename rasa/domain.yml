@@ -12,6 +12,7 @@ intents:
     - mood_unhappy
     - bot_challenge
     - inform
+    - help
 
 actions:
     - action_station_details
@@ -73,6 +74,12 @@ responses:
                 payload: /inform{{"sem_number":"sem1"}}
               - title: 'Sem 2'
                 payload: /inform{{"sem_number":"sem2"}}
+
+    utter_help:
+        - text: |
+              Hey there! You can ask me anything related to Practice school stations and Ill be happy to give you the details. Some sample questions
+              - Can I get the details of Amazon?
+              - What is the cutoff for Flipkart for PS2 in sem2?
 
 session_config:
     session_expiration_time: 60

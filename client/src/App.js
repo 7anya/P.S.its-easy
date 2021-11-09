@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import ResponsesPage from './pages/ResponsesPage';
+import ResponsesPagePS2Sem2 from './pages/ResponsesPagePS2Sem2';
 import NavBar from './components/NavBar/Navbar';
 import ChroniclesPage from './pages/ChroniclesPage';
 import ChroniclesPageSem2 from './pages/ChroniclesPageSem2';
@@ -65,8 +66,13 @@ const App = () => {
 					</Route>
 					<ProtectedRoute
 						exact
-						path="/ps2/responses"
+						path="/ps2/sem1/responses"
 						Component={ResponsesPage}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/sem2/responses"
+						Component={ResponsesPagePS2Sem2}
 					/>
 					<ProtectedRoute
 						exact
@@ -75,12 +81,12 @@ const App = () => {
 					/>
 					<ProtectedRoute
 						exact
-						path="/ps2/chronicles"
+						path="/ps2/sem1/chronicles"
 						Component={ChroniclesPage}
 					/>
 					<ProtectedRoute
 						exact
-						path="/ps2/chronicles/sem2"
+						path="/ps2/sem2/chronicles"
 						Component={ChroniclesPageSem2}
 					/>
 					<ProtectedRoute

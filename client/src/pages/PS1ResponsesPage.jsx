@@ -78,17 +78,9 @@ const PS1ResponsesPage = () => {
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
-		if (sessionStorage.getItem('ps1_responses')) {
-			setData(JSON.parse(sessionStorage.getItem('ps1_responses')));
-		} else {
-			axios.get('/api/stationDetailsPS1').then((resp) => {
-				setData(resp.data);
-				sessionStorage.setItem(
-					'ps1_responses',
-					JSON.stringify(resp.data)
-				);
-			});
-		}
+		axios.get('/api/stationDetailsPS1').then((resp) => {
+			setData(resp.data);
+		});
 
 		const searchParam = query.get('search');
 		if (searchParam) {

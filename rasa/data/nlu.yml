@@ -110,6 +110,13 @@ nlu:
           - [sem 1](sem_number)
           - [Sem2](sem_number)
 
+    - intent: help
+      examples: |
+          - help
+          - what can you do
+          - sample questions
+          - info
+
     - synonym: ps1
       examples: |
           - ps 1

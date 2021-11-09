@@ -47,6 +47,7 @@ const StationSelect = ({
 	setStudent,
 	isPrevDisabled,
 	isNextDisabled,
+	type,
 }) => {
 	const classes = useStyles();
 
@@ -156,6 +157,7 @@ const StationSelect = ({
 										station={station}
 										classes={classes}
 										setStudent={setStudent}
+										type={type}
 									/>
 								);
 							})}

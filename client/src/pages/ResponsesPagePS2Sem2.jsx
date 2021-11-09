@@ -60,7 +60,7 @@ function useQuery() {
 	return new URLSearchParams(useLocation().search);
 }
 
-const ResponsesPage = () => {
+const ResponsesPagePS2Sem2 = () => {
 	const classes = useStyles();
 	const query = useQuery();
 
@@ -78,8 +78,9 @@ const ResponsesPage = () => {
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
-		axios.get('/api/stationDetailsSem1').then((resp) => {
+		axios.get('/api/stationDetailsSem2').then((resp) => {
 			setData(resp.data);
+			console.log(resp.data);
 		});
 
 		const searchParam = query.get('search');
@@ -99,6 +100,11 @@ const ResponsesPage = () => {
 				if (key.toLowerCase().includes(search.toLowerCase())) {
 					//console.log(key);
 					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2021') &&
+						data[key]['2021']
+					)
+						y.push(...data[key]['2021']['CG']);
 					if (
 						(choice === 'Overall' || choice === '2020') &&
 						data[key]['2020']
@@ -277,7 +283,7 @@ const ResponsesPage = () => {
 							xvalues={xvalues}
 							index={index}
 							allStationInfo={allStationInfo}
-							type="PS2Sem1"
+							type="PS2Sem2"
 						/>
 					</Grid>
 					<Grid item xs={12}>
@@ -297,7 +303,7 @@ const ResponsesPage = () => {
 								setMainChoice={setMainChoice}
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
-								type="PS2Sem1"
+								type="PS2Sem2"
 							/>
 						</Paper>
 					</Grid>
@@ -332,7 +338,7 @@ const ResponsesPage = () => {
 					<Grid item xs={4}>
 						<ResponseDisplayPaper
 							stationDetails={stationDetails}
-							type="PS2Sem1"
+							type="PS2Sem2"
 						/>
 						<Paper elevation={10} className={classes.paper2}>
 							<SearchComponent
@@ -340,7 +346,7 @@ const ResponsesPage = () => {
 								setMainChoice={setMainChoice}
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
-								type="PS2Sem1"
+								type="PS2Sem2"
 							/>
 						</Paper>
 					</Grid>
@@ -350,4 +356,4 @@ const ResponsesPage = () => {
 	);
 };
 
-export default ResponsesPage;
+export default ResponsesPagePS2Sem2;

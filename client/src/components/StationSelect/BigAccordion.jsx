@@ -19,6 +19,7 @@ const BigAccordion = ({
 	classes,
 	fade,
 	setStudent,
+	type,
 }) => {
 	const handleChangeTop = (panel) => (event, isExpanded) => {
 		setExpandedTop(isExpanded ? panel : false);
@@ -50,19 +51,60 @@ const BigAccordion = ({
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails style={{ display: 'block' }}>
-					<Link
-						underline="none"
-						href={'/ps2/responses?search=' + station.name}
-						target="_blank"
-					>
-						<Button
-							variant="outlined"
-							color="primary"
-							style={{ marginBottom: '10px' }}
+					{type === 'PS1' && (
+						<Link
+							underline="none"
+							href={
+								'/ps1/responses?search=' +
+								station.name.split(' ')[0]
+							}
+							target="_blank"
 						>
-							Checkout It's Responses
-						</Button>
-					</Link>
+							<Button
+								variant="outlined"
+								color="primary"
+								style={{ marginBottom: '10px' }}
+							>
+								Checkout It's Responses
+							</Button>
+						</Link>
+					)}
+					{type === 'PS2Sem1' && (
+						<Link
+							underline="none"
+							href={
+								'/ps2/sem1/responses?search=' +
+								station.name.split(' ')[0]
+							}
+							target="_blank"
+						>
+							<Button
+								variant="outlined"
+								color="primary"
+								style={{ marginBottom: '10px' }}
+							>
+								Checkout It's Responses
+							</Button>
+						</Link>
+					)}
+					{type === 'PS2Sem2' && (
+						<Link
+							underline="none"
+							href={
+								'/ps2/sem2/responses?search=' +
+								station.name.split(' ')[0]
+							}
+							target="_blank"
+						>
+							<Button
+								variant="outlined"
+								color="primary"
+								style={{ marginBottom: '10px' }}
+							>
+								Checkout It's Responses
+							</Button>
+						</Link>
+					)}
 					{years.map((year) => {
 						return (
 							station[year] &&

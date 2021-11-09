@@ -126,3 +126,8 @@ stories:
                 - ps_number: 'ps2'
                 - sem_number: 'sem1'
           - action: action_station_details
+
+    - story: ask for help
+      steps:
+          - intent: help
+          - action: utter_help

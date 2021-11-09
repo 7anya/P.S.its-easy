@@ -76,17 +76,9 @@ function ChroniclesPage() {
 	const [details, setDetails] = useState({ name: '', id: '' });
 
 	useEffect(() => {
-		if (sessionStorage.getItem('ps2_sem2_chronicles')) {
-			setData(JSON.parse(sessionStorage.getItem('ps2_sem2_chronicles')));
-		} else {
-			axios.get('/api/chronicles2').then((resp) => {
-				setData(resp.data);
-				sessionStorage.setItem(
-					'ps2_sem2_chronicles',
-					JSON.stringify(resp.data)
-				);
-			});
-		}
+		axios.get('/api/chronicles2').then((resp) => {
+			setData(resp.data);
+		});
 
 		const searchParam = query.get('search');
 		if (searchParam) {
@@ -193,6 +185,7 @@ function ChroniclesPage() {
 							setStudent={setStudent}
 							isPrevDisabled={isPrevDisabled}
 							isNextDisabled={isNextDisabled}
+							type="PS2Sem2"
 						/>
 					</Grid>
 					<Grid item xs={12}>
@@ -217,6 +210,7 @@ function ChroniclesPage() {
 							setStudent={setStudent}
 							isPrevDisabled={isPrevDisabled}
 							isNextDisabled={isNextDisabled}
+							type="PS2Sem2"
 						/>
 					</Grid>
 				</Grid>

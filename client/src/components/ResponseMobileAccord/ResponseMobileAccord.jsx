@@ -80,10 +80,51 @@ const ResponseMobileAccord = ({ xvalues, allStationInfo, index, type }) => {
 								{allStationInfo[val].count}
 							</Typography>
 						)}
-						{type === 'PS2' && (
+						{type === 'PS1' && (
 							<Link
 								underline="none"
-								href={'/ps2/chronicles?search=' + val}
+								href={
+									'/ps1/chronicles?search=' +
+									val.split(' ')[0]
+								}
+							>
+								<Button
+									variant="outlined"
+									color="secondary"
+									style={{
+										marginTop: '10px',
+									}}
+								>
+									Checkout It's Chronicles
+								</Button>
+							</Link>
+						)}
+						{type === 'PS2Sem1' && (
+							<Link
+								underline="none"
+								href={
+									'/ps2/sem1/chronicles?search=' +
+									val.split(' ')[0]
+								}
+							>
+								<Button
+									variant="outlined"
+									color="secondary"
+									style={{
+										marginTop: '10px',
+									}}
+								>
+									Checkout It's Chronicles
+								</Button>
+							</Link>
+						)}
+						{type === 'PS2Sem2' && (
+							<Link
+								underline="none"
+								href={
+									'/ps2/sem2/chronicles?search=' +
+									val.split(' ')[0]
+								}
 							>
 								<Button
 									variant="outlined"
