@@ -44,7 +44,6 @@ out/
 tmp_training_data.json
 .DS_Store
 .mypy_cache/
-*.tar.gz
 secrets.tar
 .pytest_cache
 test_download.zip
