@@ -151,12 +151,14 @@ function Navbar({ user }) {
 				<>
 					<MenuItem>
 						<Link href="/ps2/form" underline="none">
-							<Button color="secondary">PS2'21 Form</Button>
+							<Button color="secondary">PS2'21 Sem-1 Form</Button>
 						</Link>
 					</MenuItem>
 					<MenuItem>
 						<Link href="/ps2/formResponses" underline="none">
-							<Button color="secondary">PS2'21 Responses</Button>
+							<Button color="secondary">
+								PS2'21 Sem-1 Responses
+							</Button>
 						</Link>
 					</MenuItem>
 					<MenuItem>
@@ -172,13 +174,36 @@ function Navbar({ user }) {
 						</Link>
 					</MenuItem>
 					<MenuItem>
-						<Link href="/ps2/responses" underline="none">
-							<Button color="inherit">PS-2 Responses</Button>
+						<Link href="/ps1/responses" underline="none">
+							<Button color="inherit">PS-1 Chronicles</Button>
 						</Link>
 					</MenuItem>
 					<MenuItem>
-						<Link href="/ps2/chronicles" underline="none">
-							<Button color="inherit">PS-2 Chronicles</Button>
+						<Link href="/ps2/sem1/responses" underline="none">
+							<Button color="inherit">
+								PS-2 Sem-1 Responses
+							</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/sem1/chronicles" underline="none">
+							<Button color="inherit">
+								PS-2 Sem-1 Chronicles
+							</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/sem2/responses" underline="none">
+							<Button color="inherit">
+								PS-2 Sem-2 Responses
+							</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/sem2/chronicles" underline="none">
+							<Button color="inherit">
+								PS-2 Sem-2 Chronicles
+							</Button>
 						</Link>
 					</MenuItem>
 					<MenuItem>
@@ -417,7 +442,7 @@ function Navbar({ user }) {
 										</MenuItem>
 										<MenuItem onClick={handleClose3}>
 											<Link
-												href="/ps1/chronicles"
+												href="/ps2/sem2/chronicles"
 												underline="none"
 											>
 												PS-2 Sem-2 Chronicles
