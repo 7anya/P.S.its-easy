@@ -43,7 +43,6 @@ out/
 .vscode/
 tmp_training_data.json
 .DS_Store
-models/
 .mypy_cache/
 *.tar.gz
 secrets.tar
@@ -51,7 +50,6 @@ secrets.tar
 test_download.zip
 bower_components/
 build/lib/
-/models/
 node_modules/
 npm-debug.log
 examples/moodbot/py3/
