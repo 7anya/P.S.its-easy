@@ -13,14 +13,18 @@ intents:
     - bot_challenge
     - inform
     - help
+    - ask_menu
 
 actions:
     - action_station_details
+    - action_menu_details
 
 entities:
     - station_name
     - ps_number
     - sem_number
+    - menu_day
+    - menu_meal
 
 slots:
     station_name:
@@ -35,10 +39,31 @@ slots:
         values:
             - sem1
             - sem2
+    menu_day:
+        type: categorical
+        values:
+            - today
+            - tomorrow
+            - monday
+            - tuesday
+            - wednesday
+            - thursday
+            - friday
+            - saturday
+            - sunday
+    menu_meal:
+        type: categorical
+        values:
+            - breakfast
+            - lunch
+            - snacks
+            - dinner
 
 responses:
     utter_greet:
-        - text: 'Hey! How are you?'
+        - text: 'Hey!'
+        - text: 'Hii!'
+        - text: 'Yoo!'
 
     utter_cheer_up:
         - text: 'Here is something to cheer you up:'
@@ -58,6 +83,7 @@ responses:
 
     utter_ask_station_name:
         - text: 'What is the station name you want the details for?'
+        - text: 'Can you tell me the station name you are interested in?'
 
     utter_ask_ps_number:
         - text: 'Which PS you want the results for?'
@@ -75,11 +101,44 @@ responses:
               - title: 'Sem 2'
                 payload: /inform{{"sem_number":"sem2"}}
 
+    utter_ask_menu_day:
+        - text: 'Which day you want the mess menu for?'
+          buttons:
+              - title: 'Monday'
+                payload: /inform{{"menu_day":"monday"}}
+              - title: 'Tuesday'
+                payload: /inform{{"menu_day":"tuesday"}}
+              - title: 'Wednesday'
+                payload: /inform{{"menu_day":"wednesday"}}
+              - title: 'Thursday'
+                payload: /inform{{"menu_day":"thursday"}}
+              - title: 'Friday'
+                payload: /inform{{"menu_day":"friday"}}
+              - title: 'Saturday'
+                payload: /inform{{"menu_day":"saturday"}}
+              - title: 'Sunday'
+                payload: /inform{{"menu_day":"sunday"}}
+
+    utter_ask_menu_meal:
+        - text: 'For which meal you want the mess menu for?'
+          buttons:
+              - title: 'Breakfast'
+                payload: /inform{{"menu_meal":"breakfast"}}
+              - title: 'Lunch'
+                payload: /inform{{"menu_meal":"lunch"}}
+              - title: 'Snacks'
+                payload: /inform{{"menu_meal":"snacks"}}
+              - title: 'Dinner'
+                payload: /inform{{"menu_meal":"dinner"}}
+
     utter_help:
         - text: |
               Hey there! You can ask me anything related to Practice school stations and Ill be happy to give you the details. Some sample questions
               - Can I get the details of Amazon?
               - What is the cutoff for Flipkart for PS2 in sem2?
+              - Whats there in mess for today lunch?
+              - Can I have the menu for monday snacks?
+              - Can I get the mess menu?
 
 session_config:
     session_expiration_time: 60

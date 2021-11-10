@@ -131,3 +131,46 @@ stories:
       steps:
           - intent: help
           - action: utter_help
+
+    - story: ask for menu without meal and day
+      steps:
+          - intent: ask_menu
+          - action: utter_ask_menu_day
+          - intent: ask_menu
+            entities:
+                - menu_day: 'monday'
+          - action: utter_ask_menu_meal
+          - intent: ask_menu
+            entities:
+                - menu_meal: 'lunch'
+          - action: action_menu_details
+
+    - story: ask for menu with day without meal
+      steps:
+          - intent: ask_menu
+            entities:
+                - menu_day: 'today'
+          - action: utter_ask_menu_meal
+          - intent: ask_menu
+            entities:
+                - menu_meal: 'dinner'
+          - action: action_menu_details
+
+    - story: ask for menu with meal without day
+      steps:
+          - intent: ask_menu
+            entities:
+                - menu_meal: 'lunch'
+          - action: utter_ask_menu_day
+          - intent: ask_menu
+            entities:
+                - menu_day: 'friday'
+          - action: action_menu_details
+
+    - story: ask for menu with meal and day
+      steps:
+          - intent: ask_menu
+            entities:
+                - menu_day: 'today'
+                - menu_meal: 'snacks'
+          - action: action_menu_details

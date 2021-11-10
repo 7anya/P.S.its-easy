@@ -16,6 +16,7 @@ nlu:
           - goodmorning
           - goodevening
           - good afternoon
+          - yo
 
     - intent: goodbye
       examples: |
@@ -116,6 +117,21 @@ nlu:
           - what can you do
           - sample questions
           - info
+
+    - intent: ask_menu
+      examples: |
+          - what is the menu
+          - what is the menu for [today](menu_day)
+          - what is the menu for [today](menu_day) [lunch](menu_meal)
+          - what is there for [lunch](menu_meal) [tomorrow](menu_day)
+          - can I get the menu for [dinner](menu_meal) for [monday](menu_day)
+          - [tuesday](menu_day) [breakfast](menu_meal)
+          - [friday](menu_day)
+          - [snacks](menu_meal)
+          - what is there for [snacks](menu_meal)
+          - what is there in mess for [saturday](menu_day)
+          - what is there in mess for [lunch](menu_meal)
+          - what is there in mess for [snacks](menu_meal) [today](menu_day)
 
     - synonym: ps1
       examples: |
