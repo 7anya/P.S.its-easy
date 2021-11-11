@@ -66,7 +66,9 @@ Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.htm
     -   Eg. 'Can I get the cgpa cutoff for Flipkart?'
     -   This was built with [rasa](https://rasa.com/) and the code is available in the same repo
 
-        ![Demo](images/chat.gif)
+        <div align="center">
+        <img src="images/chat.gif" width="250"/>
+        </div>
 
 # Disclaimer
 
