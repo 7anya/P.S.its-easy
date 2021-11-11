@@ -296,7 +296,7 @@ function Navbar({ user }) {
 										</MenuItem>
 										<MenuItem onClick={handleClose4}>
 											<Link
-												href="/ps1/chronicles"
+												href="/ps2/formResponses"
 												underline="none"
 											>
 												PS-2 Sem-1 '21 Responses
