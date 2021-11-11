@@ -16,8 +16,6 @@
 
 </div>
 
-Note: Developers trying to fork and test. Please wait, we'll set up a test branch in a few days thats immediately ready to be worked on. This branch consists of hidden creds you may require
-
 # About
 
 A Web Application to display, browse and filter Practice School Stations and it's Chronicles over the past year with CG cutoff analytics in a easy to use web interface. There is also access to the latest Project Bank and the provision to download CSV to rearrange and update your preferences at PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Extension!
@@ -34,7 +32,7 @@ Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.htm
 -   ## Home Page
 
     -   Login with BITS mail only
-        ![Home](images/home.png)
+        ![Home](images/homepage-v2.png)
 
 -   ## Project Bank (Currently has latest PS2 Sem 1 2021 Details)
 
@@ -45,31 +43,30 @@ Checkout our blog [here](https://one-to-tan.blogspot.com/2021/05/ps-its-easy.htm
     -   There is also a **Download CSV** button with which you can download all the Station Details. Then you can rearrange these stations by moving the rows according to your preferences and then you can upload it in the PSD website with the [PS Companion](https://github.com/Joe2k/PS-Companion) Chrome Extension which is also built and maintained by us. So we will make sure both of these are compatible with each other all the time!
         ![Project Bank](images/projectBank.png)
 
--   ## PS-1 Responses
+-   ## Responses Page (_For PS1 and PS2_)
 
-    -   Here you can see the latest 2021 allotments which was properly collected by us this time.
-    -   There are over 1100 responses in this.
-    -   Currently there is only 2021 stats. We will try to add more previous years stats to it before the next PS-1 in the summer starts
-        ![PS-1 Responses](images/ps1Responses.png)
-
--   ## PS-2 Responses
-
-    -   Here you can see the stats from the last 4 years **PS-2 Sem 1** Responses.
+    -   Here you can see the latest stats from the last 4 years **PS** Responses.
     -   You can use filters for year, cgpa and search for station names.
     -   You can zoom and move inside the box plot.
     -   When you hover over a station the details will come up on the right.
     -   You will also get a _Checkout it's chronicles_ button which will take you to the chronicles of that specific station if available.
-    -   In the next few months we will also add Sem 2 stats as well.
-        ![PS-2 Responses](images/ps2Responses.png)
+        ![PS Responses](images/responses-v2.png)
 
--   ## PS-2 Chronicles
+-   ## Chronicles Page (_For PS1 and PS2_)
 
-    -   Here you can see the chronicles of the past 4 years **PS-2 Sem 1**.
+    -   Here you can see the chronicles of the past 4 years **PS** Stations.
     -   You can search for stations and view the different years drop downs and each dropdown be able to see the name of the student in the PS station.
     -   Once you click on the name you can see the whole chronicle on the left.
     -   There is also a _Checkout it's responses_ button which takes you to the responses page of that specific station.
-    -   We will expand it to accomodate Sem 2 chronicles as well in the near future.
-        ![PS-2 Chronicles](images/ps2Chronicles.png)
+        ![PSChronicles](images/chronicles-v2.png)
+
+-   ## Chatbot
+
+    -   This chatbot is for quick and easy searching of station details and cutoff or even the mess menu :P.
+    -   Eg. 'Can I get the cgpa cutoff for Flipkart?'
+    -   This was built with [rasa](https://rasa.com/) and the code is available in the same repo
+
+        ![Demo](images/chat.gif)
 
 # Disclaimer
 
