@@ -315,7 +315,7 @@ const ProjectBankPage = () => {
 															'/ps2/sem2/responses?search=' +
 															station[
 																'Company Name'
-															]
+															].split(' ')[0]
 														}
 														target="_blank"
 													>
@@ -339,7 +339,7 @@ const ProjectBankPage = () => {
 															'/ps2/sem2/chronicles?search=' +
 															station[
 																'Company Name'
-															]
+															].split(' ')[0]
 														}
 														target="_blank"
 													>
