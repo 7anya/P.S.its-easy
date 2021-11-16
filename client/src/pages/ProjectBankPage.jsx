@@ -312,7 +312,7 @@ const ProjectBankPage = () => {
 													<Link
 														underline="none"
 														href={
-															'/ps2/responses?search=' +
+															'/ps2/sem2/responses?search=' +
 															station[
 																'Company Name'
 															]
@@ -336,7 +336,7 @@ const ProjectBankPage = () => {
 													<Link
 														underline="none"
 														href={
-															'/ps2/chronicles?search=' +
+															'/ps2/sem2/chronicles?search=' +
 															station[
 																'Company Name'
 															]
