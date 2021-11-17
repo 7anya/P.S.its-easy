@@ -147,7 +147,7 @@ function FilterComponentProjectBank({
 				getAriaValueText={(value) => `₹ ${value / 1000}k`}
 				valueLabelFormat={(value) => `₹ ${value / 1000}k`}
 				min={0}
-				max={150000}
+				max={200000}
 				step={1000}
 			/>
 			<Button onClick={handleSubmit} variant="outlined" color="primary">
