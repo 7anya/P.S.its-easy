@@ -99,7 +99,7 @@ const ProjectBankPage = () => {
 	const [isPrevDisabled, setIsPrevDisabled] = useState(true);
 	const [choice, setMainChoice] = useState('All');
 	const [search, setMainSearch] = useState('');
-	const [slider, setMainSlider] = useState([0, 150000]);
+	const [slider, setMainSlider] = useState([0, 200000]);
 	const [branch, setMainBranch] = useState('All');
 
 	useEffect(() => {
