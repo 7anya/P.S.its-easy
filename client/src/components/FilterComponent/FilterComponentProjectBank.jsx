@@ -32,7 +32,7 @@ function FilterComponentProjectBank({
 }) {
 	const classes = useStyles();
 	const [search, setSearch] = useState('');
-	const [slider, setSlider] = useState([0, 150000]);
+	const [slider, setSlider] = useState([0, 200000]);
 	const [choice, setChoice] = useState('All');
 	const [branch, setBranch] = useState('All');
 
