@@ -51,6 +51,20 @@ function FilterComponentProjectBank({
 		setMainBranch(branch);
 	};
 
+	useEffect(() => {
+		const listener = (event) => {
+			if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+				console.log('hi');
+				document.getElementById('subBtn').click();
+				event.preventDefault();
+			}
+		};
+		document.addEventListener('keydown', listener);
+		return () => {
+			document.removeEventListener('keydown', listener);
+		};
+	}, []);
+
 	return (
 		<div>
 			<SearchBar
@@ -150,7 +164,12 @@ function FilterComponentProjectBank({
 				max={200000}
 				step={1000}
 			/>
-			<Button onClick={handleSubmit} variant="outlined" color="primary">
+			<Button
+				id="subBtn"
+				onClick={handleSubmit}
+				variant="outlined"
+				color="primary"
+			>
 				Search
 			</Button>
 		</div>

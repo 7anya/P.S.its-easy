@@ -46,6 +46,20 @@ function FilterComponent({
 		setMainSlider(slider);
 	};
 
+	useEffect(() => {
+		const listener = (event) => {
+			if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+				console.log('hi');
+				document.getElementById('subBtn').click();
+				event.preventDefault();
+			}
+		};
+		document.addEventListener('keydown', listener);
+		return () => {
+			document.removeEventListener('keydown', listener);
+		};
+	}, []);
+
 	return (
 		<div>
 			<SearchBar
@@ -139,7 +153,12 @@ function FilterComponent({
 				max={10}
 				step={0.1}
 			/>
-			<Button onClick={handleSubmit} variant="outlined" color="primary">
+			<Button
+				id="subBtn"
+				onClick={handleSubmit}
+				variant="outlined"
+				color="primary"
+			>
 				Search
 			</Button>
 		</div>
