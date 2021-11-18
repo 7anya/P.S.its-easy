@@ -147,6 +147,7 @@ const ProjectBankPage = () => {
 			setIsNextDisabled(true);
 		}
 		setDataPoints(newPoints);
+		console.log(newPoints);
 	}, [search, choice, slider, data, branch]);
 
 	const handleNext = () => {
@@ -377,6 +378,33 @@ const ProjectBankPage = () => {
 														'Projects'
 													].split('\n')}
 												/>
+
+												<div>
+													<Typography
+														component="span"
+														color="secondary"
+													>
+														Remarks :{' '}
+													</Typography>
+													{station['Facilities (Raw)']
+														.split('\n')
+														.map((a) => {
+															if (
+																a.includes(
+																	'OtherInfo'
+																)
+															) {
+																return (
+																	<Typography component="span">
+																		{a.replace(
+																			'OtherInfo: ',
+																			''
+																		)}
+																	</Typography>
+																);
+															}
+														})}
+												</div>
 											</AccordionDetails>
 										</Accordion>
 									))}
