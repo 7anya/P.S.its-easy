@@ -20,7 +20,7 @@ const TitlePara = ({ fade, line, heading }) => {
 						</Typography>
 
 						<Typography component="p" type="body1">
-							{line.split(':')[1]}
+							{line.split(':').slice(1).join(':')}
 						</Typography>
 					</Typography>
 				</Fade>
@@ -35,7 +35,7 @@ const TitlePara = ({ fade, line, heading }) => {
 					</Typography>
 
 					<Typography component="p" type="body1">
-						{line.split(':')[1]}
+						{line.split(':').slice(1).join(':')}
 					</Typography>
 				</Typography>
 			)}
