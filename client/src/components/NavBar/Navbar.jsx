@@ -87,6 +87,15 @@ function Navbar({ user }) {
 		setAnchorEl4(null);
 	};
 
+	const [anchorEl5, setAnchorEl5] = React.useState(null);
+	const open5 = Boolean(anchorEl5);
+	const handleClick5 = (event) => {
+		setAnchorEl5(event.currentTarget);
+	};
+	const handleClose5 = () => {
+		setAnchorEl5(null);
+	};
+
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 	const [serverURL, setServerURL] = React.useState('');
@@ -150,14 +159,26 @@ function Navbar({ user }) {
 			{user ? (
 				<>
 					<MenuItem>
-						<Link href="/ps2/form" underline="none">
+						<Link href="/ps2/sem1/form" underline="none">
 							<Button color="secondary">PS2'21 Sem-1 Form</Button>
 						</Link>
 					</MenuItem>
 					<MenuItem>
-						<Link href="/ps2/formResponses" underline="none">
+						<Link href="/ps2/sem1/formResponses" underline="none">
 							<Button color="secondary">
 								PS2'21 Sem-1 Responses
+							</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/sem2/form" underline="none">
+							<Button color="secondary">PS2'22 Sem-2 Form</Button>
+						</Link>
+					</MenuItem>
+					<MenuItem>
+						<Link href="/ps2/sem2/formResponses" underline="none">
+							<Button color="secondary">
+								PS2'22 Sem-2 Responses
 							</Button>
 						</Link>
 					</MenuItem>
@@ -288,7 +309,7 @@ function Navbar({ user }) {
 									>
 										<MenuItem onClick={handleClose4}>
 											<Link
-												href="/ps2/form"
+												href="/ps2/sem1/form"
 												underline="none"
 											>
 												PS-2 Sem-1 '21 Form
@@ -296,10 +317,57 @@ function Navbar({ user }) {
 										</MenuItem>
 										<MenuItem onClick={handleClose4}>
 											<Link
-												href="/ps2/formResponses"
+												href="/ps2/sem1/formResponses"
 												underline="none"
 											>
 												PS-2 Sem-1 '21 Responses
+											</Link>
+										</MenuItem>
+									</Menu>
+								</div>
+								<div>
+									<Button
+										id="demo-positioned-button"
+										aria-controls="demo-positioned-menu"
+										aria-haspopup="true"
+										aria-expanded={
+											open5 ? 'true' : undefined
+										}
+										onClick={handleClick5}
+										color="secondary"
+										endIcon={<KeyboardArrowDownIcon />}
+									>
+										PS-2 Sem-2 '22
+									</Button>
+									<Menu
+										id="demo-positioned-menu"
+										aria-labelledby="demo-positioned-button"
+										anchorEl={anchorEl5}
+										open={open5}
+										onClose={handleClose5}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+									>
+										<MenuItem onClick={handleClose5}>
+											<Link
+												href="/ps2/sem2/form"
+												underline="none"
+											>
+												PS-2 Sem-2 '22 Form
+											</Link>
+										</MenuItem>
+										<MenuItem onClick={handleClose5}>
+											<Link
+												href="/ps2/sem2/formResponses"
+												underline="none"
+											>
+												PS-2 Sem-2 '22 Responses
 											</Link>
 										</MenuItem>
 									</Menu>

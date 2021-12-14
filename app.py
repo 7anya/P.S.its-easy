@@ -213,26 +213,48 @@ def send_stationDetails():
 def send_bank():
     return models.bank
 
-@app.route('/api/formStationNames', methods=["GET"])
+@app.route('/api/sem1/formStationNames', methods=["GET"])
 @login_required
-def send_names():
-    return models.find_names()
+def send_names_sem1():
+    return models.find_names_sem1()
 
-@app.route('/api/formResponses', methods=["GET"])
+@app.route('/api/sem2/formStationNames', methods=["GET"])
+@login_required
+def send_names_sem2():
+    return models.find_names_sem2()
+
+@app.route('/api/sem1/formResponses', methods=["GET"])
 @login_required
 def send_form_responses():
-    return models.form_responses()
+    return models.form_responses_sem1()
 
-@app.route('/api/formResponsesDetailed', methods=["GET"])
+@app.route('/api/sem2/formResponses', methods=["GET"])
+@login_required
+def send_form_responses_sem2():
+    return models.form_responses_sem2()
+
+@app.route('/api/sem1/formResponsesDetailed', methods=["GET"])
 @login_required
 def send_form_detailed_responses():
-    return models.form_detailed_responses()
+    return models.form_detailed_responses_sem1()
 
-@app.route('/api/formSubmit', methods=["POST"])
+@app.route('/api/sem2/formResponsesDetailed', methods=["GET"])
+@login_required
+def send_form_detailed_responses_sem2():
+    return models.form_detailed_responses_sem2()
+
+@app.route('/api/sem1/formSubmit', methods=["POST"])
 @login_required
 def form_submit():
     data = request.get_json()
-    models.form_submit(data)
+    models.form_submit_sem1(data)
+    return "Cool"
+
+@app.route('/api/sem2/formSubmit', methods=["POST"])
+@login_required
+def form_submit_sem2():
+    data = request.get_json()
+    models.form_submit_sem2(data)
     return "Cool"
     
 

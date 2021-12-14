@@ -142,7 +142,7 @@ for each in problembank:
 bank = json.dumps(bank)
 
 # find all names
-def find_names():
+def find_names_sem1():
     namesDB = client.get_database("ps2_sem1_2021")
     namesCol = namesDB.Final_Names_PS2_Sem1_2021
     namesVal = list(namesCol.find())
@@ -160,7 +160,25 @@ def find_names():
 
     return names
 
-def form_submit(data):
+def find_names_sem2():
+    namesDB = client.get_database("ps2_sem2_2022")
+    namesCol = namesDB.Final_Names_PS2_Sem2_2022
+    namesVal = list(namesCol.find())
+
+    for x in namesVal:
+        x['_id'] = 0
+
+    names = []
+
+    for each in namesVal:
+        del (each['_id'])
+        names.append(each)
+
+    names = json.dumps(names)
+
+    return names
+
+def form_submit_sem1(data):
     namesDB = client.get_database("ps2_sem1_2021")
     namesCol = namesDB.Station_Responses_Raw
     responseCol = namesDB.Station_Responses_CG
@@ -172,7 +190,19 @@ def form_submit(data):
         newData = {'name' : data['station'], '2021':{'CG':[data['cgpa']]}}
         z = responseCol.insert_one(newData)
 
-def form_responses():
+def form_submit_sem2(data):
+    namesDB = client.get_database("ps2_sem2_2022")
+    namesCol = namesDB.Station_Responses_Raw
+    responseCol = namesDB.Station_Responses_CG
+
+    x= namesCol.insert_one(data)
+    y= responseCol.update_one({'name': data['station']}, {'$push':{'2022.CG': data['cgpa']}})
+    print(y.matched_count)
+    if y.matched_count==0:
+        newData = {'name' : data['station'], '2022':{'CG':[data['cgpa']]}}
+        z = responseCol.insert_one(newData)
+
+def form_responses_sem1():
     respDB = client.get_database("ps2_sem1_2021")
     stationDetailsPS2 = respDB.Station_Responses_CG
     stationDetailsPS2 = list(stationDetailsPS2.find())
@@ -189,8 +219,44 @@ def form_responses():
     details = json.dumps(details)
     return details
 
-def form_detailed_responses():
+def form_responses_sem2():
+    respDB = client.get_database("ps2_sem2_2022")
+    stationDetailsPS2 = respDB.Station_Responses_CG
+    stationDetailsPS2 = list(stationDetailsPS2.find())
+    for x in stationDetailsPS2:
+        x['_id'] = 0
+
+    details = {}
+    for each in stationDetailsPS2:
+        name = each["name"]
+        del (each['name'])
+        del (each['_id'])
+        details[name] = each
+
+    details = json.dumps(details)
+    return details
+
+def form_detailed_responses_sem1():
     problembankdb = client.get_database("ps2_sem1_2021")
+    problembank = problembankdb.Station_Responses_Raw
+
+    problembank = list(problembank.find())
+    for x in problembank:
+        x['_id'] = 0
+
+    bank = []
+    for each in problembank:
+        # name = each["Company Name"]
+        # del (each['Company Name'])
+        del (each['_id'])
+        bank.append(each)
+
+    bank = json.dumps(bank)
+
+    return bank
+
+def form_detailed_responses_sem2():
+    problembankdb = client.get_database("ps2_sem2_2022")
     problembank = problembankdb.Station_Responses_Raw
 
     problembank = list(problembank.find())

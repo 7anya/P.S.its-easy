@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function AllotmentForm(props) {
+export default function AllotmentFormSem2(props) {
 	let history = useHistory();
 	// console.log(props);
 	const { user } = props;
@@ -69,7 +69,7 @@ export default function AllotmentForm(props) {
 	}, [user]);
 
 	React.useEffect(() => {
-		axios.get('/api/sem1/formStationNames').then((resp) => {
+		axios.get('/api/sem2/formStationNames').then((resp) => {
 			setStationNames(resp.data);
 		});
 	}, []);
@@ -88,8 +88,8 @@ export default function AllotmentForm(props) {
 		}
 		setError('');
 		axios
-			.post('/api/sem1/formSubmit', form)
-			.then((resp) => history.push('/ps2/sem1/formResponses'));
+			.post('/api/sem2/formSubmit', form)
+			.then((resp) => history.push('/ps2/sem2/formResponses'));
 	};
 
 	return (

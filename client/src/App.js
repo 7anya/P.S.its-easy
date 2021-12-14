@@ -26,6 +26,8 @@ import {
 	makeStyles,
 } from '@material-ui/core';
 import PS2FormResponses from './pages/PS2FormResponses';
+import AllotmentFormSem2 from './pages/AllotmentFormSem2';
+import PS2FormResponsesSem2 from './pages/PS2FormResponsesSem2';
 
 const useStyles = makeStyles((theme) => ({
 	backdrop: {
@@ -101,13 +103,23 @@ const App = () => {
 					/>
 					<ProtectedRoute
 						exact
-						path="/ps2/form"
+						path="/ps2/sem1/form"
 						Component={AllotmentForm}
 					/>
 					<ProtectedRoute
 						exact
-						path="/ps2/formResponses"
+						path="/ps2/sem1/formResponses"
 						Component={PS2FormResponses}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/sem2/form"
+						Component={AllotmentFormSem2}
+					/>
+					<ProtectedRoute
+						exact
+						path="/ps2/sem2/formResponses"
+						Component={PS2FormResponsesSem2}
 					/>
 
 					<Route path="*">

@@ -66,7 +66,7 @@ function useQuery() {
 	return new URLSearchParams(useLocation().search);
 }
 
-const PS2FormResponses = () => {
+const PS2FormResponsesSem2 = () => {
 	const classes = useStyles();
 	const query = useQuery();
 
@@ -85,11 +85,11 @@ const PS2FormResponses = () => {
 	const [measureRef, { width }] = useDimensions();
 
 	useEffect(() => {
-		axios.get('/api/sem1/formResponses').then((resp) => {
+		axios.get('/api/sem2/formResponses').then((resp) => {
 			console.log(resp.data);
 			setData(resp.data);
 		});
-		axios.get('/api/sem1/formResponsesDetailed').then((resp) => {
+		axios.get('/api/sem2/formResponsesDetailed').then((resp) => {
 			console.log(resp.data);
 			setCsvData(resp.data);
 		});
@@ -111,6 +111,11 @@ const PS2FormResponses = () => {
 				if (key.toLowerCase().includes(search.toLowerCase())) {
 					//console.log(key);
 					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2022') &&
+						data[key]['2022']
+					)
+						y.push(...data[key]['2022']['CG']);
 					if (
 						(choice === 'Overall' || choice === '2021') &&
 						data[key]['2021']
@@ -183,6 +188,11 @@ const PS2FormResponses = () => {
 				) {
 					//console.log(key);
 					let y = [];
+					if (
+						(choice === 'Overall' || choice === '2022') &&
+						data[key]['2022']
+					)
+						y.push(...data[key]['2022']['CG']);
 					if (
 						(choice === 'Overall' || choice === '2021') &&
 						data[key]['2021']
@@ -444,4 +454,4 @@ const PS2FormResponses = () => {
 	);
 };
 
-export default PS2FormResponses;
+export default PS2FormResponsesSem2;
