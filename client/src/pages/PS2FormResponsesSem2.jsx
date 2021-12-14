@@ -151,10 +151,8 @@ const PS2FormResponsesSem2 = () => {
 						min = Math.round(min * 100) / 100;
 						max = Math.max(...y);
 						max = Math.round(max * 100) / 100;
-						avg =
-							y.reduce((a, b) => parseInt(a) + parseInt(b)) /
-							y.length;
-						// avg = Math.round(avg * 100) / 100;
+						avg = y.reduce((a, b) => a + b, 0) / y.length;
+						avg = Math.round(avg * 100) / 100;
 						count = y.length;
 						newInfo = {
 							...newInfo,
@@ -229,7 +227,7 @@ const PS2FormResponsesSem2 = () => {
 						max = Math.max(...y);
 						max = Math.round(max * 100) / 100;
 						avg = y.reduce((a, b) => a + b, 0) / y.length;
-						// avg = Math.round(avg * 100) / 100;
+						avg = Math.round(avg * 100) / 100;
 						count = y.length;
 						newInfo = {
 							...newInfo,
