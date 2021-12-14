@@ -403,7 +403,7 @@ const PS2FormResponsesSem2 = () => {
 					<Grid item xs={4}>
 						<ResponseDisplayPaper
 							stationDetails={stationDetails}
-							type="PS1"
+							type="PS2Sem2"
 						/>
 						<Paper elevation={10} className={classes.paper2}>
 							<SearchComponent
