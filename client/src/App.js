@@ -23,6 +23,9 @@ import { Backdrop, CircularProgress, Fade } from '@mui/material';
 import PS2FormResponses from './pages/PS2FormResponses';
 import AllotmentFormSem2 from './pages/AllotmentFormSem2';
 import PS2FormResponsesSem2 from './pages/PS2FormResponsesSem2';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const App = () => {
 	const [user, setUser] = useState(null);
@@ -41,80 +44,85 @@ const App = () => {
 	}, []);
 
 	return (
-		<Scrollbars style={{ width: '100vw', height: '100vh' }}>
-			<Fade in={loading}>
-				<Backdrop sx={{ zIndex: 10, color: '#121212' }} open={loading}>
-					<CircularProgress color="primary" />
-				</Backdrop>
-			</Fade>
-			<Router>
-				<NavBar user={user} />
-				<Switch>
-					<Route exact path="/">
-						<HomePage user={user} />
-					</Route>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem1/responses"
-						Component={ResponsesPage}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem2/responses"
-						Component={ResponsesPagePS2Sem2}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps1/responses"
-						Component={PS1ResponsesPage}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem1/chronicles"
-						Component={ChroniclesPage}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem2/chronicles"
-						Component={ChroniclesPageSem2}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps1/chronicles"
-						Component={ChroniclesPagePS1}
-					/>
-					<ProtectedRoute
-						exact
-						path="/projectBank"
-						Component={ProjectBankPage}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem1/form"
-						Component={AllotmentForm}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem1/formResponses"
-						Component={PS2FormResponses}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem2/form"
-						Component={AllotmentFormSem2}
-					/>
-					<ProtectedRoute
-						exact
-						path="/ps2/sem2/formResponses"
-						Component={PS2FormResponsesSem2}
-					/>
+		<QueryClientProvider client={queryClient}>
+			<Scrollbars style={{ width: '100vw', height: '100vh' }}>
+				<Fade in={loading}>
+					<Backdrop
+						sx={{ zIndex: 10, color: '#121212' }}
+						open={loading}
+					>
+						<CircularProgress color="primary" />
+					</Backdrop>
+				</Fade>
+				<Router>
+					<NavBar user={user} />
+					<Switch>
+						<Route exact path="/">
+							<HomePage user={user} />
+						</Route>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem1/responses"
+							Component={ResponsesPage}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem2/responses"
+							Component={ResponsesPagePS2Sem2}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps1/responses"
+							Component={PS1ResponsesPage}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem1/chronicles"
+							Component={ChroniclesPage}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem2/chronicles"
+							Component={ChroniclesPageSem2}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps1/chronicles"
+							Component={ChroniclesPagePS1}
+						/>
+						<ProtectedRoute
+							exact
+							path="/projectBank"
+							Component={ProjectBankPage}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem1/form"
+							Component={AllotmentForm}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem1/formResponses"
+							Component={PS2FormResponses}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem2/form"
+							Component={AllotmentFormSem2}
+						/>
+						<ProtectedRoute
+							exact
+							path="/ps2/sem2/formResponses"
+							Component={PS2FormResponsesSem2}
+						/>
 
-					<Route path="*">
-						<Redirect to={{ pathname: '/' }} />
-					</Route>
-				</Switch>
-			</Router>
-		</Scrollbars>
+						<Route path="*">
+							<Redirect to={{ pathname: '/' }} />
+						</Route>
+					</Switch>
+				</Router>
+			</Scrollbars>
+		</QueryClientProvider>
 	);
 };
 

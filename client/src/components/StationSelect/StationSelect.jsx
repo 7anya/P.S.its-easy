@@ -54,6 +54,7 @@ const StationSelect = ({
 	isPrevDisabled,
 	isNextDisabled,
 	type,
+	isLoading = false,
 }) => {
 	const [fadeAccordion, setFadeAccordion] = React.useState(true);
 	const [expandedTop, setExpandedTop] = React.useState(false);
@@ -175,7 +176,7 @@ const StationSelect = ({
 									/>
 								);
 							})}
-					{fadeAccordion && stations.length === 0 && (
+					{fadeAccordion && !isLoading && stations.length === 0 && (
 						<Grid
 							container
 							justifyContent="center"
@@ -193,7 +194,7 @@ const StationSelect = ({
 						</Grid>
 					)}
 
-					{!fadeAccordion && (
+					{(!fadeAccordion || isLoading) && (
 						<CircularProgress style={{ marginTop: '10%' }} />
 					)}
 				</Scrollbars>

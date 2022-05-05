@@ -126,7 +126,7 @@ detailsps1 = json.dumps(detailsps1)
 
 # problem bank
 problembankdb = client.get_database("pref")
-problembank = problembankdb.PS2_2021_sem2_StationDetails
+problembank = problembankdb.PS1_2022_StationDetails
 
 problembank = list(problembank.find())
 for x in problembank:

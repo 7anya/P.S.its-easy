@@ -158,14 +158,14 @@ function FilterComponentProjectBank({
 					<MenuItem value={'-'}>Not Specified</MenuItem>
 				</Select>
 			</FormControl>
-			<Typography
+			{/* <Typography
 				id="range-slider"
 				gutterBottom
 				className={classes.range}
 			>
 				Stipend Range
-			</Typography>
-			<Slider
+			</Typography> */}
+			{/* <Slider
 				value={slider}
 				onChange={(event, newValue) => setSlider(newValue)}
 				valueLabelDisplay="auto"
@@ -175,12 +175,13 @@ function FilterComponentProjectBank({
 				min={0}
 				max={200000}
 				step={1000}
-			/>
+			/> */}
 			<Button
 				id="subBtn"
 				onClick={handleSubmit}
 				variant="outlined"
 				color="primary"
+				sx={{ mt: '20px' }}
 			>
 				Search
 			</Button>
