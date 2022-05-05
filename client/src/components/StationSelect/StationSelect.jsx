@@ -1,27 +1,26 @@
 import {
 	Grid,
-	makeStyles,
 	Paper,
 	TextField,
 	Typography,
-} from '@material-ui/core';
-import SearchBar from 'material-ui-search-bar';
+	Autocomplete,
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
 import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
 import BigAccordion from './BigAccordion';
 import ButtonSelect from './ButtonSelect';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
-let pad = 4,
-	mar = 4;
-if (window.innerWidth <= 800) {
-	pad = 2;
-	mar = 2;
-}
+const PREFIX = 'StationSelect';
 
-const useStyles = makeStyles((theme) => ({
-	paper2: {
+const classes = {
+	paper2: `${PREFIX}-paper2`,
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')(({ theme }) => ({
+	[`& .${classes.paper2}`]: {
 		padding: theme.spacing(pad),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -36,6 +35,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+let pad = 4,
+	mar = 4;
+if (window.innerWidth <= 800) {
+	pad = 2;
+	mar = 2;
+}
+
 const StationSelect = ({
 	stations,
 	index,
@@ -49,8 +55,6 @@ const StationSelect = ({
 	isNextDisabled,
 	type,
 }) => {
-	const classes = useStyles();
-
 	const [fadeAccordion, setFadeAccordion] = React.useState(true);
 	const [expandedTop, setExpandedTop] = React.useState(false);
 	const [expandedBottom, setExpandedBottom] = React.useState(false);
@@ -115,15 +119,25 @@ const StationSelect = ({
 		// }, 0);
 	};
 	return (
-		<>
+		<Root>
 			<Paper elevation={3} className={classes.paper2}>
-				<SearchBar
-					value={localSearch}
-					onChange={(newValue) => handleSearch(newValue)}
-					onRequestSearch={handleSearch}
-					onCancelSearch={() => handleSearch('')}
-					style={{ marginBottom: '20px' }}
+				<Autocomplete
+					freeSolo
+					options={stations.map((option) => option.name)}
+					renderInput={(params) => (
+						<TextField {...params} label="Search" />
+					)}
+					inputValue={localSearch}
+					onInputChange={(_event, newValue) => handleSearch(newValue)}
+					sx={{ mb: '10px' }}
 				/>
+				{/* <SearchBar
+                    value={localSearch}
+                    onChange={(newValue) => handleSearch(newValue)}
+                    onRequestSearch={handleSearch}
+                    onCancelSearch={() => handleSearch('')}
+                    style={{ marginBottom: '20px' }}
+                /> */}
 
 				<Scrollbars
 					style={{ height: '59vh' }}
@@ -164,7 +178,7 @@ const StationSelect = ({
 					{fadeAccordion && stations.length === 0 && (
 						<Grid
 							container
-							justify="center"
+							justifyContent="center"
 							alignItems="center"
 							style={{ height: '80%' }}
 						>
@@ -192,7 +206,7 @@ const StationSelect = ({
 				stations={stations}
 				index={index}
 			/>
-		</>
+		</Root>
 	);
 };
 

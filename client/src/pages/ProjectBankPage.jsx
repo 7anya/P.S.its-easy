@@ -6,13 +6,13 @@ import {
 	Button,
 	Grid,
 	Link,
-	makeStyles,
 	Paper,
 	Typography,
-} from '@material-ui/core';
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
 import React, { useState, useEffect } from 'react';
 import Scrollbars from 'react-custom-scrollbars';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import WriteUp from '../components/WriteUp/WriteUp';
 import FilterComponentProjectBank from '../components/FilterComponent/FilterComponentProjectBank';
 import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesButtonGroup';
@@ -20,21 +20,40 @@ import ButtonSelect from '../components/StationSelect/ButtonSelect';
 import { CSVLink, CSVDownload } from 'react-csv';
 import axios from 'axios';
 
-const useStyles = makeStyles((theme) => ({
-	root: {
+const PREFIX = 'ProjectBankPage';
+
+const classes = {
+	root: `${PREFIX}-root`,
+	mainComp: `${PREFIX}-mainComp`,
+	down: `${PREFIX}-down`,
+	paper1: `${PREFIX}-paper1`,
+	paper2: `${PREFIX}-paper2`,
+	formControl: `${PREFIX}-formControl`,
+	chartContainer: `${PREFIX}-chartContainer`,
+	heading: `${PREFIX}-heading`,
+	secondaryHeading: `${PREFIX}-secondaryHeading`,
+	tertiaryHeading: `${PREFIX}-tertiaryHeading`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+	[`&.${classes.root}`]: {
 		flexGrow: 1,
 		height: '90vh',
 	},
-	mainComp: {
+
+	[`& .${classes.mainComp}`]: {
 		padding: theme.spacing(3),
+		paddingTop: theme.spacing(1),
 		height: '100%',
 	},
-	down: {
+
+	[`& .${classes.down}`]: {
 		paddingRight: theme.spacing(3),
 		padding: theme.spacing(6),
 		paddingTop: theme.spacing(3),
 	},
-	paper1: {
+
+	[`& .${classes.paper1}`]: {
 		padding: theme.spacing(3),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -46,7 +65,8 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	paper2: {
+
+	[`& .${classes.paper2}`]: {
 		padding: theme.spacing(3),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -57,31 +77,36 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	formControl: {
+
+	[`& .${classes.formControl}`]: {
 		margin: theme.spacing(5),
 		minWidth: 220,
 	},
-	chartContainer: {
+
+	[`& .${classes.chartContainer}`]: {
 		height: '100%',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.secondary.main,
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	heading: {
+
+	[`& .${classes.heading}`]: {
 		fontSize: theme.typography.pxToRem(15),
 		flexBasis: '40%',
 		flexShrink: 0,
 		marginRight: '4%',
 	},
-	secondaryHeading: {
+
+	[`& .${classes.secondaryHeading}`]: {
 		fontSize: theme.typography.pxToRem(15),
 		color: theme.palette.text.secondary,
 		flexBasis: '15%',
 		flexShrink: 0,
 		marginRight: '4%',
 	},
-	tertiaryHeading: {
+
+	[`& .${classes.tertiaryHeading}`]: {
 		fontSize: theme.typography.pxToRem(15),
 		color: theme.palette.text.secondary,
 	},
@@ -90,8 +115,6 @@ const useStyles = makeStyles((theme) => ({
 //const data = require('../dataset/ps2_sem1_2020_pref.json');
 
 const ProjectBankPage = () => {
-	const classes = useStyles();
-
 	const [data, setData] = useState([]);
 	const [dataPoints, setDataPoints] = useState([]);
 	const [index, setIndex] = useState({ start: 0, end: 0 });
@@ -175,11 +198,11 @@ const ProjectBankPage = () => {
 	};
 
 	return (
-		<div className={classes.root}>
+		<Root className={classes.root}>
 			{window.innerWidth <= '800' ? (
 				<Grid
 					container
-					justify="center"
+					justifyContent="center"
 					alignItems="center"
 					alignContent="center"
 					style={{ flexGrow: 1, height: '100%', padding: '10px' }}
@@ -224,7 +247,7 @@ const ProjectBankPage = () => {
 							{dataPoints.length === 0 && (
 								<Grid
 									container
-									justify="center"
+									justifyContent="center"
 									alignItems="center"
 									style={{ height: '100%' }}
 								>
@@ -418,6 +441,7 @@ const ProjectBankPage = () => {
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
 								setMainBranch={setMainBranch}
+								stationNames={data}
 							/>
 						</Paper>
 						<div style={{ marginTop: '20px' }}>
@@ -432,7 +456,7 @@ const ProjectBankPage = () => {
 						</div>
 						<Grid
 							container
-							justify="center"
+							justifyContent="center"
 							alignItems="center"
 							className={classes.down}
 						>
@@ -465,6 +489,7 @@ const ProjectBankPage = () => {
 								<Link
 									href="https://github.com/Joe2k/PS-Companion"
 									target="_blank"
+									underline="hover"
 								>
 									PS&nbsp;Companion
 								</Link>{' '}
@@ -474,7 +499,7 @@ const ProjectBankPage = () => {
 					</Grid>
 				</Grid>
 			)}
-		</div>
+		</Root>
 	);
 };
 

@@ -4,18 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CustomThemeProvider from './context/CustomThemeProvider';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, StyledEngineProvider, adaptV4Theme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
-const theme = createMuiTheme({
+const theme = createTheme(adaptV4Theme({
 	typography: {
 		fontFamily: ['"Product Sans"', 'Roboto', 'Arial', 'sans-serif'].join(
 			','
 		),
 	},
 	palette: {
-		type: 'dark',
+		mode: 'dark',
 		primary: {
 			main: '#bb86fc',
 		},
@@ -27,7 +27,7 @@ const theme = createMuiTheme({
 			paper: '#272727',
 		},
 	},
-});
+}));
 
 // const theme = createMuiTheme({
 // 	typography: {
@@ -39,7 +39,7 @@ const theme = createMuiTheme({
 // 		},
 // 	},
 // 	palette: {
-// 		type: 'dark',
+// 		mode: 'dark',
 // 		primary: {
 // 			main: '#f9cec4',
 // 		},
@@ -54,10 +54,12 @@ const theme = createMuiTheme({
 // });
 
 ReactDOM.render(
-	<ThemeProvider theme={theme}>
-		<CssBaseline />
-		<App />
-	</ThemeProvider>,
+	<StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <App />
+        </ThemeProvider>
+    </StyledEngineProvider>,
 	document.getElementById('root')
 );
 

@@ -6,9 +6,9 @@ import {
 	Fade,
 	Link,
 	Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import React from 'react';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const BigAccordion = ({
 	expandedTop,

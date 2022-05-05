@@ -1,45 +1,65 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import Link from '@material-ui/core/Link';
-import { Button } from '@material-ui/core';
-import LogOut from '@material-ui/icons/ExitToApp';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { styled } from '@mui/material/styles';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+import MoreIcon from '@mui/icons-material/MoreVert';
+import Link from '@mui/material/Link';
+import { Button } from '@mui/material';
+import LogOut from '@mui/icons-material/ExitToApp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const useStyles = makeStyles((theme) => ({
-	grow: {
+const PREFIX = 'Navbar';
+
+const classes = {
+	grow: `${PREFIX}-grow`,
+	menuButton: `${PREFIX}-menuButton`,
+	title: `${PREFIX}-title`,
+	inputRoot: `${PREFIX}-inputRoot`,
+	inputInput: `${PREFIX}-inputInput`,
+	sectionDesktop: `${PREFIX}-sectionDesktop`,
+	sectionMobile: `${PREFIX}-sectionMobile`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+	[`&.${classes.grow}`]: {
 		flexGrow: 1,
 	},
-	menuButton: {
+
+	[`& .${classes.menuButton}`]: {
 		marginRight: theme.spacing(2),
 	},
-	title: {},
-	inputRoot: {
+
+	[`& .${classes.title}`]: {
+		flexGrow: 1,
+	},
+
+	[`& .${classes.inputRoot}`]: {
 		color: 'inherit',
 	},
-	inputInput: {
+
+	[`& .${classes.inputInput}`]: {
 		padding: theme.spacing(1, 1, 1, 0),
 		// vertical padding + font size from searchIcon
-		paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
 		transition: theme.transitions.create('width'),
 		width: '100%',
 		[theme.breakpoints.up('md')]: {
 			width: '20ch',
 		},
 	},
-	sectionDesktop: {
+
+	[`& .${classes.sectionDesktop}`]: {
 		display: 'none',
 		[theme.breakpoints.up('md')]: {
 			display: 'flex',
 		},
 	},
-	sectionMobile: {
+
+	[`& .${classes.sectionMobile}`]: {
 		display: 'flex',
 		[theme.breakpoints.up('md')]: {
 			display: 'none',
@@ -48,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar({ user }) {
-	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -251,7 +270,7 @@ function Navbar({ user }) {
 	);
 
 	return (
-		<div className={classes.grow}>
+		<Root className={classes.grow}>
 			<AppBar color="inherit" position="static">
 				<Toolbar>
 					<Typography
@@ -544,6 +563,7 @@ function Navbar({ user }) {
 							aria-haspopup="true"
 							onClick={handleMobileMenuOpen}
 							color="inherit"
+							size="large"
 						>
 							<MoreIcon />
 						</IconButton>
@@ -552,7 +572,7 @@ function Navbar({ user }) {
 			</AppBar>
 			{renderMobileMenu}
 			{renderMenu}
-		</div>
+		</Root>
 	);
 }
 

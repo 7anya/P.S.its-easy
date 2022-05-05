@@ -1,4 +1,4 @@
-import { Fade, Typography } from '@material-ui/core';
+import { Fade, Typography } from '@mui/material';
 import React from 'react';
 
 const TitlePara = ({ fade, line, heading }) => {

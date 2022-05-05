@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from 'material-ui-search-bar';
+import { styled } from '@mui/material/styles';
 import {
 	Button,
 	FormControl,
 	InputLabel,
-	makeStyles,
 	MenuItem,
 	Select,
 	Slider,
 	Typography,
-} from '@material-ui/core';
+	Autocomplete,
+	TextField,
+} from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-	formControl: {
+const PREFIX = 'FilterComponentProjectBank';
+
+const classes = {
+	formControl: `${PREFIX}-formControl`,
+	range: `${PREFIX}-range`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+	[`& .${classes.formControl}`]: {
 		marginTop: theme.spacing(3),
 		marginLeft: '0px',
 		marginRight: '0px',
 		width: '100%',
 	},
-	range: {
+
+	[`& .${classes.range}`]: {
 		marginTop: theme.spacing(3),
 	},
 }));
@@ -29,8 +38,8 @@ function FilterComponentProjectBank({
 	setMainSlider,
 	mainSearch,
 	setMainBranch,
+	stationNames,
 }) {
-	const classes = useStyles();
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([0, 200000]);
 	const [choice, setChoice] = useState('All');
@@ -66,12 +75,15 @@ function FilterComponentProjectBank({
 	}, []);
 
 	return (
-		<div>
-			<SearchBar
-				value={search}
-				onChange={(newValue) => handleSearch(newValue)}
-				onRequestSearch={handleSearch}
-				onCancelSearch={() => handleSearch('')}
+		<Root>
+			<Autocomplete
+				freeSolo
+				options={stationNames.map((option) => option['Company Name'])}
+				renderInput={(params) => (
+					<TextField {...params} label="Search" />
+				)}
+				inputValue={search}
+				onInputChange={(_event, newValue) => handleSearch(newValue)}
 			/>
 			<FormControl variant="outlined" className={classes.formControl}>
 				<InputLabel id="demo-simple-select-label">
@@ -172,7 +184,7 @@ function FilterComponentProjectBank({
 			>
 				Search
 			</Button>
-		</div>
+		</Root>
 	);
 }
 

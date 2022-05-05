@@ -1,16 +1,24 @@
-import { Button, Link, makeStyles, Paper, Typography } from '@material-ui/core';
+import { Button, Link, Paper, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import React from 'react';
 import FadeIn from 'react-fade-in';
 import DetailsTypo from './DetailsTypo';
 
-const useStyles = makeStyles((theme) => ({
-	paper1: {
+const PREFIX = 'ResponseDisplayPaper';
+
+const classes = {
+	paper1: `${PREFIX}-paper1`,
+};
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+	[`&.${classes.paper1}`]: {
 		padding: theme.spacing(3),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
 		height: '200px',
 		margin: '40px',
 		marginTop: '10px',
+		marginBottom: '30px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
 		borderColor: theme.palette.primary.main,
 		borderWidth: '2px',
@@ -19,9 +27,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ResponseDisplayPaper = ({ stationDetails, type }) => {
-	const classes = useStyles();
 	return (
-		<Paper elevation={3} className={classes.paper1}>
+		<StyledPaper elevation={3} className={classes.paper1}>
 			<FadeIn>
 				{stationDetails.name ? (
 					<div key={stationDetails.name}>
@@ -91,7 +98,7 @@ const ResponseDisplayPaper = ({ stationDetails, type }) => {
 					</FadeIn>
 				)}
 			</FadeIn>
-		</Paper>
+		</StyledPaper>
 	);
 };
 

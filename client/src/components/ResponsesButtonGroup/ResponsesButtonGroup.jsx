@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import ShowingTypo from './ShowingTypo';
 
@@ -19,7 +19,7 @@ const ResponsesButtonGroup = ({
 		marginTop = '50px';
 	}
 	return (
-		<Grid
+        <Grid
 			container
 			style={{ marginTop: marginTop, marginBottom: marginBottom }}
 		>
@@ -28,7 +28,7 @@ const ResponsesButtonGroup = ({
 					container
 					alignItems="center"
 					direction="row"
-					justify="center"
+					justifyContent="center"
 				>
 					<Button
 						disabled={isPrevDisabled}
@@ -45,7 +45,7 @@ const ResponsesButtonGroup = ({
 					container
 					alignItems="center"
 					direction="row"
-					justify="center"
+					justifyContent="center"
 				>
 					<ShowingTypo index={index} dataPoints={dataPoints} />
 				</Grid>
@@ -55,7 +55,7 @@ const ResponsesButtonGroup = ({
 					container
 					alignItems="center"
 					direction="row"
-					justify="center"
+					justifyContent="center"
 				>
 					<Button
 						disabled={isNextDisabled}
@@ -68,7 +68,7 @@ const ResponsesButtonGroup = ({
 				</Grid>
 			</Grid>
 		</Grid>
-	);
+    );
 };
 
 export default ResponsesButtonGroup;

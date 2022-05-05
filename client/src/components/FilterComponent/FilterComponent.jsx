@@ -1,21 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from 'material-ui-search-bar';
+import { styled } from '@mui/material/styles';
 import {
 	Button,
 	FormControl,
 	InputLabel,
-	makeStyles,
 	MenuItem,
 	Select,
 	Slider,
 	Typography,
-} from '@material-ui/core';
+	Autocomplete,
+	TextField,
+} from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-	formControl: {
+const PREFIX = 'FilterComponent';
+
+const classes = {
+	formControl: `${PREFIX}-formControl`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+	[`& .${classes.formControl}`]: {
 		margin: theme.spacing(5),
 		marginLeft: '0px',
 		marginRight: '0px',
+		marginBottom: '0px',
 		minWidth: 220,
 	},
 }));
@@ -26,11 +34,13 @@ function FilterComponent({
 	setMainSlider,
 	mainSearch,
 	type,
+	stationNames,
 }) {
-	const classes = useStyles();
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([5, 10]);
 	const [choice, setChoice] = useState('Overall');
+
+	console.log(search);
 
 	useEffect(() => {
 		setSearch(mainSearch);
@@ -60,13 +70,18 @@ function FilterComponent({
 		};
 	}, []);
 
+	const top100Films = ['1', '5', '2', '3'];
+
 	return (
-		<div>
-			<SearchBar
-				value={search}
-				onChange={(newValue) => handleSearch(newValue)}
-				onRequestSearch={handleSearch}
-				onCancelSearch={() => handleSearch('')}
+		<Root>
+			<Autocomplete
+				freeSolo
+				options={stationNames.map((option) => option)}
+				renderInput={(params) => (
+					<TextField {...params} label="Search" />
+				)}
+				inputValue={search}
+				onInputChange={(_event, newValue) => handleSearch(newValue)}
 			/>
 
 			{type !== 'response' && (
@@ -140,7 +155,7 @@ function FilterComponent({
 				</>
 			)}
 
-			<Typography id="range-slider" gutterBottom>
+			<Typography id="range-slider" sx={{ mt: '10px' }}>
 				CGPA range
 			</Typography>
 			<Slider
@@ -161,7 +176,7 @@ function FilterComponent({
 			>
 				Search
 			</Button>
-		</div>
+		</Root>
 	);
 }
 

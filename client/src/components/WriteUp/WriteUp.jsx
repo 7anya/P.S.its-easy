@@ -1,18 +1,23 @@
-import { Fade, makeStyles, Paper, Typography } from '@material-ui/core';
+import { Fade, Paper, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import React from 'react';
 import DetailPara from './DetailPara';
 import Scroll from './Scroll';
 import TitlePara from './TitlePara';
 
-let pad = 4,
-	mar = 4;
-if (window.innerWidth <= 800) {
-	pad = 2;
-	mar = 2;
-}
+const PREFIX = 'WriteUp';
 
-const useStyles = makeStyles((theme) => ({
-	chartContainer: {
+const classes = {
+    chartContainer: `${PREFIX}-chartContainer`
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')((
+    {
+        theme
+    }
+) => ({
+    [`& .${classes.chartContainer}`]: {
 		marginTop: theme.spacing(2),
 		marginLeft: theme.spacing(mar),
 		marginRight: theme.spacing(mar),
@@ -21,14 +26,21 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 		padding: theme.spacing(pad),
-	},
+	}
 }));
 
+let pad = 4,
+	mar = 4;
+if (window.innerWidth <= 800) {
+	pad = 2;
+	mar = 2;
+}
+
 const WriteUp = ({ fade, details, bio }) => {
-	const classes = useStyles();
+
 	return (
-		<>
-			{fade ? (
+        (<Root>
+            {fade ? (
 				<Paper className={classes.chartContainer}>
 					{/* <Typography
 							component="h1"
@@ -230,8 +242,8 @@ const WriteUp = ({ fade, details, bio }) => {
 					}
 				})
 			)}
-		</>
-	);
+        </Root>)
+    );
 };
 
 const check = (line, content) => {

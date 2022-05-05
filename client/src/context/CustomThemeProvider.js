@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider, StyledEngineProvider, adaptV4Theme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 // eslint-disable-next-line no-unused-vars
 export const CustomThemeContext = React.createContext({
@@ -10,7 +10,7 @@ export const CustomThemeContext = React.createContext({
 
 export const light = {
 	palette: {
-		type: 'light',
+		mode: 'light',
 		background: {
 			default: '#fff',
 		},
@@ -24,7 +24,7 @@ export const dark = {
 		),
 	},
 	palette: {
-		type: 'dark',
+		mode: 'dark',
 		primary: {
 			main: '#bb86fc',
 		},
@@ -49,7 +49,7 @@ const CustomThemeProvider = (props) => {
 	const [themeName, _setThemeName] = useState(currentTheme);
 
 	// Retrieve the theme object by theme name
-	const newTheme = createMuiTheme(themeName === 'light' ? light : dark);
+	const newTheme = createTheme(adaptV4Theme(themeName === 'light' ? light : dark));
 
 	// Wrap _setThemeName to store new theme names in localStorage
 	const setThemeName = (name) => {
@@ -63,10 +63,12 @@ const CustomThemeProvider = (props) => {
 	};
 
 	return (
-		<CustomThemeContext.Provider value={contextValue}>
-			<ThemeProvider theme={newTheme}>{children}</ThemeProvider>
+        <CustomThemeContext.Provider value={contextValue}>
+			<StyledEngineProvider injectFirst>
+                <ThemeProvider theme={newTheme}>{children}</ThemeProvider>
+            </StyledEngineProvider>
 		</CustomThemeContext.Provider>
-	);
+    );
 };
 
 export default CustomThemeProvider;

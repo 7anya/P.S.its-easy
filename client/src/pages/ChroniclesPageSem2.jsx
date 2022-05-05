@@ -1,4 +1,5 @@
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import React, { useState, useEffect } from 'react';
 // import data from '../dataset/chronicles_combined_new.json';
 import WriteUp from '../components/WriteUp/WriteUp';
@@ -7,12 +8,28 @@ import fuzz from 'fuzzball';
 import { useLocation } from 'react-router';
 import axios from 'axios';
 
-const useStyles = makeStyles((theme) => ({
-	root: {
+const PREFIX = 'ChroniclesPage';
+
+const classes = {
+    root: `${PREFIX}-root`,
+    paper1: `${PREFIX}-paper1`,
+    paper2: `${PREFIX}-paper2`,
+    formControl: `${PREFIX}-formControl`,
+    chartContainer: `${PREFIX}-chartContainer`,
+    heading: `${PREFIX}-heading`
+};
+
+const Root = styled('div')((
+    {
+        theme
+    }
+) => ({
+    [`&.${classes.root}`]: {
 		flexGrow: 1,
 		height: '90vh',
 	},
-	paper1: {
+
+    [`& .${classes.paper1}`]: {
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -23,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	paper2: {
+
+    [`& .${classes.paper2}`]: {
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -35,11 +53,13 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	formControl: {
+
+    [`& .${classes.formControl}`]: {
 		margin: theme.spacing(5),
 		minWidth: 220,
 	},
-	chartContainer: {
+
+    [`& .${classes.chartContainer}`]: {
 		marginTop: '10px',
 		margin: '50px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
@@ -48,10 +68,11 @@ const useStyles = makeStyles((theme) => ({
 		borderStyle: 'solid',
 		padding: theme.spacing(4),
 	},
-	heading: {
+
+    [`& .${classes.heading}`]: {
 		fontSize: theme.typography.pxToRem(15),
 		fontWeight: theme.typography.fontWeightRegular,
-	},
+	}
 }));
 
 function useQuery() {
@@ -59,7 +80,7 @@ function useQuery() {
 }
 
 function ChroniclesPage() {
-	const classes = useStyles();
+
 	const query = useQuery();
 
 	const [data, setData] = useState({});
@@ -164,7 +185,7 @@ function ChroniclesPage() {
 	}, [search, full]);
 
 	return (
-		<div className={classes.root}>
+        <Root className={classes.root}>
 			{window.innerWidth <= '800' ? (
 				<Grid
 					container
@@ -215,8 +236,8 @@ function ChroniclesPage() {
 					</Grid>
 				</Grid>
 			)}
-		</div>
-	);
+		</Root>
+    );
 }
 
 export default ChroniclesPage;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import SearchComponent from '../components/FilterComponent/FilterComponent';
 import useDimensions from 'react-use-dimensions';
 import { ChartComponent } from '../components/ChartComponents/ChartComponent';
@@ -12,12 +12,23 @@ import ResponseDisplayPaper from '../components/ResponseDisplayPaper/ResponseDis
 import ResponseMobileAccord from '../components/ResponseMobileAccord/ResponseMobileAccord';
 import axios from 'axios';
 
-const useStyles = makeStyles((theme) => ({
-	root: {
+const PREFIX = 'ResponsesPagePS2Sem2';
+
+const classes = {
+	root: `${PREFIX}-root`,
+	paper1: `${PREFIX}-paper1`,
+	paper2: `${PREFIX}-paper2`,
+	formControl: `${PREFIX}-formControl`,
+	chartContainer: `${PREFIX}-chartContainer`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+	[`&.${classes.root}`]: {
 		flexGrow: 1,
 		height: '90vh',
 	},
-	paper1: {
+
+	[`& .${classes.paper1}`]: {
 		padding: theme.spacing(3),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -29,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	paper2: {
+
+	[`& .${classes.paper2}`]: {
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -40,11 +52,13 @@ const useStyles = makeStyles((theme) => ({
 		borderWidth: '2px',
 		borderStyle: 'solid',
 	},
-	formControl: {
+
+	[`& .${classes.formControl}`]: {
 		margin: theme.spacing(5),
 		minWidth: 220,
 	},
-	chartContainer: {
+
+	[`& .${classes.chartContainer}`]: {
 		height: '72vh',
 		marginTop: '10px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
@@ -61,7 +75,6 @@ function useQuery() {
 }
 
 const ResponsesPagePS2Sem2 = () => {
-	const classes = useStyles();
 	const query = useQuery();
 
 	const [data, setData] = useState({});
@@ -76,11 +89,19 @@ const ResponsesPagePS2Sem2 = () => {
 	const [search, setMainSearch] = useState('');
 	const [slider, setMainSlider] = useState([5, 10]);
 	const [measureRef, { width }] = useDimensions();
+	const [stationNames, setStationNames] = useState([]);
 
 	useEffect(() => {
 		axios.get('/api/stationDetailsSem2').then((resp) => {
 			setData(resp.data);
 			console.log(resp.data);
+
+			let statNames = [];
+			for (const key in resp.data) {
+				statNames.push(key);
+			}
+
+			setStationNames(statNames);
 		});
 
 		const searchParam = query.get('search');
@@ -265,7 +286,7 @@ const ResponsesPagePS2Sem2 = () => {
 	const getKeyValue = (obj) => (key) => obj[key];
 
 	return (
-		<div className={classes.root}>
+		<Root className={classes.root}>
 			{window.innerWidth <= '800' ? (
 				<Grid container direction="row" spacing={0}>
 					<Grid
@@ -347,12 +368,13 @@ const ResponsesPagePS2Sem2 = () => {
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
 								type="PS2Sem2"
+								stationNames={stationNames}
 							/>
 						</Paper>
 					</Grid>
 				</Grid>
 			)}
-		</div>
+		</Root>
 	);
 };
 

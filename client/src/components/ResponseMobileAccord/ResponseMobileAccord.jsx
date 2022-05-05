@@ -5,10 +5,10 @@ import {
 	Button,
 	Link,
 	Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const ResponseMobileAccord = ({ xvalues, allStationInfo, index, type }) => {
 	return (

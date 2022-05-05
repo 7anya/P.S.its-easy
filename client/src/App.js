@@ -19,25 +19,12 @@ import PS1ResponsesPage from './pages/PS1ResponsesPage';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ProjectBankPage from './pages/ProjectBankPage';
 import AllotmentForm from './pages/AllotmentForm';
-import {
-	Backdrop,
-	CircularProgress,
-	Fade,
-	makeStyles,
-} from '@material-ui/core';
+import { Backdrop, CircularProgress, Fade } from '@mui/material';
 import PS2FormResponses from './pages/PS2FormResponses';
 import AllotmentFormSem2 from './pages/AllotmentFormSem2';
 import PS2FormResponsesSem2 from './pages/PS2FormResponsesSem2';
 
-const useStyles = makeStyles((theme) => ({
-	backdrop: {
-		zIndex: theme.zIndex.drawer + 1,
-		color: '#121212',
-	},
-}));
-
 const App = () => {
-	const classes = useStyles();
 	const [user, setUser] = useState(null);
 	const [loading, setLoading] = useState(true);
 
@@ -56,7 +43,7 @@ const App = () => {
 	return (
 		<Scrollbars style={{ width: '100vw', height: '100vh' }}>
 			<Fade in={loading}>
-				<Backdrop className={classes.backdrop} open={loading}>
+				<Backdrop sx={{ zIndex: 10, color: '#121212' }} open={loading}>
 					<CircularProgress color="primary" />
 				</Backdrop>
 			</Fade>
