@@ -4,6 +4,7 @@ import {
 	AccordionSummary,
 	Badge,
 	Button,
+	CircularProgress,
 	Grid,
 	Link,
 	Pagination,
@@ -255,14 +256,17 @@ const ProjectBankPage = () => {
 									alignItems="center"
 									style={{ height: '100%' }}
 								>
-									<Typography
-										component="h5"
-										variant="h5"
-										align="center"
-										color="textSecondary"
-									>
-										Sorry, No Results Were Found :(
-									</Typography>
+									{isLoading && <CircularProgress />}
+									{!isLoading && (
+										<Typography
+											component="h5"
+											variant="h5"
+											align="center"
+											color="textSecondary"
+										>
+											Sorry, No Results Were Found :(
+										</Typography>
+									)}
 								</Grid>
 							)}
 							{dataPoints.length > 0 &&
