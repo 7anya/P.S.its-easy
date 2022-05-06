@@ -10,7 +10,13 @@ import React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const ResponseMobileAccord = ({ xvalues, allStationInfo, index, type }) => {
+const ResponseMobileAccord = ({
+	xvalues,
+	allStationInfo,
+	index,
+	type,
+	page,
+}) => {
 	return (
 		<Scrollbars
 			style={{
@@ -28,7 +34,7 @@ const ResponseMobileAccord = ({ xvalues, allStationInfo, index, type }) => {
 				/>
 			)}
 		>
-			{xvalues.slice(index.start, index.end).map((val) => (
+			{xvalues.slice((page - 1) * 15, page * 15).map((val) => (
 				<Accordion>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}

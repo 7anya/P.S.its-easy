@@ -88,6 +88,8 @@ function ChroniclesPagePS1() {
 	const [isNextDisabled, setIsNextDisabled] = useState(true);
 	const [isPrevDisabled, setIsPrevDisabled] = useState(true);
 	const [student, setStudent] = useState({ name: '', id: '', writeUp: '' });
+	const [page, setPage] = useState(1);
+	const [pageCount, setPageCount] = useState(1);
 
 	const [fade, setFade] = useState(true);
 	const [details, setDetails] = useState({ name: '', id: '' });
@@ -140,6 +142,8 @@ function ChroniclesPagePS1() {
 			setIsPrevDisabled(true);
 			setIsNextDisabled(true);
 		}
+		setPageCount(Math.ceil(newArray.length / 15));
+		setPage(1);
 		setFull(newArray);
 	}, [data]);
 
@@ -182,6 +186,8 @@ function ChroniclesPagePS1() {
 			setIsPrevDisabled(true);
 			setIsNextDisabled(true);
 		}
+		setPageCount(Math.ceil(newStations.length / 15));
+		setPage(1);
 	}, [search, full]);
 
 	return (
@@ -208,6 +214,9 @@ function ChroniclesPagePS1() {
 							isNextDisabled={isNextDisabled}
 							type="PS1"
 							isLoading={isLoading}
+							page={page}
+							setPage={setPage}
+							pageCount={pageCount}
 						/>
 					</Grid>
 					<Grid item xs={12}>
@@ -234,6 +243,9 @@ function ChroniclesPagePS1() {
 							isNextDisabled={isNextDisabled}
 							type="PS1"
 							isLoading={isLoading}
+							page={page}
+							setPage={setPage}
+							pageCount={pageCount}
 						/>
 					</Grid>
 				</Grid>

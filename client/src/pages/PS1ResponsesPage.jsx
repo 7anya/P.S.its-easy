@@ -11,6 +11,7 @@ import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesBu
 import ResponseDisplayPaper from '../components/ResponseDisplayPaper/ResponseDisplayPaper';
 import ResponseMobileAccord from '../components/ResponseMobileAccord/ResponseMobileAccord';
 import axios from 'axios';
+import { Pagination } from '@mui/material';
 
 const PREFIX = 'PS1ResponsesPage';
 
@@ -90,6 +91,8 @@ const PS1ResponsesPage = () => {
 	const [slider, setMainSlider] = useState([5, 10]);
 	const [measureRef, { width }] = useDimensions();
 	const [stationNames, setStationNames] = useState([]);
+	const [page, setPage] = useState(1);
+	const [pageCount, setPageCount] = useState(1);
 
 	useEffect(() => {
 		axios.get('/api/stationDetailsPS1').then((resp) => {
@@ -255,6 +258,8 @@ const PS1ResponsesPage = () => {
 			setIsPrevDisabled(true);
 			setIsNextDisabled(true);
 		}
+		setPageCount(Math.ceil(points.length / 15));
+		setPage(1);
 		// console.log(points.slice(1, 10));
 		setDataPoints(points);
 		setXvalues(x);
@@ -289,6 +294,10 @@ const PS1ResponsesPage = () => {
 	};
 	const getKeyValue = (obj) => (key) => obj[key];
 
+	const handleChange = (event, value) => {
+		setPage(value);
+	};
+
 	return (
 		<Root className={classes.root}>
 			{window.innerWidth <= '800' ? (
@@ -309,17 +318,30 @@ const PS1ResponsesPage = () => {
 							index={index}
 							allStationInfo={allStationInfo}
 							type="PS1"
+							page={page}
 						/>
 					</Grid>
 					<Grid item xs={12}>
-						<ResponsesButtonGroup
+						<Grid
+							container
+							justifyContent="center"
+							sx={{ my: '20px' }}
+						>
+							<Pagination
+								count={pageCount}
+								page={page}
+								onChange={handleChange}
+								color="secondary"
+							/>
+						</Grid>
+						{/* <ResponsesButtonGroup
 							isPrevDisabled={isPrevDisabled}
 							handlePrevious={handlePrevious}
 							index={index}
 							dataPoints={dataPoints}
 							isNextDisabled={isNextDisabled}
 							handleNext={handleNext}
-						/>
+						/> */}
 					</Grid>
 					<Grid item xs={12}>
 						<Paper elevation={10} className={classes.paper2}>
@@ -328,6 +350,7 @@ const PS1ResponsesPage = () => {
 								setMainChoice={setMainChoice}
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
+								stationNames={stationNames}
 							/>
 						</Paper>
 					</Grid>
@@ -348,15 +371,28 @@ const PS1ResponsesPage = () => {
 							setStationDetails={setStationDetails}
 							allStationInfo={allStationInfo}
 							getKeyValue={getKeyValue}
+							page={page}
 						/>
-						<ResponsesButtonGroup
+						<Grid
+							container
+							justifyContent="center"
+							sx={{ mt: '40px' }}
+						>
+							<Pagination
+								count={pageCount}
+								page={page}
+								onChange={handleChange}
+								color="secondary"
+							/>
+						</Grid>
+						{/* <ResponsesButtonGroup
 							isPrevDisabled={isPrevDisabled}
 							handlePrevious={handlePrevious}
 							index={index}
 							dataPoints={dataPoints}
 							isNextDisabled={isNextDisabled}
 							handleNext={handleNext}
-						/>
+						/> */}
 					</Grid>
 
 					<Grid item xs={4}>

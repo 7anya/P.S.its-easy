@@ -11,7 +11,7 @@ import Link from '@mui/material/Link';
 import { Button } from '@mui/material';
 import LogOut from '@mui/icons-material/ExitToApp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import { useHistory } from 'react-router-dom';
 const PREFIX = 'Navbar';
 
 const classes = {
@@ -68,6 +68,7 @@ const Root = styled('div')(({ theme }) => ({
 }));
 
 function Navbar({ user }) {
+	let history = useHistory();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -178,77 +179,117 @@ function Navbar({ user }) {
 			{user ? (
 				<>
 					<MenuItem>
-						<Link href="/ps2/sem1/form" underline="none">
-							<Button color="secondary">PS2'21 Sem-1 Form</Button>
-						</Link>
+						<Button
+							color="secondary"
+							onClick={() => history.push('/ps2/sem1/form')}
+							fullWidth
+						>
+							PS2'21 Sem-1 Form
+						</Button>
 					</MenuItem>
 					<MenuItem>
-						<Link href="/ps2/sem1/formResponses" underline="none">
-							<Button color="secondary">
-								PS2'21 Sem-1 Responses
+						<Button
+							color="secondary"
+							onClick={() =>
+								history.push('/ps2/sem1/formResponses')
+							}
+							fullWidth
+						>
+							PS2'21 Sem-1 Responses
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="secondary"
+							onClick={() => history.push('/ps2/sem2/form')}
+							fullWidth
+						>
+							PS2'22 Sem-2 Form
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="secondary"
+							onClick={() =>
+								history.push('/ps2/sem2/formResponses')
+							}
+							fullWidth
+						>
+							PS2'22 Sem-2 Responses
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="secondary"
+							onClick={() => history.push('/projectBank')}
+							fullWidth
+						>
+							NEW | Project Bank(PS-1) '22
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="primary"
+							onClick={() => history.push('/ps1/responses')}
+							fullWidth
+						>
+							PS-1 Responses
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="primary"
+							onClick={() => history.push('/ps1/chronicles')}
+							fullWidth
+						>
+							PS-1 Chronicles
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="primary"
+							onClick={() => history.push('/ps2/sem1/responses')}
+							fullWidth
+						>
+							PS-2 Sem-1 Responses
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="primary"
+							onClick={() => history.push('/ps2/sem1/chronicles')}
+							fullWidth
+						>
+							PS-2 Sem-1 Chronicles
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="primary"
+							onClick={() => history.push('/ps2/sem2/responses')}
+							fullWidth
+						>
+							PS-2 Sem-2 Responses
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Button
+							color="primary"
+							onClick={() => history.push('/ps2/sem2/chronicles')}
+							fullWidth
+						>
+							PS-2 Sem-2 Chronicles
+						</Button>
+					</MenuItem>
+					<MenuItem>
+						<Link
+							href={serverURL + 'api/logout'}
+							underline="none"
+							sx={{ width: '100%' }}
+						>
+							<Button color="inherit" fullWidth>
+								Logout
 							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps2/sem2/form" underline="none">
-							<Button color="secondary">PS2'22 Sem-2 Form</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps2/sem2/formResponses" underline="none">
-							<Button color="secondary">
-								PS2'22 Sem-2 Responses
-							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/projectBank" underline="none">
-							<Button color="secondary">
-								NEW | Project Bank(PS-1) '22
-							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps1/responses" underline="none">
-							<Button color="inherit">PS-1 Responses</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps1/responses" underline="none">
-							<Button color="inherit">PS-1 Chronicles</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps2/sem1/responses" underline="none">
-							<Button color="inherit">
-								PS-2 Sem-1 Responses
-							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps2/sem1/chronicles" underline="none">
-							<Button color="inherit">
-								PS-2 Sem-1 Chronicles
-							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps2/sem2/responses" underline="none">
-							<Button color="inherit">
-								PS-2 Sem-2 Responses
-							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href="/ps2/sem2/chronicles" underline="none">
-							<Button color="inherit">
-								PS-2 Sem-2 Chronicles
-							</Button>
-						</Link>
-					</MenuItem>
-					<MenuItem>
-						<Link href={serverURL + 'api/logout'} underline="none">
-							<Button color="inherit">Logout</Button>
 						</Link>
 					</MenuItem>
 				</>
@@ -327,20 +368,26 @@ function Navbar({ user }) {
 										}}
 									>
 										<MenuItem onClick={handleClose4}>
-											<Link
-												href="/ps2/sem1/form"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem1/form'
+													)
+												}
 											>
 												PS-2 Sem-1 '21 Form
-											</Link>
+											</Button>
 										</MenuItem>
 										<MenuItem onClick={handleClose4}>
-											<Link
-												href="/ps2/sem1/formResponses"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem1/formResponses'
+													)
+												}
 											>
 												PS-2 Sem-1 '21 Responses
-											</Link>
+											</Button>
 										</MenuItem>
 									</Menu>
 								</div>
@@ -374,28 +421,35 @@ function Navbar({ user }) {
 										}}
 									>
 										<MenuItem onClick={handleClose5}>
-											<Link
-												href="/ps2/sem2/form"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem2/form'
+													)
+												}
 											>
 												PS-2 Sem-2 '22 Form
-											</Link>
+											</Button>
 										</MenuItem>
 										<MenuItem onClick={handleClose5}>
-											<Link
-												href="/ps2/sem2/formResponses"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem2/formResponses'
+													)
+												}
 											>
 												PS-2 Sem-2 '22 Responses
-											</Link>
+											</Button>
 										</MenuItem>
 									</Menu>
 								</div>
-								<Link href="/projectBank" underline="none">
-									<Button color="secondary">
-										New | Project Bank(PS-1) '22
-									</Button>
-								</Link>
+								<Button
+									color="secondary"
+									onClick={() => history.push('/projectBank')}
+								>
+									New | Project Bank(PS-1) '22
+								</Button>
 								<div>
 									<Button
 										id="demo-positioned-button"
@@ -426,20 +480,26 @@ function Navbar({ user }) {
 										}}
 									>
 										<MenuItem onClick={handleClose1}>
-											<Link
-												href="/ps1/responses"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps1/responses'
+													)
+												}
 											>
 												PS-1 Responses
-											</Link>
+											</Button>
 										</MenuItem>
 										<MenuItem onClick={handleClose1}>
-											<Link
-												href="/ps1/chronicles"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps1/chronicles'
+													)
+												}
 											>
 												PS-1 Chronicles
-											</Link>
+											</Button>
 										</MenuItem>
 									</Menu>
 								</div>
@@ -473,20 +533,26 @@ function Navbar({ user }) {
 										}}
 									>
 										<MenuItem onClick={handleClose2}>
-											<Link
-												href="/ps2/sem1/responses"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem1/responses'
+													)
+												}
 											>
 												PS-2 Sem-1 Responses
-											</Link>
+											</Button>
 										</MenuItem>
 										<MenuItem onClick={handleClose2}>
-											<Link
-												href="/ps2/sem1/chronicles"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem1/chronicles'
+													)
+												}
 											>
 												PS-2 Sem-1 Chronicles
-											</Link>
+											</Button>
 										</MenuItem>
 									</Menu>
 								</div>
@@ -520,20 +586,26 @@ function Navbar({ user }) {
 										}}
 									>
 										<MenuItem onClick={handleClose3}>
-											<Link
-												href="/ps2/sem2/responses"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem2/responses'
+													)
+												}
 											>
 												PS-2 Sem-2 Responses
-											</Link>
+											</Button>
 										</MenuItem>
 										<MenuItem onClick={handleClose3}>
-											<Link
-												href="/ps2/sem2/chronicles"
-												underline="none"
+											<Button
+												onClick={() =>
+													history.push(
+														'/ps2/sem2/chronicles'
+													)
+												}
 											>
 												PS-2 Sem-2 Chronicles
-											</Link>
+											</Button>
 										</MenuItem>
 									</Menu>
 								</div>

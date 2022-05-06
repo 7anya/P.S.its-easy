@@ -7,29 +7,26 @@ import StationSelect from '../components/StationSelect/StationSelect';
 import fuzz from 'fuzzball';
 import { useLocation } from 'react-router';
 import axios from 'axios';
+import { useQuery } from 'react-query';
 
 const PREFIX = 'ChroniclesPage';
 
 const classes = {
-    root: `${PREFIX}-root`,
-    paper1: `${PREFIX}-paper1`,
-    paper2: `${PREFIX}-paper2`,
-    formControl: `${PREFIX}-formControl`,
-    chartContainer: `${PREFIX}-chartContainer`,
-    heading: `${PREFIX}-heading`
+	root: `${PREFIX}-root`,
+	paper1: `${PREFIX}-paper1`,
+	paper2: `${PREFIX}-paper2`,
+	formControl: `${PREFIX}-formControl`,
+	chartContainer: `${PREFIX}-chartContainer`,
+	heading: `${PREFIX}-heading`,
 };
 
-const Root = styled('div')((
-    {
-        theme
-    }
-) => ({
-    [`&.${classes.root}`]: {
+const Root = styled('div')(({ theme }) => ({
+	[`&.${classes.root}`]: {
 		flexGrow: 1,
 		height: '90vh',
 	},
 
-    [`& .${classes.paper1}`]: {
+	[`& .${classes.paper1}`]: {
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -41,7 +38,7 @@ const Root = styled('div')((
 		borderStyle: 'solid',
 	},
 
-    [`& .${classes.paper2}`]: {
+	[`& .${classes.paper2}`]: {
 		padding: theme.spacing(4),
 		textAlign: 'center',
 		color: theme.palette.text.primary,
@@ -54,12 +51,12 @@ const Root = styled('div')((
 		borderStyle: 'solid',
 	},
 
-    [`& .${classes.formControl}`]: {
+	[`& .${classes.formControl}`]: {
 		margin: theme.spacing(5),
 		minWidth: 220,
 	},
 
-    [`& .${classes.chartContainer}`]: {
+	[`& .${classes.chartContainer}`]: {
 		marginTop: '10px',
 		margin: '50px',
 		backgroundColor: 'rgba(39, 39, 39, 0.7)',
@@ -69,21 +66,19 @@ const Root = styled('div')((
 		padding: theme.spacing(4),
 	},
 
-    [`& .${classes.heading}`]: {
+	[`& .${classes.heading}`]: {
 		fontSize: theme.typography.pxToRem(15),
 		fontWeight: theme.typography.fontWeightRegular,
-	}
+	},
 }));
 
-function useQuery() {
+function useParamQuery() {
 	return new URLSearchParams(useLocation().search);
 }
 
 function ChroniclesPage() {
+	const query = useParamQuery();
 
-	const query = useQuery();
-
-	const [data, setData] = useState({});
 	const [stations, setStations] = useState([]);
 	const [full, setFull] = useState([]);
 	const [bio, setBio] = useState([]);
@@ -96,10 +91,17 @@ function ChroniclesPage() {
 	const [fade, setFade] = useState(true);
 	const [details, setDetails] = useState({ name: '', id: '' });
 
+	const [page, setPage] = useState(1);
+	const [pageCount, setPageCount] = useState(1);
+
+	const { isLoading, error, data } = useQuery('PS2_Sem1_Chronicles', () =>
+		fetch('/api/chronicles').then((res) => res.json())
+	);
+
 	useEffect(() => {
-		axios.get('/api/chronicles').then((resp) => {
-			setData(resp.data);
-		});
+		// axios.get('/api/chronicles').then((resp) => {
+		// 	setData(resp.data);
+		// });
 
 		const searchParam = query.get('search');
 		if (searchParam) {
@@ -122,7 +124,7 @@ function ChroniclesPage() {
 	}, [student]);
 
 	useEffect(() => {
-		//console.log(data);
+		// console.log(data, error);
 		const newArray = [];
 		for (const property in data) {
 			newArray.push({
@@ -141,6 +143,8 @@ function ChroniclesPage() {
 			setIsNextDisabled(true);
 		}
 		setFull(newArray);
+		setPageCount(Math.ceil(newArray.length / 15));
+		setPage(1);
 	}, [data]);
 
 	useEffect(() => {
@@ -182,10 +186,12 @@ function ChroniclesPage() {
 			setIsPrevDisabled(true);
 			setIsNextDisabled(true);
 		}
+		setPageCount(Math.ceil(newStations.length / 15));
+		setPage(1);
 	}, [search, full]);
 
 	return (
-        <Root className={classes.root}>
+		<Root className={classes.root}>
 			{window.innerWidth <= '800' ? (
 				<Grid
 					container
@@ -207,6 +213,10 @@ function ChroniclesPage() {
 							isPrevDisabled={isPrevDisabled}
 							isNextDisabled={isNextDisabled}
 							type="PS2Sem1"
+							page={page}
+							setPage={setPage}
+							pageCount={pageCount}
+							isLoading={isLoading}
 						/>
 					</Grid>
 					<Grid item xs={12}>
@@ -232,12 +242,16 @@ function ChroniclesPage() {
 							isPrevDisabled={isPrevDisabled}
 							isNextDisabled={isNextDisabled}
 							type="PS2Sem1"
+							isLoading={isLoading}
+							page={page}
+							setPage={setPage}
+							pageCount={pageCount}
 						/>
 					</Grid>
 				</Grid>
 			)}
 		</Root>
-    );
+	);
 }
 
 export default ChroniclesPage;

@@ -11,6 +11,7 @@ import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesBu
 import ResponseDisplayPaper from '../components/ResponseDisplayPaper/ResponseDisplayPaper';
 import ResponseMobileAccord from '../components/ResponseMobileAccord/ResponseMobileAccord';
 import axios from 'axios';
+import { Pagination } from '@mui/material';
 
 const PREFIX = 'ResponsesPage';
 
@@ -90,6 +91,8 @@ const ResponsesPage = () => {
 	const [slider, setMainSlider] = useState([5, 10]);
 	const [measureRef, { width }] = useDimensions();
 	const [stationNames, setStationNames] = useState([]);
+	const [page, setPage] = useState(1);
+	const [pageCount, setPageCount] = useState(1);
 
 	useEffect(() => {
 		axios.get('/api/stationDetailsSem1').then((resp) => {
@@ -247,6 +250,8 @@ const ResponsesPage = () => {
 			setIsNextDisabled(true);
 		}
 		// console.log(points.slice(1, 10));
+		setPageCount(Math.ceil(points.length / 15));
+		setPage(1);
 		setDataPoints(points);
 		setXvalues(x);
 		setAllStationInfo(newInfo);
@@ -280,6 +285,10 @@ const ResponsesPage = () => {
 	};
 	const getKeyValue = (obj) => (key) => obj[key];
 
+	const handleChange = (event, value) => {
+		setPage(value);
+	};
+
 	return (
 		<Root className={classes.root}>
 			{window.innerWidth <= '800' ? (
@@ -299,18 +308,31 @@ const ResponsesPage = () => {
 							xvalues={xvalues}
 							index={index}
 							allStationInfo={allStationInfo}
+							page={page}
 							type="PS2Sem1"
 						/>
 					</Grid>
 					<Grid item xs={12}>
-						<ResponsesButtonGroup
+						<Grid
+							container
+							justifyContent="center"
+							sx={{ my: '20px' }}
+						>
+							<Pagination
+								count={pageCount}
+								page={page}
+								onChange={handleChange}
+								color="secondary"
+							/>
+						</Grid>
+						{/* <ResponsesButtonGroup
 							isPrevDisabled={isPrevDisabled}
 							handlePrevious={handlePrevious}
 							index={index}
 							dataPoints={dataPoints}
 							isNextDisabled={isNextDisabled}
 							handleNext={handleNext}
-						/>
+						/> */}
 					</Grid>
 					<Grid item xs={12}>
 						<Paper elevation={10} className={classes.paper2}>
@@ -320,6 +342,7 @@ const ResponsesPage = () => {
 								setMainSearch={setMainSearch}
 								setMainSlider={setMainSlider}
 								type="PS2Sem1"
+								stationNames={stationNames}
 							/>
 						</Paper>
 					</Grid>
@@ -340,15 +363,28 @@ const ResponsesPage = () => {
 							setStationDetails={setStationDetails}
 							allStationInfo={allStationInfo}
 							getKeyValue={getKeyValue}
+							page={page}
 						/>
-						<ResponsesButtonGroup
+						<Grid
+							container
+							justifyContent="center"
+							sx={{ mt: '40px' }}
+						>
+							<Pagination
+								count={pageCount}
+								page={page}
+								onChange={handleChange}
+								color="secondary"
+							/>
+						</Grid>
+						{/* <ResponsesButtonGroup
 							isPrevDisabled={isPrevDisabled}
 							handlePrevious={handlePrevious}
 							index={index}
 							dataPoints={dataPoints}
 							isNextDisabled={isNextDisabled}
 							handleNext={handleNext}
-						/>
+						/> */}
 					</Grid>
 
 					<Grid item xs={4}>

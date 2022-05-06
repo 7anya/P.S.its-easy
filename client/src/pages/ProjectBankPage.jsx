@@ -6,6 +6,7 @@ import {
 	Button,
 	Grid,
 	Link,
+	Pagination,
 	Paper,
 	Typography,
 } from '@mui/material';
@@ -19,6 +20,7 @@ import ResponsesButtonGroup from '../components/ResponsesButtonGroup/ResponsesBu
 import ButtonSelect from '../components/StationSelect/ButtonSelect';
 import { CSVLink, CSVDownload } from 'react-csv';
 import axios from 'axios';
+import { useQuery } from 'react-query';
 
 const PREFIX = 'ProjectBankPage';
 
@@ -115,7 +117,6 @@ const Root = styled('div')(({ theme }) => ({
 //const data = require('../dataset/ps2_sem1_2020_pref.json');
 
 const ProjectBankPage = () => {
-	const [data, setData] = useState([]);
 	const [dataPoints, setDataPoints] = useState([]);
 	const [index, setIndex] = useState({ start: 0, end: 0 });
 	const [isNextDisabled, setIsNextDisabled] = useState(true);
@@ -124,53 +125,52 @@ const ProjectBankPage = () => {
 	const [search, setMainSearch] = useState('');
 	const [slider, setMainSlider] = useState([0, 200000]);
 	const [branch, setMainBranch] = useState('All');
+	const [page, setPage] = useState(1);
+	const [pageCount, setPageCount] = useState(1);
+
+	const { isLoading, error, data } = useQuery('ProjectBank', () =>
+		fetch('/api/problembank').then((res) => res.json())
+	);
 
 	useEffect(() => {
-		axios.get('/api/problembank').then((res) => {
-			setData(res.data);
-			// let pref = {};
-			// res.data.forEach((d) => {
-			// 	pref[d['Industry Domain']] = {};
-			// });
-			// console.log(pref);
-		});
-	}, []);
-
-	useEffect(() => {
-		let newPoints = [];
-		data.forEach((d) => {
-			if (
-				d['Company Name']
-					.toLowerCase()
-					.includes(search.toLowerCase()) ||
-				d['Location'].toLowerCase().includes(search.toLowerCase())
-			) {
-				if (choice === 'All' || d['Industry Domain'] === choice) {
-					if (
-						d['Stipend (UG)'] >= slider[0] &&
-						d['Stipend (UG)'] <= slider[1]
-					) {
+		if (data) {
+			let newPoints = [];
+			data.forEach((d) => {
+				if (
+					d['Company Name']
+						.toLowerCase()
+						.includes(search.toLowerCase()) ||
+					d['Location'].toLowerCase().includes(search.toLowerCase())
+				) {
+					if (choice === 'All' || d['Industry Domain'] === choice) {
 						if (
-							branch === 'All' ||
-							d['Preferred Branches'].includes(branch)
+							d['Stipend (UG)'] >= slider[0] &&
+							d['Stipend (UG)'] <= slider[1]
 						) {
-							newPoints.push(d);
+							if (
+								branch === 'All' ||
+								d['Preferred Branches'].includes(branch)
+							) {
+								newPoints.push(d);
+							}
 						}
 					}
 				}
+			});
+			if (newPoints.length > 15) {
+				setIndex({ start: 0, end: 15 });
+				setIsNextDisabled(false);
+				setIsPrevDisabled(true);
+			} else {
+				setIndex({ start: 0, end: newPoints.length });
+				setIsPrevDisabled(true);
+				setIsNextDisabled(true);
 			}
-		});
-		if (newPoints.length > 15) {
-			setIndex({ start: 0, end: 15 });
-			setIsNextDisabled(false);
-			setIsPrevDisabled(true);
-		} else {
-			setIndex({ start: 0, end: newPoints.length });
-			setIsPrevDisabled(true);
-			setIsNextDisabled(true);
+			setDataPoints(newPoints);
+			setPageCount(Math.ceil(newPoints.length / 15));
+			setPage(1);
+			console.log(newPoints);
 		}
-		setDataPoints(newPoints);
-		console.log(newPoints);
 	}, [search, choice, slider, data, branch]);
 
 	const handleNext = () => {
@@ -195,6 +195,10 @@ const ProjectBankPage = () => {
 			setIsPrevDisabled(true);
 			setIsNextDisabled(false);
 		}
+	};
+
+	const handleChange = (event, value) => {
+		setPage(value);
 	};
 
 	return (
@@ -263,7 +267,7 @@ const ProjectBankPage = () => {
 							)}
 							{dataPoints.length > 0 &&
 								dataPoints
-									.slice(index.start, index.end)
+									.slice((page - 1) * 15, page * 15)
 									.map((station) => (
 										<Accordion
 											style={{
@@ -435,16 +439,30 @@ const ProjectBankPage = () => {
 					</Grid>
 					<Grid item sm={4} xs={12}>
 						<Paper elevation={10} className={classes.paper2}>
-							<FilterComponentProjectBank
-								mainSearch={search}
-								setMainChoice={setMainChoice}
-								setMainSearch={setMainSearch}
-								setMainSlider={setMainSlider}
-								setMainBranch={setMainBranch}
-								stationNames={data}
-							/>
+							{data && (
+								<FilterComponentProjectBank
+									mainSearch={search}
+									setMainChoice={setMainChoice}
+									setMainSearch={setMainSearch}
+									setMainSlider={setMainSlider}
+									setMainBranch={setMainBranch}
+									stationNames={data}
+								/>
+							)}
 						</Paper>
-						<div style={{ marginTop: '20px' }}>
+						<Grid
+							container
+							justifyContent="center"
+							sx={{ mt: '30px' }}
+						>
+							<Pagination
+								count={pageCount}
+								page={page}
+								onChange={handleChange}
+								color="secondary"
+							/>
+						</Grid>
+						{/* <div style={{ marginTop: '20px' }}>
 							<ButtonSelect
 								isPrevDisabled={isPrevDisabled}
 								handlePrevious={handlePrevious}
@@ -453,29 +471,33 @@ const ProjectBankPage = () => {
 								stations={dataPoints}
 								index={index}
 							/>
-						</div>
+						</div> */}
+
 						<Grid
 							container
 							justifyContent="center"
 							alignItems="center"
 							className={classes.down}
 						>
-							<CSVLink
-								data={data}
-								style={{
-									textDecoration: 'none',
-									width: '100%',
-								}}
-								filename={'StationDetails.csv'}
-							>
-								<Button
-									variant="outlined"
-									color="primary"
-									fullWidth
+							{data && (
+								<CSVLink
+									data={data}
+									style={{
+										textDecoration: 'none',
+										width: '100%',
+									}}
+									filename={'StationDetails.csv'}
 								>
-									Download CSV
-								</Button>
-							</CSVLink>
+									<Button
+										variant="outlined"
+										color="primary"
+										fullWidth
+									>
+										Download CSV
+									</Button>
+								</CSVLink>
+							)}
+
 							<Typography
 								component="p"
 								variant="body1"

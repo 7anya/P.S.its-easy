@@ -4,6 +4,7 @@ import {
 	TextField,
 	Typography,
 	Autocomplete,
+	Pagination,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import React from 'react';
@@ -55,6 +56,9 @@ const StationSelect = ({
 	isNextDisabled,
 	type,
 	isLoading = false,
+	page,
+	setPage,
+	pageCount,
 }) => {
 	const [fadeAccordion, setFadeAccordion] = React.useState(true);
 	const [expandedTop, setExpandedTop] = React.useState(false);
@@ -119,6 +123,11 @@ const StationSelect = ({
 
 		// }, 0);
 	};
+
+	const handleChange = (event, value) => {
+		setPage(value);
+	};
+
 	return (
 		<Root>
 			<Paper elevation={3} className={classes.paper2}>
@@ -160,7 +169,7 @@ const StationSelect = ({
 
 					{fadeAccordion &&
 						stations
-							.slice(index.start, index.end)
+							.slice((page - 1) * 15, page * 15)
 							.map((station) => {
 								return (
 									<BigAccordion
@@ -199,14 +208,23 @@ const StationSelect = ({
 					)}
 				</Scrollbars>
 			</Paper>
-			<ButtonSelect
+			<Grid container justifyContent="center">
+				<Pagination
+					count={pageCount}
+					page={page}
+					onChange={handleChange}
+					color="primary"
+				/>
+			</Grid>
+
+			{/* <ButtonSelect
 				isPrevDisabled={isPrevDisabled}
 				handlePrevious={handlePrevious}
 				isNextDisabled={isNextDisabled}
 				handleNext={handleNext}
 				stations={stations}
 				index={index}
-			/>
+			/> */}
 		</Root>
 	);
 };

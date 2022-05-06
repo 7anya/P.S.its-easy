@@ -16,6 +16,7 @@ export const ChartComponent = ({
 	setStationDetails,
 	allStationInfo,
 	getKeyValue,
+	page,
 }) => {
 	return (
 		<>
@@ -58,7 +59,7 @@ export const ChartComponent = ({
 							fontStyle: 'italic',
 						},
 					}}
-					tickValues={xvalues.slice(index.start, index.end)}
+					tickValues={xvalues.slice((page - 1) * 15, page * 15)}
 					theme={VictoryTheme.material}
 				/>
 				<VictoryAxis
@@ -89,7 +90,7 @@ export const ChartComponent = ({
 					}}
 					boxWidth={10}
 					whiskerWidth={6}
-					data={dataPoints.slice(index.start, index.end)}
+					data={dataPoints.slice((page - 1) * 15, page * 15)}
 					style={{
 						min: { stroke: '#ff6363', strokeWidth: 2.5 },
 						max: { stroke: '#ff6363', strokeWidth: 2.5 },
