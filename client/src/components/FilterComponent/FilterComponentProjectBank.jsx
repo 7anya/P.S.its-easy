@@ -10,6 +10,8 @@ import {
 	Typography,
 	Autocomplete,
 	TextField,
+	FormControlLabel,
+	Switch,
 } from '@mui/material';
 
 const PREFIX = 'FilterComponentProjectBank';
@@ -39,11 +41,13 @@ function FilterComponentProjectBank({
 	mainSearch,
 	setMainBranch,
 	stationNames,
+	setSortByStipend,
 }) {
 	const [search, setSearch] = useState('');
 	const [slider, setSlider] = useState([0, 200000]);
 	const [choice, setChoice] = useState('All');
 	const [branch, setBranch] = useState('All');
+	const [localCheck, setLocalCheck] = useState(true);
 
 	useEffect(() => {
 		setSearch(mainSearch);
@@ -58,6 +62,11 @@ function FilterComponentProjectBank({
 		setMainSearch(search);
 		setMainSlider(slider);
 		setMainBranch(branch);
+		setSortByStipend(localCheck);
+	};
+
+	const handleCheckChange = (event) => {
+		setLocalCheck(event.target.checked);
 	};
 
 	useEffect(() => {
@@ -158,14 +167,14 @@ function FilterComponentProjectBank({
 					<MenuItem value={'-'}>Not Specified</MenuItem>
 				</Select>
 			</FormControl>
-			{/* <Typography
+			<Typography
 				id="range-slider"
 				gutterBottom
 				className={classes.range}
 			>
 				Stipend Range
-			</Typography> */}
-			{/* <Slider
+			</Typography>
+			<Slider
 				value={slider}
 				onChange={(event, newValue) => setSlider(newValue)}
 				valueLabelDisplay="auto"
@@ -175,13 +184,26 @@ function FilterComponentProjectBank({
 				min={0}
 				max={200000}
 				step={1000}
-			/> */}
+			/>
+			<FormControlLabel
+				fullWidth
+				control={
+					<Switch
+						fullWidth
+						checked={localCheck}
+						onChange={handleCheckChange}
+						inputProps={{ 'aria-label': 'controlled' }}
+					/>
+				}
+				label="Sort By Stipend (Desc)"
+			/>
 			<Button
 				id="subBtn"
 				onClick={handleSubmit}
 				variant="outlined"
 				color="primary"
 				sx={{ mt: '20px' }}
+				fullWidth
 			>
 				Search
 			</Button>

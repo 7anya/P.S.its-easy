@@ -224,7 +224,7 @@ function Navbar({ user }) {
 							onClick={() => history.push('/projectBank')}
 							fullWidth
 						>
-							NEW | Project Bank(PS-1) '22
+							NEW | Project Bank(PS-2) Sem-1 '22
 						</Button>
 					</MenuItem>
 					<MenuItem>
@@ -448,7 +448,7 @@ function Navbar({ user }) {
 									color="secondary"
 									onClick={() => history.push('/projectBank')}
 								>
-									New | Project Bank(PS-1) '22
+									New | Project Bank(PS-2) Sem-1 '22
 								</Button>
 								<div>
 									<Button

@@ -96,7 +96,7 @@ const Root = styled('div')(({ theme }) => ({
 
 	[`& .${classes.heading}`]: {
 		fontSize: theme.typography.pxToRem(15),
-		flexBasis: '40%',
+		flexBasis: '30%',
 		flexShrink: 0,
 		marginRight: '4%',
 	},
@@ -128,6 +128,7 @@ const ProjectBankPage = () => {
 	const [branch, setMainBranch] = useState('All');
 	const [page, setPage] = useState(1);
 	const [pageCount, setPageCount] = useState(1);
+	const [sortByStipend, setSortByStipend] = useState(true);
 
 	const { isLoading, error, data } = useQuery('ProjectBank', () =>
 		fetch('/api/problembank').then((res) => res.json())
@@ -135,6 +136,20 @@ const ProjectBankPage = () => {
 
 	useEffect(() => {
 		if (data) {
+			console.log(sortByStipend);
+			if (sortByStipend) {
+				data.sort(
+					(a, b) =>
+						parseFloat(b['Stipend (UG)']) -
+						parseFloat(a['Stipend (UG)'])
+				);
+			} else {
+				data.sort((a, b) =>
+					a['Company Name'].localeCompare(b['Company Name'])
+				);
+				console.log(data);
+			}
+
 			let newPoints = [];
 			data.forEach((d) => {
 				if (
@@ -172,7 +187,7 @@ const ProjectBankPage = () => {
 			setPage(1);
 			console.log(newPoints);
 		}
-	}, [search, choice, slider, data, branch]);
+	}, [search, choice, slider, data, branch, sortByStipend]);
 
 	const handleNext = () => {
 		// console.log(allStationInfo);
@@ -322,7 +337,7 @@ const ProjectBankPage = () => {
 												)}
 												<Typography
 													className={
-														classes.tertiaryHeading
+														classes.secondaryHeading
 													}
 												>
 													{
@@ -330,6 +345,13 @@ const ProjectBankPage = () => {
 															'Preferred Branches'
 														]
 													}
+												</Typography>
+												<Typography
+													className={
+														classes.tertiaryHeading
+													}
+												>
+													₹ {station['Stipend (UG)']}
 												</Typography>
 											</AccordionSummary>
 											<AccordionDetails
@@ -451,6 +473,7 @@ const ProjectBankPage = () => {
 									setMainSlider={setMainSlider}
 									setMainBranch={setMainBranch}
 									stationNames={data}
+									setSortByStipend={setSortByStipend}
 								/>
 							)}
 						</Paper>
